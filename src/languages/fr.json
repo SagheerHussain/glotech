@@ -1,0 +1,13 @@
+{
+  "logo": "Mon Logo",
+  "menu": {
+    "Home": {"name": "Accueil", "slug": "/"},
+    "About": {"name": "propos", "slug": "/about"},
+    "Services": {"name": "Services", "slug": "/services", "subMenus": ["Développement Web", "Développement d'applications", "Optimisation des moteurs de recherche", "Image de marque"]},
+    "Company": {"name": "Entreprise", "slug": "/company"},
+    "Pricing": {"name": "Tarification", "slug": "/pricing"},
+    "Contact": {"name": "Contact", "slug": "/contact"}
+  },
+  "title": "Bienvenue chez Glotech-KSA votre partenaire de services informatiques en Arabie saoudite",
+  "description": "Nous offrons aux entreprises des solutions informatiques de pointe adaptées au marché saoudien. De la gestion des ressources humaines au développement de logiciels sur mesure, Glotech-KSA est votre interlocuteur unique pour tout ce qui touche à la technologie."
+}

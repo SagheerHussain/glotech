@@ -1,0 +1,13 @@
+{
+  "logo": "My Logo",
+  "menu": {
+    "Home": {"name": "Home", "slug": "/"},
+    "About": {"name": "About", "slug": "/about"},
+    "Services": {"name": "Services", "slug": "/services", "subMenus": ["Web Development", "App Development", "Search Engine Optimization", "Branding"]},
+    "Company": {"name": "Company", "slug": "/company"},
+    "Pricing": {"name": "Pricing", "slug": "/pricing"},
+    "Contact": {"name": "Contact", "slug": "/contact"}
+  },
+  "title": "Welcome to Glotech-KSA <1/> Your IT Services Partner <1/> in Saudi Arabia",
+  "description": "Empowering businesses with cutting-edge IT solutions tailored for the Saudi Arabian market. From HR management to custom software development, Glotech-KSA is your one-stop destination for all things tech."
+}
