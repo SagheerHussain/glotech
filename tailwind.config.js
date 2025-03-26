@@ -18,7 +18,7 @@ export default {
       colors: {
         primary: '#4079ff',
         theme: '#111111',
-        text_light: '#666'
+        text_light: '#ccc'
       },
       animation: {
         gradient: 'gradient 8s linear infinite'

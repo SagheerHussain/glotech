@@ -10,6 +10,7 @@ import {
   FaCheck,
   FaHeadset,
 } from "react-icons/fa";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 const About = () => {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ const About = () => {
   return (
     <>
       <section id="about" className="bg-theme py-20">
-        <div className="container max-w-[1500px] mx-auto px-6">
+        <div className="container max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="about_company_content">
               <h3 className="uppercase text-primary font-semibold">
