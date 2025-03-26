@@ -30,7 +30,7 @@ export function Navbar({ className }) {
           </div>
         </MenuItem>
 
-        {/* <MenuItem
+        <MenuItem
           setActive={setActive}
           active={active}
           item={t("menu.Company.name")}
@@ -61,7 +61,7 @@ export function Navbar({ className }) {
               description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
             />
           </div>
-        </MenuItem> */}
+        </MenuItem>
 
         <HoveredLink>{t("menu.Pricing.name")}</HoveredLink>
 

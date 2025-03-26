@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Link } from "react-router-dom";
-import { Header } from "./components";
+import { About, Header } from "./components";
 // import { Header } from "./components/index";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
     <>
      <div className="App">
       <Header />
+      <About />
     </div>
     </>
   );

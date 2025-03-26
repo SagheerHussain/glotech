@@ -15,6 +15,11 @@ export default {
           '100%': { backgroundPosition: '0% 50%' },
         },
       },
+      colors: {
+        primary: '#4079ff',
+        theme: '#111111',
+        text_light: '#666'
+      },
       animation: {
         gradient: 'gradient 8s linear infinite'
       },

@@ -1,13 +1,33 @@
 {
   "logo": "My Logo",
   "menu": {
-    "Home": {"name": "Home", "slug": "/"},
-    "About": {"name": "About", "slug": "/about"},
-    "Services": {"name": "Services", "slug": "/services", "subMenus": ["Web Development", "App Development", "Search Engine Optimization", "Branding"]},
-    "Company": {"name": "Company", "slug": "/company"},
-    "Pricing": {"name": "Pricing", "slug": "/pricing"},
-    "Contact": {"name": "Contact", "slug": "/contact"}
+    "Home": { "name": "Home", "slug": "/" },
+    "About": { "name": "About", "slug": "/about" },
+    "Services": {
+      "name": "Services",
+      "slug": "/services",
+      "subMenus": [
+        "Web Development",
+        "App Development",
+        "Search Engine Optimization",
+        "Branding"
+      ]
+    },
+    "Company": { "name": "Company", "slug": "/company" },
+    "Pricing": { "name": "Pricing", "slug": "/pricing" },
+    "Contact": { "name": "Contact", "slug": "/contact" }
   },
   "title": "Welcome to Glotech-KSA <1/> Your IT Services Partner <1/> in Saudi Arabia",
-  "description": "Empowering businesses with cutting-edge IT solutions tailored for the Saudi Arabian market. From HR management to custom software development, Glotech-KSA is your one-stop destination for all things tech."
+  "description": "Empowering businesses with cutting-edge IT solutions tailored for the Saudi Arabian market. From HR management to custom software development, Glotech-KSA is your one-stop destination for all things tech.",
+  "home-page-components": {
+    "about": {
+      "heading": "About Glotech-KSA",
+      "title": "Your Partner for <1/> Software Innovation",
+      "description": "Many of the top businesses, SMEs, and tech innovators in the world choose GloTech-KSA as their partner. Through product design, QA, consulting, and custom software development, we assist companies in increasing their worth.",
+      "missionTitle": "Our Mission",
+      "missionText": "At Glotech-KSA, we strive to revolutionize the IT landscape in Saudi Arabia by providing innovative, efficient, and tailored solutions to businesses of all sizes. Our mission is to empower organizations through technology, enabling them to thrive in the digital age.",
+      "visionTitle": "Our Vision",
+      "visionText": "We aim to be the leading IT services provider in Saudi Arabia, recognized for our expertise, reliability, and commitment to excellence. Our vision is to drive digital transformation across industries, contributing to the Kingdom's technological advancement and economic growth."
+    }
+  }
 }
