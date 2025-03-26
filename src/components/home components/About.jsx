@@ -19,10 +19,10 @@ const About = () => {
     <>
       <section id="about" className="bg-theme py-20">
         <div className="container max-w-[1200px] mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="about_company_content">
+          <div className="flex items-center">
+            <div className="about_company_content w-1/2">
               <h3 className="uppercase text-primary font-semibold">
-                // {t("home-page-components.about.heading")}
+                {t("home-page-components.about.heading")}
               </h3>
               <h1 className="text-white font-bold text-4xl md:text-5xl py-6">
                 <Trans
@@ -57,7 +57,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="about_image">
+            <div className="about_image w-1/2">
               <img
                 className="w-full"
                 src="https://wpdemo.archiwp.com/engitech/wp-content/uploads/sites/4/2020/02/image1-home1.png"

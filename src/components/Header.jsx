@@ -58,7 +58,7 @@ const Header = () => {
 
       {/* Navbar */}
       <div
-        className={`w-full fixed top-0 z-50 transition-all duration-500 ease-in-out py-4
+        className={`w-full z-50 transition-all duration-500 ease-in-out py-4 flex justify-center
                 ${
                   isScrollingUp
                     ? `translate-y-0 ${
@@ -70,8 +70,8 @@ const Header = () => {
                 } 
             `}
       >
-        <div className="container max-w-[1500px] mx-auto flex items-center justify-between px-2">
-          <div className="w-full">
+        <div className="container max-w-[1500px] flex items-center justify-between">
+          <div>
             <GradientText
               colors={["#fff", "#4079ff", "#fff", "#4079ff", "#fff"]}
               animationSpeed={8}
@@ -81,17 +81,17 @@ const Header = () => {
               GLOTECH-KSA
             </GradientText>
           </div>
-          <div className="w-full">
+          <div>
             <Navbar />
           </div>
-          <div className="w-full text-end">
+          <div>
             <LanguageSwitcher />
           </div>
         </div>
       </div>
 
       {/* Header Content */}
-      <div className="header_content pt-[5.5rem] h-screen flex flex-col items-center justify-center">
+      <div className="header_content h-[calc(100vh-105px)] flex flex-col items-center justify-center">
         <div className="header_content_width lg:max-w-4xl xl:max-w-6xl">
           <h1 className="text-white font-bold text-center text-6xl">
             <Trans i18nKey="title" components={{ 1: <br /> }} />
@@ -110,33 +110,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="header_content pt-[5.5rem] h-screen flex flex-col items-center justify-center">
-        <div className="header_content_width lg:max-w-4xl xl:max-w-6xl">
-          <SplitText
-            text={t("title")}
-            className="text-6xl font-bold text-center text-white"
-            delay={150}
-            animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-            animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-            easing="easeOutCubic"
-            threshold={0.2}
-            rootMargin="-50px"
-            onLetterAnimationComplete={handleAnimationComplete}
-          />
-          <p className="text-zinc-300 text-center text-xl pt-8 pb-4 ">
-            {t("description")}
-          </p>
-          <div className="text-center mt-6 flex items-center justify-center">
-            <button className="primary-button me-3">Our Services</button>
-            <button className="primary-button">
-              Contact Us
-              <span></span>
-            </button>
-          </div>
-        </div>
-
-      </div> */}
     </header>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"; // using framer-motion
 import { cn } from "../../lib/utils"; // ensure this utility exists or remove it
-import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { PiMouseSimpleThin } from "react-icons/pi";
 
 const StickyScroll = ({ content, contentClassName }) => {
   const [activeCard, setActiveCard] = useState(0);
@@ -67,8 +67,8 @@ const StickyScroll = ({ content, contentClassName }) => {
         transition={{ duration: 0.3 }}
       >
         <div className="arrow bounce">
-          <MdKeyboardDoubleArrowDown
-            className="bounce text-white border-2 rounded-full"
+          <PiMouseSimpleThin
+            className="bounce text-white rotate-90"
             size={32}
           />
         </div>

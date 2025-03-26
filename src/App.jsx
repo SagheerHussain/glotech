@@ -1,21 +1,18 @@
 import { useState } from "react";
 import "./App.css";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { About, Header } from "./components";
 import WhyChoose from "./components/home components/WhyChoose";
-// import { Header } from "./components/index";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <>
-     <div className="App">
-      <Header />
-      <About />
-      <WhyChoose />
-    </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </>
   );
 }
 
 export default App;
- 

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@headlessui/react": "^2.2.0",
     "@heroui/autocomplete": "^2.3.17",
     "@heroui/system": "^2.4.12",
     "@heroui/theme": "^2.4.12",

@@ -1,12 +1,21 @@
 {
   "logo": "Mon Logo",
   "menu": {
-    "Home": {"name": "Accueil", "slug": "/"},
-    "About": {"name": "propos", "slug": "/about"},
-    "Services": {"name": "Services", "slug": "/services", "subMenus": ["Développement Web", "Développement d'applications", "Optimisation des moteurs de recherche", "Image de marque"]},
-    "Company": {"name": "Entreprise", "slug": "/company"},
-    "Pricing": {"name": "Tarification", "slug": "/pricing"},
-    "Contact": {"name": "Contact", "slug": "/contact"}
+    "Home": { "name": "Accueil", "slug": "/" },
+    "About": { "name": "propos", "slug": "/about" },
+    "Services": {
+      "name": "Services",
+      "slug": "/services",
+      "subMenus": [
+        "Développement Web",
+        "Développement d'applications",
+        "Optimisation des moteurs de recherche",
+        "Image de marque"
+      ]
+    },
+    "Company": { "name": "Entreprise", "slug": "/company" },
+    "Pricing": { "name": "Tarification", "slug": "/pricing" },
+    "Contact": { "name": "Contact", "slug": "/contact" }
   },
   "title": "Bienvenue chez Glotech-KSA votre partenaire de services informatiques en Arabie saoudite",
   "description": "Nous offrons aux entreprises des solutions informatiques de pointe adaptées au marché saoudien. De la gestion des ressources humaines au développement de logiciels sur mesure, Glotech-KSA est votre interlocuteur unique pour tout ce qui touche à la technologie.",
@@ -19,6 +28,28 @@
       "missionText": "Chez Glotech-KSA, nous nous efforçons de révolutionner le paysage informatique en Arabie saoudite en proposant des solutions innovantes, efficaces et sur mesure aux entreprises de toutes tailles. Notre mission est de donner aux organisations les moyens de prospérer à l'ère du numérique grâce à la technologie.",
       "visionTitle": "Notre vision",
       "visionText": "Notre objectif est de devenir le premier fournisseur de services informatiques en Arabie saoudite, reconnu pour notre expertise, notre fiabilité et notre engagement envers l'excellence. Notre vision est de stimuler la transformation numérique dans tous les secteurs, contribuant ainsi au progrès technologique et à la croissance économique du Royaume."
+    },
+    "why-choose": {
+      "title": "Pourquoi choisir Glotech-KSA",
+      "description": "De nombreuses entreprises, PME et innovateurs technologiques de premier plan au monde choisissent GloTech-KSA comme partenaire. Grâce à la conception de produits, à l'assurance qualité, au conseil et au développement de logiciels sur mesure, nous aidons les entreprises à accroître leur valeur.",
+      "service": [
+        {
+          "title": "Expertise Locale",
+          "description": "Notre compréhension approfondie du marché saoudien nous permet de proposer des solutions conformes aux réglementations locales et aux attentes culturelles. Avec une équipe bien ancrée dans le contexte régional, nous assurons la précision, la conformité et la pertinence de chaque projet, aidant ainsi votre entreprise à créer un lien authentique avec le public saoudien."
+        },
+        {
+          "title": "Technologie de Pointe",
+          "description": "Nous adoptons les dernières avancées technologiques pour offrir à nos clients des solutions innovantes et prêtes pour l'avenir. En restant à la pointe des tendances numériques, nous vous apportons un avantage concurrentiel, de meilleures performances et des systèmes évolutifs. Notre équipe évolue constamment pour mettre en œuvre les outils de nouvelle génération."
+        },
+        {
+          "title": "Approche Personnalisée",
+          "description": "Chaque entreprise est unique, tout comme ses défis. Nous adaptons nos services à vos objectifs spécifiques, garantissant des résultats efficaces et performants. Grâce à une analyse approfondie et une planification personnalisée, nous élaborons des stratégies qui maximisent le retour sur investissement et reflètent fidèlement l'identité et les ambitions de votre entreprise."
+        },
+        {
+          "title": "Support Exceptionnel",
+          "description": "Notre engagement ne s'arrête pas à la livraison. Nous assurons un support technique dédié et une maintenance continue pour garantir que vos solutions restent à jour, optimisées et sécurisées. Qu'il s'agisse de dépannage, de mises à jour ou de conseils continus, notre équipe experte est toujours prête à vous accompagner."
+        }
+      ]
     }
   }
 }

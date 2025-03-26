@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function GradientText({
   children,
   className = "",
@@ -35,7 +37,7 @@ export default function GradientText({
         </div>
       )}
       <div
-        className="inline-block relative z-2 text-transparent bg-cover animate-gradient text-4xl font-bold"
+        className="inline-block relative z-2 text-transparent bg-cover animate-gradient lg:text-[2.3rem] font-bold"
         style={{
           ...gradientStyle,
           backgroundClip: "text",
@@ -43,7 +45,7 @@ export default function GradientText({
           backgroundSize: "300% 100%",
         }}
       >
-        {children}
+        <Link to={"/"}> {children}</Link>
       </div>
     </div>
   );

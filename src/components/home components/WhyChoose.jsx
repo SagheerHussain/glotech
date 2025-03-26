@@ -8,102 +8,39 @@ import habibi from "/Images/why choose/habibi.png";
 import bulb from "/Images/why choose/bulb.png";
 import headphone from "/Images/why choose/headphone.png";
 import notes from "/Images/why choose/notes.png";
+import { useTranslation } from "react-i18next";
 
 const WhyChoose = () => {
-  const content = [
-    {
-      title: "Local Expertise",
-      icon: (
-        <div className="flex items-center justify-center text-white">
-          <img
-            src={habibi}
-            className="h-[50px] w-[50px] object-cover"
-            alt="Collaborative Editing"
-          />
-        </div>
-      ),
-      description:
-        "Our deep understanding of the Saudi Arabian market ensures solutions that comply with local regulations and cultural nuances.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center text-white">
-          <img
-            src={why_choose_4}
-            className="h-full w-full object-cover"
-            alt="Collaborative Editing"
-          />
-        </div>
-      ),
-    },
-    {
-      title: "Real-time Changes",
-      icon: (
-        <div className="flex items-center justify-center text-white">
-          <img
-            src={bulb}
-            className="h-[50px] w-[50px] object-cover"
-            alt="Collaborative Editing"
-          />
-        </div>
-      ),
-      description:
-        "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center text-white">
-          <img
-            src={why_choose_1}
-            className="h-full w-full object-cover"
-            alt="Collaborative Editing"
-          />
-        </div>
-      ),
-    },
-    {
-      title: "Version Control",
-      icon: (
-        <div className="flex items-center justify-center text-white">
-          <img
-            src={headphone}
-            className="h-[50px] w-[50px] object-cover"
-            alt="Collaborative Editing"
-          />
-        </div>
-      ),
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center text-white">
-          <img
-            src={why_choose_2}
-            className="h-full w-full object-cover"
-            alt="Collaborative Editing"
-          />
-        </div>
-      ),
-    },
-    {
-      title: "Running Out of Content",
-      icon: (
-        <div className="flex items-center justify-center text-white">
-          <img
-            src={notes}
-            className="h-[50px] w-[50px] object-cover"
-            alt="Collaborative Editing"
-          />
-        </div>
-      ),
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center text-white">
-          <img
-            src={why_choose_3}
-            className="h-full w-full object-cover"
-            alt="Collaborative Editing"
-          />
-        </div>
-      ),
-    },
-  ];
+  const { t } = useTranslation();
+  const services = t("home-page-components.why-choose.service", { returnObjects: true });
+
+  console.log("services", services)
+
+  const icons = [habibi, bulb, headphone, notes];
+  const images = [why_choose_4, why_choose_1, why_choose_2, why_choose_3];
+
+  const content = services.map((service, index) => ({
+    title: service.title,
+    icon: (
+      <div className="flex items-center justify-center text-white">
+        <img
+          src={icons[index]}
+          className="h-[50px] w-[50px] object-cover"
+          alt="Service Icon"
+        />
+      </div>
+    ),
+    description: service.description,
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <img
+          src={images[index]}
+          className="h-full w-full object-cover"
+          alt="Service Visual"
+        />
+      </div>
+    ),
+  }));
 
   return (
     <>

@@ -28,6 +28,28 @@
       "missionText": "At Glotech-KSA, we strive to revolutionize the IT landscape in Saudi Arabia by providing innovative, efficient, and tailored solutions to businesses of all sizes. Our mission is to empower organizations through technology, enabling them to thrive in the digital age.",
       "visionTitle": "Our Vision",
       "visionText": "We aim to be the leading IT services provider in Saudi Arabia, recognized for our expertise, reliability, and commitment to excellence. Our vision is to drive digital transformation across industries, contributing to the Kingdom's technological advancement and economic growth."
+    },
+    "why-choose": {
+      "title": "Why Choose Glotech-KSA",
+      "description": "Many of the top businesses, SMEs, and tech innovators in the world choose GloTech-KSA as their partner. Through product design, QA, consulting, and custom software development, we assist companies in increasing their worth.",
+      "service": [
+        {
+          "title": "Local Expertise",
+          "description": "Our deep understanding of the Saudi Arabian market empowers us to deliver solutions that align with local regulations and cultural expectations. With a team well-versed in the regional landscape, we ensure every project is built with precision, compliance, and relevance—helping your business connect authentically with the people of Saudi Arabia."
+        },
+        {
+          "title": "Cutting-Edge Technology",
+          "description": "We embrace the latest technological advancements to bring our clients innovative and future-ready solutions. By staying ahead of digital trends, we ensure that you gain a competitive edge, increased performance, and scalable systems. Our team continuously evolves to implement next-gen tools, keeping your business aligned with the pace of global technological progress."
+        },
+        {
+          "title": "Customized Approach",
+          "description": "Every business is different, and so are its challenges. We tailor our services to meet your specific goals and workflows, ensuring the most efficient and effective outcome possible. Through careful analysis and personalized planning, we deliver strategies that maximize ROI and create long-lasting value that truly reflects your business identity and ambitions."
+        },
+        {
+          "title": "Exceptional Support",
+          "description": "Our commitment doesn’t end at deployment. We provide dedicated, long-term technical support and system maintenance to ensure your solutions stay updated, optimized, and secure. Whether it's troubleshooting, upgrades, or ongoing advice, our expert team is always ready to help you keep your IT infrastructure strong and your business running smoothly."
+        }
+      ]
     }
   }
 }
