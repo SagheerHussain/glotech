@@ -45,7 +45,7 @@ const WhyChoose = () => {
   return (
     <>
       <section id="why_choose_glotech" className="bg-theme py-20 ">
-        <div className="container max-w-[1200px] mx-auto px-6">
+        <div className="container">
           <div className="pb-20">
             <h2 className="text-white text-5xl font-bold text-center">
               Why Choose GloTech-KSA

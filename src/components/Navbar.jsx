@@ -45,19 +45,19 @@ export function Navbar({ className }) {
             <ProductItem
               title="GloTech"
               to="/"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+              src="https://assets.aceternity.com/demos/algochurn.webp"
               description="Production ready Tailwind css components for your next project"
             />
             <ProductItem
               title="GloTech"
               to="/"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+              src="https://assets.aceternity.com/demos/algochurn.webp"
               description="Never write from scratch again. Go from idea to blog in minutes."
             />
             <ProductItem
               title="GloTech"
               to="/"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+              src="https://assets.aceternity.com/demos/algochurn.webp"
               description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
             />
           </div>

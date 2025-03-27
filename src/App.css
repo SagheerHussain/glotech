@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 html[dir="rtl"] body {
   direction: rtl;
   text-align: right;
@@ -5,6 +7,13 @@ html[dir="rtl"] body {
 body {
   background-color: #111;
   overflow-x: hidden !important;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1400px !important;
+  padding: 0 1.5rem !important;
+  margin: 0 auto !important;
 }
 
 :root {
@@ -12,6 +21,11 @@ body {
   --arrow-icon: url("https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg");
   --option-bg: white;
   --select-bg: rgba(34, 34, 34, 0.2);
+}
+
+/* Custom Classes */
+.smooth-curve {
+  clip-path: polygon(43% 0, 100% 0, 100% 20%, 100% 66%, 100% 67%, 100% 67%, 71% 57%, 49% 20%);
 }
 
 /* Custom Scrollbar */
@@ -24,14 +38,14 @@ body {
 
 /* Buttons */
 .primary-button {
-  padding: 0.8em 1.8em;
+  padding: 0.8rem 1.8rem;
   border: 1px solid #fff;
   position: relative;
   overflow: hidden;
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 15px;
   transition: 0.3s;
   z-index: 1;
   font-family: inherit;
@@ -182,4 +196,74 @@ select option {
   60% {
     transform: translateY(-15px);
   }
+}
+
+
+/* Header */
+header .overlay {
+  clip-path: polygon(0 0, 14% 0, 100% 100%, 0% 100%);
+}
+
+html[dir="rtl"] header .overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  clip-path: polygon(90% 0, 100% 0, 100% 100%, 0% 100%);
+}
+html[dir="ltr"] header .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+html[dir="rtl"] header::before {
+  left: 10%;
+}
+html[dir="rtl"] header::after {
+  left: 15%;
+}
+html[dir="ltr"] header::before {
+  left: 110%;
+}
+html[dir="ltr"] header::after {
+  left: 110%;
+}
+
+
+/* Home Page Services */
+#services,
+.clients_slider {
+  direction: ltr !important;
+  text-align: left !important;
+}
+#services .swiper {
+  padding: 100px 0 !important;
+}
+#services .swiper-scrollbar {
+  background: #222 !important;
+}
+#services .swiper-scrollbar-drag {
+  background: linear-gradient(to right, #3059f5, #6223f0) !important;
+}
+#services .swiper-button-next,
+#services .swiper-button-prev {
+  background: #222 !important;
+  color: #fff !important;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .3s ease-in-out;
+  top: 90%;
+}
+#services .swiper-button-next::after,
+#services .swiper-button-prev::after {
+  font-size: .7rem;
+  font-weight: bold;
+}
+#services .swiper-button-next:hover,
+#services .swiper-button-prev:hover {
+  background: linear-gradient(to right, #3059f5, #6223f0) !important;
+  color: #fff !important;
 }

@@ -29,6 +29,14 @@
       "visionTitle": "Our Vision",
       "visionText": "We aim to be the leading IT services provider in Saudi Arabia, recognized for our expertise, reliability, and commitment to excellence. Our vision is to drive digital transformation across industries, contributing to the Kingdom's technological advancement and economic growth."
     },
+    "clients_counter_title": "Join over +200 happy clients!",
+    "services": [
+      { "name": "Web Development Services" },
+      { "name": "Cross Platform Services" },
+      { "name": "Data Analytics Services" },
+      { "name": "HR Management System" },
+      { "name": "Asset Management & Tagging" }
+    ],
     "why-choose": {
       "title": "Why Choose Glotech-KSA",
       "description": "Many of the top businesses, SMEs, and tech innovators in the world choose GloTech-KSA as their partner. Through product design, QA, consulting, and custom software development, we assist companies in increasing their worth.",
@@ -50,6 +58,58 @@
           "description": "Our commitment doesn’t end at deployment. We provide dedicated, long-term technical support and system maintenance to ensure your solutions stay updated, optimized, and secure. Whether it's troubleshooting, upgrades, or ongoing advice, our expert team is always ready to help you keep your IT infrastructure strong and your business running smoothly."
         }
       ]
-    }
+    },
+    "service_details_intro": {
+      "title": "~ Our Awesome Services ~",
+      "headline": "We Are <1>Dedicated</1> To<2></2>Serve You All Time."
+    },
+    "services_details": [
+      {
+        "title": "Web Development",
+        "description": "We create modern, responsive websites to grow your business and brand."
+      },
+      {
+        "title": "App Development",
+        "description": "We build high-performance mobile apps for both Android and iOS platforms."
+      },
+      {
+        "title": "Data Analytics",
+        "description": "Harness the power of your data with our Power BI and Google Looker Studio expertise."
+      },
+      {
+        "title": "HR Management",
+        "description": "Streamline your workforce operations with our cutting-edge HR management systems"
+      },
+      {
+        "title": "Asset Management",
+        "description": "Optimize your asset tracking and verification processes with our tagging services"
+      },
+      {
+        "title": "Project Management",
+        "description": "Harness the power of your data with our Power BI and Google Looker Studio expertise."
+      }
+    ],
+    "commitment": [
+      {
+        "title": "99.9%",
+        "subTitle": "Uptime Guarantee",
+        "description": "We ensure your critical systems are always available, minimizing downtime and maximizing productivity."
+      },
+      {
+        "title": "24/7",
+        "subTitle": "Support Available",
+        "description": "Our dedicated support team is always ready to assist you, ensuring smooth operations around the clock."
+      },
+      {
+        "title": "100+",
+        "subTitle": "Satisfied Clients",
+        "description": "We've successfully served over a hundred businesses across Saudi Arabia, from startups to large enterprises."
+      },
+      {
+        "title": "15+",
+        "subTitle": "Years of Experience",
+        "description": "With over 15 years in the industry, we bring a wealth of expertise to every project we undertake."
+      }
+    ]
   }
 }

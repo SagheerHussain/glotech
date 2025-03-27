@@ -17,7 +17,7 @@
     "Pricing": { "name": "Tarification", "slug": "/pricing" },
     "Contact": { "name": "Contact", "slug": "/contact" }
   },
-  "title": "Bienvenue chez Glotech-KSA votre partenaire de services informatiques en Arabie saoudite",
+  "title": "Bienvenue chez Glotech-KSA <1/> votre partenaire de services <1/> informatiques en Arabie saoudite",
   "description": "Nous offrons aux entreprises des solutions informatiques de pointe adaptées au marché saoudien. De la gestion des ressources humaines au développement de logiciels sur mesure, Glotech-KSA est votre interlocuteur unique pour tout ce qui touche à la technologie.",
   "home-page-components": {
     "about": {
@@ -29,6 +29,14 @@
       "visionTitle": "Notre vision",
       "visionText": "Notre objectif est de devenir le premier fournisseur de services informatiques en Arabie saoudite, reconnu pour notre expertise, notre fiabilité et notre engagement envers l'excellence. Notre vision est de stimuler la transformation numérique dans tous les secteurs, contribuant ainsi au progrès technologique et à la croissance économique du Royaume."
     },
+    "clients_counter_title": "Rejoignez plus de 200 clients satisfaits",
+    "services": [
+      { "name": "Services de développement Web" },
+      { "name": "Services multiplateformes" },
+      { "name": "Services d’analyse de données" },
+      { "name": "Système de gestion des ressources humaines" },
+      { "name": "Gestion et étiquetage des actifs" }
+    ],
     "why-choose": {
       "title": "Pourquoi choisir Glotech-KSA",
       "description": "De nombreuses entreprises, PME et innovateurs technologiques de premier plan au monde choisissent GloTech-KSA comme partenaire. Grâce à la conception de produits, à l'assurance qualité, au conseil et au développement de logiciels sur mesure, nous aidons les entreprises à accroître leur valeur.",
@@ -50,6 +58,58 @@
           "description": "Notre engagement ne s'arrête pas à la livraison. Nous assurons un support technique dédié et une maintenance continue pour garantir que vos solutions restent à jour, optimisées et sécurisées. Qu'il s'agisse de dépannage, de mises à jour ou de conseils continus, notre équipe experte est toujours prête à vous accompagner."
         }
       ]
-    }
+    },
+    "service_details_intro": {
+      "title": "~ Nos services exceptionnels ~",
+      "headline": "Nous sommes <1>engagés</1> <2></2>à vous servir à tout moment."
+    },
+    "services_details": [
+      {
+        "title": "Développement Web",
+        "description": "Nous créons des sites modernes et réactifs pour développer votre entreprise."
+      },
+      {
+        "title": "Développement d'applications",
+        "description": "Nous créons des applications mobiles performantes pour Android et iOS efficacement."
+      },
+      {
+        "title": "Analyse de données",
+        "description": "Exploitez la puissance de vos données grâce à notre expertise Power BI et Google Looker Studio."
+      },
+      {
+        "title": "Gestion des ressources humaines",
+        "description": "Rationalisez vos opérations RH avec nos systèmes de gestion de pointe."
+      },
+      {
+        "title": "Gestion des actifs",
+        "description": "Optimisez le suivi et la vérification de vos actifs grâce à nos services de marquage."
+      },
+      {
+        "title": "Gestion de projet",
+        "description": "Exploitez la puissance de vos données grâce à notre expertise Power BI et Google Looker Studio."
+      }
+    ],
+    "commitment": [
+      {
+        "title": "99.9%",
+        "subTitle": "Garantie de disponibilité",
+        "description": "Nous assurons la disponibilité constante de vos systèmes critiques, réduisant les interruptions et maximisant la productivité."
+      },
+      {
+        "title": "24/7",
+        "subTitle": "Support disponible",
+        "description": "Notre équipe de support dédiée est toujours prête à vous aider pour garantir un fonctionnement fluide en continu."
+      },
+      {
+        "title": "100+",
+        "subTitle": "Clients satisfaits",
+        "description": "Nous avons servi avec succès plus de cent entreprises à travers l’Arabie Saoudite, des startups aux grandes entreprises."
+      },
+      {
+        "title": "15+",
+        "subTitle": "Années d’expérience",
+        "description": "Avec plus de 15 ans d’expérience, nous apportons une expertise précieuse à chaque projet que nous réalisons."
+      }
+    ]
   }
 }

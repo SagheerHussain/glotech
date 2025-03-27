@@ -1,13 +1,16 @@
 import React from "react";
-import { Header, About, WhyChoose } from "../components";
+import { Header, About, WhyChoose, TechWorkWith, Services, Commitment } from "../components";
 
 const HomePage = () => {
   return (
     <>
       <div className="App">
         <Header />
+        <TechWorkWith />
         <About />
-        <WhyChoose />
+        {/* <WhyChoose /> */}
+        <Services />
+        <Commitment />
       </div>
     </>
   );

@@ -16,7 +16,8 @@ export default {
         },
       },
       colors: {
-        primary: '#4079ff',
+        primary: '#3059f5',
+        secondary: '#6223f0',
         theme: '#111111',
         text_light: '#ccc'
       },
