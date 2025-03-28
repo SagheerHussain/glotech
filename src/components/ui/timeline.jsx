@@ -8,7 +8,7 @@ import { IoMdHappy } from "react-icons/io";
 import { Ri24HoursLine } from "react-icons/ri";
 import { FaMedal } from "react-icons/fa6";
 
-export const Timeline = ({ data }) => {
+export const Timeline = ({ data, title, description }) => {
   const { i18n } = useTranslation();
 
   const icons = [
@@ -48,12 +48,10 @@ export const Timeline = ({ data }) => {
     <div className="w-full font-sans" ref={containerRef}>
       <div className="max-w-5xl text-center mx-auto pt-20 pb-10 px-4 md:px-8 lg:px-10">
         <h2 className="text-5xl font-bold mb-4 text-white">
-          Our Commitment to Excellence
+          {title}
         </h2>
         <p className="text-text_light text-base xl:text-lg">
-          We are dedicated to delivering innovative, reliable, and high-quality
-          solutions that exceed expectations and drive long-term success for our
-          clients.
+          {description}
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

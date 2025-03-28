@@ -89,6 +89,10 @@
         "description": "Exploitez la puissance de vos données grâce à notre expertise Power BI et Google Looker Studio."
       }
     ],
+    "commitment_intro": {
+      "title": "Notre engagement envers l'excellence",
+      "description": "Nous nous engageons à fournir des solutions innovantes, fiables et de haute qualité qui dépassent les attentes et garantissent le succès à long terme de nos clients."
+    },
     "commitment": [
       {
         "title": "99.9%",

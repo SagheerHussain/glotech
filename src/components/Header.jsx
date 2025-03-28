@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { LanguageSwitcher, Logo } from "./index"; // Fixed import
 import { Link } from "react-router-dom";
 
+
 import Particles from "./bits ui/Particles";
 import "../i18n";
 import { Navbar } from "./Navbar";
 import { Trans, useTranslation } from "react-i18next";
 import GradientText from "./bits ui/GradientText";
+import Button from "./Button";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -43,12 +45,12 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="w-full lg:max-h-[125vh] xl:max-h-[100vh] 2xl:max-h-[85vh] overflow-hidden relative before:content-[''] before:bg-[#4079ff06] before:w-[400px] before:h-[400px] before:absolute before:top-[115%] before:-translate-x-full before:-translate-y-full -before:z-0 before:rounded-full after:content-[''] after:bg-[#4079ff1a] after:w-[500px] after:h-[500px] after:absolute after:top-[115%] after:-translate-x-full after:-translate-y-full -after:z-0 after:rounded-full"
+      className="w-full lg:max-h-[125vh] 2xl:max-h-[100vh] overflow-hidden relative before:content-[''] before:bg-[#4079ff06] before:w-[400px] before:h-[400px] before:absolute before:top-[115%] before:-translate-x-full before:-translate-y-full -before:z-0 before:rounded-full after:content-[''] after:bg-[#4079ff1a] after:w-[500px] after:h-[500px] after:absolute after:top-[115%] after:-translate-x-full after:-translate-y-full -after:z-0 after:rounded-full"
     >
       <div className="overlay absolute left-0 top-0 h-full w-[40%] bg-[#4079ff0f] z-[1]"></div>
 
       {/* Particles Waves backgroud */}
-      <div className="lg:h-[125vh] xl:h-[100vh] 2xl:h-[85vh] w-full absolute z-0">
+      <div className="lg:h-[125vh] 2xl:h-[100vh] w-full absolute z-0">
         <Particles
           particleCount={800}
           particleSpread={12}
@@ -97,7 +99,7 @@ const Header = () => {
       </div>
 
       {/* Header Content */}
-      <div className="header_content lg:h-[calc(125vh-105px)] xl:h-[calc(100vh-105px)] 2xl:h-[calc(85vh-105px)] z-[2] flex flex-col items-start justify-center">
+      <div className="header_content lg:h-[calc(125vh-90px)] 2xl:h-[calc(100vh-90px)] z-[2] flex flex-col items-start justify-center">
         <div className="container">
           <div className="header_title z-[9999] ">
             <h1 className="text-white font-bold text-5xl xl:text-[3.2rem]">
@@ -110,11 +112,7 @@ const Header = () => {
           </p>
 
           <div className="mt-6 flex items-center">
-            <button className="primary-button me-3">Our Services</button>
-            <button className="primary-button">
-              Contact Us
-              <span></span>
-            </button>
+            <Button label={"Get In Touch"} />
           </div>
         </div>
       </div>

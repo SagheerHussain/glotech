@@ -71,7 +71,7 @@ export function Commitment() {
     <>
       <section id="commitment" className="py-24 bg-[#111]">
         <div className="container">
-        <Timeline data={data} />
+        <Timeline data={data} title={t("home-page-components.commitment_intro.title")} description={t("home-page-components.commitment_intro.description")} />
         </div>
       </section>
     </>

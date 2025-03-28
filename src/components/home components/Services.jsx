@@ -1,11 +1,9 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import serviceBg from "/Images/service_bg.avif";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar, Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/scrollbar";
 import "swiper/css/navigation";
-import { LuPencilRuler } from "react-icons/lu";
 import { FiLayers } from "react-icons/fi";
 import { FaCashRegister } from "react-icons/fa";
 import { Trans, useTranslation } from "react-i18next";
@@ -86,7 +84,6 @@ const Services = () => {
 
           <div className="service_content">
             <Swiper
-              scrollbar={{ hide: false }}
               spaceBetween={20}
               autoplay={{
                 delay: 1500,
@@ -94,7 +91,7 @@ const Services = () => {
               }}
               navigation={true}
               loop={true}
-              modules={[Scrollbar, Autoplay, Navigation]}
+              modules={[Autoplay, Navigation]}
               className="mySwiper"
               breakpoints={{
                 0: {
