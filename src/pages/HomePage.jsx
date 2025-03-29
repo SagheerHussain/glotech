@@ -1,16 +1,36 @@
 import React from "react";
-import { Header, About, WhyChoose, TechWorkWith, Services, Commitment } from "../components";
+import {
+  Header,
+  About,
+  TechWorkWith,
+  Services,
+  Commitment,
+  GlotechChoosen,
+  Testimonial,
+  Banner,
+  Footer,
+} from "../components";
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
+
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="App">
         <Header />
         <TechWorkWith />
         <About />
-        {/* <WhyChoose /> */}
         <Services />
         <Commitment />
+        <GlotechChoosen />
+        <Testimonial />
+        <Banner
+          title={t("home-page-components.banner.title")}
+          description={t("home-page-components.banner.description")}
+        />
+        <Footer />
       </div>
     </>
   );

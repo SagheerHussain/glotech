@@ -112,7 +112,7 @@ const Header = () => {
           </p>
 
           <div className="mt-6 flex items-center">
-            <Button label={"Get In Touch"} />
+          <Button label={t("buttons.get-in-touch")} />
           </div>
         </div>
       </div>

@@ -37,25 +37,54 @@
       { "name": "Système de gestion des ressources humaines" },
       { "name": "Gestion et étiquetage des actifs" }
     ],
+    "why_choose_intro": {
+      "subTitle": "~ Pourquoi nous choisir ? ~",
+      "title": "Nous servons une grande <1>variété</1> d'industries",
+      "description": "Vous trouverez ci-dessous un petit échantillon de certaines des industries que nous servons."
+    },
     "why-choose": {
       "title": "Pourquoi choisir Glotech-KSA",
       "description": "De nombreuses entreprises, PME et innovateurs technologiques de premier plan au monde choisissent GloTech-KSA comme partenaire. Grâce à la conception de produits, à l'assurance qualité, au conseil et au développement de logiciels sur mesure, nous aidons les entreprises à accroître leur valeur.",
       "service": [
         {
           "title": "Expertise Locale",
-          "description": "Notre compréhension approfondie du marché saoudien nous permet de proposer des solutions conformes aux réglementations locales et aux attentes culturelles. Avec une équipe bien ancrée dans le contexte régional, nous assurons la précision, la conformité et la pertinence de chaque projet, aidant ainsi votre entreprise à créer un lien authentique avec le public saoudien."
+          "description": "Notre compréhension approfondie du marché saoudien nous permet de proposer des solutions conformes aux réglementations locales et aux attentes culturelles. Avec une équipe bien ancrée dans le contexte régional, nous assurons la précision, la conformité et la pertinence de chaque projet, aidant ainsi votre entreprise à créer un lien authentique avec le public saoudien.",
+          "features": [
+            "Expérience avec divers secteurs et industries locaux",
+            "Professionnels arabophones familiers avec les coutumes locales",
+            "Réseau solide et relations sur le marché saoudien",
+            "Expertise en conformité gouvernementale et normes locales"
+          ]
         },
         {
           "title": "Technologie de Pointe",
-          "description": "Nous adoptons les dernières avancées technologiques pour offrir à nos clients des solutions innovantes et prêtes pour l'avenir. En restant à la pointe des tendances numériques, nous vous apportons un avantage concurrentiel, de meilleures performances et des systèmes évolutifs. Notre équipe évolue constamment pour mettre en œuvre les outils de nouvelle génération."
+          "description": "Nous adoptons les dernières avancées technologiques pour offrir à nos clients des solutions innovantes et prêtes pour l'avenir. En restant à la pointe des tendances numériques, nous vous apportons un avantage concurrentiel, de meilleures performances et des systèmes évolutifs. Notre équipe évolue constamment pour mettre en œuvre les outils de nouvelle génération.",
+          "features": [
+            "Mise en œuvre de technologies modernes et d’architectures évolutives",
+            "Intégration de solutions d'IA, de machine learning et d'automatisation",
+            "Concentration sur la cybersécurité et la protection des données",
+            "Recherche continue sur les tendances technologiques mondiales pour une adoption locale"
+          ]
         },
         {
           "title": "Approche Personnalisée",
-          "description": "Chaque entreprise est unique, tout comme ses défis. Nous adaptons nos services à vos objectifs spécifiques, garantissant des résultats efficaces et performants. Grâce à une analyse approfondie et une planification personnalisée, nous élaborons des stratégies qui maximisent le retour sur investissement et reflètent fidèlement l'identité et les ambitions de votre entreprise."
+          "description": "Chaque entreprise est unique, tout comme ses défis. Nous adaptons nos services à vos objectifs spécifiques, garantissant des résultats efficaces et performants. Grâce à une analyse approfondie et une planification personnalisée, nous élaborons des stratégies qui maximisent le retour sur investissement et reflètent fidèlement l'identité et les ambitions de votre entreprise.",
+          "features": [
+            "Consultations personnalisées et analyse des besoins",
+            "Conception de solutions flexibles adaptées aux processus du client",
+            "Solutions modulaires et évolutives selon la croissance de votre entreprise",
+            "Chefs de projet dédiés pour garantir une livraison à temps"
+          ]
         },
         {
           "title": "Support Exceptionnel",
-          "description": "Notre engagement ne s'arrête pas à la livraison. Nous assurons un support technique dédié et une maintenance continue pour garantir que vos solutions restent à jour, optimisées et sécurisées. Qu'il s'agisse de dépannage, de mises à jour ou de conseils continus, notre équipe experte est toujours prête à vous accompagner."
+          "description": "Notre engagement ne s'arrête pas à la livraison. Nous assurons un support technique dédié et une maintenance continue pour garantir que vos solutions restent à jour, optimisées et sécurisées. Qu'il s'agisse de dépannage, de mises à jour ou de conseils continus, notre équipe experte est toujours prête à vous accompagner.",
+          "features": [
+            "Support client 24/7 via plusieurs canaux",
+            "Vérifications régulières de la santé du système et mises à jour",
+            "Surveillance proactive et résolution rapide des problèmes",
+            "Formation et accompagnement pour votre équipe"
+          ]
         }
       ]
     },
@@ -114,6 +143,61 @@
         "subTitle": "Années d’expérience",
         "description": "Avec plus de 15 ans d’expérience, nous apportons une expertise précieuse à chaque projet que nous réalisons."
       }
-    ]
+    ],
+    "banner": {
+      "title": "Vous recherchez les meilleures solutions informatiques pour votre entreprise ?",
+      "description": "En tant qu'expert en robot d'exploration d'applications Web, nous vous aiderons à vous organiser."
+    }
+  },
+  "testimonial_intro": {
+    "subTitle": "Témoignages ~",
+    "title": "Voici ce que nos clients ont dit.",
+    "description": "Simplified IT est conçu pour vous garantir une protection optimale de vos données et le bon fonctionnement de votre ordinateur. Le réseau fourni par Access est très précieux."
+  },
+  "testimonials": [
+    {
+      "name": "John Doe",
+      "title": "Directeur de l'entreprise",
+      "description": "Collaborer avec GloTech-KSA a été un tournant décisif pour notre transformation numérique. Leur connaissance approfondie du marché local, combinée à une expertise technique de classe mondiale, nous a permis de rationaliser nos opérations et d’améliorer l’engagement client. Leur équipe s’est sentie comme une extension de la nôtre."
+    },
+    {
+      "name": "Jane Smith",
+      "title": "PDG de l'entreprise",
+      "description": "Dès notre première réunion, l’équipe de GloTech-KSA nous a impressionnés par son professionnalisme et son approche personnalisée. Ils ne nous ont pas simplement vendu un service — ils ont conçu une solution adaptée à nos besoins spécifiques. Le support après-vente a également été exceptionnel."
+    }
+  ],
+  "footer": [
+    {
+      "title": "logo",
+      "description": "Nous travaillons avec passion pour relever des défis et en créer de nouveaux dans le secteur de la publicité."
+    },
+    {
+      "title": "Bulletin",
+      "description": "Abonnez-vous à notre bulletin pour recevoir les dernières nouvelles et mises à jour."
+    },
+    {
+      "title": "Infos Bureau",
+      "address": {
+        "description": "123 Rue Principale, Riyad, Arabie Saoudite"
+      },
+      "phone": { "description": "1-888-432422424" },
+      "opening_hours": {
+        "title": "Heures d'ouverture",
+        "description": "Lun – Sam : 8h – 17h, Dimanche : FERMÉ"
+      }
+    },
+    {
+      "description": "2025, Glotech. Tous droits réservés."
+    },
+    {
+      "title": "Liens sociaux"
+    }
+  ],
+  "buttons": {
+    "about": "À propos de nous",
+    "get-in-touch": "Entrer en contact"
+  },
+  "labels": {
+    "subscribe": "S'abonner"
   }
 }

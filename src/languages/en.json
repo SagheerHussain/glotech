@@ -37,25 +37,54 @@
       { "name": "HR Management System" },
       { "name": "Asset Management & Tagging" }
     ],
+    "why_choose_intro": {
+      "subTitle": "~ Why choose Us? ~",
+      "title": "We Serve A Wide <1>Variety</1> Of Industries",
+      "description": "Below is just a small sample of some of the industries that we serve."
+    },
     "why-choose": {
       "title": "Why Choose Glotech-KSA",
       "description": "Many of the top businesses, SMEs, and tech innovators in the world choose GloTech-KSA as their partner. Through product design, QA, consulting, and custom software development, we assist companies in increasing their worth.",
       "service": [
         {
           "title": "Local Expertise",
-          "description": "Our deep understanding of the Saudi Arabian market empowers us to deliver solutions that align with local regulations and cultural expectations. With a team well-versed in the regional landscape, we ensure every project is built with precision, compliance, and relevance—helping your business connect authentically with the people of Saudi Arabia."
+          "description": "Our deep understanding of the Saudi Arabian market empowers us to deliver solutions that align with local regulations and cultural expectations. With a team well-versed in the regional landscape, we ensure every project is built with precision, compliance, and relevance—helping your business connect authentically with the people of Saudi Arabia.",
+          "features": [
+            "Experience working with various local industries and sectors",
+            "Arabic-speaking professionals familiar with local customs",
+            "Strong network and relationships within the KSA market",
+            "Expertise in government compliance and local standards"
+          ]
         },
         {
           "title": "Cutting-Edge Technology",
-          "description": "We embrace the latest technological advancements to bring our clients innovative and future-ready solutions. By staying ahead of digital trends, we ensure that you gain a competitive edge, increased performance, and scalable systems. Our team continuously evolves to implement next-gen tools, keeping your business aligned with the pace of global technological progress."
+          "description": "We embrace the latest technological advancements to bring our clients innovative and future-ready solutions. By staying ahead of digital trends, we ensure that you gain a competitive edge, increased performance, and scalable systems. Our team continuously evolves to implement next-gen tools, keeping your business aligned with the pace of global technological progress.",
+          "features": [
+            "Implementation of modern tech stacks and scalable architecture",
+            "Integration of AI, machine learning, and automation solutions",
+            "Focus on cybersecurity and data protection",
+            "Continuous research on global tech trends for local adoption"
+          ]
         },
         {
           "title": "Customized Approach",
-          "description": "Every business is different, and so are its challenges. We tailor our services to meet your specific goals and workflows, ensuring the most efficient and effective outcome possible. Through careful analysis and personalized planning, we deliver strategies that maximize ROI and create long-lasting value that truly reflects your business identity and ambitions."
+          "description": "Every business is different, and so are its challenges. We tailor our services to meet your specific goals and workflows, ensuring the most efficient and effective outcome possible. Through careful analysis and personalized planning, we deliver strategies that maximize ROI and create long-lasting value that truly reflects your business identity and ambitions.",
+          "features": [
+            "Personalized consultations and requirement analysis",
+            "Flexible solution design to match client workflows",
+            "Scalable and modular solutions that grow with your business",
+            "Dedicated project managers to ensure on-time delivery"
+          ]
         },
         {
           "title": "Exceptional Support",
-          "description": "Our commitment doesn’t end at deployment. We provide dedicated, long-term technical support and system maintenance to ensure your solutions stay updated, optimized, and secure. Whether it's troubleshooting, upgrades, or ongoing advice, our expert team is always ready to help you keep your IT infrastructure strong and your business running smoothly."
+          "description": "Our commitment doesn’t end at deployment. We provide dedicated, long-term technical support and system maintenance to ensure your solutions stay updated, optimized, and secure. Whether it's troubleshooting, upgrades, or ongoing advice, our expert team is always ready to help you keep your IT infrastructure strong and your business running smoothly.",
+          "features": [
+            "24/7 customer support via multiple channels",
+            "Regular system health checks and updates",
+            "Proactive monitoring and quick issue resolution",
+            "Onboarding and training support for your team"
+          ]
         }
       ]
     },
@@ -114,6 +143,56 @@
         "subTitle": "Years of Experience",
         "description": "With over 15 years in the industry, we bring a wealth of expertise to every project we undertake."
       }
-    ]
+    ],
+    "banner": {
+      "title": "Looking for the Best IT Business Solutions?",
+      "description": "As a app web crawler expert, We will help to organize."
+    }
+  },
+  "testimonial_intro": {
+    "subTitle": "Testimonials ~",
+    "title": "Here’s what our customers have said.",
+    "description": "Simplified IT is designed to help make sure you and your data is protected and your computer runs it’s best. The network Access provides is valuable."
+  },
+  "testimonials": [
+    {
+      "name": "John Doe",
+      "title": "Manager Of Company",
+      "description": "Partnering with GloTech-KSA was a game-changer for our digital transformation. Their deep understanding of the local market, combined with world-class technical expertise, helped us streamline operations and improve customer engagement. Their team felt like an extension of our own."
+    },
+    {
+      "name": "Jane Smith",
+      "title": "CEO Of Company",
+      "description": "From the very first meeting, the GloTech-KSA team impressed us with their professionalism and tailored approach. They didn’t just sell a service—they crafted a solution that fit our specific needs. The after-sales support has also been phenomenal"
+    }
+  ],
+  "footer": [
+    {
+      "title": "logo",
+      "description": "We work with a passion of taking challenges and creating new ones in advertising sector."
+    },
+    {
+      "title": "Newsletter",
+      "description": "Subscribe to our newsletter to get the latest news and updates."
+    },
+    {
+      "title": "Office Info",
+      "address": { "description": "123 Main Street, Riyadh, Saudi Arabia" },
+      "phone": { "description": "1-888-432422424" },
+      "opening_hours": { "title": "Open Hours", "description": "Mon – Sat: 8 am – 5 pm, Sunday: CLOSED" }
+    },
+    {
+      "description": "copyright 2025, Glotech. All rights reserved."
+    },
+    {
+      "title": "Social Links"
+    }
+  ],
+  "buttons": {
+    "about": "About Us",
+    "get-in-touch": "Get in Touch"
+  },
+  "labels": {
+    "subscribe": "Subscribe"
   }
 }

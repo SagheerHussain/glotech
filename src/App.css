@@ -27,6 +27,17 @@ body {
 .smooth-curve {
   clip-path: polygon(43% 0, 100% 0, 100% 20%, 100% 66%, 100% 67%, 100% 67%, 71% 57%, 49% 20%);
 }
+div[data-slot="input-wrapper"] {
+  background: #131723 !important;
+  border-radius: 0 !important;
+  padding: .1rem 1.5rem !important;
+}
+.input label {
+  color: #ccc !important;
+}
+.input input {
+  color: #fff !important;
+}
 
 /* Custom Scrollbar */
 #why_choose_glotech ::-webkit-scrollbar {
@@ -196,32 +207,46 @@ html[dir="ltr"] header::after {
   direction: ltr !important;
   text-align: left !important;
 }
-#services .swiper {
+.testimonial_carousel {
+  direction: ltr !important;
+  text-align: left !important;
+}
+#services .swiper,
+#testimonials .swiper {
   padding: 100px 0 !important;
 }
 #services .swiper-button-next,
-#services .swiper-button-prev {
+#services .swiper-button-prev,
+#testimonials .swiper-button-next,
+#testimonials .swiper-button-prev {
   background: #222 !important;
   color: #fff !important;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background .3s ease-in-out;
-  top: 90%;
+  border-radius: 50% !important;
+  height: 40px !important;
+  width: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background .3s ease-in-out !important;
+  top: 90% !important;
 }
 #services .swiper-button-prev {
-  left: 92%;
+  left: 92% !important;
+}
+#testimonials .swiper-button-prev {
+  left: 83% !important;
 }
 #services .swiper-button-next::after,
-#services .swiper-button-prev::after {
-  font-size: .7rem;
-  font-weight: bold;
+#services .swiper-button-prev::after,
+#testimonials .swiper-button-next::after,
+#testimonials .swiper-button-prev::after {
+  font-size: .7rem !important;
+  font-weight: bold !important;
 }
 #services .swiper-button-next:hover,
-#services .swiper-button-prev:hover {
+#services .swiper-button-prev:hover,
+#testimonials .swiper-button-next:hover,
+#testimonials .swiper-button-prev:hover {
   background: linear-gradient(to right, #3059f5, #6223f0) !important;
   color: #fff !important;
 }
@@ -229,5 +254,8 @@ html[dir="ltr"] header::after {
 @media (max-width: 1280px) {
   #services .swiper-button-prev {
     left: 90%;
+  }
+  #testimonials .swiper-button-prev {
+    left: 80% !important;
   }
 }

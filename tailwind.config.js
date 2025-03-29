@@ -4,7 +4,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@heroui/theme/dist/components/(autocomplete|button|ripple|spinner|form|input|listbox|divider|popover|scroll-shadow).js"
+    "./node_modules/@heroui/theme/dist/components/(autocomplete|input|button|ripple|spinner|form|listbox|divider|popover|scroll-shadow).js"
   ],
   theme: {
     extend: {
