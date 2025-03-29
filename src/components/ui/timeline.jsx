@@ -47,7 +47,7 @@ export const Timeline = ({ data, title, description }) => {
   return (
     <div className="w-full font-sans" ref={containerRef}>
       <div className="max-w-5xl text-center mx-auto pt-20 pb-10 px-4 md:px-8 lg:px-10">
-        <h2 className="text-5xl font-bold mb-4 text-white">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
           {title}
         </h2>
         <p className="text-text_light text-base xl:text-lg">

@@ -266,6 +266,9 @@ html[dir="ltr"] header::after {
   #testimonials .swiper-button-prev {
     left: 73% !important;
   }
+  #techWorkingWith .clients_heading h6::after {
+    display: none !important;
+  }
 }
 @media (max-width: 768px) {
   #services .swiper-button-prev {
@@ -283,11 +286,20 @@ html[dir="ltr"] header::after {
     left: 70% !important;
   }
 }
-/* @media (max-width: 550px) {
-  #services .swiper-button-prev {
-    left: 70% !important;
-  }
-  #testimonials .swiper-button-prev {
-    left: 70% !important;
-  }
-} */
+
+/* Accordion */
+.MuiAccordion-root {
+  background: none !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+.MuiAccordionSummary-expandIconWrapper {
+  color: #fff !important;
+}
+.MuiAccordionSummary-root {
+  padding: 0 !important;
+}
+.MuiAccordionDetails-root {
+  padding: 8px 0 16px !important;
+}
+

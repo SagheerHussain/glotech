@@ -19,51 +19,45 @@ export function Navbar({ className }) {
           active={active}
           item={t("menu.Services.name")}
         >
-          <div className="flex flex-col space-y-4 text-sm">
-            {t("menu.Services.subMenus", { returnObjects: true }).map(
-              (submenu, index) => (
-                <HoveredLink key={index} to="#">
-                  {submenu}
-                </HoveredLink>
-              )
-            )}
-          </div>
-        </MenuItem>
-
-        <MenuItem
-          setActive={setActive}
-          active={active}
-          item={t("menu.Company.name")}
-        >
           <div className="text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
-              title="GloTech"
+              title="Web Development"
               to="/"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
+              src="https://thumbs.dreamstime.com/b/web-development-coding-programming-internet-technology-business-concept-web-development-coding-programming-internet-technology-121903546.jpg"
               description="Prepare for tech interviews like never before."
             />
             <ProductItem
-              title="GloTech"
+              title="Mobile App Development"
               to="/"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
+              src="https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg"
               description="Production ready Tailwind css components for your next project"
             />
             <ProductItem
-              title="GloTech"
+              title="Data Analytics"
               to="/"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
+              src="https://i.ytimg.com/vi/CvN2fD604Gk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCJBcrzWmQYuSkeFJoHoqrbw-sLkg"
               description="Never write from scratch again. Go from idea to blog in minutes."
             />
             <ProductItem
-              title="GloTech"
+              title="HR Management"
               to="/"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
+              src="https://c8.alamy.com/comp/TDG9FJ/human-resource-management-hr-team-building-and-recruitment-concept-on-blurred-background-TDG9FJ.jpg"
+              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+            />
+            <ProductItem
+              title="Asset Management"
+              to="/"
+              src="https://media.licdn.com/dms/image/v2/D4D12AQHnaA1r5t42Xg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1703169946255?e=2147483647&v=beta&t=M1ZNg7UH3HHpH57VPKdPwqSeMjhTBgonGPq5t6g02HA"
+              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+            />
+            <ProductItem
+              title="Project Management"
+              to="/"
+              src="https://media.licdn.com/dms/image/v2/D4D12AQHAzpZZDBIkfA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1710486640359?e=2147483647&v=beta&t=9iRUJ8yBIVaBKctslR9DBFXaD7R21PBHugsefN3ZcoM"
               description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
             />
           </div>
         </MenuItem>
-
-        <HoveredLink>{t("menu.Pricing.name")}</HoveredLink>
 
         <HoveredLink>{t("menu.Contact.name")}</HoveredLink>
       </Menu>

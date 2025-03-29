@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { LanguageSwitcher, Logo } from "./index"; // Fixed import
 import { Link } from "react-router-dom";
 
-
 import Particles from "./bits ui/Particles";
 import "../i18n";
 import { Navbar } from "./Navbar";
 import { Trans, useTranslation } from "react-i18next";
 import GradientText from "./bits ui/GradientText";
 import Button from "./Button";
+import Drawer from "./Drawer";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -50,7 +50,7 @@ const Header = () => {
       <div className="overlay absolute left-0 top-0 h-full md:w-1/2 lg:w-[40%] bg-[#4079ff0f] z-[1]"></div>
 
       {/* Particles Waves backgroud */}
-      <div className="h-screen lg:h-[125vh] 2xl:h-[100vh] w-full absolute z-0">
+      <div className=" h-screen lg:h-[125vh] 2xl:h-[100vh] w-full absolute z-0">
         <Particles
           particleCount={800}
           particleSpread={12}
@@ -66,7 +66,7 @@ const Header = () => {
 
       {/* Navbar */}
       <div
-        className={`fixed hidden top-0 w-screen z-50 transition-all duration-500 ease-in-out py-4 lg:flex justify-center
+        className={`desktop_only fixed hidden top-0 w-screen z-50 transition-all duration-500 ease-in-out py-4 lg:flex justify-center
                 ${
                   isScrollingUp
                     ? `translate-y-0 ${
@@ -98,6 +98,33 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Mobile Navbar */}
+      <div
+        className={`fixed top-0 w-screen z-50 transition-all duration-500 ease-in-out py-4 lg:hidden flex justify-center ${
+          isScrollingUp
+            ? `translate-y-0 ${
+                isAtTop ? "" : "bg-[#171717]/50 backdrop-blur-[10px] shadow-lg"
+              }`
+            : "-translate-y-full"
+        } `}
+      >
+        <div className="container flex items-center justify-between">
+          <div>
+            <GradientText
+              colors={["#6223f0", "#3059f5", "#fff", "#3059f5", "#6223f0"]}
+              animationSpeed={8}
+              showBorder={false}
+              className=""
+            >
+              GLOTECH-KSA
+            </GradientText>
+          </div>
+          <div>
+            <Drawer />
+          </div>
+        </div>
+      </div>
+
       {/* Header Content */}
       <div className="header_content h-[calc(100vh-90px)] lg:h-[calc(125vh-0px)] 2xl:h-[calc(100vh-0px)] z-[2] flex flex-col items-start justify-center">
         <div className="container">
@@ -112,7 +139,7 @@ const Header = () => {
           </p>
 
           <div className="mt-6 flex items-center">
-          <Button label={t("buttons.get-in-touch")} />
+            <Button label={t("buttons.get-in-touch")} />
           </div>
         </div>
       </div>

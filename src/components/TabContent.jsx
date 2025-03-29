@@ -44,7 +44,7 @@ const TabContent = ({ src, title, description, features }) => {
         {/* Content */}
         <div className="content md:ms-[10%] md:w-[50%]">
           <h6 className="text-sm bg-gradient-to-r from-primary to-secondary inline-block px-3 py-1 rounded-full mb-4">
-            Touching Lives Through Technology
+            {t("home-page-components.why_choose_intro.subHeading")}
           </h6>
           <h1 className="text-3xl font-bold text-white py-6">{title}</h1>
           <p className="text-text_light text-base font-normal">{description}</p>

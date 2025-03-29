@@ -82,8 +82,8 @@ const TechWorkWith = () => {
 
           {/* Technologies / Brands */}
           <div className="flex lg:flex-row flex-col justify-center items-center">
-            <div className="clients_heading w-1/3 lg:mb-0 mb-10">
-              <h6 className={`text-white font-semibold text-base lg:text-sm relative  after:content-[''] after:align-middle ${arabic ? "after:-translate-x-5" : "after:translate-x-5"} after:inline-block after:w-[80px] after:h-[1px] after:bg-white`}>{t("home-page-components.clients_counter_title")}</h6>
+            <div className="clients_heading lg:w-1/3 lg:mb-0 mb-10">
+              <h6 className={`text-white font-semibold text-xl lg:text-sm relative  after:content-[''] after:align-middle ${arabic ? "after:-translate-x-5" : "after:translate-x-5"} after:inline-block after:w-[80px] after:h-[1px] after:bg-white`}>{t("home-page-components.clients_counter_title")}</h6>
             </div>
             <div className="clients_slider w-full lg:w-2/3">
               <Swiper

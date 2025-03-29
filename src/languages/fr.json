@@ -7,10 +7,30 @@
       "name": "Services",
       "slug": "/services",
       "subMenus": [
-        "Développement Web",
-        "Développement d'applications",
-        "Optimisation des moteurs de recherche",
-        "Image de marque"
+        {
+          "title": "Développement Web",
+          "description": "Nous créons des sites web rapides, réactifs et évolutifs pour atteindre vos objectifs."
+        },
+        {
+          "title": "Développement d'applications mobiles",
+          "description": "Nous développons des applications mobiles performantes pour Android et iOS."
+        },
+        {
+          "title": "Analyse de données",
+          "description": "Exploitez la puissance de vos données avec notre expertise Power BI et Google Looker Studio."
+        },
+        {
+          "title": "Système de gestion des ressources humaines",
+          "description": "Simplifiez vos opérations RH avec nos systèmes de gestion avancés."
+        },
+        {
+          "title": "Gestion et étiquetage des actifs",
+          "description": "Gérez efficacement vos actifs grâce à nos solutions de gestion et d'étiquetage."
+        },
+        {
+          "title": "Gestion de projet",
+          "description": "Nous vous aidons à planifier, exécuter et livrer vos projets avec précision et efficacité."
+        }
       ]
     },
     "Company": { "name": "Entreprise", "slug": "/company" },
@@ -40,7 +60,8 @@
     "why_choose_intro": {
       "subTitle": "~ Pourquoi nous choisir ? ~",
       "title": "Nous servons une grande <1>variété</1> d'industries",
-      "description": "Vous trouverez ci-dessous un petit échantillon de certaines des industries que nous servons."
+      "description": "Vous trouverez ci-dessous un petit échantillon de certaines des industries que nous servons.",
+      "subHeading": "Toucher des vies grâce à la technologie"
     },
     "why-choose": {
       "title": "Pourquoi choisir Glotech-KSA",
