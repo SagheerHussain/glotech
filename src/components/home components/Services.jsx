@@ -76,7 +76,7 @@ const Services = () => {
                   1: (
                     <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text" />
                   ),
-                  2: <br />,
+                  2: <br className="sm:block hidden" />,
                 }}
               />
             </h2>
@@ -97,7 +97,7 @@ const Services = () => {
                 0: {
                   slidesPerView: 1,
                 },
-                768: {
+                550: {
                   slidesPerView: 2,
                 },
                 1024: {

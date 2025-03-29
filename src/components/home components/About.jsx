@@ -44,7 +44,7 @@ const About = () => {
       >
         <div className="container ">
           <div className="md:flex items-center">
-            <div className="about_image relative md:w-1/2 lg:w-[30%] md:me-[2rem] lg:me-[12rem] z-[2]">
+            <div className="about_image relative md:w-1/2 lg:w-[30%] md:me-[2rem] lg:me-[12rem] z-[2] md:mb-0 mb-4">
               <div
                 className={`lg:block hidden right_to_left_animater absolute top-0 ${
                   isArabic ? "left-[-120px]" : "right-[-120px]"

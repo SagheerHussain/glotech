@@ -90,7 +90,7 @@
     },
     "service_details_intro": {
       "title": "~ Nos services exceptionnels ~",
-      "headline": "Nous sommes <1>engagés</1> <2></2>à vous servir à tout moment."
+      "headline": "Nous sommes <1>engagés</1> <2></2> à vous servir à tout moment."
     },
     "services_details": [
       {
@@ -187,7 +187,7 @@
       }
     },
     {
-      "description": "2025, Glotech. Tous droits réservés."
+      "description": "© 2025, Glotech. Tous droits réservés."
     },
     {
       "title": "Liens sociaux"

@@ -33,7 +33,7 @@ export function GlotechChoosen() {
   }));
 
   return (
-    <section id="glotech-choosen" className="py-20 pb-56">
+    <section id="glotech-choosen" className="pt-20 pb-56">
       <div className="container">
         <div className="glotech_choosen_intro mb-20">
           <h3 className="flex justify-center mb-4">
@@ -56,7 +56,7 @@ export function GlotechChoosen() {
           </p>
         </div>
 
-        <div className="h-[80rem] md:h-[55rem] lg:h-[45rem] [perspective:1000px] relative flex flex-col mx-auto w-full items-start justify-start">
+        <div className="h-[80rem] md:h-[60rem] lg:h-[50rem] xl:h-[45rem] [perspective:1000px] relative flex flex-col mx-auto w-full items-start justify-start">
           <Tabs tabs={tabs} />
         </div>
       </div>

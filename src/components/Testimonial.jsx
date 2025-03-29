@@ -41,8 +41,8 @@ const Testimonial = () => {
     >
       <div className="overlay absolute top-0 left-0 w-full h-full bg-[#111111db] -z-[1]"></div>
       <div className="container">
-        <div className="flex items-center">
-          <div className="testimonial_intro w-1/2">
+        <div className="md:flex items-center">
+          <div className="testimonial_intro md:w-1/2">
             <div className="service_intro">
               <h3 className="flex mb-4">
                 <span className="text-white bg-[#222] inline-block px-8 py-2 rounded-[25px]">
@@ -58,7 +58,7 @@ const Testimonial = () => {
               <Button label={t("buttons.get-in-touch")} className="mt-6" />
             </div>
           </div>
-          <div className={`testimonial_carousel z-[999] w-1/2 ${isArabic ? "me-[4rem]" : "ms-[4rem]"}`}>
+          <div className={`testimonial_carousel z-[999] md:w-1/2 ${isArabic ? "md:me-[4rem]" : "md:ms-[4rem]"}`}>
             <Swiper
               navigation={true}
               modules={[Navigation, Autoplay]}

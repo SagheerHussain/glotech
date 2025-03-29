@@ -60,7 +60,7 @@ const TechWorkWith = () => {
         <div className="container">
           {/* Services */}
           <div className="tech_working_with_content relative py-20 lg:py-0 lg:-top-[100px]">
-            <div className="grid  sm:grid-cols-3 lg:grid-cols-5 gap-10">
+            <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-5 gap-10">
               {content?.map((service) => (
                 <TiltedCard
                   captionText={service.title}
@@ -85,7 +85,7 @@ const TechWorkWith = () => {
             <div className="clients_heading w-1/3 lg:mb-0 mb-10">
               <h6 className={`text-white font-semibold text-base lg:text-sm relative  after:content-[''] after:align-middle ${arabic ? "after:-translate-x-5" : "after:translate-x-5"} after:inline-block after:w-[80px] after:h-[1px] after:bg-white`}>{t("home-page-components.clients_counter_title")}</h6>
             </div>
-            <div className="clients_slider w-2/3">
+            <div className="clients_slider w-full lg:w-2/3">
               <Swiper
                 className="mySwiper"
                 modules={[Autoplay]}
@@ -100,10 +100,7 @@ const TechWorkWith = () => {
                   0: {
                     slidesPerView: 3,
                   },
-                  576: {
-                    slidesPerView: 4,
-                  },
-                  1024: {
+                  640: {
                     slidesPerView: 5,
                   }
                 }}

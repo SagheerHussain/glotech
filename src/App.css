@@ -267,3 +267,27 @@ html[dir="ltr"] header::after {
     left: 73% !important;
   }
 }
+@media (max-width: 768px) {
+  #services .swiper-button-prev {
+    left: 82% !important;
+  }
+  #testimonials .swiper-button-prev {
+    left: 80% !important;
+  }
+}
+@media (max-width: 550px) {
+  #services .swiper-button-prev {
+    left: 70% !important;
+  }
+  #testimonials .swiper-button-prev {
+    left: 70% !important;
+  }
+}
+/* @media (max-width: 550px) {
+  #services .swiper-button-prev {
+    left: 70% !important;
+  }
+  #testimonials .swiper-button-prev {
+    left: 70% !important;
+  }
+} */
