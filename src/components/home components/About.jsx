@@ -16,24 +16,25 @@ const About = () => {
   const [isArabic, setIsArabic] = useState(false);
 
   useEffect(() => {
-    const isArabic = i18n.language === "ar";
-    setIsArabic(isArabic);
+    const arabic = i18n.language === "ar";
+    setIsArabic(arabic);
+    if (shapeRef.current || arabic) {
+      gsap.to(shapeRef.current, {
+        y: -50,
+        duration: 4,
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo: true,
+      });
 
-    gsap.to(shapeRef.current, {
-      y: -50,
-      duration: 4,
-      ease: "power1.inOut",
-      repeat: -1,
-      yoyo: true,
-    });
-
-    gsap.to(shapeRef2.current, {
-      x: isArabic ? 20 : -20,
-      duration: 4,
-      ease: "power1.inOut",
-      repeat: -1,
-      yoyo: true,
-    });
+      gsap.to(shapeRef2.current, {
+        x: isArabic ? 20 : -20,
+        duration: 4,
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo: true,
+      });
+    }
   }, [i18n.language]);
 
   return (

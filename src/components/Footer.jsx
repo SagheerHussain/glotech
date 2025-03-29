@@ -43,9 +43,8 @@ const Footer = () => {
                 isRequired
                 label={t("labels.subscribe")}
                 name="email"
-                className="bg-[#222]"
               />
-              <button className="bg-gradient-to-r from-primary to-secondary py-4 px-4 rounded-none">
+              <button className="bg-gradient-to-r from-primary to-secondary py-4 px-4 rounded-[0_15px_15px_0]">
                 <FaLocationArrow size={20} className="text-white" />
               </button>
             </div>

@@ -38,6 +38,9 @@ div[data-slot="input-wrapper"] {
 .input input {
   color: #fff !important;
 }
+div[data-slot="input-wrapper"] {
+  border-radius: 15px 0 0 15px !important;
+}
 
 /* Custom Scrollbar */
 #why_choose_glotech ::-webkit-scrollbar {
