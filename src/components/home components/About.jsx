@@ -43,8 +43,8 @@ const About = () => {
         className="bg-theme py-20 relative overflow-y-visible"
       >
         <div className="container ">
-          <div className="flex items-center">
-            <div className="about_image relative w-[30%] me-[12rem] z-[2]">
+          <div className="md:flex items-center">
+            <div className="about_image relative md:w-1/2 lg:w-[30%] md:me-[2rem] lg:me-[12rem] z-[2]">
               <div
                 className={`lg:block hidden right_to_left_animater absolute top-0 ${
                   isArabic ? "left-[-120px]" : "right-[-120px]"
@@ -61,7 +61,7 @@ const About = () => {
                 alt=""
               />
             </div>
-            <div className="about_company_content w-3/4">
+            <div className="about_company_content  md:w-1/2 lg:w-3/4">
               <h3 className="px-8 py-2 rounded-[25px] bg-[#222] inline-block">
                 <span className="text-white">
                   {t("home-page-components.about.heading")}

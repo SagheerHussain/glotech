@@ -27,9 +27,9 @@ const TabContent = ({ src, title, description, features }) => {
 
   return (
     <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#14171f]">
-      <div className="flex py-10">
+      <div className="flex md:flex-row flex-col py-10">
         {/* Image */}
-        <div className="image p-6 w-[40%] relative h-full z-[2]">
+        <div className="image p-6 md:w-[40%] relative h-full z-[2]">
           <div className="overlay absolute -top-[5px] -left-[5px] w-[85%] h-[85%] bg-[#f4f9fd1e] opacity-50 rounded-[25px] -z-[1]" />
           <img
             src={src}
@@ -42,7 +42,7 @@ const TabContent = ({ src, title, description, features }) => {
         </div>
 
         {/* Content */}
-        <div className="content ms-[10%] w-[50%]">
+        <div className="content md:ms-[10%] md:w-[50%]">
           <h6 className="text-sm bg-gradient-to-r from-primary to-secondary inline-block px-3 py-1 rounded-full mb-4">
             Touching Lives Through Technology
           </h6>

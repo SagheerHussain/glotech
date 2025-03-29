@@ -59,8 +59,8 @@ const TechWorkWith = () => {
 
         <div className="container">
           {/* Services */}
-          <div className="tech_working_with_content relative -top-[100px]">
-            <div className="grid grid-cols-5 gap-10">
+          <div className="tech_working_with_content relative py-20 lg:py-0 lg:-top-[100px]">
+            <div className="grid  sm:grid-cols-3 lg:grid-cols-5 gap-10">
               {content?.map((service) => (
                 <TiltedCard
                   captionText={service.title}
@@ -81,9 +81,9 @@ const TechWorkWith = () => {
           </div>
 
           {/* Technologies / Brands */}
-          <div className="flex items-center">
-            <div className="clients_heading w-1/3">
-              <h6 className={`text-white font-semibold text-sm relative after:content-[''] after:align-middle ${arabic ? "after:-translate-x-5" : "after:translate-x-5"}  after:inline-block after:w-[80px] after:h-[1px] after:bg-white`}>{t("home-page-components.clients_counter_title")}</h6>
+          <div className="flex lg:flex-row flex-col justify-center items-center">
+            <div className="clients_heading w-1/3 lg:mb-0 mb-10">
+              <h6 className={`text-white font-semibold text-base lg:text-sm relative  after:content-[''] after:align-middle ${arabic ? "after:-translate-x-5" : "after:translate-x-5"} after:inline-block after:w-[80px] after:h-[1px] after:bg-white`}>{t("home-page-components.clients_counter_title")}</h6>
             </div>
             <div className="clients_slider w-2/3">
               <Swiper
@@ -96,6 +96,17 @@ const TechWorkWith = () => {
                   disableOnInteraction: false,
                 }}
                 loop={true} // optional: to keep looping
+                breakpoints={{
+                  0: {
+                    slidesPerView: 3,
+                  },
+                  576: {
+                    slidesPerView: 4,
+                  },
+                  1024: {
+                    slidesPerView: 5,
+                  }
+                }}
               >
                 {[
                   client1,

@@ -253,9 +253,17 @@ html[dir="ltr"] header::after {
 
 @media (max-width: 1280px) {
   #services .swiper-button-prev {
-    left: 90%;
+    left: 90% !important;
   }
   #testimonials .swiper-button-prev {
     left: 80% !important;
+  }
+}
+@media (max-width: 1024px) {
+  #services .swiper-button-prev {
+    left: 86% !important;
+  }
+  #testimonials .swiper-button-prev {
+    left: 73% !important;
   }
 }

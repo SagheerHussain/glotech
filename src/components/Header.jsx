@@ -45,12 +45,12 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="w-full lg:max-h-[125vh] 2xl:max-h-[100vh] overflow-hidden relative before:content-[''] before:bg-[#4079ff06] before:w-[400px] before:h-[400px] before:absolute before:top-[115%] before:-translate-x-full before:-translate-y-full -before:z-0 before:rounded-full after:content-[''] after:bg-[#4079ff1a] after:w-[500px] after:h-[500px] after:absolute after:top-[115%] after:-translate-x-full after:-translate-y-full -after:z-0 after:rounded-full"
+      className="w-full md:max-h-screen lg:max-h-[125vh] 2xl:max-h-[100vh] overflow-hidden relative before:content-[''] before:bg-[#4079ff06] before:w-[400px] before:h-[400px] before:absolute before:top-[115%] before:-translate-x-full before:-translate-y-full -before:z-0 before:rounded-full after:content-[''] after:bg-[#4079ff1a] after:w-[500px] after:h-[500px] after:absolute after:top-[115%] after:-translate-x-full after:-translate-y-full -after:z-0 after:rounded-full"
     >
       <div className="overlay absolute left-0 top-0 h-full w-[40%] bg-[#4079ff0f] z-[1]"></div>
 
       {/* Particles Waves backgroud */}
-      <div className="lg:h-[125vh] 2xl:h-[100vh] w-full absolute z-0">
+      <div className="md:h-screen lg:h-[125vh] 2xl:h-[100vh] w-full absolute z-0">
         <Particles
           particleCount={800}
           particleSpread={12}
@@ -66,7 +66,7 @@ const Header = () => {
 
       {/* Navbar */}
       <div
-        className={`fixed top-0 w-screen z-50 transition-all duration-500 ease-in-out py-4 flex justify-center
+        className={`fixed hidden top-0 w-screen z-50 transition-all duration-500 ease-in-out py-4 lg:flex justify-center
                 ${
                   isScrollingUp
                     ? `translate-y-0 ${
@@ -99,15 +99,15 @@ const Header = () => {
       </div>
 
       {/* Header Content */}
-      <div className="header_content lg:h-[calc(125vh-90px)] 2xl:h-[calc(100vh-90px)] z-[2] flex flex-col items-start justify-center">
+      <div className="header_content md:h-[calc(100vh-90px)] lg:h-[calc(125vh-90px)] 2xl:h-[calc(100vh-90px)] z-[2] flex flex-col items-start justify-center">
         <div className="container">
           <div className="header_title z-[9999] ">
-            <h1 className="text-white font-bold text-5xl xl:text-[3.2rem]">
+            <h1 className="text-white font-bold md:text-4xl lg:text-5xl xl:text-[3.2rem]">
               <Trans i18nKey="title" components={{ 1: <br /> }} />
             </h1>
           </div>
 
-          <p className="text-zinc-300 text-lg pt-8 pb-4 lg:max-w-3xl xl:max-w-3xl">
+          <p className="text-zinc-300 lg:text-lg pt-8 pb-4 md:max-w-3xl xl:max-w-3xl">
             {t("description")}
           </p>
 

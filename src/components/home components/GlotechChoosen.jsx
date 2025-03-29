@@ -56,7 +56,7 @@ export function GlotechChoosen() {
           </p>
         </div>
 
-        <div className="h-[20rem] lg:h-[45rem] [perspective:1000px] relative flex flex-col mx-auto w-full items-start justify-start">
+        <div className="h-[80rem] md:h-[55rem] lg:h-[45rem] [perspective:1000px] relative flex flex-col mx-auto w-full items-start justify-start">
           <Tabs tabs={tabs} />
         </div>
       </div>
