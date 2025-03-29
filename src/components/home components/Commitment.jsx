@@ -8,10 +8,7 @@ import commitmentFive from "/Images/commitment/commitment (5).jpg";
 import commitmentSix from "/Images/commitment/commitment (6).jpg";
 import commitmentSeven from "/Images/commitment/commetment (7).webp";
 import commitmentEight from "/Images/commitment/commitment (8).jpg";
-import { FiFileText } from "react-icons/fi";
-import GlassIcons from "../bits ui/GlassIcons";
 import { useTranslation } from "react-i18next";
-import { FaAccessibleIcon } from "react-icons/fa6";
 
 export function Commitment() {
   const { t } = useTranslation();

@@ -5,7 +5,6 @@ import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import verticalShape from "/Images/shape (1).png";
 import horizontalShape from "/Images/shape (2).png";
-import about from "/Images/gloTech_about.jpg";
 
 const About = () => {
   const { i18n } = useTranslation();
