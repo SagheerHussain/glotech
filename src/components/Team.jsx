@@ -11,8 +11,8 @@ const Team = () => {
 
   const images = [
     "https://assets.wam.ae/resource/bt502eil1k815kgpn.jpeg",
-    "https://saam.academy/wp-content/uploads/2022/11/Dr.-Fatima-Alrasheed-scaled.jpeg",
-    "https://campaignme.com/wp-content/uploads/2020/05/Muhammad-Omer-e1588595555619.jpg",
+    "https://i1.rgstatic.net/ii/profile.image/991201121550337-1613332171573_Q512/Fatima_Youssef3.jpg",
+    "https://i1.rgstatic.net/ii/profile.image/688605450219520-1541187741311_Q512/Omer-Khan-12.jpg",
     "https://data.themeim.com/html/sixart/assets/img/team/team-3.jpg",
   ];
 
@@ -60,7 +60,7 @@ const Team = () => {
                 key={index}
                 className="flex flex-col items-center text-center rounded-lg"
               >
-                <div className="rounded-full w-[275px] h-[275px] overflow-hidden border-2 border-dashed border-gray-600 mb-4">
+                <div className="rounded-full overflow-hidden border-2 border-dashed border-gray-600 mb-4">
                   <img
                     src={member.image}
                     alt={member.name}
