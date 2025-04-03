@@ -170,6 +170,83 @@
       "description": "En tant qu'expert en robot d'exploration d'applications Web, nous vous aiderons à vous organiser."
     }
   },
+  "about-page-components": {
+    "info": {
+      "title": "De la stratégie à l'image de marque, nous construisons le succès",
+      "description": "GLOTECH KSA est une entreprise saoudienne de services et de conseil en informatique spécialisée dans les systèmes de gestion des ressources humaines. Avec une équipe de 51 à 200 employés, elle fournit des produits et services exclusifs conçus pour améliorer l'efficacité organisationnelle."
+    },
+    "service_tagging": [
+      "Gestion des ressources humaines",
+      "Étiquetage et vérification des actifs",
+      "Développement de sites Web",
+      "Développement d'applications mobiles",
+      "Analyse de données"
+    ],
+    "mission": {
+      "title": "Notre mission",
+      "description": "Notre mission est de permettre aux entreprises du monde entier d’atteindre leur plein potentiel en fournissant des solutions informatiques, des services numériques et de commerce électronique exceptionnels. Nous nous engageons à créer des solutions innovantes permettant à nos clients d’exceller dans le paysage numérique, en les aidant à prospérer et à réussir dans leurs secteurs respectifs en traitant leurs affaires comme les nôtres."
+    },
+    "vision": {
+      "title": "Notre vision",
+      "description": "Notre objectif est de construire des relations durables avec nos clients en fournissant des solutions complètes et intégrées qui favorisent la croissance de l'entreprise. Nous offrons des stratégies innovantes conçues pour améliorer la présence numérique et maximiser le succès. Grâce à notre expertise et à notre technologie de pointe, nous assurons des expériences fluides et des résultats durables."
+    },
+    "audience": {
+      "title": "Public cible",
+      "description": "Nous accompagnons les entreprises de taille moyenne avec des solutions évolutives et les grandes entreprises avec des stratégies sur mesure. Notre priorité est de travailler avec des dirigeants axés sur le retour sur investissement, qui apprécient la fiabilité et l’expertise. Nous les aidons à prospérer sur des marchés compétitifs avec des résultats percutants. Grâce à notre expertise et à une technologie de pointe, nous garantissons des expériences fluides et des résultats durables."
+    },
+    "values_intro": {
+      "subTitle": "~ Découvrez le cœur de Glotech ~",
+      "title": "Rencontrez les <1>esprits passionnés</1> qui portent nos valeurs",
+      "description": "Chez Glotech, notre équipe n’est pas seulement compétente — elle est profondément ancrée dans des valeurs partagées qui nourrissent notre innovation et notre intégrité. De l’honnêteté et la collaboration au leadership et à l’agilité, chaque individu joue un rôle essentiel dans la création de notre culture et l’excellence de nos services."
+    },
+    "values": {
+      "honesty": {
+        "title": "Nous aimons",
+        "heading": "L’HONNÊTETÉ",
+        "description": "Nous sommes une équipe très soudée, nous nous soutenons avec empathie et authenticité. Chaque membre joue un rôle crucial dans notre succès. Ensemble, nous grandissons, innovons et travaillons pour faire de notre entreprise la meilleure du secteur."
+      },
+      "fist": {
+        "title": "Faites partie du",
+        "heading": "GROUPE",
+        "description": "Nous sommes un groupe uni. Cela signifie que nous nous soutenons mutuellement, agissons avec empathie et restons authentiques chaque jour pour devenir la meilleure entreprise du monde. Lorem ipsum dolor sit amet."
+      },
+      "boss": {
+        "title": "Soyez votre propre",
+        "heading": "PATRON",
+        "description": "Nous assumons pleinement la responsabilité de notre travail et de nos décisions. Avec une totale liberté, nous apportons de nouvelles idées et des solutions innovantes. La responsabilité nous pousse à atteindre l'excellence, assurant une croissance personnelle et professionnelle à chaque défi."
+      },
+      "flash": {
+        "title": "Soyez le",
+        "heading": "FLASH !",
+        "description": "Le monde évolue rapidement, et nous aussi. En nous adaptant vite, nous apprenons, désapprenons et réapprenons pour garder une longueur d'avance. Notre capacité à exécuter avec rapidité et précision nous permet de rester compétitifs dans cette ère numérique en constante évolution."
+      }
+    }
+  },
+  "counter": {
+    "projects": "Projets livrés",
+    "years": "Années d'expérience",
+    "members": "Membres de l'équipe",
+    "clients": "Clients"
+  },
+  "teams_intro": {
+    "subTitle": "~ Notre équipe incroyable ~",
+    "title": "Rencontrez l'équipe <1>passionnée</1> de Glotech",
+    "description": "Nous apportons créativité, expérience et engagement à chaque projet."
+  },
+  "teams": {
+    "members": [
+      { "name": "Ahmed Al Saud", "designation": "PDG et fondateur" },
+      {
+        "name": "Fatima Al Rashid",
+        "designation": "Directrice de la technologie"
+      },
+      {
+        "name": "Omer Khan",
+        "designation": "Responsable de la gestion de projet"
+      },
+      { "name": "David Rethman", "designation": "Développeur web" }
+    ]
+  },
   "testimonial_intro": {
     "subTitle": "Témoignages ~",
     "title": "Voici ce que nos clients ont dit.",

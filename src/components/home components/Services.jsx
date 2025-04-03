@@ -111,7 +111,7 @@ const Services = () => {
               {content.map((item) => (
                 <SwiperSlide key={item}>
                   <div className="service_content_card group hover:rounded-[10px_80px_10px_10px] transition-all relative bg-[#222] p-8 rounded-[80px_10px_10px_10px] shadow-2xl z-[0]">
-                    <div className="overlay opacity-0 transition-all bg-gradient-to-r from-primary to-secondary group-hover:opacity-50 w-full h-1/2 rounded-[10px_80px_0px_0px] absolute -top-[50px] left-0 -z-[1]">
+                    <div className="overlay opacity-0 transition-all bg-gradient-to-r from-primary to-secondary group-hover:opacity-50 w-full h-1/2 rounded-[10px_80px_0px_0px] absolute -top-[70px] left-0 -z-[1]">
                       <svg
                         className="absolute bottom-0 left-0 w-full z-[-1]"
                         viewBox="0 0 1440 100"
@@ -119,6 +119,7 @@ const Services = () => {
                       >
                         <path
                           fill="#222"
+                          stroke="#222"
                           d="M0,0 C480,120 960,-20 1440,100 L1440,100 L0,100 Z"
                         />
                       </svg>

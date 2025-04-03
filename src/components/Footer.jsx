@@ -43,8 +43,9 @@ const Footer = () => {
                 isRequired
                 label={t("labels.subscribe")}
                 name="email"
+                style={{direction: "ltr"}}
               />
-              <button className="bg-gradient-to-r from-primary to-secondary py-4 px-4 rounded-[0_15px_15px_0]">
+              <button className="bg-gradient-to-r from-primary to-secondary py-4 px-4 rounded-[0_15px_15px_0]" style={{direction: "ltr"}}>
                 <FaLocationArrow size={20} className="text-white" />
               </button>
             </div>

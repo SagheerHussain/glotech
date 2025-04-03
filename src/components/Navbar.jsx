@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/NavbarMenu";
 import { cn } from "../lib/utils";
+import { Link } from "react-router-dom";
 
 export function Navbar({ className }) {
   const [active, setActive] = useState(null);
@@ -24,26 +25,29 @@ export function Navbar({ className }) {
   return (
     <div className={cn("inset-x-0 max-w-4xl mx-auto", className)}>
       <Menu setActive={setActive}>
-        <HoveredLink>{t("menu.Home.name")}</HoveredLink>
-        <HoveredLink>{t("menu.About.name")}</HoveredLink>
+        <HoveredLink to={`/`}>{t("menu.Home.name")}</HoveredLink>
 
-        <MenuItem
-          setActive={setActive}
-          active={active}
-          item={t("menu.Services.name")}
-        >
-          <div className="text-sm grid grid-cols-2 gap-10 p-4">
-            {services.map((service, index) => (
-              <ProductItem
-                key={index}
-                title={service.title}
-                to="/"
-                src={src[index]}
-                description={service.description}
-              />
-            ))}
-          </div>
-        </MenuItem>
+        <HoveredLink to={`/about`}>{t("menu.About.name")}</HoveredLink>
+
+        <Link to={"/"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item={t("menu.Services.name")}
+          >
+            <div className="text-sm grid grid-cols-2 gap-10 p-4">
+              {services.map((service, index) => (
+                <ProductItem
+                  key={index}
+                  title={service.title}
+                  to="/"
+                  src={src[index]}
+                  description={service.description}
+                />
+              ))}
+            </div>
+          </MenuItem>
+        </Link>
 
         <HoveredLink>{t("menu.Contact.name")}</HoveredLink>
       </Menu>
