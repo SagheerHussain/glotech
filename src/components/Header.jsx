@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { LanguageSwitcher, Logo } from "./index"; // Fixed import
+import { LanguageSwitcher, Logo, NavigationLayout } from "./index"; // Fixed import
 import { Link } from "react-router-dom";
 
 import Particles from "./bits ui/Particles";
@@ -65,65 +65,7 @@ const Header = () => {
       </div>
 
       {/* Navbar */}
-      <div
-        className={`desktop_only fixed hidden top-0 w-screen z-50 transition-all duration-500 ease-in-out py-4 lg:flex justify-center
-                ${
-                  isScrollingUp
-                    ? `translate-y-0 ${
-                        isAtTop
-                          ? ""
-                          : "bg-[#171717]/50 backdrop-blur-[10px] shadow-lg"
-                      }`
-                    : "-translate-y-full"
-                } 
-            `}
-      >
-        <div className="container flex items-center justify-between">
-          <div>
-            <GradientText
-              colors={["#6223f0", "#3059f5", "#fff", "#3059f5", "#6223f0"]}
-              animationSpeed={8}
-              showBorder={false}
-              className=""
-            >
-              GLOTECH-KSA
-            </GradientText>
-          </div>
-          <div className="mx-3">
-            <Navbar />
-          </div>
-          <div>
-            <LanguageSwitcher />
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Navbar */}
-      <div
-        className={`fixed top-0 w-screen z-50 transition-all duration-500 ease-in-out py-4 lg:hidden flex justify-center ${
-          isScrollingUp
-            ? `translate-y-0 ${
-                isAtTop ? "" : "bg-[#171717]/50 backdrop-blur-[10px] shadow-lg"
-              }`
-            : "-translate-y-full"
-        } `}
-      >
-        <div className="container flex items-center justify-between">
-          <div>
-            <GradientText
-              colors={["#6223f0", "#3059f5", "#fff", "#3059f5", "#6223f0"]}
-              animationSpeed={8}
-              showBorder={false}
-              className=""
-            >
-              GLOTECH-KSA
-            </GradientText>
-          </div>
-          <div>
-            <Drawer />
-          </div>
-        </div>
-      </div>
+      <NavigationLayout />
 
       {/* Header Content */}
       <div className="header_content h-[calc(100vh-90px)] lg:h-[calc(125vh-0px)] 2xl:h-[calc(100vh-0px)] z-[2] flex flex-col items-start justify-center">

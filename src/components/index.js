@@ -4,6 +4,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import Testimonial from "./Testimonial";
 import Banner from "./Banner";
 import Footer from "./Footer";
+import NavigationLayout from "./NavigationLayout";
 
 // Home Components
 import About from "./home components/About";
@@ -23,5 +24,6 @@ export {
     GlotechChoosen,
     Banner,
     Testimonial,
-    Footer
+    Footer,
+    NavigationLayout
 }
