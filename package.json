@@ -29,7 +29,7 @@
     "framer-motion": "^12.5.0",
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.4",
-    "motion": "^12.5.0",
+    "motion": "^12.6.3",
     "ogl": "^1.0.11",
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
@@ -41,7 +41,7 @@
     "react-router-dom": "^7.3.0",
     "sweetalert2": "^11.17.2",
     "swiper": "^11.2.6",
-    "tailwind-merge": "^3.0.2"
+    "tailwind-merge": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

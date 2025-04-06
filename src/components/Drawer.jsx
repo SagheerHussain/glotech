@@ -26,7 +26,7 @@ export default function DrawerMenus() {
   const { i18n } = useTranslation();
 
   const services = t("menu.Services.subMenus", { returnObjects: true });
-  console.log("Services", services);
+  const menus = t("menu", { returnObjects: true });
 
   // StateVariables
   const [open, setOpen] = useState(false);
@@ -39,7 +39,7 @@ export default function DrawerMenus() {
   useEffect(() => {
     const arabic = i18n.language === "ar";
     setIsArabic(arabic);
-  }, [i18n.language]);
+  }, [i18n.language, menus]);
 
   const DrawerList = (
     <Box
@@ -50,44 +50,51 @@ export default function DrawerMenus() {
       }}
       role="presentation"
     >
-      <div className={`${isArabic ? "text-start justify-start" : "text-end justify-end"} flex  m-2`}>
+      <div
+        className={`${
+          isArabic ? "text-start justify-start" : "text-end justify-end"
+        } flex  m-2`}
+      >
         <IoClose color={`#fff`} size={24} onClick={toggleDrawer(false)} />
       </div>
       <List>
-        {[
-          `${t("menu.Home.name")}`,
-          `${t("menu.About.name")}`,
-          `${t("menu.Services.name")}`,
-          `${t("menu.Contact.name")}`,
-        ].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              {index === 2 ? (
-                <Accordion sx={{ direction: "ltr", width: "100%" }}>
-                  <AccordionSummary
-                    expandIcon={<MdOutlineExpandMore />}
-                    aria-controls="panel1-content"
-                    id="panel1-header"
-                  >
-                    <Typography component="span">{text}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    {services.map((service) => (
-                      <Link
-                        to={`/${service.title}`}
-                        className="pb-4 text-text_light hover:text-white transition-all duration-300 linear block"
-                      >
-                        {service.title}
-                      </Link>
-                    ))}
-                  </AccordionDetails>
-                </Accordion>
-              ) : (
-                <ListItemText primary={text} className={`text-text_light`} />
-              )}
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {[menus.Home, menus.About, menus.Services, menus.Contact]?.map((menu, index) => {
+          console.log("text", menu);
+          return (
+            <ListItem key={menu.name} disablePadding>
+              <ListItemButton>
+                {index === 2 ? (
+                  <Accordion sx={{ direction: "ltr", width: "100%" }}>
+                    <AccordionSummary
+                      expandIcon={<MdOutlineExpandMore />}
+                      aria-controls="panel1-content"
+                      id="panel1-header"
+                    >
+                      <Typography component="span">{menu.name}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      {services.map((service) => (
+                        <Link
+                          to={`/services/${service.category}`}
+                          className="pb-4 text-text_light hover:text-white transition-all duration-300 linear block"
+                        >
+                          {service.title}
+                        </Link>
+                      ))}
+                    </AccordionDetails>
+                  </Accordion>
+                ) : (
+                  <Link to={menu.slug}>
+                    <ListItemText
+                      primary={menu.name}
+                      className={`text-text_light`}
+                    />
+                  </Link>
+                )}
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
       </List>
       <Divider className={`bg-[#363d4c]`} />
       <List>

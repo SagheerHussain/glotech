@@ -16,6 +16,13 @@ import { useTranslation } from "react-i18next";
 
 const AboutPage = () => {
   const { t } = useTranslation();
+  
+  const stats = [
+    { label: t("counter.projects"), value: 10 },
+    { label: t("counter.years"), value: 3 },
+    { label: t("counter.members"), value: 5 },
+    { label: t("counter.clients"), value: 9 },
+  ];
 
   return (
     <>
@@ -32,7 +39,7 @@ const AboutPage = () => {
       </header>
       <main id="main">
         <Info />
-        <Counter />
+        <Counter stats={stats} />
         <GlotechChoosen />
         <Team />
         <ValueAddition />

@@ -11,7 +11,7 @@ export function Navbar({ className }) {
 
   const services = t("menu.Services.subMenus", { returnObjects: true });
 
-  console.log("services", services);
+  console.log("services navbar", services);
 
   const src = [
     "https://thumbs.dreamstime.com/b/web-development-coding-programming-internet-technology-business-concept-web-development-coding-programming-internet-technology-121903546.jpg",
@@ -29,7 +29,7 @@ export function Navbar({ className }) {
 
         <HoveredLink to={`/about`}>{t("menu.About.name")}</HoveredLink>
 
-        <Link to={"/"}>
+        <Link to={""}>
           <MenuItem
             setActive={setActive}
             active={active}
@@ -40,7 +40,7 @@ export function Navbar({ className }) {
                 <ProductItem
                   key={index}
                   title={service.title}
-                  to="/"
+                  to={`/services/${service.category}`}
                   src={src[index]}
                   description={service.description}
                 />
@@ -49,7 +49,7 @@ export function Navbar({ className }) {
           </MenuItem>
         </Link>
 
-        <HoveredLink>{t("menu.Contact.name")}</HoveredLink>
+        <HoveredLink to={'/contact'}>{t("menu.Contact.name")}</HoveredLink>
       </Menu>
     </div>
   );

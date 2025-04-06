@@ -39,13 +39,12 @@ const Footer = () => {
               {footer[1].description}
             </p>
             <div className="input flex items-center">
-              <Input
-                isRequired
-                label={t("labels.subscribe")}
-                name="email"
-                style={{direction: "ltr"}}
-              />
-              <button className="bg-gradient-to-r from-primary to-secondary py-4 px-4 rounded-[0_15px_15px_0]" style={{direction: "ltr"}}>
+            <input
+                    type="email"
+                    className="w-full block bg-[#222] py-4 px-4 rounded-[15px_0px_0px_15px] focus:outline-none focus:text-white"
+                    placeholder={`${t("labels.subscribe")}`}
+                  />
+              <button className="bg-gradient-to-r from-primary to-secondary py-4 px-4 rounded-[0_15px_15px_0]">
                 <FaLocationArrow size={20} className="text-white" />
               </button>
             </div>

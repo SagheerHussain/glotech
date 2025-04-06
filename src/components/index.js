@@ -19,6 +19,9 @@ import { GlotechChoosen } from "./home components/GlotechChoosen";
 // About Components
 import Info from "./about components/Info";
 
+// Services Components
+import Benefits from "./services components/Benefits";
+
 export {
     Logo,
     Header,
@@ -35,5 +38,6 @@ export {
     Info,
     Counter,
     Team,
-    ValueAddition
+    ValueAddition,
+    Benefits,
 }

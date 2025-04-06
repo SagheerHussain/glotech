@@ -3,20 +3,11 @@ import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import GlassIcons from "../bits ui/GlassIcons";
-import { MdVerified } from "react-icons/md";
-import { IoMdHappy } from "react-icons/io";
-import { Ri24HoursLine } from "react-icons/ri";
-import { FaMedal } from "react-icons/fa6";
 
-export const Timeline = ({ data, title, description }) => {
+export const Timeline = ({ data, title, description, icons }) => {
   const { i18n } = useTranslation();
 
-  const icons = [
-    { icon: <MdVerified /> },
-    { icon: <Ri24HoursLine /> },
-    { icon: <IoMdHappy /> },
-    { icon: <FaMedal /> }
-  ];
+ 
 
   const ref = useRef(null);
   const containerRef = useRef(null);

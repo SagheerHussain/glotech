@@ -1,14 +1,13 @@
-const {heroui} = require('@heroui/theme');
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@heroui/theme/dist/components/(autocomplete|input|button|ripple|spinner|form|listbox|divider|popover|scroll-shadow).js"
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       keyframes: {
+        scroll: {
+          to: { transform: "translate(calc(-50% - 0.5rem))" }, 
+          /* moves content left by 50% + 0.5rem to account for any gap */
+        },
         gradient: {
           '0%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
@@ -22,9 +21,10 @@ export default {
         text_light: '#ccc'
       },
       animation: {
-        gradient: 'gradient 8s linear infinite'
+        gradient: 'gradient 8s linear infinite',
+        scroll: "scroll 60s linear infinite", 
       },
     },
   },
-  plugins: [heroui()],
+  plugins: [],
 }

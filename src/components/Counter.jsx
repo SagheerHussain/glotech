@@ -3,15 +3,8 @@ import CountUp from "react-countup";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 
-const Counter = () => {
-  const { t } = useTranslation();
-  
-  const stats = [
-    { label: t("counter.projects"), value: 10 },
-    { label: t("counter.years"), value: 3 },
-    { label: t("counter.members"), value: 5 },
-    { label: t("counter.clients"), value: 9 },
-  ];
+const Counter = ({ stats }) => {
+ 
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -29,13 +22,14 @@ const Counter = () => {
               <div key={index} className="text-center group">
                 <div className="flex justify-center items-center text-6xl font-bold relative">
                   <span className="relative z-10 text-white">
-                    {inView ? <CountUp end={stat.value} duration={2} /> : "0"}
+                    {inView ? <CountUp end={stat.value || stat.count} duration={2} /> : "0"}
+                    
                   </span>
-                  <span className="relative z-10 text-white ml-1">+</span>
+                  <span className="relative z-10 text-white ml-1">{stat.icon ? stat.icon : "+"}</span>
                   <span className="absolute w-10 h-10 bg-[#3059f5] group-hover:-translate-y-[70%] transition-all rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></span>
                 </div>
                 <div className="mt-2 text-base font-semibold tracking-wide text-white uppercase">
-                  {stat.label}
+                  {stat.title || stat.label}
                 </div>
               </div>
             ))}

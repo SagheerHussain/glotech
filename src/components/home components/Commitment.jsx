@@ -9,9 +9,20 @@ import commitmentSix from "/Images/commitment/commitment (6).jpg";
 import commitmentSeven from "/Images/commitment/commetment (7).webp";
 import commitmentEight from "/Images/commitment/commitment (8).jpg";
 import { useTranslation } from "react-i18next";
+import { MdVerified } from "react-icons/md";
+import { IoMdHappy } from "react-icons/io";
+import { Ri24HoursLine } from "react-icons/ri";
+import { FaMedal } from "react-icons/fa6";
 
 export function Commitment() {
   const { t } = useTranslation();
+
+  const icons = [
+    { icon: <MdVerified /> },
+    { icon: <Ri24HoursLine /> },
+    { icon: <IoMdHappy /> },
+    { icon: <FaMedal /> },
+  ];
 
   const services = t("home-page-components.commitment", {
     returnObjects: true,
@@ -27,8 +38,6 @@ export function Commitment() {
     commitmentSeven,
     commitmentEight,
   ];
-
-
 
   // Data For Timeline
   const data = services.map((commitment, index) => {
@@ -68,7 +77,12 @@ export function Commitment() {
     <>
       <section id="commitment" className="py-24 bg-[#111] overflow-hidden">
         <div className="container">
-        <Timeline data={data} title={t("home-page-components.commitment_intro.title")} description={t("home-page-components.commitment_intro.description")} />
+          <Timeline
+            data={data}
+            icons={icons}
+            title={t("home-page-components.commitment_intro.title")}
+            description={t("home-page-components.commitment_intro.description")}
+          />
         </div>
       </section>
     </>
