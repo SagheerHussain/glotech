@@ -20,6 +20,36 @@ import apiOne from "/Images/Services Images/apps/api.jpg"
 import apiTwo from "/Images/Services Images/apps/api.png"
 import deploymentOne from "/Images/Services Images/apps/deployment (1).png"
 import deploymentTwo from "/Images/Services Images/apps/deployment (2).png"
+import barcodeOne from "/Images/Services Images/asset/barcode.jpg"
+import barcodeTwo from "/Images/Services Images/asset/rfid.jpg"
+import mobileAssetOne from "/Images/Services Images/asset/mobile-asset-tracking.png"
+import mobileAssetTwo from "/Images/Services Images/asset/mobile-asset.jpg"
+import centralAssetOne from "/Images/Services Images/asset/central-asset-db.png"
+import centralAssetTwo from "/Images/Services Images/asset/central-asset.png"
+import geoTaggingOne from "/Images/Services Images/asset/geo-tagg.jpg"
+import geoTaggingTwo from "/Images/Services Images/asset/geo-tagging.jpg"
+import automatedReportOne from "/Images/Services Images/asset/automated-report.png"
+import automatedReportTwo from "/Images/Services Images/asset/automated-reports.png"
+import visualizationOne from "/Images/Services Images/data-analytics/visualization.jpg"
+import visualizationTwo from "/Images/Services Images/data-analytics/visualization.png"
+import predictionOne from "/Images/Services Images/data-analytics/predict.jpg"
+import predictionTwo from "/Images/Services Images/data-analytics/predictive.jpg"
+import ETLOne from "/Images/Services Images/data-analytics/ETL.webp"
+import ETLTwo from "/Images/Services Images/data-analytics/ETL-service.webp"
+import cleanOne from "/Images/Services Images/data-analytics/data-clean.jpg"
+import cleanTwo from "/Images/Services Images/data-analytics/data-clean.png"
+import customReportOne from "/Images/Services Images/data-analytics/custom-report.jpg"
+import customReportTwo from "/Images/Services Images/data-analytics/custom-reports.jpg"
+import attendenceOne from "/Images/Services Images/hr-management/attendence.jpg"
+import attendenceTwo from "/Images/Services Images/hr-management/attendence.png"
+import onboaringOne from "/Images/Services Images/hr-management/onboarding.jpg"
+import onboaringTwo from "/Images/Services Images/hr-management/onboarding.png"
+import leaveOne from "/Images/Services Images/hr-management/leave.jpeg"
+import leaveTwo from "/Images/Services Images/hr-management/leave.jpg"
+import performanceOne from "/Images/Services Images/hr-management/performance.jpg"
+import performanceTwo from "/Images/Services Images/hr-management/performance-review.jpg"
+import taskOne from "/Images/Services Images/project-management/task.webp"
+import taskTwo from "/Images/Services Images/project-management/task-track.webp"
 import { useTranslation } from "react-i18next";
 import { MdVerified } from "react-icons/md";
 import { IoMdHappy } from "react-icons/io";
@@ -79,7 +109,61 @@ export function ServiceDetail({ params }) {
     {
       category: "data-analytics",
       src: [
-        
+        visualizationOne,
+        visualizationTwo,
+        predictionOne,
+        predictionTwo,
+        ETLOne,
+        ETLTwo,
+        cleanOne,
+        cleanTwo,
+        customReportOne,
+        customReportTwo
+      ],
+    },
+    {
+      category: "asset-tagging",
+      src: [
+        barcodeOne,
+        barcodeTwo,
+        mobileAssetOne,
+        mobileAssetTwo,
+        centralAssetOne,
+        centralAssetTwo,
+        geoTaggingOne,
+        geoTaggingTwo,
+        automatedReportOne,
+        automatedReportTwo
+      ],
+    },
+    {
+      category: "hr-management",
+      src: [
+        onboaringOne,
+        onboaringTwo,
+        attendenceOne,
+        attendenceTwo,
+        leaveOne,
+        leaveTwo,
+        performanceOne,
+        performanceTwo,
+        automatedReportOne,
+        automatedReportTwo
+      ],
+    },
+    {
+      category: "project-management",
+      src: [
+        taskOne,
+        taskTwo,
+        mobileAssetOne,
+        mobileAssetTwo,
+        centralAssetOne,
+        centralAssetTwo,
+        geoTaggingOne,
+        geoTaggingTwo,
+        automatedReportOne,
+        automatedReportTwo
       ],
     },
   ];

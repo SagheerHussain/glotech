@@ -22,8 +22,8 @@ const Info = () => {
     >
       <div className="overlay absolute top-0 left-0 w-full h-full bg-[#111111e4] -z-[1]"></div>
       <div className="container">
-        <div className="info_content flex md:flex gap-4 items-center">
-          <div className="info_content_card w-[45%]">
+        <div className="info_content flex md:flex-row flex-col gap-4 md:items-center">
+          <div className="info_content_card md:w-[45%]">
             <h1 className="text-white text-[2.5rem] font-bold leading-snug">
               {t("about-page-components.info.title")}
             </h1>
@@ -41,7 +41,7 @@ const Info = () => {
               ))}
             </div>
           </div>
-          <div className="info_content_img w-[55%]">
+          <div className="info_content_img md:w-[55%]">
             <img
               src="https://wpdemo.archiwp.com/engitech/wp-content/uploads/sites/4/2020/02/image1-home1.png"
               className="w-full"

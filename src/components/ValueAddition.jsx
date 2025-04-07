@@ -40,7 +40,7 @@ const ValueAddition = () => {
             </p>
           </div>
 
-          <div className="mb-10 grid lg:grid-cols-4 md:grid-cols-2 gap-6 grid-cols-1">
+          <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-2 gap-6 grid-cols-1">
             <div className="skynet_value_content text-center px-4 py-10 bg-[#222] relative group transition-all rounded-[80px_10px_10px_10px] shadow-2xl z-[0]">
               <div className="skynet_value_icon icon justify-center flex absolute -top-[30px] left-1/2 -translate-x-1/2 shadow-4xl z-[3]">
                 <span className="bg-gradient-to-r from-primary to-secondary group-hover:-rotate-[360deg] transition-all duration-200 p-3 rounded-[25px] rotate-0">

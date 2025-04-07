@@ -1,15 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Button from "../Button";
+import Swal from "sweetalert2";
+import { BeatLoader } from "react-spinners";
 
 const ContactForm = () => {
+  const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  // Submit Form
+  const handleContactForm = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    try {
+      // Step 2: Proceed with form submission only if reCAPTCHA is verified
+      const formData = new FormData(event.target);
+      formData.append("access_key", "e074078e-7716-4aaa-9995-7c06c9183dfe");
+
+      const object = Object.fromEntries(formData);
+
+      const json = JSON.stringify(object);
+
+      const formResponse = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      });
+
+      const formResult = await formResponse.json();
+
+      if (formResult.success) {
+        Swal.fire({
+          icon: "success",
+          title: "Successfully sent your form",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Form submission failed. Please try again!",
+        });
+      }
+
+      setLoading(false);
+    } catch (error) {
+      console.error("Error:", error);
+      setLoading(false);
+      Swal.fire({
+        icon: "error",
+        title: "An error occurred. Please try again later.",
+      });
+    }
+  };
+
   return (
     <>
       <section id="contact" className="py-20 bg-[#111]">
-        <div className="container bg-[#222]">
-          <div className="grid grid-cols-2 px-8 py-16 gap-4">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 px-8 py-16 gap-4 bg-[#222] rounded-[10px]">
             <div className="contact-info">
               <h1 className="text-5xl font-bold text-white">Contact Us</h1>
               <p className="text-white text-sm py-6 leading-loose">
@@ -49,7 +101,7 @@ const ContactForm = () => {
               </div>
             </div>
             <div className="contact_form bg-[#333] px-6 py-8 rounded-[15px]">
-              <form action="">
+              <form action="" onSubmit={handleContactForm}>
                 <div className="name">
                   <label
                     htmlFor="name"
@@ -59,7 +111,8 @@ const ContactForm = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full block bg-[#222] px-4 py-2 rounded-[5px] focus:outline-none focus:text-white"
+                    name="name"
+                    className="w-full block bg-[#222] px-4 py-2 rounded-[5px] focus:outline-none text-white"
                     placeholder="Name"
                   />
                 </div>
@@ -72,7 +125,8 @@ const ContactForm = () => {
                   </label>
                   <input
                     type="email"
-                    className="w-full block bg-[#222] px-4 py-2 rounded-[5px] focus:outline-none focus:text-white"
+                    name="email"
+                    className="w-full block bg-[#222] px-4 py-2 rounded-[5px] focus:outline-none text-white"
                     placeholder="Email"
                   />
                 </div>
@@ -85,7 +139,8 @@ const ContactForm = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full block bg-[#222] px-4 py-2 rounded-[5px] focus:outline-none focus:text-white"
+                    name="subject"
+                    className="w-full block bg-[#222] px-4 py-2 rounded-[5px] focus:outline-none text-white"
                     placeholder="Subject"
                   />
                 </div>
@@ -97,11 +152,18 @@ const ContactForm = () => {
                     Message*
                   </label>
                   <textarea
-                    className="w-full block bg-[#222] px-4 py-2 h-[150px] rounded-[5px] focus:outline-none focus:text-white"
+                    name="message"
+                    className="w-full block bg-[#222] px-4 py-2 h-[150px] rounded-[5px] focus:outline-none text-white"
                     placeholder="Message"
                   ></textarea>
                   <div className="mt-4">
-                    <Button label="Send Message" />
+                    {loading ? (
+                      <div className="bg-gradient-to-r from-primary to-secondary inline-block px-16 py-[.6rem] rounded-[25px]">
+                        <BeatLoader size={12} color="#fff" />
+                      </div>
+                    ) : (
+                      <Button label={"Send Message"} />
+                    )}
                   </div>
                 </div>
               </form>
