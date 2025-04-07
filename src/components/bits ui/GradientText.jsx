@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function GradientText({
   children,
   className = "",
-  colors = ["#ffaa40", "#9c40ff", "#ffaa40"],
+  colors = ["#3059f5", "#6223f0", "#3059f5"],
   animationSpeed = 8,
   showBorder = false,
 }) {
@@ -14,7 +14,7 @@ export default function GradientText({
 
   return (
     <div
-      className={`relative flex max-w-fit flex-row items-center justify-center rounded-[1.25rem] font-medium backdrop-blur transition-shadow duration-500 overflow-hidden cursor-pointer ${className}`}
+      className={`relative flex max-w-fit flex-row items-center justify-center rounded-[1.25rem] font-medium transition-shadow duration-500 overflow-hidden cursor-pointer ${className}`}
     >
       {showBorder && (
         <div
@@ -37,7 +37,7 @@ export default function GradientText({
         </div>
       )}
       <div
-        className="inline-block relative z-2 text-transparent bg-cover animate-gradient lg:text-[2.3rem] font-bold"
+        className="inline-block relative z-2 text-transparent bg-cover animate-gradient text-[1.5rem] lg:text-[1.85rem] xl:text-[2.3rem] font-bold"
         style={{
           ...gradientStyle,
           backgroundClip: "text",

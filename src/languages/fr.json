@@ -7,17 +7,43 @@
       "name": "Services",
       "slug": "/services",
       "subMenus": [
-        "Développement Web",
-        "Développement d'applications",
-        "Optimisation des moteurs de recherche",
-        "Image de marque"
+        {
+          "category": "web-development",
+          "title": "Développement Web",
+          "description": "Nous créons des sites web réactifs, rapides et évolutifs adaptés à vos objectifs commerciaux."
+        },
+        {
+          "category": "app-development",
+          "title": "Développement d'applications",
+          "description": "Nous développons des applications mobiles performantes pour les plateformes Android et iOS."
+        },
+        {
+          "category": "data-analytics",
+          "title": "Analyse de données",
+          "description": "Exploitez la puissance de vos données grâce à notre expertise sur Power BI et Google Looker Studio."
+        },
+        {
+          "category": "hr-management",
+          "title": "Gestion RH",
+          "description": "Simplifiez vos opérations RH avec nos systèmes de gestion des ressources humaines de pointe."
+        },
+        {
+          "category": "asset-tagging",
+          "title": "Étiquetage des actifs",
+          "description": "Gérez efficacement vos actifs grâce à nos solutions de gestion et d’étiquetage des actifs."
+        },
+        {
+          "category": "project-management",
+          "title": "Gestion de projet",
+          "description": "Nous vous aidons à planifier, exécuter et livrer vos projets avec précision et efficacité."
+        }
       ]
     },
     "Company": { "name": "Entreprise", "slug": "/company" },
     "Pricing": { "name": "Tarification", "slug": "/pricing" },
     "Contact": { "name": "Contact", "slug": "/contact" }
   },
-  "title": "Bienvenue chez Glotech-KSA votre partenaire de services informatiques en Arabie saoudite",
+  "title": "Bienvenue chez Glotech-KSA <1/> votre partenaire de services <1/> informatiques en Arabie saoudite",
   "description": "Nous offrons aux entreprises des solutions informatiques de pointe adaptées au marché saoudien. De la gestion des ressources humaines au développement de logiciels sur mesure, Glotech-KSA est votre interlocuteur unique pour tout ce qui touche à la technologie.",
   "home-page-components": {
     "about": {
@@ -29,27 +55,815 @@
       "visionTitle": "Notre vision",
       "visionText": "Notre objectif est de devenir le premier fournisseur de services informatiques en Arabie saoudite, reconnu pour notre expertise, notre fiabilité et notre engagement envers l'excellence. Notre vision est de stimuler la transformation numérique dans tous les secteurs, contribuant ainsi au progrès technologique et à la croissance économique du Royaume."
     },
+    "clients_counter_title": "Rejoignez plus de 200 clients satisfaits",
+    "services": [
+      { "name": "Services de développement Web" },
+      { "name": "Services multiplateformes" },
+      { "name": "Services d’analyse de données" },
+      { "name": "Système de gestion des ressources humaines" },
+      { "name": "Gestion et étiquetage des actifs" }
+    ],
+    "why_choose_intro": {
+      "subTitle": "~ Pourquoi nous choisir ? ~",
+      "title": "Nous servons une grande <1>variété</1> d'industries",
+      "description": "Vous trouverez ci-dessous un petit échantillon de certaines des industries que nous servons.",
+      "subHeading": "Toucher des vies grâce à la technologie"
+    },
     "why-choose": {
       "title": "Pourquoi choisir Glotech-KSA",
       "description": "De nombreuses entreprises, PME et innovateurs technologiques de premier plan au monde choisissent GloTech-KSA comme partenaire. Grâce à la conception de produits, à l'assurance qualité, au conseil et au développement de logiciels sur mesure, nous aidons les entreprises à accroître leur valeur.",
       "service": [
         {
           "title": "Expertise Locale",
-          "description": "Notre compréhension approfondie du marché saoudien nous permet de proposer des solutions conformes aux réglementations locales et aux attentes culturelles. Avec une équipe bien ancrée dans le contexte régional, nous assurons la précision, la conformité et la pertinence de chaque projet, aidant ainsi votre entreprise à créer un lien authentique avec le public saoudien."
+          "description": "Notre compréhension approfondie du marché saoudien nous permet de proposer des solutions conformes aux réglementations locales et aux attentes culturelles. Avec une équipe bien ancrée dans le contexte régional, nous assurons la précision, la conformité et la pertinence de chaque projet, aidant ainsi votre entreprise à créer un lien authentique avec le public saoudien.",
+          "features": [
+            "Expérience avec divers secteurs et industries locaux",
+            "Professionnels arabophones familiers avec les coutumes locales",
+            "Réseau solide et relations sur le marché saoudien",
+            "Expertise en conformité gouvernementale et normes locales"
+          ]
         },
         {
           "title": "Technologie de Pointe",
-          "description": "Nous adoptons les dernières avancées technologiques pour offrir à nos clients des solutions innovantes et prêtes pour l'avenir. En restant à la pointe des tendances numériques, nous vous apportons un avantage concurrentiel, de meilleures performances et des systèmes évolutifs. Notre équipe évolue constamment pour mettre en œuvre les outils de nouvelle génération."
+          "description": "Nous adoptons les dernières avancées technologiques pour offrir à nos clients des solutions innovantes et prêtes pour l'avenir. En restant à la pointe des tendances numériques, nous vous apportons un avantage concurrentiel, de meilleures performances et des systèmes évolutifs. Notre équipe évolue constamment pour mettre en œuvre les outils de nouvelle génération.",
+          "features": [
+            "Mise en œuvre de technologies modernes et d’architectures évolutives",
+            "Intégration de solutions d'IA, de machine learning et d'automatisation",
+            "Concentration sur la cybersécurité et la protection des données",
+            "Recherche continue sur les tendances technologiques mondiales pour une adoption locale"
+          ]
         },
         {
           "title": "Approche Personnalisée",
-          "description": "Chaque entreprise est unique, tout comme ses défis. Nous adaptons nos services à vos objectifs spécifiques, garantissant des résultats efficaces et performants. Grâce à une analyse approfondie et une planification personnalisée, nous élaborons des stratégies qui maximisent le retour sur investissement et reflètent fidèlement l'identité et les ambitions de votre entreprise."
+          "description": "Chaque entreprise est unique, tout comme ses défis. Nous adaptons nos services à vos objectifs spécifiques, garantissant des résultats efficaces et performants. Grâce à une analyse approfondie et une planification personnalisée, nous élaborons des stratégies qui maximisent le retour sur investissement et reflètent fidèlement l'identité et les ambitions de votre entreprise.",
+          "features": [
+            "Consultations personnalisées et analyse des besoins",
+            "Conception de solutions flexibles adaptées aux processus du client",
+            "Solutions modulaires et évolutives selon la croissance de votre entreprise",
+            "Chefs de projet dédiés pour garantir une livraison à temps"
+          ]
         },
         {
           "title": "Support Exceptionnel",
-          "description": "Notre engagement ne s'arrête pas à la livraison. Nous assurons un support technique dédié et une maintenance continue pour garantir que vos solutions restent à jour, optimisées et sécurisées. Qu'il s'agisse de dépannage, de mises à jour ou de conseils continus, notre équipe experte est toujours prête à vous accompagner."
+          "description": "Notre engagement ne s'arrête pas à la livraison. Nous assurons un support technique dédié et une maintenance continue pour garantir que vos solutions restent à jour, optimisées et sécurisées. Qu'il s'agisse de dépannage, de mises à jour ou de conseils continus, notre équipe experte est toujours prête à vous accompagner.",
+          "features": [
+            "Support client 24/7 via plusieurs canaux",
+            "Vérifications régulières de la santé du système et mises à jour",
+            "Surveillance proactive et résolution rapide des problèmes",
+            "Formation et accompagnement pour votre équipe"
+          ]
         }
       ]
+    },
+    "service_details_intro": {
+      "title": "~ Nos services exceptionnels ~",
+      "headline": "Nous sommes <1>engagés</1> <2></2> à vous servir à tout moment."
+    },
+    "services_details": [
+      {
+        "title": "Développement Web",
+        "description": "Nous créons des sites modernes et réactifs pour développer votre entreprise."
+      },
+      {
+        "title": "Développement d'applications",
+        "description": "Nous créons des applications mobiles performantes pour Android et iOS efficacement."
+      },
+      {
+        "title": "Analyse de données",
+        "description": "Exploitez la puissance de vos données grâce à notre expertise Power BI et Google Looker Studio."
+      },
+      {
+        "title": "Gestion des ressources humaines",
+        "description": "Rationalisez vos opérations RH avec nos systèmes de gestion de pointe."
+      },
+      {
+        "title": "Gestion des actifs",
+        "description": "Optimisez le suivi et la vérification de vos actifs grâce à nos services de marquage."
+      },
+      {
+        "title": "Gestion de projet",
+        "description": "Exploitez la puissance de vos données grâce à notre expertise Power BI et Google Looker Studio."
+      }
+    ],
+    "commitment_intro": {
+      "title": "Notre engagement envers l'excellence",
+      "description": "Nous nous engageons à fournir des solutions innovantes, fiables et de haute qualité qui dépassent les attentes et garantissent le succès à long terme de nos clients."
+    },
+    "commitment": [
+      {
+        "title": "99.9%",
+        "subTitle": "Garantie de disponibilité",
+        "description": "Nous assurons la disponibilité constante de vos systèmes critiques, réduisant les interruptions et maximisant la productivité."
+      },
+      {
+        "title": "24/7",
+        "subTitle": "Support disponible",
+        "description": "Notre équipe de support dédiée est toujours prête à vous aider pour garantir un fonctionnement fluide en continu."
+      },
+      {
+        "title": "100+",
+        "subTitle": "Clients satisfaits",
+        "description": "Nous avons servi avec succès plus de cent entreprises à travers l’Arabie Saoudite, des startups aux grandes entreprises."
+      },
+      {
+        "title": "15+",
+        "subTitle": "Années d’expérience",
+        "description": "Avec plus de 15 ans d’expérience, nous apportons une expertise précieuse à chaque projet que nous réalisons."
+      }
+    ],
+    "banner": {
+      "title": "Vous recherchez les meilleures solutions informatiques pour votre entreprise ?",
+      "description": "En tant qu'expert en robot d'exploration d'applications Web, nous vous aiderons à vous organiser."
     }
-  }
+  },
+  "about-page-components": {
+    "info": {
+      "title": "De la stratégie à l'image de marque, nous construisons le succès",
+      "description": "GLOTECH KSA est une entreprise saoudienne de services et de conseil en informatique spécialisée dans les systèmes de gestion des ressources humaines. Avec une équipe de 51 à 200 employés, elle fournit des produits et services exclusifs conçus pour améliorer l'efficacité organisationnelle."
+    },
+    "service_tagging": [
+      "Gestion des ressources humaines",
+      "Étiquetage et vérification des actifs",
+      "Développement de sites Web",
+      "Développement d'applications mobiles",
+      "Analyse de données"
+    ],
+    "mission": {
+      "title": "Notre mission",
+      "description": "Notre mission est de permettre aux entreprises du monde entier d’atteindre leur plein potentiel en fournissant des solutions informatiques, des services numériques et de commerce électronique exceptionnels. Nous nous engageons à créer des solutions innovantes permettant à nos clients d’exceller dans le paysage numérique, en les aidant à prospérer et à réussir dans leurs secteurs respectifs en traitant leurs affaires comme les nôtres."
+    },
+    "vision": {
+      "title": "Notre vision",
+      "description": "Notre objectif est de construire des relations durables avec nos clients en fournissant des solutions complètes et intégrées qui favorisent la croissance de l'entreprise. Nous offrons des stratégies innovantes conçues pour améliorer la présence numérique et maximiser le succès. Grâce à notre expertise et à notre technologie de pointe, nous assurons des expériences fluides et des résultats durables."
+    },
+    "audience": {
+      "title": "Public cible",
+      "description": "Nous accompagnons les entreprises de taille moyenne avec des solutions évolutives et les grandes entreprises avec des stratégies sur mesure. Notre priorité est de travailler avec des dirigeants axés sur le retour sur investissement, qui apprécient la fiabilité et l’expertise. Nous les aidons à prospérer sur des marchés compétitifs avec des résultats percutants. Grâce à notre expertise et à une technologie de pointe, nous garantissons des expériences fluides et des résultats durables."
+    },
+    "values_intro": {
+      "subTitle": "~ Découvrez le cœur de Glotech ~",
+      "title": "Rencontrez les <1>esprits passionnés</1> qui portent nos valeurs",
+      "description": "Chez Glotech, notre équipe n’est pas seulement compétente — elle est profondément ancrée dans des valeurs partagées qui nourrissent notre innovation et notre intégrité. De l’honnêteté et la collaboration au leadership et à l’agilité, chaque individu joue un rôle essentiel dans la création de notre culture et l’excellence de nos services."
+    },
+    "values": {
+      "honesty": {
+        "title": "Nous aimons",
+        "heading": "L’HONNÊTETÉ",
+        "description": "Nous sommes une équipe très soudée, nous nous soutenons avec empathie et authenticité. Chaque membre joue un rôle crucial dans notre succès. Ensemble, nous grandissons, innovons et travaillons pour faire de notre entreprise la meilleure du secteur."
+      },
+      "fist": {
+        "title": "Faites partie du",
+        "heading": "GROUPE",
+        "description": "Nous sommes un groupe uni. Cela signifie que nous nous soutenons mutuellement, agissons avec empathie et restons authentiques chaque jour pour devenir la meilleure entreprise du monde. Lorem ipsum dolor sit amet."
+      },
+      "boss": {
+        "title": "Soyez votre propre",
+        "heading": "PATRON",
+        "description": "Nous assumons pleinement la responsabilité de notre travail et de nos décisions. Avec une totale liberté, nous apportons de nouvelles idées et des solutions innovantes. La responsabilité nous pousse à atteindre l'excellence, assurant une croissance personnelle et professionnelle à chaque défi."
+      },
+      "flash": {
+        "title": "Soyez le",
+        "heading": "FLASH !",
+        "description": "Le monde évolue rapidement, et nous aussi. En nous adaptant vite, nous apprenons, désapprenons et réapprenons pour garder une longueur d'avance. Notre capacité à exécuter avec rapidité et précision nous permet de rester compétitifs dans cette ère numérique en constante évolution."
+      }
+    }
+  },
+  "counter": {
+    "projects": "Projets livrés",
+    "years": "Années d'expérience",
+    "members": "Membres de l'équipe",
+    "clients": "Clients"
+  },
+  "teams_intro": {
+    "subTitle": "~ Notre équipe incroyable ~",
+    "title": "Rencontrez l'équipe <1>passionnée</1> de Glotech",
+    "description": "Nous apportons créativité, expérience et engagement à chaque projet."
+  },
+  "teams": {
+    "members": [
+      { "name": "Ahmed Al Saud", "designation": "PDG et fondateur" },
+      {
+        "name": "Fatima Al Rashid",
+        "designation": "Directrice de la technologie"
+      },
+      {
+        "name": "Omer Khan",
+        "designation": "Responsable de la gestion de projet"
+      },
+      { "name": "David Rethman", "designation": "Développeur web" }
+    ]
+  },
+  "testimonial_intro": {
+    "subTitle": "Témoignages ~",
+    "title": "Voici ce que nos clients ont dit.",
+    "description": "Simplified IT est conçu pour vous garantir une protection optimale de vos données et le bon fonctionnement de votre ordinateur. Le réseau fourni par Access est très précieux."
+  },
+  "testimonials": [
+    {
+      "name": "John Doe",
+      "title": "Directeur de l'entreprise",
+      "description": "Collaborer avec GloTech-KSA a été un tournant décisif pour notre transformation numérique. Leur connaissance approfondie du marché local, combinée à une expertise technique de classe mondiale, nous a permis de rationaliser nos opérations et d’améliorer l’engagement client. Leur équipe s’est sentie comme une extension de la nôtre."
+    },
+    {
+      "name": "Jane Smith",
+      "title": "PDG de l'entreprise",
+      "description": "Dès notre première réunion, l’équipe de GloTech-KSA nous a impressionnés par son professionnalisme et son approche personnalisée. Ils ne nous ont pas simplement vendu un service — ils ont conçu une solution adaptée à nos besoins spécifiques. Le support après-vente a également été exceptionnel."
+    }
+  ],
+  "footer": [
+    {
+      "title": "logo",
+      "description": "Nous travaillons avec passion pour relever des défis et en créer de nouveaux dans le secteur de la publicité."
+    },
+    {
+      "title": "Bulletin",
+      "description": "Abonnez-vous à notre bulletin pour recevoir les dernières nouvelles et mises à jour."
+    },
+    {
+      "title": "Infos Bureau",
+      "address": {
+        "description": "123 Rue Principale, Riyad, Arabie Saoudite"
+      },
+      "phone": { "description": "1-888-432422424" },
+      "opening_hours": {
+        "title": "Heures d'ouverture",
+        "description": "Lun – Sam : 8h – 17h, Dimanche : FERMÉ"
+      }
+    },
+    {
+      "description": "© 2025, Glotech. Tous droits réservés."
+    },
+    {
+      "title": "Liens sociaux"
+    }
+  ],
+  "buttons": {
+    "about": "À propos de nous",
+    "get-in-touch": "Entrer en contact"
+  },
+  "labels": {
+    "subscribe": "S'abonner"
+  },
+  "services": [
+    {
+      "category": "web-development",
+      "title": "Services de développement Web pour réussir en ligne",
+      "description": "Concevez et développez des solutions Web personnalisées et performantes qui engagent les utilisateurs et offrent des expériences fluides. GloTech aide les entreprises à prospérer en ligne grâce à un développement Web innovant et centré sur l'utilisateur.",
+      "features": {
+        "title": "Nos services de développement Web",
+        "description": "Des pages d’atterrissage élégantes aux plateformes de niveau entreprise, nous créons des solutions qui génèrent des résultats. Notre équipe garantit un design intuitif, des performances élevées et une évolutivité complète.",
+        "features_services": [
+          {
+            "title": "Design réactif",
+            "description": "Mise en page adaptative, mobile-first, pour tous les appareils."
+          },
+          {
+            "title": "Optimisation SEO",
+            "description": "Assurez la visibilité grâce à un SEO technique et de contenu."
+          },
+          {
+            "title": "Intégration CMS",
+            "description": "Gestion de contenu simplifiée avec WordPress, Strapi, etc."
+          },
+          {
+            "title": "Applications Web personnalisées",
+            "description": "Applications sur mesure développées selon votre logique métier."
+          },
+          {
+            "title": "Vitesse & Sécurité",
+            "description": "Performance optimisée et sécurité de niveau entreprise."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 99, "title": "Projets terminés" },
+        { "count": 15, "title": "Années d'expérience" },
+        { "count": 100, "title": "Clients satisfaits" },
+        { "count": 100, "title": "Clients satisfaits" }
+      ],
+      "benefits": {
+        "title": "Des solutions Web prêtes pour l'avenir et évolutives",
+        "description": "Nous mettons l’accent sur la performance, l’esthétique et la fonctionnalité métier pour livrer des sites Web réactifs et performants. Que vous lanciez une startup ou que vous développiez une entreprise, nous simplifions votre parcours grâce à des solutions puissantes.",
+        "benefits_features": [
+          {
+            "title": "Expérience utilisateur optimisée",
+            "description": "Des designs centrés sur la facilité d'utilisation et l'engagement."
+          },
+          {
+            "title": "Compatibilité multi-navigateurs",
+            "description": "Performance parfaite sur tous les navigateurs majeurs."
+          },
+          {
+            "title": "Base de code modulaire",
+            "description": "Maintenance facile et évolutivité assurée."
+          },
+          {
+            "title": "Vitesse & Performance",
+            "description": "Temps de chargement rapides et excellents indicateurs de performance."
+          },
+          {
+            "title": "Bonnes pratiques SEO",
+            "description": "Développé en intégrant le SEO technique pour être bien référencé."
+          },
+          {
+            "title": "Support continu",
+            "description": "Bénéficiez d'une assistance et de mises à jour après le lancement."
+          }
+        ]
+      },
+      "why_choose": {
+        "title": "Pourquoi choisir GloTech-KSA comme partenaire Web ?",
+        "description": "Nous ne faisons pas que coder des sites – nous créons des expériences numériques qui captivent et convertissent. Chez GloTech, nos services allient innovation, évolutivité et excellence technique pour faire briller votre marque en ligne.",
+        "why_choose_features": [
+          {
+            "title": "Services tout-en-un",
+            "description": "De la stratégie au déploiement, nous nous occupons de tout."
+          },
+          {
+            "title": "UI/UX personnalisés",
+            "description": "Des designs qui reflètent votre identité de marque et génèrent des résultats."
+          },
+          {
+            "title": "Développement agile",
+            "description": "Des livraisons rapides et adaptables selon vos retours."
+          },
+          {
+            "title": "Sécurité avant tout",
+            "description": "Nos protocoles protègent vos données et vos utilisateurs."
+          }
+        ],
+        "technologies": {
+          "category": "web-development",
+          "title": "Tech Stack Our <1>Web Development</1> Company Leverage",
+          "description": "Empowering your web development with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+        }
+      }
+    },
+    {
+      "category": "app-development",
+      "title": "Développement d'applications multiplateformes pour une portée fluide",
+      "description": "Lancez des applications mobiles puissantes qui fonctionnent parfaitement sur iOS, Android et le Web. GloTech donne vie à votre idée d’application avec performance et facilité d’utilisation au cœur du processus.",
+      "features": {
+        "title": "Services de développement d'applications mobiles",
+        "description": "Nous créons des applications multiplateformes percutantes et riches en fonctionnalités à l'aide de Flutter, React Native et d'autres outils modernes pour une efficacité maximale et un engagement utilisateur élevé.",
+        "features_services": [
+          {
+            "title": "Flutter et React Native",
+            "description": "Développez une seule fois, déployez partout."
+          },
+          {
+            "title": "Déploiement sur les stores",
+            "description": "Publication fluide sur l’App Store et Google Play."
+          },
+          {
+            "title": "Fonctionnalité hors ligne",
+            "description": "Des applications qui fonctionnent même sans connexion Internet."
+          },
+          {
+            "title": "Intégration API",
+            "description": "Connectez-vous facilement à vos systèmes backend."
+          },
+          {
+            "title": "Fonctionnalités en temps réel",
+            "description": "Intégrez messagerie, notifications et synchronisation en direct."
+          }
+        ]
+      },
+      "stats": [
+        { "count": "99+", "title": "Applications lancées" },
+        { "count": "100+", "title": "Experts en développement d'applications" },
+        { "count": "5M+", "title": "Utilisateurs actifs d'applications" },
+        { "count": "4.8", "title": "Note sur Clutch" }
+      ],
+      "benefits": {
+        "title": "Développement d'applications simple et sans effort",
+        "description": "Notre processus fluide élimine la complexité et garantit une navigation intuitive. Notre agence de développement d'applications est reconnue pour livrer des produits performants, conviviaux et efficaces de l'idée au déploiement.",
+        "benefits_features": [
+          {
+            "title": "Validation du concept",
+            "description": "Analysez les besoins des utilisateurs et le potentiel du marché pour affiner votre idée."
+          },
+          {
+            "title": "Performance optimale",
+            "description": "Fonctionnement fluide sur iOS et Android."
+          },
+          {
+            "title": "Support hors ligne",
+            "description": "Les applications fonctionnent même sans connexion Internet."
+          },
+          {
+            "title": "Intégration d'API",
+            "description": "Connexion fluide aux systèmes backend."
+          },
+          {
+            "title": "Fonctionnalités temps réel",
+            "description": "Messagerie, alertes et synchronisation immédiate."
+          },
+          {
+            "title": "Tests complets",
+            "description": "Tests rigoureux pour garantir des performances sans faille."
+          }
+        ]
+      },
+      "why_choose": {
+        "title": "Pourquoi choisir GloTech-KSA comme partenaire de développement mobile ?",
+        "description": "GloTech est votre partenaire stratégique, pas seulement un prestataire. Nous créons des solutions numériques évolutives et puissantes qui soutiennent la croissance de votre entreprise, rationalisent les opérations et offrent une expérience utilisateur exceptionnelle.",
+        "why_choose_features": [
+          {
+            "title": "Assistance 24/7",
+            "description": "Disponible en permanence pour répondre à toutes vos questions."
+          },
+          {
+            "title": "Développement de haute qualité",
+            "description": "Solutions sur mesure parfaitement adaptées à vos besoins."
+          },
+          {
+            "title": "Méthodologie Agile efficace",
+            "description": "Workflows agiles personnalisés pour un délai de livraison réduit et une grande flexibilité."
+          },
+          {
+            "title": "Design utilisateur avancé",
+            "description": "UI/UX modernes et centrées sur l'utilisateur pour maximiser l'engagement."
+          }
+        ],
+        "technologies": { "category": "app-development", "title": "Tech Stack Our <1>App Development</1> Company Leverage", "description": "Empowering your apps with novel, high-end, and in-demand tech stacks for consistent performance and innovation." }
+      }
+    },
+    {
+      "category": "data-analytics",
+      "title": "Analytique des données pour des décisions plus intelligentes",
+      "description": "Transformez des données brutes en informations précieuses. Nos services d'analyse vous aident à prendre des décisions stratégiques éclairées à l'aide d'outils et de techniques avancés.",
+      "features": {
+        "title": "Solutions avancées d'analyse de données",
+        "description": "Nous fournissons des stratégies complètes avec tableaux de bord, rapports, et analyses prédictives qui transforment vos données en connaissances exploitables.",
+        "features_services": [
+          {
+            "title": "Visualisation des données",
+            "description": "Graphiques interactifs et tableaux de bord via des outils BI."
+          },
+          {
+            "title": "Analyse prédictive",
+            "description": "Prévoir les tendances avec des modèles d’apprentissage automatique."
+          },
+          {
+            "title": "Services ETL",
+            "description": "Extraction, transformation et chargement efficaces des données."
+          },
+          {
+            "title": "Nettoyage des données",
+            "description": "Éliminez les erreurs et améliorez la qualité des données."
+          },
+          {
+            "title": "Rapports personnalisés",
+            "description": "Rapports métier sur mesure pour des décisions éclairées."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 120, "title": "Projets analytiques" },
+        { "count": 30, "title": "Experts en données" },
+        { "count": "98%", "title": "Taux de fidélisation client" },
+        { "count": "10TB+", "title": "Données traitées chaque semaine" }
+      ],
+      "benefits": {
+        "title": "Transformez les Big Data en grands succès",
+        "description": "Nous fournissons des analyses axées sur les données pour stimuler la croissance et l’efficacité de votre entreprise. Nos services aident les décideurs à anticiper les tendances, optimiser les opérations et repérer les opportunités.",
+        "benefits_features": [
+          {
+            "title": "Informations exploitables",
+            "description": "Prenez des décisions fondées sur des données en temps réel."
+          },
+          {
+            "title": "Prévisions intelligentes",
+            "description": "Anticipez les tendances du marché avant qu'elles ne surviennent."
+          },
+          {
+            "title": "Précision des données",
+            "description": "Données propres, vérifiées et fiables."
+          },
+          {
+            "title": "Tableaux de bord personnalisés",
+            "description": "Visualisations interactives adaptées à vos indicateurs clés."
+          },
+          {
+            "title": "Optimisation des coûts",
+            "description": "Réduisez le gaspillage et allouez mieux les ressources."
+          },
+          {
+            "title": "Conformité et sécurité",
+            "description": "Vos données sont sécurisées et prêtes pour la conformité réglementaire."
+          }
+        ]
+      },
+      "why_choose": {
+        "title": "Pourquoi choisir GloTech-KSA pour l'analyse de données ?",
+        "description": "Nous allions expertise technique et stratégie commerciale pour exploiter le plein potentiel de vos données. Nos solutions sont flexibles, précises et conçues pour évoluer avec vos objectifs.",
+        "why_choose_features": [
+          {
+            "title": "Experts en BI",
+            "description": "Spécialisés en Power BI, Tableau et dashboards personnalisés."
+          },
+          {
+            "title": "Approche Data Science",
+            "description": "Exploitez l’IA et le ML pour une meilleure intelligence d'affaires."
+          },
+          {
+            "title": "Solutions sur mesure",
+            "description": "Pas de modèles prêts à l’emploi – nous personnalisons selon vos besoins."
+          },
+          {
+            "title": "Déploiement rapide",
+            "description": "Obtenez des insights plus vite grâce à des pipelines ETL optimisés."
+          }
+        ],
+        "technologies": {
+          "category": "data-analytics",
+          "title": "Tech Stack Our <1>Data Analytics</1> Company Leverage",
+          "description": "Empowering your analytics with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+        }
+      }
+    },
+    {
+      "category": "hr-management",
+      "title": "Solutions modernes de gestion des ressources humaines",
+      "description": "Donnez à votre service RH les moyens de réussir grâce à des solutions numériques intelligentes pour le recrutement, l'intégration, la gestion de la présence et le suivi des performances – le tout sur une seule plateforme.",
+      "features": {
+        "title": "Outils RH efficaces",
+        "description": "Nos systèmes RH rationalisent les opérations, améliorent la communication et garantissent la conformité réglementaire dans toute l’entreprise.",
+        "features_services": [
+          {
+            "title": "Intégration des employés",
+            "description": "Processus de recrutement et d'accueil entièrement numériques."
+          },
+          {
+            "title": "Suivi de la présence",
+            "description": "Systèmes biométriques, manuels ou via application mobile."
+          },
+          {
+            "title": "Gestion des congés",
+            "description": "Demandes automatisées et processus d'approbation simplifiés."
+          },
+          {
+            "title": "Évaluations de performance",
+            "description": "Suivi, évaluation et amélioration de la productivité."
+          },
+          {
+            "title": "Intégration de la paie",
+            "description": "Distribution fluide des salaires et gestion des impôts."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 85, "title": "Systèmes RH livrés" },
+        { "count": 10, "title": "Secteurs desservis" },
+        { "count": "99%", "title": "Précision des processus RH" },
+        { "count": "24/7", "title": "Support disponible" }
+      ],
+      "benefits": {
+        "title": "Des RH plus intelligentes pour des équipes plus heureuses",
+        "description": "Notre logiciel RH simplifie les flux de travail, améliore la productivité et maintient votre personnel connecté et conforme. Découvrez l’avenir des RH – numérique, automatisé et fluide.",
+        "benefits_features": [
+          {
+            "title": "Processus sans papier",
+            "description": "Numérisez le recrutement, la présence, les évaluations et plus encore."
+          },
+          {
+            "title": "Libre-service pour les employés",
+            "description": "Donnez aux employés les moyens de gérer leurs propres dossiers."
+          },
+          {
+            "title": "Informations basées sur les données",
+            "description": "Suivez la performance, le taux de rotation et l'engagement."
+          },
+          {
+            "title": "Paie intégrée",
+            "description": "Automatisez la paie, les taxes et la conformité."
+          },
+          {
+            "title": "Politiques personnalisées",
+            "description": "Créez des règles RH adaptées à la culture de votre entreprise."
+          },
+          {
+            "title": "Archivage sécurisé",
+            "description": "Stockez les données RH sensibles avec chiffrement et sauvegardes."
+          }
+        ]
+      },
+      "why_choose": {
+        "title": "Pourquoi choisir GloTech-KSA pour la gestion RH ?",
+        "description": "Nous comprenons les personnes et les processus. Nos solutions RH sont conçues pour simplifier les flux de travail, améliorer la satisfaction des équipes et garantir la conformité et l'efficacité.",
+        "why_choose_features": [
+          {
+            "title": "Plateforme tout-en-un",
+            "description": "Gérez toutes vos tâches RH depuis un tableau de bord intuitif."
+          },
+          {
+            "title": "Conforme à la réglementation",
+            "description": "Outils intégrés pour respecter les lois locales du travail."
+          },
+          {
+            "title": "Axé sur l'expérience employé",
+            "description": "Améliorez la satisfaction et la fidélisation avec des technologies RH modernes."
+          },
+          {
+            "title": "Évolutif",
+            "description": "Convient aussi bien aux startups qu'aux grandes entreprises – évolue avec vous."
+          }
+        ],
+        "technologies": {
+          "category": "hr-management",
+          "title": "Tech Stack Our <1>HR Management</1> Company Leverage",
+          "description": "Empowering your HR with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+        }
+      }
+    },
+    {
+      "category": "asset-tagging",
+      "title": "Étiquetage intelligent et vérification des actifs",
+      "description": "Identifiez, suivez et vérifiez vos actifs physiques numériquement pour éviter les pertes et renforcer la responsabilité. GloTech propose des solutions fiables pour la gestion de vos actifs.",
+      "features": {
+        "title": "Services de suivi des actifs",
+        "description": "Nous aidons les entreprises à mettre en œuvre des systèmes de suivi efficaces à l’aide de codes-barres, QR ou RFID, avec des modules de vérification centralisés.",
+        "features_services": [
+          {
+            "title": "Étiquetage code-barres & RFID",
+            "description": "Suivi précis des actifs physiques."
+          },
+          {
+            "title": "Scan mobile des actifs",
+            "description": "Vérification rapide via des applications mobiles."
+          },
+          {
+            "title": "Base de données centrale",
+            "description": "Conservez l'historique complet de chaque actif."
+          },
+          {
+            "title": "Géolocalisation",
+            "description": "Suivi en temps réel de la localisation des actifs."
+          },
+          {
+            "title": "Rapports automatisés",
+            "description": "Obtenez des rapports d’audit d’un simple clic."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 60, "title": "Projets d'actifs terminés" },
+        { "count": 5000, "title": "Actifs suivis" },
+        { "count": "99.9%", "title": "Précision du suivi" },
+        { "count": "100%", "title": "Disponibilité des données" }
+      ],
+      "benefits": {
+        "title": "Visibilité et contrôle optimisés des actifs",
+        "description": "Améliorez la responsabilité, éliminez les pertes et suivez votre inventaire en temps réel grâce à nos solutions complètes d'étiquetage d’actifs.",
+        "benefits_features": [
+          {
+            "title": "Transparence des actifs",
+            "description": "Visibilité et traçabilité des actifs en temps réel."
+          },
+          {
+            "title": "Systèmes prêts pour l’audit",
+            "description": "Toujours prêts pour les contrôles de conformité."
+          },
+          {
+            "title": "Vérification mobile",
+            "description": "Scanner et vérifier via des applications mobiles."
+          },
+          {
+            "title": "Prévention des pertes",
+            "description": "Réduction significative des vols et pertes d’actifs."
+          },
+          {
+            "title": "Planification de la maintenance",
+            "description": "Suivi des échéances et de l’historique de maintenance."
+          },
+          {
+            "title": "Accès cloud",
+            "description": "Gérez vos actifs de n’importe où, à tout moment."
+          }
+        ]
+      },
+      "why_choose": {
+        "title": "Pourquoi choisir GloTech-KSA pour l’étiquetage des actifs ?",
+        "description": "Nous fournissons des solutions flexibles et évolutives qui grandissent avec votre activité. Avec GloTech, vous bénéficiez d’un meilleur contrôle sur vos actifs et réduisez les pertes.",
+        "why_choose_features": [
+          {
+            "title": "Expertise QR, RFID et code-barres",
+            "description": "Des technologies de suivi adaptées à vos besoins spécifiques."
+          },
+          {
+            "title": "Plateformes compatibles mobiles",
+            "description": "Scanner les actifs sur le terrain ou depuis un entrepôt."
+          },
+          {
+            "title": "Intégrations personnalisées",
+            "description": "Connectez vos systèmes ERP ou logiciels d'inventaire."
+          },
+          {
+            "title": "Support dédié",
+            "description": "Assistance continue pour la gestion des actifs."
+          }
+        ],
+        "technologies": {
+          "category": "asset-tagging",
+          "title": "Tech Stack Our <1>Asset Tagging</1> Company Leverage",
+          "description": "Empowering your asset tagging with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+        }
+      }
+    },
+    {
+      "category": "project-management",
+      "title": "Gestion de projet agile pour la croissance des entreprises",
+      "description": "Livrez vos projets à temps et dans les limites du budget grâce à nos outils et stratégies de gestion de projet intelligents, adaptés à votre secteur et à vos objectifs.",
+      "features": {
+        "title": "Support complet du cycle de vie du projet",
+        "description": "De la planification à l’exécution, nous assurons une livraison efficace grâce aux méthodologies agiles et à une communication claire.",
+        "features_services": [
+          {
+            "title": "Suivi des tâches",
+            "description": "Attribuez, hiérarchisez et suivez les tâches du projet."
+          },
+          {
+            "title": "Collaboration d’équipe",
+            "description": "Communication fluide entre les équipes."
+          },
+          {
+            "title": "Suivi du budget",
+            "description": "Restez dans le budget grâce au suivi en temps réel."
+          },
+          {
+            "title": "Tableaux de bord de progression",
+            "description": "Visualisez chaque phase du projet en temps réel."
+          },
+          {
+            "title": "Rapports clients",
+            "description": "Mises à jour automatisées et suivi des jalons."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 110, "title": "Projets livrés" },
+        { "count": 25, "title": "Experts en gestion de projet" },
+        { "count": "95%", "title": "Livraison à temps" },
+        { "count": "4.9", "title": "Évaluations des clients" }
+      ],
+      "benefits": {
+        "title": "Piloter les projets de l’idée à la réalisation",
+        "description": "Nous dotons vos équipes des outils nécessaires pour planifier, exécuter et livrer. Nos services de gestion de projet éliminent les blocages et alignent vos équipes pour plus d’efficacité.",
+        "benefits_features": [
+          {
+            "title": "Planification simplifiée",
+            "description": "Découpez des objectifs complexes en étapes simples."
+          },
+          {
+            "title": "Supervision centralisée",
+            "description": "Surveillez tous les aspects de la santé du projet."
+          },
+          {
+            "title": "Méthodologies agiles",
+            "description": "Adaptez-vous rapidement aux changements grâce aux sprints."
+          },
+          {
+            "title": "Contrôle du temps et du budget",
+            "description": "Restez dans les limites de votre périmètre projet."
+          },
+          {
+            "title": "Outils intégrés",
+            "description": "Connectez la gestion de projet avec les communications et documents."
+          },
+          {
+            "title": "Collaboration client",
+            "description": "Offrez une transparence totale avec des mises à jour en direct."
+          }
+        ]
+      },
+      "why_choose": {
+        "title": "Pourquoi choisir GloTech-KSA pour la gestion de projet ?",
+        "description": "Des startups aux grandes entreprises, notre approche agile garantit des résultats. GloTech offre une clarté stratégique, une expertise opérationnelle et des outils numériques pour faire avancer vos projets sans friction.",
+        "why_choose_features": [
+          {
+            "title": "Experts Agile",
+            "description": "Scrum Masters et chefs de projet certifiés."
+          },
+          {
+            "title": "Flux de travail personnalisés",
+            "description": "Conçus sur mesure pour votre entreprise."
+          },
+          {
+            "title": "Collaboration en temps réel",
+            "description": "Synchronisation des équipes entre services."
+          },
+          {
+            "title": "Rapports avancés",
+            "description": "Suivez l'avancement, les risques et les indicateurs clés visuellement."
+          }
+        ],
+        "technologies": {
+          "category": "project-management",
+          "title": "Tech Stack Our <1>Project Management</1> Company Leverage",
+          "description": "Empowering your projects with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+        }
+      }
+    }
+  ]
 }

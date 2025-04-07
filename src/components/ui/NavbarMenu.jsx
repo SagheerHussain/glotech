@@ -66,9 +66,9 @@ export const ProductItem = ({ title, description, to, src }) => {
         width={140}
         height={70}
         alt={title}
-        className="shrink-0 rounded-md shadow-2xl"
+        className="shrink-0 rounded-md shadow-2xl "
       />
-      <div>
+      <div className="px-3">
         <h4 className="text-xl font-bold mb-1 text-white">
           {title}
         </h4>

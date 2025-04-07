@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { LanguageSwitcher, Logo } from "./index"; // Fixed import
+import { LanguageSwitcher, Logo, NavigationLayout } from "./index"; // Fixed import
 import { Link } from "react-router-dom";
 
 import Particles from "./bits ui/Particles";
@@ -7,6 +7,8 @@ import "../i18n";
 import { Navbar } from "./Navbar";
 import { Trans, useTranslation } from "react-i18next";
 import GradientText from "./bits ui/GradientText";
+import Button from "./Button";
+import Drawer from "./Drawer";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -41,9 +43,14 @@ const Header = () => {
   }, [lastScrollY]);
 
   return (
-    <header id="header" className="w-full h-screen">
+    <header
+      id="header"
+      className="w-full max-h-screen lg:max-h-[125vh] 2xl:max-h-[100vh] overflow-hidden relative before:content-[''] before:bg-[#4079ff06] before:lg:w-[400px] before:md:w-[300px] before:lg:h-[400px] before:md:h-[300px] before:absolute before:top-[115%] before:-translate-x-full before:-translate-y-full -before:z-0 before:rounded-full after:content-[''] after:bg-[#4079ff1a] after:lg:w-[500px] after:md:w-[400px] after:lg:h-[500px] after:md:h-[400px] after:absolute after:top-[115%] after:-translate-x-full after:-translate-y-full -after:z-0 after:rounded-full"
+    >
+      <div className="overlay absolute left-0 top-0 h-full md:w-1/2 lg:w-[40%] bg-[#4079ff0f] z-[1]"></div>
+
       {/* Particles Waves backgroud */}
-      <div className="h-screen w-full absolute">
+      <div className=" h-screen lg:h-[125vh] 2xl:h-[100vh] w-full absolute z-0">
         <Particles
           particleCount={800}
           particleSpread={12}
@@ -53,60 +60,28 @@ const Header = () => {
           moveParticlesOnHover={true}
           alphaParticles={false}
           disableRotation={false}
+          className={"h-full w-full relative"}
         />
       </div>
 
       {/* Navbar */}
-      <div
-        className={`w-full z-50 transition-all duration-500 ease-in-out py-4 flex justify-center
-                ${
-                  isScrollingUp
-                    ? `translate-y-0 ${
-                        isAtTop
-                          ? ""
-                          : "bg-[#171717]/50 backdrop-blur-[10px] shadow-lg"
-                      }`
-                    : "-translate-y-full"
-                } 
-            `}
-      >
-        <div className="container max-w-[1500px] flex items-center justify-between">
-          <div>
-            <GradientText
-              colors={["#fff", "#4079ff", "#fff", "#4079ff", "#fff"]}
-              animationSpeed={8}
-              showBorder={false}
-              className="custom-class"
-            >
-              GLOTECH-KSA
-            </GradientText>
-          </div>
-          <div>
-            <Navbar />
-          </div>
-          <div>
-            <LanguageSwitcher />
-          </div>
-        </div>
-      </div>
+      <NavigationLayout />
 
       {/* Header Content */}
-      <div className="header_content h-[calc(100vh-105px)] flex flex-col items-center justify-center">
-        <div className="header_content_width lg:max-w-4xl xl:max-w-6xl">
-          <h1 className="text-white font-bold text-center text-6xl">
-            <Trans i18nKey="title" components={{ 1: <br /> }} />
-          </h1>
+      <div className="header_content h-[calc(100vh-90px)] lg:h-[calc(125vh-0px)] 2xl:h-[calc(100vh-0px)] z-[2] flex flex-col items-start justify-center">
+        <div className="container">
+          <div className="header_title z-[9999] ">
+            <h1 className="text-white font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-[3.2rem]">
+              <Trans i18nKey="title" components={{ 1: <br /> }} />
+            </h1>
+          </div>
 
-          <p className="text-zinc-300 text-center text-xl pt-8 pb-4">
+          <p className="text-zinc-300 lg:text-lg pt-8 pb-4 md:max-w-3xl xl:max-w-3xl">
             {t("description")}
           </p>
 
-          <div className="text-center mt-6 flex items-center justify-center">
-            <button className="primary-button me-3">Our Services</button>
-            <button className="primary-button">
-              Contact Us
-              <span></span>
-            </button>
+          <div className="mt-6 flex items-center">
+            <Button label={t("buttons.get-in-touch")} />
           </div>
         </div>
       </div>

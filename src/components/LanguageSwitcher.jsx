@@ -28,7 +28,7 @@ const LanguageSwitcher = () => {
   return (
     <Listbox value={selected.value} onChange={changeLanguage}>
       <div className="relative">
-        <Listbox.Button className="flex items-center justify-between gap-2 px-6 py-3 bg-[#171717] text-white rounded-[25px] w-full">
+        <Listbox.Button className="flex items-center justify-between gap-2 px-6 py-3 bg-[#111] lg:bg-[#171717] text-white rounded-[25px] w-full">
           <div className="flex items-center gap-2">
             <img src={selected.icon} alt={selected.label} className="w-5 h-5" />
             <span>{selected.label}</span>
@@ -45,7 +45,7 @@ const LanguageSwitcher = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Listbox.Options className="absolute mt-2 bg-[#171717] rounded-lg w-full shadow-lg z-10">
+          <Listbox.Options className="absolute mt-2 bg-[#111] lg:bg-[#171717] rounded-lg w-full shadow-lg z-10">
             {languages.map((lang) => (
               <Listbox.Option
                 key={lang.value}
