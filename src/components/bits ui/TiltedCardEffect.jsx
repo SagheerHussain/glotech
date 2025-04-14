@@ -85,7 +85,7 @@ export default function TiltedCard({
       )}
 
       <motion.div
-        className="relative overflow-hidden flex flex-col items-center justify-center bg-[#222] rounded-[50px_10px_10px_10px] [transform-style:preserve-3d] p-4"
+        className="relative overflow-hidden flex flex-col items-center justify-center bg-white shadow-2xl rounded-[50px_10px_10px_10px] [transform-style:preserve-3d] p-4"
         style={{
           height: containerHeight,
           width: containerWidth,

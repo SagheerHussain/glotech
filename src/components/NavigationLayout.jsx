@@ -3,6 +3,7 @@ import GradientText from "./bits ui/GradientText";
 import { Navbar } from "./Navbar";
 import LanguageSwitcher from "./LanguageSwitcher";
 import DrawerMenus from "./Drawer";
+import Logo from "./Logo";
 
 const NavigationLayout = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -50,14 +51,15 @@ const NavigationLayout = () => {
             `}
       >
         <div className="container flex items-center justify-between">
-          <div>
+          <div className="flex items-center">
+            <Logo />
             <GradientText
-              colors={["#6223f0", "#3059f5", "#fff", "#3059f5", "#6223f0"]}
+              colors={["#c9a66f", "#8C6238", "#fff", "#c9a66f", "#8C6238"]}
               animationSpeed={8}
               showBorder={false}
               className=""
             >
-              GLOTECH-KSA
+              GLOTECH
             </GradientText>
           </div>
           <div className="mx-3">

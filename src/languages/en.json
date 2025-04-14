@@ -41,17 +41,17 @@
     },
     "Contact": { "name": "Contact", "slug": "/contact" }
   },
-  "title": "Welcome to Glotech-KSA <1/> Your IT Services Partner <1/> in Saudi Arabia",
-  "description": "Empowering businesses with cutting-edge IT solutions tailored for the Saudi Arabian market. From HR management to custom software development, Glotech-KSA is your one-stop destination for all things tech.",
+  "title": "Welcome to Glotech <1/> Pioneering Digital Innovation <1/> in Saudi Arabia",
+  "description": "Born in Riyadh with a vision to fuel Saudi Arabia’s Vision 2030, Azm Global Technology transforms ambitious ideas into real-world tech solutions. From AI-powered analytics to custom SaaS platforms, Azm empowers businesses to simplify operations, scale smarter, and lead boldly. It’s not just a tech company—it’s a movement shaping the future of digital excellence across the Kingdom.",
   "home-page-components": {
     "about": {
-      "heading": "About Glotech-KSA",
+      "heading": "About Glotech",
       "title": "Your Partner for <1/> Software Innovation",
-      "description": "Many of the top businesses, SMEs, and tech innovators in the world choose GloTech-KSA as their partner. Through product design, QA, consulting, and custom software development, we assist companies in increasing their worth.",
+      "description": "At Glotech KSA, we don’t just work with businesses—we build the future with them.",
       "missionTitle": "Our Mission",
-      "missionText": "At Glotech-KSA, we strive to revolutionize the IT landscape in Saudi Arabia by providing innovative, efficient, and tailored solutions to businesses of all sizes. Our mission is to empower organizations through technology, enabling them to thrive in the digital age.",
+      "missionText": "We empower businesses to unlock their full potential by delivering tailored, cutting-edge technology solutions. Through innovation and collaboration, we simplify operations, drive growth, and create value that goes beyond expectations. At Glotech KSA, our mission is to be more than a service provider—we strive to be a trusted partner in every business's journey toward excellence and impact.",
       "visionTitle": "Our Vision",
-      "visionText": "We aim to be the leading IT services provider in Saudi Arabia, recognized for our expertise, reliability, and commitment to excellence. Our vision is to drive digital transformation across industries, contributing to the Kingdom's technological advancement and economic growth."
+      "visionText": "To be the driving force behind transforming businesses into extraordinary success stories by leveraging innovation, technology, and relentless passion to redefine what’s possible in the digital era."
     },
     "clients_counter_title": "Join over +200 happy clients!",
     "services": [
@@ -72,8 +72,8 @@
       "description": "Many of the top businesses, SMEs, and tech innovators in the world choose GloTech-KSA as their partner. Through product design, QA, consulting, and custom software development, we assist companies in increasing their worth.",
       "service": [
         {
-          "title": "Local Expertise",
-          "description": "Our deep understanding of the Saudi Arabian market empowers us to deliver solutions that align with local regulations and cultural expectations. With a team well-versed in the regional landscape, we ensure every project is built with precision, compliance, and relevance—helping your business connect authentically with the people of Saudi Arabia.",
+          "title": "Comprehensive Suite of Services",
+          "description": "We offer an all-in-one solution for your business, covering everything your business needs.",
           "features": [
             "Experience working with various local industries and sectors",
             "Arabic-speaking professionals familiar with local customs",
@@ -82,8 +82,8 @@
           ]
         },
         {
-          "title": "Cutting-Edge Technology",
-          "description": "We embrace the latest technological advancements to bring our clients innovative and future-ready solutions. By staying ahead of digital trends, we ensure that you gain a competitive edge, increased performance, and scalable systems. Our team continuously evolves to implement next-gen tools, keeping your business aligned with the pace of global technological progress.",
+          "title": "Tailored Solutions",
+          "description": "Custom-built systems designed to meet your specific needs and goals.",
           "features": [
             "Implementation of modern tech stacks and scalable architecture",
             "Integration of AI, machine learning, and automation solutions",
@@ -92,8 +92,8 @@
           ]
         },
         {
-          "title": "Customized Approach",
-          "description": "Every business is different, and so are its challenges. We tailor our services to meet your specific goals and workflows, ensuring the most efficient and effective outcome possible. Through careful analysis and personalized planning, we deliver strategies that maximize ROI and create long-lasting value that truly reflects your business identity and ambitions.",
+          "title": "Expertise and Experience",
+          "description": "With years of experience of our professionals, we bring industry-specific knowledge and best practices to the table.",
           "features": [
             "Personalized consultations and requirement analysis",
             "Flexible solution design to match client workflows",
@@ -102,8 +102,8 @@
           ]
         },
         {
-          "title": "Exceptional Support",
-          "description": "Our commitment doesn’t end at deployment. We provide dedicated, long-term technical support and system maintenance to ensure your solutions stay updated, optimized, and secure. Whether it's troubleshooting, upgrades, or ongoing advice, our expert team is always ready to help you keep your IT infrastructure strong and your business running smoothly.",
+          "title": "Scalable and Flexible",
+          "description": "Our solutions grow with your business, adapting to changing needs as you scale.",
           "features": [
             "24/7 customer support via multiple channels",
             "Regular system health checks and updates",
@@ -132,15 +132,39 @@
       },
       {
         "title": "HR Management",
-        "description": "Streamline your workforce operations with our cutting-edge HR management systems"
+        "description": "Streamline your workforce operations with our cutting-edge HR management systems."
       },
       {
         "title": "Asset Management",
-        "description": "Optimize your asset tracking and verification processes with our tagging services"
+        "description": "Optimize your asset tracking and verification processes with our tagging services."
       },
       {
         "title": "Project Management",
-        "description": "Harness the power of your data with our Power BI and Google Looker Studio expertise."
+        "description": "Manage tasks, teams, and timelines efficiently with our smart project solutions."
+      },
+      {
+        "title": "Payroll Outsourcing",
+        "description": "Simplify payroll processing and compliance with our reliable outsourcing services."
+      },
+      {
+        "title": "Digital Marketing",
+        "description": "Boost your online presence and reach the right audience with our digital marketing strategies."
+      },
+      {
+        "title": "IT Services",
+        "description": "Comprehensive IT support and infrastructure solutions tailored for your business."
+      },
+      {
+        "title": "Cybersecurity Services",
+        "description": "Protect your business with advanced security strategies and risk mitigation solutions."
+      },
+      {
+        "title": "Cloud Services",
+        "description": "Enable seamless scalability and collaboration with our cloud infrastructure expertise."
+      },
+      {
+        "title": "AI Services",
+        "description": "Automate processes and enhance decision-making through our AI-driven solutions."
       }
     ],
     "commitment_intro": {
@@ -273,12 +297,9 @@
     },
     {
       "title": "Office Info",
-      "address": { "description": "123 Main Street, Riyadh, Saudi Arabia" },
-      "phone": { "description": "1-888-432422424" },
-      "opening_hours": {
-        "title": "Open Hours",
-        "description": "Mon – Sat: 8 am – 5 pm, Sunday: CLOSED"
-      }
+      "address": { "description": "Riyadh, Saudi Arabia" },
+      "phone": { "description": "+966-115123177" },
+      "email": { "description": "info@glotech-ksa.com" }
     },
     {
       "description": "copyright 2025, Glotech. All rights reserved."

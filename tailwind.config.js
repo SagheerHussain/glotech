@@ -15,9 +15,10 @@ export default {
         },
       },
       colors: {
-        primary: '#3059f5',
-        secondary: '#6223f0',
+        primary: '#8c6238',
+        secondary: '#c9a66f',
         theme: '#111111',
+        text_dark: "#222222",
         text_light: '#ccc'
       },
       animation: {

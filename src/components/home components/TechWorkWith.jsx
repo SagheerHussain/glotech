@@ -49,13 +49,9 @@ const TechWorkWith = () => {
     <>
       <section
         id="techWorkingWith"
-        className="pb-24 min-h-[250px] relative z-[9]"
-        style={{
-          background:
-            "url(/Images/team_meeting.jpg) no-repeat center center/cover",
-        }}
+        className="pb-24 min-h-[250px] relative z-[9] bg-white"
       >
-        <div className="overlay absolute top-0 left-0 w-full h-full bg-[#000000cb] z-[-1]"></div>
+        {/* <div className="overlay absolute top-0 left-0 w-full h-full bg-[#000000cb] z-[-1]"></div> */}
 
         <div className="container">
           {/* Services */}
@@ -72,7 +68,7 @@ const TechWorkWith = () => {
                   showTooltip={false}
                 >
                   {service.icon}
-                  <h1 className="text-base xl:text-lg text-center font-bold text-white">
+                  <h1 className="text-base xl:text-lg text-center font-bold text-text_dark">
                     {service.title}
                   </h1>
                 </TiltedCard>
@@ -83,7 +79,7 @@ const TechWorkWith = () => {
           {/* Technologies / Brands */}
           <div className="flex lg:flex-row flex-col justify-center items-center">
             <div className="clients_heading lg:w-1/3 lg:mb-0 mb-10">
-              <h6 className={`text-white font-semibold text-xl lg:text-sm relative  after:content-[''] after:align-middle ${arabic ? "after:-translate-x-5" : "after:translate-x-5"} after:inline-block after:w-[80px] after:h-[1px] after:bg-white`}>{t("home-page-components.clients_counter_title")}</h6>
+              <h6 className={`text-text_dark font-semibold text-xl lg:text-sm relative  after:content-[''] after:align-middle ${arabic ? "after:-translate-x-5" : "after:translate-x-5"} after:inline-block after:w-[80px] after:h-[1px] after:bg-text_dark`}>{t("home-page-components.clients_counter_title")}</h6>
             </div>
             <div className="clients_slider w-full lg:w-2/3">
               <Swiper

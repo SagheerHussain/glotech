@@ -41,7 +41,7 @@ const About = () => {
     <>
       <section
         id="about"
-        className="bg-theme py-20 relative overflow-y-visible"
+        className="bg-white py-20 relative overflow-y-visible"
       >
         <div className="container ">
           <div className="md:flex items-center">
@@ -63,12 +63,12 @@ const About = () => {
               />
             </div>
             <div className="about_company_content  md:w-1/2 lg:w-3/4">
-              <h3 className="px-8 py-2 rounded-[25px] bg-[#222] inline-block">
+              <h3 className="px-8 py-2 rounded-[25px] bg-primary inline-block">
                 <span className="text-white">
                   {t("home-page-components.about.heading")}
                 </span>
               </h3>
-              <h1 className="text-white font-bold text-4xl md:text-5xl py-6">
+              <h1 className="text-dark font-bold text-4xl md:text-5xl py-6">
                 <Trans
                   i18nKey="home-page-components.about.title"
                   components={{
@@ -76,25 +76,25 @@ const About = () => {
                   }}
                 />
               </h1>
-              <p className="text-text_light pe-3 leading-snug">
+              <p className="text-dark pe-3 leading-snug">
                 {t("home-page-components.about.description")}
               </p>
               <div className="sm:flex items-center">
-                <div className="our_mission py-6">
+                <div className="our_mission py-6 sm:w-1/2">
                   <FaMedal className="text-primary mb-3" size={24} />
-                  <h3 className="text-white text-xl font-semibold">
+                  <h3 className="text-dark text-xl font-semibold">
                     {t("home-page-components.about.missionTitle")}
                   </h3>
-                  <p className="text-text_light pe-3 leading-snug text-sm mt-3">
+                  <p className="text-dark pe-3 leading-snug text-sm mt-3">
                     {t("home-page-components.about.missionText")}
                   </p>
                 </div>
-                <div className="our_vision py-4">
+                <div className="our_vision py-4 sm:w-1/2">
                   <FaEye className="text-primary mb-3" size={24} />
-                  <h3 className="text-white text-xl font-semibold">
+                  <h3 className="text-dark text-xl font-semibold">
                     {t("home-page-components.about.visionTitle")}
                   </h3>
-                  <p className="text-text_light pe-3 leading-snug text-sm mt-3">
+                  <p className="text-dark pe-3 leading-snug text-sm mt-3">
                     {t("home-page-components.about.visionText")}
                   </p>
                 </div>

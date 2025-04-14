@@ -26,7 +26,7 @@ const TabContent = ({ src, title, description, features }) => {
   }, [i18n.language]);
 
   return (
-    <div className="w-full relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#14171f]">
+    <div className="w-full relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-dark bg-[#ddd]">
       <div className="flex md:flex-row flex-col py-14">
         {/* Image */}
         <div className="image p-6 md:w-[40%] relative h-full z-[2]">
@@ -43,16 +43,16 @@ const TabContent = ({ src, title, description, features }) => {
 
         {/* Content */}
         <div className="content md:ms-[10%] md:w-[50%]">
-          <h6 className="text-sm bg-gradient-to-r from-primary to-secondary inline-block px-3 py-1 rounded-full mb-4">
+          <h6 className="text-sm bg-gradient-to-r from-primary to-secondary text-white inline-block px-3 py-1 rounded-full mb-4">
             {t("home-page-components.why_choose_intro.subHeading")}
           </h6>
-          <h1 className="text-3xl font-bold text-white py-6">{title}</h1>
-          <p className="text-text_light text-base font-normal">{description}</p>
+          <h1 className="text-3xl font-bold text-dark py-6">{title}</h1>
+          <p className="text-dark text-base font-normal">{description}</p>
           <div className="features pt-10">
             {features.map((point, idx) => (
               <span
                 key={idx}
-                className="text-text_light text-sm font-normal block pb-3"
+                className="text-dark text-sm font-normal block pb-3"
               >
                 <IoCheckmarkDone
                   size={20}

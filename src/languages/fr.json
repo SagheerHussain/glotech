@@ -43,17 +43,17 @@
     "Pricing": { "name": "Tarification", "slug": "/pricing" },
     "Contact": { "name": "Contact", "slug": "/contact" }
   },
-  "title": "Bienvenue chez Glotech-KSA <1/> votre partenaire de services <1/> informatiques en Arabie saoudite",
-  "description": "Nous offrons aux entreprises des solutions informatiques de pointe adaptées au marché saoudien. De la gestion des ressources humaines au développement de logiciels sur mesure, Glotech-KSA est votre interlocuteur unique pour tout ce qui touche à la technologie.",
+  "title": "Bienvenue chez Glotech <1/> Pionnier de l’innovation numérique <1/> en Arabie Saoudite",
+  "description": "Fondée à Riyad avec une vision pour soutenir la Vision 2030 de l’Arabie Saoudite, Azm Global Technology transforme des idées ambitieuses en solutions technologiques concrètes. De l’analyse basée sur l’IA aux plateformes SaaS sur mesure, Azm permet aux entreprises de simplifier leurs opérations, de croître intelligemment et de diriger avec audace. Ce n’est pas simplement une entreprise technologique – c’est un mouvement qui façonne l’avenir de l’excellence numérique dans le Royaume.",
   "home-page-components": {
     "about": {
-      "heading": "À propos de Glotech-KSA",
-      "title": "Votre partenaire pour l'innovation logicielle",
-      "description": "De nombreuses entreprises, PME et innovateurs technologiques de premier plan au monde choisissent GloTech-KSA comme partenaire. Grâce à la conception de produits, à l'assurance qualité, au conseil et au développement de logiciels sur mesure, nous aidons les entreprises à accroître leur valeur.",
-      "missionTitle": "Notre Mission",
-      "missionText": "Chez Glotech-KSA, nous nous efforçons de révolutionner le paysage informatique en Arabie saoudite en proposant des solutions innovantes, efficaces et sur mesure aux entreprises de toutes tailles. Notre mission est de donner aux organisations les moyens de prospérer à l'ère du numérique grâce à la technologie.",
+      "heading": "À propos de Glotech",
+      "title": "Votre partenaire pour <1/> l’innovation logicielle",
+      "description": "Chez Glotech KSA, nous ne faisons pas que travailler avec les entreprises – nous construisons l’avenir avec elles.",
+      "missionTitle": "Notre mission",
+      "missionText": "Nous permettons aux entreprises de libérer tout leur potentiel en fournissant des solutions technologiques de pointe sur mesure. Grâce à l’innovation et à la collaboration, nous simplifions les opérations, stimulons la croissance et créons une valeur qui dépasse les attentes. Chez Glotech KSA, notre mission est d’être plus qu’un simple prestataire de services – nous aspirons à être un partenaire de confiance dans chaque parcours entrepreneurial vers l’excellence et l’impact.",
       "visionTitle": "Notre vision",
-      "visionText": "Notre objectif est de devenir le premier fournisseur de services informatiques en Arabie saoudite, reconnu pour notre expertise, notre fiabilité et notre engagement envers l'excellence. Notre vision est de stimuler la transformation numérique dans tous les secteurs, contribuant ainsi au progrès technologique et à la croissance économique du Royaume."
+      "visionText": "Être la force motrice qui transforme les entreprises en histoires de réussite exceptionnelles en tirant parti de l’innovation, de la technologie et d’une passion sans relâche pour redéfinir ce qui est possible à l’ère numérique."
     },
     "clients_counter_title": "Rejoignez plus de 200 clients satisfaits",
     "services": [
@@ -122,27 +122,51 @@
     "services_details": [
       {
         "title": "Développement Web",
-        "description": "Nous créons des sites modernes et réactifs pour développer votre entreprise."
+        "description": "Nous créons des sites web modernes et responsives pour développer votre entreprise et votre marque."
       },
       {
         "title": "Développement d'applications",
-        "description": "Nous créons des applications mobiles performantes pour Android et iOS efficacement."
+        "description": "Nous développons des applications mobiles performantes pour les plateformes Android et iOS."
       },
       {
         "title": "Analyse de données",
-        "description": "Exploitez la puissance de vos données grâce à notre expertise Power BI et Google Looker Studio."
+        "description": "Exploitez la puissance de vos données grâce à notre expertise sur Power BI et Google Looker Studio."
       },
       {
         "title": "Gestion des ressources humaines",
-        "description": "Rationalisez vos opérations RH avec nos systèmes de gestion de pointe."
+        "description": "Rationalisez vos opérations RH avec nos systèmes de gestion avancés."
       },
       {
         "title": "Gestion des actifs",
-        "description": "Optimisez le suivi et la vérification de vos actifs grâce à nos services de marquage."
+        "description": "Optimisez le suivi et la vérification de vos actifs grâce à nos services d’étiquetage."
       },
       {
         "title": "Gestion de projet",
-        "description": "Exploitez la puissance de vos données grâce à notre expertise Power BI et Google Looker Studio."
+        "description": "Gérez efficacement les tâches, les équipes et les délais avec nos solutions intelligentes de gestion de projet."
+      },
+      {
+        "title": "Externalisation de la paie",
+        "description": "Simplifiez le traitement des salaires et la conformité avec nos services fiables d’externalisation."
+      },
+      {
+        "title": "Marketing digital",
+        "description": "Améliorez votre présence en ligne et touchez le bon public grâce à nos stratégies de marketing numérique."
+      },
+      {
+        "title": "Services informatiques",
+        "description": "Support informatique complet et solutions d'infrastructure adaptées à votre entreprise."
+      },
+      {
+        "title": "Services de cybersécurité",
+        "description": "Protégez votre entreprise grâce à des stratégies de sécurité avancées et des solutions de gestion des risques."
+      },
+      {
+        "title": "Services Cloud",
+        "description": "Permettez une collaboration fluide et une évolutivité avec notre expertise en infrastructure cloud."
+      },
+      {
+        "title": "Services d’IA",
+        "description": "Automatisez les processus et améliorez la prise de décision grâce à nos solutions basées sur l'intelligence artificielle."
       }
     ],
     "commitment_intro": {
@@ -285,10 +309,7 @@
         "description": "123 Rue Principale, Riyad, Arabie Saoudite"
       },
       "phone": { "description": "1-888-432422424" },
-      "opening_hours": {
-        "title": "Heures d'ouverture",
-        "description": "Lun – Sam : 8h – 17h, Dimanche : FERMÉ"
-      }
+      "email": { "description": "info@glotech-ksa.com" }
     },
     {
       "description": "© 2025, Glotech. Tous droits réservés."
@@ -486,7 +507,11 @@
             "description": "UI/UX modernes et centrées sur l'utilisateur pour maximiser l'engagement."
           }
         ],
-        "technologies": { "category": "app-development", "title": "Tech Stack Our <1>App Development</1> Company Leverage", "description": "Empowering your apps with novel, high-end, and in-demand tech stacks for consistent performance and innovation." }
+        "technologies": {
+          "category": "app-development",
+          "title": "Tech Stack Our <1>App Development</1> Company Leverage",
+          "description": "Empowering your apps with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+        }
       }
     },
     {

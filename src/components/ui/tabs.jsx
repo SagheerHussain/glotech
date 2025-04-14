@@ -43,12 +43,12 @@ export const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full",
+                  "absolute inset-0 bg-gradient-to-r from-secondary to-secondary rounded-full",
                   activeTabClassName
                 )}
               />
             )}
-            <span className="relative block text-white hover:bg-gradient-to-r dark:text-white">
+            <span className="relative block text-dark hover:bg-gradient-to-r">
               {tab.title}
             </span>
           </button>

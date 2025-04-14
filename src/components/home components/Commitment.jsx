@@ -48,10 +48,10 @@ export function Commitment() {
       title: commitment.title,
       content: (
         <div>
-          <h1 className="text-white text-3xl font-bold mb-2">
+          <h1 className="text-dark text-3xl font-bold mb-2">
             {commitment.subTitle}
           </h1>
-          <p className="text-text_light text-sm md:text-base lg:text-lg font-normal mb-8">
+          <p className="text-dark text-sm md:text-base lg:text-lg font-normal mb-8">
             {commitment.description}
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -75,7 +75,7 @@ export function Commitment() {
 
   return (
     <>
-      <section id="commitment" className="py-24 bg-[#111] overflow-hidden">
+      <section id="commitment" className=" bg-white overflow-hidden">
         <div className="container">
           <Timeline
             data={data}

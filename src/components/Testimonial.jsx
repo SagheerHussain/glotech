@@ -36,23 +36,23 @@ const Testimonial = () => {
       id="testimonials"
       className="py-20 relative z-[10]"
       style={{
-        background: `url(https://img.freepik.com/premium-vector/dotted-world-map-black-background-vector-illustration_541075-470.jpg)`,
+        background: `url(https://media.istockphoto.com/id/1485424068/vector/world-map-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=FfRJAk0f0XWCMl1PjdGRVQSdUsVHpDjyfBBQE9L8GWg=)`,
       }}
     >
-      <div className="overlay absolute top-0 left-0 w-full h-full bg-[#111111db] -z-[1]"></div>
+      <div className="overlay absolute top-0 left-0 w-full h-full bg-[#ffffffac] -z-[1]"></div>
       <div className="container">
         <div className="md:flex items-center">
           <div className="testimonial_intro md:w-1/2">
             <div className="service_intro">
               <h3 className="flex mb-4">
-                <span className="text-white bg-[#222] inline-block px-8 py-2 rounded-[25px]">
+                <span className="text-white bg-primary inline-block px-8 py-2 rounded-[25px]">
                   {t("testimonial_intro.subTitle")}
                 </span>
               </h3>
-              <h2 className="text-white text-4xl pb-6 font-bold leading-snug">
+              <h2 className="text-dark text-4xl pb-6 font-bold leading-snug">
                 {t("testimonial_intro.title")}
               </h2>
-              <p className="text-text_light">
+              <p className="text-dark">
                 {t("testimonial_intro.description")}
               </p>
               <Button label={t("buttons.get-in-touch")} className="mt-6" />
@@ -72,7 +72,7 @@ const Testimonial = () => {
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
-                  <div className="testimonial_card bg-[#222] p-10">
+                  <div className="testimonial_card bg-white shadow-2xl p-10 rounded-[20px]">
                     <div className="card_ratings flex items-center">
                       <IoIosStar size={24} className="text-yellow-600" />
                       <IoIosStar size={24} className="text-yellow-600" />
@@ -81,7 +81,7 @@ const Testimonial = () => {
                       <IoIosStar size={24} className="text-yellow-600" />
                     </div>
                     <div className="card_description">
-                      <em className="text-text_light py-6 leading-loose inline-block">
+                      <em className="text-dark py-6 leading-loose inline-block">
                         {testimonial.description}
                       </em>
                     </div>
@@ -94,8 +94,8 @@ const Testimonial = () => {
                         />
                       </div>
                       <div className="company_headline ms-4">
-                        <h3 className="text-white">{testimonial.name}</h3>
-                        <span className="text-text_light">
+                        <h3 className="text-dark">{testimonial.name}</h3>
+                        <span className="text-dark">
                           {testimonial.title}
                         </span>
                       </div>

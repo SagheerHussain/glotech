@@ -33,25 +33,25 @@ export function GlotechChoosen() {
   }));
 
   return (
-    <section id="glotech-choosen" className="pt-20 pb-56">
+    <section id="glotech-choosen" className="pt-20 pb-56 bg-white">
       <div className="container">
         <div className="glotech_choosen_intro mb-20">
           <h3 className="flex justify-center mb-4">
-            <span className="text-white bg-[#222] inline-block px-8 py-2 rounded-[25px]">
+            <span className="text-white bg-primary inline-block px-8 py-2 rounded-[25px]">
               {t("home-page-components.why_choose_intro.subTitle")}
             </span>
           </h3>
-          <h2 className="text-white text-center text-4xl pb-3 font-bold leading-snug">
+          <h2 className="text-dark text-center text-4xl pb-3 font-bold leading-snug">
             <Trans
               i18nKey="home-page-components.why_choose_intro.title"
               components={{
                 1: (
-                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text" />
+                  <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text" />
                 )
               }}
             />
           </h2>
-          <p className="text-text_light text-lg text-center">
+          <p className="text-dark text-lg text-center">
             {t("home-page-components.why_choose_intro.description")}
           </p>
         </div>
