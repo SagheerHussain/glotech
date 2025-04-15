@@ -224,7 +224,7 @@ const Particles = ({
   return (
     <div
       ref={containerRef}
-      className={`absolute inset-0 z-0 ${className}`}
+      className={`absolute inset-0 bg-white z-[-1] ${className}`}
     />
   );
 };

@@ -46,7 +46,8 @@ export default function DrawerMenus() {
       sx={{
         width: 250,
         height: "100vh",
-        backgroundColor: "#14171f",
+        padding: ".5rem",
+        backgroundColor: "#222",
       }}
       role="presentation"
     >
@@ -59,7 +60,6 @@ export default function DrawerMenus() {
       </div>
       <List>
         {[menus.Home, menus.About, menus.Services, menus.Contact]?.map((menu, index) => {
-          console.log("text", menu);
           return (
             <ListItem key={menu.name} disablePadding>
               <ListItemButton>
@@ -105,8 +105,8 @@ export default function DrawerMenus() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)} className="text-white">
-        <HiMenuAlt3 size={32} color={`#fff`} />
+      <Button onClick={toggleDrawer(true)} className="text-dark">
+        <HiMenuAlt3 size={32} color={`#000`} />
       </Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}

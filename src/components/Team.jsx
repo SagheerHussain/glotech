@@ -25,21 +25,17 @@ const Team = () => {
   return (
     <section
       id="team"
-      className="py-20 relative z-[2]"
-      style={{
-        background: `url('https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149161863.jpg') no-repeat center center/cover`,
-      }}
+      className="py-20 relative bg-[#ddd]"
     >
-      <div className="overlay absolute top-0 left-0 w-full h-full bg-[#111111f1] -z-[1]"></div>
       <div className="container">
         <div className="max-w-screen-xl mx-auto">
           <div className="team_intro mb-20">
             <h3 className="flex justify-center">
-              <span className="text-white bg-[#222] inline-block px-8 py-2 rounded-[25px]">
+              <span className="text-white bg-primary inline-block px-8 py-2 rounded-[25px]">
                 {t("teams_intro.subTitle")}
               </span>
             </h3>
-            <h2 className="text-white text-center text-4xl py-4 font-bold leading-snug">
+            <h2 className="text-text_dark text-center text-4xl py-4 font-bold leading-snug">
               <Trans
                 i18nKey="teams_intro.title"
                 components={{
@@ -49,7 +45,7 @@ const Team = () => {
                 }}
               />
             </h2>
-            <p className="text-text_light text-center">
+            <p className="text-text_dark text-center">
               {" "}
               {t("teams_intro.description")}
             </p>
@@ -60,18 +56,18 @@ const Team = () => {
                 key={index}
                 className="flex flex-col items-center text-center rounded-lg"
               >
-                <div className="rounded-full overflow-hidden border-2 border-dashed border-gray-600 mb-4">
+                <div className="rounded-full overflow-hidden border-2 border-dashed border-secondary mb-4">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover p-3 rounded-full"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg font-semibold text-text_dark">
                   {member.name}
                 </h3>
-                <p className="text-gray-400 text-sm mb-3">{member.role}</p>
-                <div className="flex gap-4 text-gray-400 text-lg">
+                <p className="text-text_dark text-sm mb-3">{member.role}</p>
+                <div className="flex gap-4 text-text_dark text-lg">
                   <FaFacebookF className="hover:text-blue-500 cursor-pointer transition-all" />
                   <FaTwitter className="hover:text-sky-400 cursor-pointer transition-all" />
                   <FaYoutube className="hover:text-red-600 cursor-pointer transition-all" />

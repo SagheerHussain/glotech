@@ -42,11 +42,11 @@ export const TextHoverEffect = ({ text, duration = 0, className = "text-[3rem]" 
         <linearGradient id="textGradient" gradientUnits="userSpaceOnUse">
           {hovered && (
             <>
-              <stop offset="0%" stopColor="#8c6238" />
-              <stop offset="25%" stopColor="#8c6238" />
-              <stop offset="50%" stopColor="#c9a66f" />
-              <stop offset="75%" stopColor="#c9a66f" />
-              <stop offset="100%" stopColor="#8c6238" />
+              <stop offset="0%" stopColor="#111" />
+              <stop offset="25%" stopColor="#111" />
+              <stop offset="50%" stopColor="#222" />
+              <stop offset="75%" stopColor="#111" />
+              <stop offset="100%" stopColor="#111" />
             </>
           )}
         </linearGradient>
@@ -73,7 +73,7 @@ export const TextHoverEffect = ({ text, duration = 0, className = "text-[3rem]" 
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className={`fill-transparent stroke-neutral-700 font-[helvetica] ${className} font-bold dark:stroke-neutral-800`}
+        className={`fill-transparent stroke-secondary font-[helvetica] ${className} font-bold dark:stroke-neutral-800`}
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
@@ -85,7 +85,7 @@ export const TextHoverEffect = ({ text, duration = 0, className = "text-[3rem]" 
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className={`fill-transparent stroke-neutral-700 font-[helvetica] ${className} font-bold dark:stroke-neutral-800`}
+        className={`fill-transparent stroke-secondary font-[helvetica] ${className} font-bold dark:stroke-neutral-800`}
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
           strokeDashoffset: 0,

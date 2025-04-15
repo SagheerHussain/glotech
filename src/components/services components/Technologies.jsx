@@ -27,9 +27,22 @@ import powerBi from "/Images/technologies/data_analytics/power bi.png";
 import spacy from "/Images/technologies/data_analytics/spacy.png";
 import superAnnotate from "/Images/technologies/data_analytics/super annotate.png";
 import vision_ai from "/Images/technologies/data_analytics/vision_ai.png";
-import { Trans } from "react-i18next";
+import facebookAd from "/Images/technologies/marketing/facebook-ad.png";
+import googleAd from "/Images/technologies/marketing/google_ads.webp";
+import canva from "/Images/technologies/marketing/canva.jpg";
+import semrush from "/Images/technologies/marketing/semrush.png";
+import mailchimp from "/Images/technologies/marketing/mailchimp.png";
+import powerpoint from "/Images/technologies/payroll/powerpoint.png";
+import word from "/Images/technologies/payroll/word.png";
+import azure from "/Images/technologies/cloud/azure.webp";
+import postgresSql from "/Images/technologies/cloud/postgresql.webp";
+import nginx from "/Images/technologies/cloud/nginx.webp";
+import ansible from "/Images/technologies/cloud/ansible.webp";
+import { Trans, useTranslation } from "react-i18next";
 
 const Technologies = ({ params, filteredService }) => {
+  const { t } = useTranslation();
+
   const [currentStack, setCurrentStack] = useState({});
 
   const technologies = [
@@ -98,50 +111,139 @@ const Technologies = ({ params, filteredService }) => {
         { icon: google_cloud, title: "Google Cloud" },
       ],
     },
+    {
+      category: "project-management",
+      src: [
+        { icon: react, title: "React Js" },
+        { icon: node, title: "Node Js" },
+        { icon: angular, title: "Angular" },
+        { icon: html, title: "HTML" },
+        { icon: ionic, title: "Ionic" },
+        { icon: kotlin, title: "Kotlin" },
+        { icon: java, title: "Java" },
+        { icon: javascript, title: "JavaScript" },
+        { icon: jquery, title: "jQuery" },
+        { icon: mySql, title: "MySQL" },
+        { icon: aws, title: "AWS" },
+        { icon: google_cloud, title: "Google Cloud" },
+      ],
+    },
+    {
+      category: "payroll-outsourcing",
+      src: [
+        { icon: powerpoint, title: "PowerPoint" },
+        { icon: excel, title: "Excel" },
+        { icon: powerBi, title: "Power BI" },
+        { icon: word, title: "Microsoft Word" },
+        { icon: superAnnotate, title: "Super Annotate" },
+        { icon: vision_ai, title: "Vision AI" },
+      ],
+    },
+    {
+      category: "digital-marketing",
+      src: [
+        { icon: facebookAd, title: "Facebook Ads" },
+        { icon: googleAd, title: "Google Ads" },
+        { icon: canva, title: "Canva" },
+        { icon: semrush, title: "Semrush" },
+        { icon: mailchimp, title: "Mailchimp" },
+      ],
+    },
+    {
+      category: "cloud-services",
+      src: [
+        { icon: aws, title: "AWS" },
+        { icon: google_cloud, title: "Google Cloud" },
+        { icon: azure, title: "Azure" },
+        { icon: python, title: "Python" },
+        { icon: mySql, title: "MySQL" },
+        { icon: postgresSql, title: "PostgreSQL" },
+        { icon: mongodb, title: "Mongo DB" },
+        { icon: nginx, title: "Nginx" },
+        { icon: ansible, title: "Ansible" },
+      ],
+    },
+    {
+      category: "artificial-intelligence",
+      src: [
+        { icon: aws, title: "AWS" },
+        { icon: google_cloud, title: "Google Cloud" },
+        { icon: azure, title: "Azure" },
+        { icon: python, title: "Python" },
+        { icon: mySql, title: "MySQL" },
+        { icon: postgresSql, title: "PostgreSQL" },
+        { icon: mongodb, title: "Mongo DB" },
+        { icon: nginx, title: "Nginx" },
+        { icon: ansible, title: "Ansible" },
+      ],
+    },
+    {
+      category: "it-services",
+      src: [
+        { icon: aws, title: "AWS" },
+        { icon: google_cloud, title: "Google Cloud" },
+        { icon: azure, title: "Azure" },
+        { icon: python, title: "Python" },
+        { icon: mySql, title: "MySQL" },
+        { icon: postgresSql, title: "PostgreSQL" },
+        { icon: mongodb, title: "Mongo DB" },
+        { icon: nginx, title: "Nginx" },
+        { icon: ansible, title: "Ansible" },
+      ],
+    },
   ];
 
-  useEffect(() => {
-    const filteredTechnology = technologies.find(
-      (technology) => technology.category === params
-    );
-    setCurrentStack(filteredTechnology);
-  }, [params]);
+  const services = t("services", {
+    returnObjects: true,
+  });
 
-  console.log("current tack", currentStack);
+  const featuredTechnology = services.filter(
+    (service) => service.category === params
+  );
+
+  useEffect(() => {
+    const filteredTechnology = technologies.find((stack) => stack.category === featuredTechnology[0].category);
+    console.log("fitlered technology ====.", filteredTechnology)
+    setCurrentStack(filteredTechnology);
+  }, [params])
 
   return (
     <>
-      <section id="technologies" className="py-20">
-        <div className="container">
-          <div className="flex lg:flex-row flex-col items-center pb-20 gap-8">
-            <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold lg:text-start text-center">
-              {filteredService?.why_choose?.technologies?.title && (
-                <Trans
-                  components={{
-                    1: (
-                      <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text" />
-                    ),
-                  }}
-                >
-                  {filteredService.why_choose.technologies.title}
-                </Trans>
-              )}
-            </h2>
-            <p className="text-text_light text-center lg:text-start">
-              {filteredService?.why_choose?.technologies?.description}
-            </p>
-          </div>
+      {featuredTechnology[0]?.why_choose?.technologies && (
+        <section id="technologies" className="py-20 bg-white">
+          <div className="container">
+            <div className="flex lg:flex-row flex-col items-center pb-20 gap-8">
+              <h2 className="text-text_dark text-3xl sm:text-4xl lg:text-5xl font-bold lg:text-start text-center">
+                {featuredTechnology[0]?.why_choose?.technologies?.title && (
+                  <Trans
+                    components={{
+                      1: (
+                        <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text" />
+                      ),
+                    }}
+                  >
+                    {featuredTechnology[0]?.why_choose?.technologies?.title}
+                  </Trans>
+                )}
+              </h2>
+              <p className="text-text_dark text-center lg:text-start">
+                {featuredTechnology[0]?.why_choose?.technologies?.description}
+              </p>
+            </div>
 
-          <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 xl:grid-cols-9 gap-12">
-            {currentStack?.src?.map(({ icon, title }) => (
-              <div>
-                <img src={icon} className="max-w-[90px] mx-auto" alt="" />
-                <h4 className="text-white text-center font-medium mt-2">{title}</h4>
-              </div>
-            ))}
+            <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 xl:grid-cols-9 gap-12">
+              {currentStack?.src?.map(({ icon, title }) => (
+                <div>
+                  <img src={icon} className="max-w-[90px] mx-auto" alt="" />
+                  <h4 className="text-text_dark text-center font-medium mt-2">
+                    {title}
+                  </h4>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 };

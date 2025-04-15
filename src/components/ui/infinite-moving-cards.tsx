@@ -83,7 +83,7 @@ export const InfiniteMovingCards = ({
             <div className="relative flex items-center justify-between">
               <img
                 src={item.src}
-                className="max-w-full grayscale hover:grayscale-0 transition-all"
+                className="max-w-full transition-all"
                 alt=""
                 loading="lazy"
               />

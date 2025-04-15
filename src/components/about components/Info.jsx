@@ -3,20 +3,13 @@ import { ImCheckmark } from "react-icons/im";
 import { FaEye } from "react-icons/fa";
 import { FaMedal } from "react-icons/fa6";
 import { FiTarget } from "react-icons/fi";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 const Info = () => {
   const { t } = useTranslation();
 
-  const serviceTagging = t("about-page-components.service_tagging", {
-    returnObjects: true,
-  });
-
   return (
-    <section
-      id="info"
-      className="bg-white py-20 z-[2] relative"
-    >
+    <section id="info" className="bg-white py-20 z-[2] relative">
       <div className="container">
         <div className="info_content flex md:flex-row flex-col gap-4 md:items-center">
           <div className="info_content_card md:w-[45%]">
@@ -24,18 +17,12 @@ const Info = () => {
               {t("about-page-components.info.title")}
             </h1>
             <p className="text-dark text-sm pt-4 leading-loose">
-              {t("about-page-components.info.description")}
+              {/* {t("about-page-components.info.description")} */}
+              <Trans
+                i18nKey="about-page-components.info.description"
+                components={{ 1: <><br /> <br /></> }}
+              />
             </p>
-            <div className="service_tagging pt-8">
-              {serviceTagging?.map((service) => (
-                <div className="tagging flex items-center pb-4">
-                  <ImCheckmark size={16} color="#8c6238" />
-                  <h3 className="text-dark ps-3">
-                    {service}
-                  </h3>
-                </div>
-              ))}
-            </div>
           </div>
           <div className="info_content_img md:w-[55%]">
             <img

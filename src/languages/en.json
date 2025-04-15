@@ -36,6 +36,36 @@
           "category": "project-management",
           "title": "Project Management",
           "description": "We help you plan, execute, and deliver projects with precision and efficiency"
+        },
+        {
+          "category": "payroll-outsourcing",
+          "title": "Payroll Outsourcing",
+          "description": "We help you plan, execute, and deliver projects with precision and efficiency"
+        },
+        {
+          "category": "digital-marketing",
+          "title": "Digital Marketing",
+          "description": "We help you plan, execute, and deliver projects with precision and efficiency"
+        },
+        {
+          "category": "cloud-services",
+          "title": "Cloud Services",
+          "description": "We help you plan, execute, and deliver projects with precision and efficiency"
+        },
+        {
+          "category": "cyber-security",
+          "title": "Cyber Security",
+          "description": "We help you plan, execute, and deliver projects with precision and efficiency"
+        },
+        {
+          "category": "artificial-intelligence",
+          "title": "Artificial Intelligence",
+          "description": "We help you plan, execute, and deliver projects with precision and efficiency"
+        },
+        {
+          "category": "it-services",
+          "title": "IT Services",
+          "description": "We help you plan, execute, and deliver projects with precision and efficiency"
         }
       ]
     },
@@ -201,7 +231,7 @@
   "about-page-components": {
     "info": {
       "title": "From Strategy to Branding, We Build Success",
-      "description": "In 2021, Glotech KSA was born out of a bold vision shared by a team of dreamers and doers in Riyadh. It all began with a conversation—a realization that businesses across Saudi Arabia were hungry for solutions that could keep pace with the nation’s rapid transformation under Vision 2030. The team, with backgrounds spanning technology, finance, and innovation, decided to create something extraordinary: a company that didn’t just provide services but solved real problems and unlocked untapped potential."
+      "description": "In 2021, Glotech KSA was born out of a bold vision shared by a team of dreamers and doers in Riyadh. It all began with a conversation—a realization that businesses across Saudi Arabia were hungry for solutions that could keep pace with the nation’s rapid transformation under Vision 2030. The team, with backgrounds spanning technology, finance, and innovation, decided to create something extraordinary: a company that didn’t just provide services but solved real problems and unlocked untapped potential. <1/> The journey started with a simple yet powerful idea: What if technology could make businesses not only efficient but extraordinary? Driven by this question, Azm set out to empower companies with tools and strategies that simplify operations, save time, and deliver results. From custom software solutions to AI-powered analytics, from seamless cloud migration to cutting-edge digital marketing strategies, Azm became a partner businesses could rely on to grow smarter, faster, and stronger. <1/> But Azm’s story isn’t just about technology—it’s about people. It’s about the businesses that dared to dream bigger and the Azm team’s relentless passion for making those dreams a reality. Whether it’s creating bespoke SaaS platforms that streamline operations or designing web and app solutions that bring visions to life, Azm Global Technology is in the business of enabling success stories. <1/> Today, Azm is more than a company; it’s a movement. A movement to redefine what’s possible in business. A movement to turn challenges into opportunities. And a movement to ensure that every business it touches becomes not just better, but exceptional."
     },
     "service_tagging": [
       "Human Resource Management",
@@ -216,7 +246,7 @@
     },
     "vision": {
       "title": "Our Vision",
-      "description": "To be the driving force behind transforming businesses into extraordinary success stories by leveraging innovation, technology, and relentless passion to redefine what’s possible in the digital era."
+      "description": "To be the driving force behind transforming businesses into extraordinary success stories by leveraging innovation, technology, and relentless passion to redefine what’s possible in the digital era. To build a secure digital world where businesses operate with confidence. To empower organizations with proactive, intelligent cybersecurity solutions."
     },
     "audience": {
       "title": "Target Audience",
@@ -692,12 +722,7 @@
             "title": "Scalable for Growth",
             "description": "Fits startups to enterprises—grow as you go."
           }
-        ],
-        "technologies": {
-          "category": "hr-management",
-          "title": "Tech Stack Our <1>HR Management</1> Company Leverage",
-          "description": "Empowering your HR with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
-        }
+        ]
       }
     },
     {
@@ -887,6 +912,430 @@
           "description": "Empowering your projects with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
         }
       }
-    }
+    },
+    {
+      "category": "payroll-outsourcing",
+      "title": "Smart Payroll Outsourcing for Stress-Free Salaries",
+      "description": "We manage your payroll process so you can focus on business growth.",
+      "features": {
+        "title": "Full-Cycle Payroll Management",
+        "description": "From employee onboarding to final settlements, we manage your entire payroll process while ensuring compliance and precision.",
+        "features_services": [
+          {
+            "title": "Accurate Payroll Processing",
+            "description": "Timely, compliant payroll processing with tax calculations."
+          },
+          {
+            "title": "Tax Compliance",
+            "description": "Ensuring your company complies with tax laws and regulations."
+          },
+          {
+            "title": "Reports Generation",
+            "description": "Payroll reports, tax filings, and detailed financial summaries."
+          },
+          {
+            "title": "Employee Payslips",
+            "description": "Providing clear, accurate payslips for your employees, ensuring transparency."
+          },
+          {
+            "title": "Cost Efficiency",
+            "description": "Outsourcing reduces overhead and ensures efficient payroll management."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 120, "title": "Payroll Clients Served" },
+        { "count": 15, "title": "HR & Payroll Specialists" },
+        { "count": 99.3, "icon": "%", "title": "On-Time Payroll Accuracy" },
+        { "count": 4.9, "title": "Client Satisfaction Rating" }
+      ],
+      "benefits": {
+        "title": "Run Payroll Without Lifting a Finger",
+        "description": "Our payroll outsourcing service lets you focus on business growth while we handle the complexities. From salary to compliance, we've got it covered.",
+        "benefits_features": [
+          {
+            "title": "Zero Payroll Errors",
+            "description": "Reduce manual mistakes with rule-based automation."
+          },
+          {
+            "title": "Time Savings",
+            "description": "Free up your HR teams to focus on strategic initiatives."
+          },
+          {
+            "title": "Regulatory Compliance",
+            "description": "Stay audit-ready with timely reports and filings."
+          },
+          {
+            "title": "Secure Data Handling",
+            "description": "Protect sensitive employee data with end-to-end encryption."
+          },
+          {
+            "title": "Scalable for Growth",
+            "description": "Handle payroll for startups to enterprises with ease."
+          },
+          {
+            "title": "Employee Self-Service",
+            "description": "Let employees access payslips, tax docs, and leave data."
+          }
+        ]
+      },
+      "why_choose": {
+        "title": "Why Choose GloTech-KSA for Payroll Outsourcing?",
+        "description": "We simplify payroll for businesses of all sizes with smart automation, legal compliance, and expert guidance. GloTech ensures your payroll is precise, punctual, and 100% stress-free.",
+        "why_choose_features": [
+          {
+            "title": "Experienced Payroll Team",
+            "description": "HR, finance, and compliance specialists with deep industry know-how."
+          },
+          {
+            "title": "Cloud-Based Processing",
+            "description": "Manage payroll anytime, anywhere via secure portals."
+          },
+          {
+            "title": "Legal & Tax Compliance",
+            "description": "Stay aligned with Saudi labor and tax laws effortlessly."
+          },
+          {
+            "title": "End-to-End Support",
+            "description": "From onboarding to final settlements — all covered."
+          }
+        ],
+        "technologies": {
+          "category": "payroll-outsourcing",
+          "title": "Tech Stack Powering Our <1>Payroll Outsourcing</1> Services",
+          "description": "From automated salary engines to compliance platforms — our tech ecosystem ensures seamless, secure, and scalable payroll experiences."
+        }
+      }
+    },
+    {
+      "category": "digital-marketing",
+      "title": "Digital Marketing",
+      "description": "We elevate your brand’s presence online with comprehensive digital marketing services.",
+      "features": {
+        "title": "Our Digital Marketing Services",
+        "description": "From SEO to analytics, we ensure your brand reaches the right audience effectively.",
+        "features_services": [
+          {
+            "title": "SEO",
+            "description": "Optimizing your website and content to rank higher in search engine results."
+          },
+          {
+            "title": "Content Creation",
+            "description": "Developing engaging, high-quality content that resonates with your audience."
+          },
+          {
+            "title": "Social Media Marketing",
+            "description": "Managing and growing your presence on platforms like Facebook, Instagram, LinkedIn, and Twitter."
+          },
+          {
+            "title": "Paid Advertising",
+            "description": "Targeted ad campaigns across Google Ads, social media, and display networks."
+          },
+          {
+            "title": "Analytics & Reporting",
+            "description": "Providing measurable insights to track and optimize campaign performance."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 120, "title": "Payroll Clients Served" },
+        { "count": 15, "title": "HR & Payroll Specialists" },
+        { "count": 99.3, "icon": "%", "title": "On-Time Payroll Accuracy" },
+        { "count": 4.9, "title": "Client Satisfaction Rating" }
+      ],
+      "why_choose": {
+        "title": "Why Choose GloTech-KSA for Payroll Outsourcing?",
+        "description": "We simplify payroll for businesses of all sizes with smart automation, legal compliance, and expert guidance. GloTech ensures your payroll is precise, punctual, and 100% stress-free.",
+        "why_choose_features": [
+          {
+            "title": "Experienced Payroll Team",
+            "description": "HR, finance, and compliance specialists with deep industry know-how."
+          },
+          {
+            "title": "Cloud-Based Processing",
+            "description": "Manage payroll anytime, anywhere via secure portals."
+          },
+          {
+            "title": "Legal & Tax Compliance",
+            "description": "Stay aligned with Saudi labor and tax laws effortlessly."
+          },
+          {
+            "title": "End-to-End Support",
+            "description": "From onboarding to final settlements — all covered."
+          }
+        ],
+        "technologies": {
+          "category": "digital-marketing",
+          "title": "Tech Stack Powering Our <1>Digital Marketing</1> Services",
+          "description": "From automated salary engines to compliance platforms — our tech ecosystem ensures seamless, secure, and scalable payroll experiences."
+        }
+      }
+    },
+    {
+      "category": "cloud-services",
+      "title": "Cloud Services",
+      "description": "Migrate and optimize your business on the cloud for better scalability and security.",
+      "features": {
+        "title": "Complete Cloud Solutions",
+        "description": "From hosting to security, we deliver end-to-end cloud services tailored to your infrastructure needs.",
+        "features_services": [
+          {
+            "title": "Cloud Hosting",
+            "description": "Reliable hosting services on platforms like AWS, Microsoft Azure, and Google Cloud."
+          },
+          {
+            "title": "Cloud Migration",
+            "description": "Seamlessly migrating your existing systems to the cloud."
+          },
+          {
+            "title": "Data Storage & Management",
+            "description": "Scalable cloud storage solutions with secure data access."
+          },
+          {
+            "title": "Disaster Recovery",
+            "description": "Implementing cloud-based backup and recovery solutions."
+          },
+          {
+            "title": "Cloud Security",
+            "description": "Protecting your cloud infrastructure from security threats."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 180, "title": "Cloud Deployments Completed" },
+        { "count": 30, "title": "Cloud Engineers Onboard" },
+        { "count": 99.9, "icon": "%", "title": "Uptime Guarantee" },
+        { "count": 4.95, "title": "Client Rating Score" }
+      ],
+      "why_choose": {
+        "title": "Why Choose GloTech-KSA for Cloud Services?",
+        "description": "From migration to disaster recovery, we provide future-proof cloud infrastructure with full compliance, uptime, and scalability.",
+        "why_choose_features": [
+          {
+            "title": "Certified Cloud Experts",
+            "description": "Experienced engineers with AWS, Azure, and GCP certifications."
+          },
+          {
+            "title": "Seamless Integration",
+            "description": "Integrate cloud with existing systems and workflows easily."
+          },
+          {
+            "title": "Enterprise Security",
+            "description": "End-to-end encryption, access control, and threat protection."
+          },
+          {
+            "title": "Flexible Architecture",
+            "description": "Custom cloud setups tailored for your business size and sector."
+          }
+        ],
+        "technologies": {
+          "category": "cloud-services",
+          "title": "Tech Stack Powering Our <1>Cloud Services</1>",
+          "description": "We use leading platforms and tools like AWS, Azure, GCP, Docker, Kubernetes, and Terraform to build robust cloud environments."
+        }
+      }
+    },
+    {
+      "category": "cyber-security",
+      "title": "Cybersecurity Services",
+      "description": "Safeguard your business with our comprehensive cybersecurity solutions.",
+      "features": {
+        "title": "Comprehensive Cybersecurity Solutions",
+        "description": "From threat monitoring to training, we provide end-to-end security solutions tailored to your business.",
+        "features_services": [
+          {
+            "title": "Threat Monitoring",
+            "description": "Continuous monitoring to identify and mitigate security risks."
+          },
+          {
+            "title": "Penetration Testing",
+            "description": "Simulating attacks to identify vulnerabilities and improve defenses."
+          },
+          {
+            "title": "Firewall Management",
+            "description": "Implementing and managing firewalls to protect your network."
+          },
+          {
+            "title": "Data Encryption",
+            "description": "Ensuring sensitive data is protected through encryption."
+          },
+          {
+            "title": "Employee Training",
+            "description": "Training employees to recognize and avoid common cybersecurity threats."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 250, "title": "Threats Mitigated" },
+        { "count": 40, "title": "Certified Security Experts" },
+        { "count": 99.99, "icon": "%", "title": "System Uptime Guarantee" },
+        { "count": 4.97, "title": "Customer Satisfaction Rating" }
+      ],
+      "why_choose": {
+        "title": "Why Choose GloTech-KSA for Cybersecurity?",
+        "description": "We protect your digital assets with industry-leading tools, expert teams, and tailored strategies.",
+        "why_choose_features": [
+          {
+            "title": "Certified Cyber Experts",
+            "description": "Professionals certified in CISSP, CEH, and CompTIA Security+."
+          },
+          {
+            "title": "Proactive Security Measures",
+            "description": "We identify and neutralize threats before they impact your business."
+          },
+          {
+            "title": "Advanced Encryption Standards",
+            "description": "State-of-the-art encryption to secure your sensitive data."
+          },
+          {
+            "title": "Tailored Security Frameworks",
+            "description": "Custom cybersecurity frameworks designed for your business size and sector."
+          }
+        ],
+        "technologies": {
+          "category": "Cybersecurity",
+          "title": "Technologies Powering Our <1>Cybersecurity</1> Services",
+          "description": "We use platforms and tools like Palo Alto, Fortinet, Splunk, AWS Shield, and CrowdStrike for robust protection."
+        }
+      }
+    },   
+    {
+      "category": "artificial-intelligence",
+      "title": "AI Services",
+      "description": "Leverage AI to automate business processes and gain insights from your data.",
+      "features": {
+        "title": "Smart AI-Powered Business Solutions",
+        "description": "Our AI services optimize operations, enhance customer experiences, and unlock business potential.",
+        "features_services": [
+          {
+            "title": "Process Automation",
+            "description": "Using AI to automate repetitive tasks and increase efficiency."
+          },
+          {
+            "title": "AI Analytics",
+            "description": "Harnessing AI for advanced data analysis and predictive insights."
+          },
+          {
+            "title": "Chatbots and Virtual Assistants",
+            "description": "Developing AI-powered bots to improve customer interaction."
+          },
+          {
+            "title": "Personalized Experiences",
+            "description": "Using AI to deliver personalized services to customers."
+          },
+          {
+            "title": "Machine Learning",
+            "description": "Building algorithms that evolve and improve over time to drive decision-making."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 120, "title": "AI Projects Delivered" },
+        { "count": 35, "title": "AI Engineers Onboard" },
+        { "count": 98.6, "icon": "%", "title": "Client Retention Rate" },
+        { "count": 4.92, "title": "Client Satisfaction Score" }
+      ],
+      "why_choose": {
+        "title": "Why Choose GloTech-KSA for AI Services?",
+        "description": "We combine deep learning, automation, and real-time data intelligence to drive digital transformation.",
+        "why_choose_features": [
+          {
+            "title": "Experienced AI Engineers",
+            "description": "Our experts specialize in NLP, computer vision, and data science."
+          },
+          {
+            "title": "Custom AI Solutions",
+            "description": "We tailor AI services to your business needs and industry."
+          },
+          {
+            "title": "Seamless Integration",
+            "description": "Our AI solutions easily integrate with your existing systems."
+          },
+          {
+            "title": "Cutting-Edge Tools",
+            "description": "We utilize platforms like TensorFlow, PyTorch, OpenAI, and Azure AI."
+          }
+        ],
+        "technologies": {
+          "category": "AI Services",
+          "title": "Technologies Powering Our <1>AI Services</1>",
+          "description": "We use AI platforms such as OpenAI, TensorFlow, PyTorch, Hugging Face, Azure AI, and Dialogflow."
+        }
+      }
+    },
+    {
+      "category": "it-services",
+      "title": "Managed IT Services",
+      "description": "We provide proactive IT management to ensure your systems are running smoothly.",
+      "features": {
+        "title": "Reliable & Scalable IT Management",
+        "description": "From network monitoring to 24/7 support, we ensure maximum uptime and optimized infrastructure.",
+        "features_services": [
+          {
+            "title": "Network Monitoring",
+            "description": "Constant monitoring to detect and resolve issues before they impact business."
+          },
+          {
+            "title": "Server Management",
+            "description": "Ensuring servers are optimized and maintained for performance."
+          },
+          {
+            "title": "Backup and Recovery",
+            "description": "Regular data backups and rapid recovery solutions in case of data loss."
+          },
+          {
+            "title": "IT Infrastructure Management",
+            "description": "End-to-end management of your technology infrastructure."
+          },
+          {
+            "title": "Scalability Solutions",
+            "description": "Designing and managing IT systems that grow with your business."
+          },
+          {
+            "title": "IT Support & Helpdesk Services",
+            "description": "Comprehensive IT support to resolve any technical issues quickly.",
+            "sub_features": [
+              { "title": "24/7 Support", "description": "Round-the-clock support to ensure your systems stay up and running." },
+              { "title": "Remote Troubleshooting", "description": "Quick resolutions through remote access to your systems." },
+              { "title": "Onsite Support", "description": "Dispatching technicians when on-site support is needed." },
+              { "title": "Proactive Monitoring", "description": "Identifying and addressing issues before they cause downtime." }
+            ]
+          }
+        ]
+      },
+      "stats": [
+        { "count": 300, "title": "Systems Monitored" },
+        { "count": 50, "title": "Certified IT Engineers" },
+        { "count": 99.95, "icon": "%", "title": "Uptime Achieved" },
+        { "count": 4.93, "title": "Customer Satisfaction Score" }
+      ],
+      "why_choose": {
+        "title": "Why Choose GloTech-KSA for IT Services?",
+        "description": "We provide end-to-end IT solutions tailored to your business needs with unmatched reliability and support.",
+        "why_choose_features": [
+          {
+            "title": "Certified IT Experts",
+            "description": "Experienced technicians and engineers with global certifications."
+          },
+          {
+            "title": "Scalable IT Architecture",
+            "description": "Flexible systems that scale with your business growth."
+          },
+          {
+            "title": "24/7 Service Desk",
+            "description": "Always-on IT support to keep your operations running smoothly."
+          },
+          {
+            "title": "Best-in-Class Tools",
+            "description": "Utilizing tools like SolarWinds, ManageEngine, Datadog, and Microsoft Intune."
+          }
+        ],
+        "technologies": {
+          "category": "IT Services",
+          "title": "Technologies Powering Our <1>IT Services</1>",
+          "description": "We use technologies such as SolarWinds, Datadog, Microsoft Intune, ManageEngine, TeamViewer, and VMware to deliver reliable IT support."
+        }
+      }
+    }    
   ]
 }

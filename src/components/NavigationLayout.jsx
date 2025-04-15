@@ -54,7 +54,7 @@ const NavigationLayout = () => {
           <div className="flex items-center">
             <Logo />
             <GradientText
-              colors={["#c9a66f", "#8C6238", "#fff", "#c9a66f", "#8C6238"]}
+              colors={["#c9a66f", "#8C6238", "#c9a66f", "#c9a66f", "#8C6238"]}
               animationSpeed={8}
               showBorder={false}
               className=""
@@ -82,14 +82,15 @@ const NavigationLayout = () => {
         } `}
       >
         <div className="container flex items-center justify-between">
-          <div>
+        <div className="flex items-center">
+            <Logo />
             <GradientText
-              colors={["#6223f0", "#3059f5", "#fff", "#3059f5", "#6223f0"]}
+              colors={["#c9a66f", "#8C6238", "#c9a66f", "#c9a66f", "#8C6238"]}
               animationSpeed={8}
               showBorder={false}
               className=""
             >
-              GLOTECH-KSA
+              GLOTECH
             </GradientText>
           </div>
           <div>

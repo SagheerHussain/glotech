@@ -49,7 +49,7 @@ const TechWorkWith = () => {
     <>
       <section
         id="techWorkingWith"
-        className="pb-24 min-h-[250px] relative z-[9] bg-white"
+        className="pb-24 min-h-[250px] relative z-[9] bg-[#eee]"
       >
         {/* <div className="overlay absolute top-0 left-0 w-full h-full bg-[#000000cb] z-[-1]"></div> */}
 

@@ -10,32 +10,62 @@
         {
           "category": "web-development",
           "title": "Développement Web",
-          "description": "Nous créons des sites web réactifs, rapides et évolutifs adaptés à vos objectifs commerciaux."
+          "description": "Nous créons des sites web réactifs, rapides et évolutifs adaptés à vos objectifs business."
         },
         {
           "category": "app-development",
-          "title": "Développement d'applications",
-          "description": "Nous développons des applications mobiles performantes pour les plateformes Android et iOS."
+          "title": "Développement d'Applications",
+          "description": "Nous développons des applications mobiles performantes pour Android et iOS."
         },
         {
           "category": "data-analytics",
-          "title": "Analyse de données",
-          "description": "Exploitez la puissance de vos données grâce à notre expertise sur Power BI et Google Looker Studio."
+          "title": "Analyse de Données",
+          "description": "Exploitez vos données avec notre expertise Power BI et Google Looker Studio."
         },
         {
           "category": "hr-management",
-          "title": "Gestion RH",
-          "description": "Simplifiez vos opérations RH avec nos systèmes de gestion des ressources humaines de pointe."
+          "title": "Gestion des RH",
+          "description": "Optimisez vos opérations RH avec nos systèmes avancés de gestion des ressources humaines."
         },
         {
           "category": "asset-tagging",
-          "title": "Étiquetage des actifs",
-          "description": "Gérez efficacement vos actifs grâce à nos solutions de gestion et d’étiquetage des actifs."
+          "title": "Étiquetage des Actifs",
+          "description": "Gérez efficacement vos actifs grâce à nos solutions de gestion et d'étiquetage."
         },
         {
           "category": "project-management",
-          "title": "Gestion de projet",
-          "description": "Nous vous aidons à planifier, exécuter et livrer vos projets avec précision et efficacité."
+          "title": "Gestion de Projet",
+          "description": "Nous vous aidons à planifier, exécuter et livrer vos projets avec précision."
+        },
+        {
+          "category": "payroll-outsourcing",
+          "title": "Externalisation de la Paie",
+          "description": "Nous gérons vos salaires pour vous concentrer sur la croissance de votre entreprise en toute conformité."
+        },
+        {
+          "category": "digital-marketing",
+          "title": "Marketing Digital",
+          "description": "Renforcez votre présence en ligne grâce à nos stratégies de SEO, contenu et publicité."
+        },
+        {
+          "category": "cloud-services",
+          "title": "Services Cloud",
+          "description": "Faites évoluer votre entreprise avec une infrastructure cloud sécurisée, fiable et rentable."
+        },
+        {
+          "category": "cyber-security",
+          "title": "Cybersécurité",
+          "description": "Protégez vos actifs numériques avec nos solutions de cybersécurité avancées."
+        },
+        {
+          "category": "artificial-intelligence",
+          "title": "Intelligence Artificielle",
+          "description": "Exploitez l'IA pour automatiser, prévoir et améliorer l’intelligence d'affaires."
+        },
+        {
+          "category": "it-services",
+          "title": "Services Informatiques",
+          "description": "Support informatique complet et services adaptés à votre organisation."
         }
       ]
     },
@@ -202,53 +232,61 @@
   },
   "about-page-components": {
     "info": {
-      "title": "De la stratégie à l'image de marque, nous construisons le succès",
-      "description": "GLOTECH KSA est une entreprise saoudienne de services et de conseil en informatique spécialisée dans les systèmes de gestion des ressources humaines. Avec une équipe de 51 à 200 employés, elle fournit des produits et services exclusifs conçus pour améliorer l'efficacité organisationnelle."
+      "title": "De la stratégie à l’image de marque, nous construisons le succès",
+      "description": "En 2021, Glotech KSA est née d’une vision audacieuse partagée par une équipe de rêveurs et d’acteurs à Riyad. Tout a commencé par une conversation — une prise de conscience que les entreprises en Arabie Saoudite avaient besoin de solutions capables de suivre le rythme de la transformation rapide du pays sous Vision 2030. L’équipe, avec des parcours en technologie, finance et innovation, a décidé de créer quelque chose d’extraordinaire : une entreprise qui ne fournit pas seulement des services, mais résout de vrais problèmes et libère du potentiel inexploité."
     },
     "service_tagging": [
       "Gestion des ressources humaines",
       "Étiquetage et vérification des actifs",
-      "Développement de sites Web",
+      "Développement de sites web",
       "Développement d'applications mobiles",
       "Analyse de données"
     ],
     "mission": {
-      "title": "Notre mission",
-      "description": "Notre mission est de permettre aux entreprises du monde entier d’atteindre leur plein potentiel en fournissant des solutions informatiques, des services numériques et de commerce électronique exceptionnels. Nous nous engageons à créer des solutions innovantes permettant à nos clients d’exceller dans le paysage numérique, en les aidant à prospérer et à réussir dans leurs secteurs respectifs en traitant leurs affaires comme les nôtres."
+      "title": "Notre Mission",
+      "description": "Nous permettons aux entreprises de libérer tout leur potentiel en fournissant des solutions technologiques de pointe adaptées à leurs besoins. Grâce à l’innovation et à la collaboration, nous simplifions les opérations, stimulons la croissance et créons de la valeur au-delà des attentes. Chez Azm Global Technology, nous ne sommes pas seulement un prestataire — nous sommes un partenaire de confiance dans chaque parcours vers l’excellence."
     },
     "vision": {
-      "title": "Notre vision",
-      "description": "Notre objectif est de construire des relations durables avec nos clients en fournissant des solutions complètes et intégrées qui favorisent la croissance de l'entreprise. Nous offrons des stratégies innovantes conçues pour améliorer la présence numérique et maximiser le succès. Grâce à notre expertise et à notre technologie de pointe, nous assurons des expériences fluides et des résultats durables."
+      "title": "Notre Vision",
+      "description": "Être la force motrice qui transforme les entreprises en histoires de succès extraordinaires grâce à l'innovation, à la technologie et à une passion sans relâche pour redéfinir ce qui est possible à l’ère numérique. Construire un monde numérique sécurisé où les entreprises opèrent en toute confiance. Donner aux organisations les moyens de se protéger grâce à des solutions de cybersécurité intelligentes et proactives."
     },
     "audience": {
-      "title": "Public cible",
-      "description": "Nous accompagnons les entreprises de taille moyenne avec des solutions évolutives et les grandes entreprises avec des stratégies sur mesure. Notre priorité est de travailler avec des dirigeants axés sur le retour sur investissement, qui apprécient la fiabilité et l’expertise. Nous les aidons à prospérer sur des marchés compétitifs avec des résultats percutants. Grâce à notre expertise et à une technologie de pointe, nous garantissons des expériences fluides et des résultats durables."
+      "title": "Public Cible",
+      "description": "Nous soutenons les entreprises de taille moyenne avec des solutions évolutives et accompagnons les grandes entreprises avec des stratégies sur mesure. Notre objectif est de servir des leaders orientés résultats, qui valorisent la fiabilité et l’expertise. Grâce à la technologie de pointe, nous leur assurons des résultats durables et des expériences sans faille."
     },
     "values_intro": {
       "subTitle": "~ Découvrez le cœur de Glotech ~",
-      "title": "Rencontrez les <1>esprits passionnés</1> qui portent nos valeurs",
-      "description": "Chez Glotech, notre équipe n’est pas seulement compétente — elle est profondément ancrée dans des valeurs partagées qui nourrissent notre innovation et notre intégrité. De l’honnêteté et la collaboration au leadership et à l’agilité, chaque individu joue un rôle essentiel dans la création de notre culture et l’excellence de nos services."
+      "title": "Rencontrez les esprits <1>passionnés</1> qui incarnent nos valeurs",
+      "description": "Chez Glotech, notre équipe n’est pas seulement compétente — elle est animée par des valeurs communes qui nourrissent notre innovation et notre intégrité. De l’honnêteté à la collaboration, en passant par le leadership et l’agilité, chaque individu contribue à façonner notre culture et à offrir l’excellence."
     },
     "values": {
       "honesty": {
-        "title": "Nous aimons",
-        "heading": "L’HONNÊTETÉ",
-        "description": "Nous sommes une équipe très soudée, nous nous soutenons avec empathie et authenticité. Chaque membre joue un rôle crucial dans notre succès. Ensemble, nous grandissons, innovons et travaillons pour faire de notre entreprise la meilleure du secteur."
+        "title": "Intégrité",
+        "description": "Nous respectons les normes éthiques les plus élevées dans tout ce que nous faisons."
       },
       "fist": {
-        "title": "Faites partie du",
-        "heading": "GROUPE",
-        "description": "Nous sommes un groupe uni. Cela signifie que nous nous soutenons mutuellement, agissons avec empathie et restons authentiques chaque jour pour devenir la meilleure entreprise du monde. Lorem ipsum dolor sit amet."
+        "title": "Innovation",
+        "description": "Nous adoptons des technologies de pointe pour proposer des solutions innovantes."
       },
       "boss": {
-        "title": "Soyez votre propre",
-        "heading": "PATRON",
-        "description": "Nous assumons pleinement la responsabilité de notre travail et de nos décisions. Avec une totale liberté, nous apportons de nouvelles idées et des solutions innovantes. La responsabilité nous pousse à atteindre l'excellence, assurant une croissance personnelle et professionnelle à chaque défi."
+        "title": "Orientation client",
+        "description": "Nous plaçons les besoins de nos clients au cœur de nos priorités pour assurer leur succès."
       },
       "flash": {
-        "title": "Soyez le",
-        "heading": "FLASH !",
-        "description": "Le monde évolue rapidement, et nous aussi. En nous adaptant vite, nous apprenons, désapprenons et réapprenons pour garder une longueur d'avance. Notre capacité à exécuter avec rapidité et précision nous permet de rester compétitifs dans cette ère numérique en constante évolution."
+        "title": "Collaboration",
+        "description": "Nous collaborons étroitement avec nos clients et nos équipes pour offrir les meilleures solutions."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Nous visons l’excellence et cherchons à dépasser les attentes dans chaque projet."
+      },
+      "agility": {
+        "title": "Agilité",
+        "description": "Nous restons flexibles et nous adaptons aux besoins évolutifs des entreprises."
+      },
+      "sustainability": {
+        "title": "Durabilité",
+        "description": "Nous proposons des solutions axées sur la croissance durable à long terme."
       }
     }
   },
@@ -887,6 +925,446 @@
           "category": "project-management",
           "title": "Tech Stack Our <1>Project Management</1> Company Leverage",
           "description": "Empowering your projects with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+        }
+      }
+    },
+    {
+      "category": "payroll-outsourcing",
+      "title": "Externalisation Intelligente de la Paie Sans Stress",
+      "description": "Nous gérons votre processus de paie pour que vous puissiez vous concentrer sur la croissance de votre entreprise.",
+      "features": {
+        "title": "Gestion Complète de la Paie",
+        "description": "De l’intégration des employés aux règlements finaux, nous gérons l’ensemble de votre processus de paie avec conformité et précision.",
+        "features_services": [
+          {
+            "title": "Traitement Précis de la Paie",
+            "description": "Traitement ponctuel et conforme avec calcul des taxes."
+          },
+          {
+            "title": "Conformité Fiscale",
+            "description": "Assurer la conformité de votre entreprise aux lois fiscales."
+          },
+          {
+            "title": "Génération de Rapports",
+            "description": "Rapports de paie, déclarations fiscales, et résumés financiers détaillés."
+          },
+          {
+            "title": "Bulletins de Paie",
+            "description": "Fournir des fiches de paie claires et précises à vos employés pour assurer la transparence."
+          },
+          {
+            "title": "Efficacité des Coûts",
+            "description": "L’externalisation réduit les frais généraux et assure une gestion efficace de la paie."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 120, "title": "Clients de Paie Servis" },
+        { "count": 15, "title": "Spécialistes RH & Paie" },
+        {
+          "count": 99.3,
+          "icon": "%",
+          "title": "Exactitude de la Paie à Temps"
+        },
+        { "count": 4.9, "title": "Évaluation de la Satisfaction Client" }
+      ],
+      "benefits": {
+        "title": "Gérez la Paie Sans Lever le Petit Doigt",
+        "description": "Nos services d’externalisation vous permettent de vous concentrer sur votre croissance pendant que nous gérons les salaires et la conformité.",
+        "benefits_features": [
+          {
+            "title": "Aucune Erreur de Paie",
+            "description": "Réduction des erreurs manuelles grâce à l’automatisation basée sur des règles."
+          },
+          {
+            "title": "Gain de Temps",
+            "description": "Libérez vos équipes RH pour des initiatives stratégiques."
+          },
+          {
+            "title": "Conformité Réglementaire",
+            "description": "Soyez prêt pour les audits avec des rapports ponctuels et précis."
+          },
+          {
+            "title": "Protection des Données",
+            "description": "Protégez les données sensibles avec un cryptage de bout en bout."
+          },
+          {
+            "title": "Évolutivité",
+            "description": "Gérez la paie des startups comme des grandes entreprises en toute simplicité."
+          },
+          {
+            "title": "Libre-Service Employé",
+            "description": "Laissez les employés accéder aux fiches de paie, documents fiscaux, et données de congés."
+          }
+        ]
+      },
+      "why_choose": {
+        "title": "Pourquoi Choisir GloTech-KSA pour l’Externalisation de la Paie ?",
+        "description": "Nous simplifions la paie pour toutes les tailles d'entreprise grâce à l’automatisation intelligente, à la conformité légale et à une expertise reconnue. GloTech garantit une paie précise, ponctuelle et sans stress.",
+        "why_choose_features": [
+          {
+            "title": "Équipe Expérimentée",
+            "description": "Spécialistes RH, finance et conformité avec expertise sectorielle."
+          },
+          {
+            "title": "Traitement Basé sur le Cloud",
+            "description": "Gérez la paie à tout moment via des portails sécurisés."
+          },
+          {
+            "title": "Conformité Juridique et Fiscale",
+            "description": "Respectez facilement les lois saoudiennes du travail et fiscales."
+          },
+          {
+            "title": "Support Complet",
+            "description": "De l’intégration à la sortie des employés — tout est couvert."
+          }
+        ],
+        "technologies": {
+          "category": "externalisation-de-la-paie",
+          "title": "Technologie Alimentant Nos Services <1>d’Externalisation de la Paie</1>",
+          "description": "Des moteurs de paie automatisés aux plateformes de conformité — notre stack assure une paie fluide, sécurisée et évolutive."
+        }
+      }
+    },
+    {
+      "category": "digital-marketing",
+      "title": "Marketing Digital",
+      "description": "Nous renforçons la présence en ligne de votre marque avec des services de marketing digital complets.",
+      "features": {
+        "title": "Nos Services de Marketing Digital",
+        "description": "Du SEO à l’analyse des données, nous assurons une portée ciblée et efficace de votre marque.",
+        "features_services": [
+          {
+            "title": "SEO",
+            "description": "Optimiser votre site web et votre contenu pour un meilleur classement dans les moteurs de recherche."
+          },
+          {
+            "title": "Création de Contenu",
+            "description": "Créer du contenu engageant et de haute qualité pour capter votre audience."
+          },
+          {
+            "title": "Marketing sur les Réseaux Sociaux",
+            "description": "Gérer et développer votre présence sur Facebook, Instagram, LinkedIn et Twitter."
+          },
+          {
+            "title": "Publicité Payante",
+            "description": "Campagnes publicitaires ciblées sur Google Ads, les réseaux sociaux et les plateformes d’affichage."
+          },
+          {
+            "title": "Analyse & Reporting",
+            "description": "Fournir des insights mesurables pour suivre et optimiser la performance des campagnes."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 200, "title": "Campagnes lancées avec succès" },
+        { "count": 25, "title": "Experts en marketing digital" },
+        { "count": 98.5, "icon": "%", "title": "Taux de satisfaction client" },
+        { "count": 4.9, "title": "Note moyenne des clients" }
+      ],
+      "why_choose": {
+        "title": "Pourquoi Choisir GloTech-KSA pour le Marketing Digital ?",
+        "description": "Nous offrons des solutions intelligentes et créatives pour renforcer la visibilité et la croissance de votre marque en ligne.",
+        "why_choose_features": [
+          {
+            "title": "Équipe Expérimentée",
+            "description": "Spécialistes du contenu, de la publicité et du SEO."
+          },
+          {
+            "title": "Stratégies Sur Mesure",
+            "description": "Plans de marketing digital adaptés à vos objectifs."
+          },
+          {
+            "title": "Rapports Avancés",
+            "description": "Indicateurs clés de performance et analyses complètes."
+          },
+          {
+            "title": "Outils Modernes",
+            "description": "Plateformes et technologies de pointe pour un marketing efficace."
+          }
+        ],
+        "technologies": {
+          "category": "marketing-digital",
+          "title": "Technologies Utilisées pour Nos Services de <1>Marketing Digital</1>",
+          "description": "Des plateformes de contenu aux outils d’analyse — notre pile technologique vous garantit des résultats concrets et durables."
+        }
+      }
+    },
+    {
+      "category": "cloud-services",
+      "title": "Services Cloud",
+      "description": "Migrez et optimisez votre entreprise sur le cloud pour plus d’évolutivité et de sécurité.",
+      "features": {
+        "title": "Solutions Cloud Complètes",
+        "description": "De l'hébergement à la sécurité, nous fournissons des services cloud de bout en bout adaptés à vos besoins.",
+        "features_services": [
+          {
+            "title": "Hébergement Cloud",
+            "description": "Services d'hébergement fiables sur AWS, Microsoft Azure et Google Cloud."
+          },
+          {
+            "title": "Migration Cloud",
+            "description": "Migration fluide de vos systèmes existants vers le cloud."
+          },
+          {
+            "title": "Stockage et Gestion des Données",
+            "description": "Solutions de stockage cloud évolutives avec accès sécurisé aux données."
+          },
+          {
+            "title": "Reprise Après Sinistre",
+            "description": "Mise en œuvre de solutions cloud pour la sauvegarde et la reprise."
+          },
+          {
+            "title": "Sécurité Cloud",
+            "description": "Protection de votre infrastructure cloud contre les menaces de sécurité."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 180, "title": "Déploiements cloud réalisés" },
+        { "count": 30, "title": "Ingénieurs cloud certifiés" },
+        { "count": 99.9, "icon": "%", "title": "Garantie de disponibilité" },
+        { "count": 4.95, "title": "Note de satisfaction client" }
+      ],
+      "why_choose": {
+        "title": "Pourquoi Choisir GloTech-KSA pour les Services Cloud ?",
+        "description": "De la migration à la reprise après sinistre, nous fournissons une infrastructure cloud évolutive, sécurisée et conforme.",
+        "why_choose_features": [
+          {
+            "title": "Experts Cloud Certifiés",
+            "description": "Ingénieurs expérimentés certifiés AWS, Azure et GCP."
+          },
+          {
+            "title": "Intégration Transparente",
+            "description": "Intégration facile du cloud avec vos systèmes existants."
+          },
+          {
+            "title": "Sécurité de Niveau Entreprise",
+            "description": "Chiffrement complet, contrôle d’accès et protection contre les menaces."
+          },
+          {
+            "title": "Architecture Flexible",
+            "description": "Solutions cloud personnalisées selon vos besoins métier."
+          }
+        ],
+        "technologies": {
+          "category": "services-cloud",
+          "title": "Technologies Utilisées pour Nos <1>Services Cloud</1>",
+          "description": "Nous utilisons AWS, Azure, GCP, Docker, Kubernetes, et Terraform pour construire des environnements cloud performants et sécurisés."
+        }
+      }
+    },
+    {
+      "category": "cyber-security",
+      "title": "Services de cybersécurité",
+      "description": "Protégez votre entreprise grâce à nos solutions de cybersécurité complètes.",
+      "features": {
+        "title": "Solutions complètes de cybersécurité",
+        "description": "De la surveillance aux formations, nous vous proposons des solutions de sécurité adaptées à votre activité.",
+        "features_services": [
+          {
+            "title": "Surveillance des menaces",
+            "description": "Surveillance continue pour détecter et atténuer les risques de sécurité."
+          },
+          {
+            "title": "Tests de pénétration",
+            "description": "Simulation d'attaques pour identifier les vulnérabilités et renforcer les défenses."
+          },
+          {
+            "title": "Gestion des pare-feu",
+            "description": "Mise en œuvre et gestion de pare-feu pour sécuriser votre réseau."
+          },
+          {
+            "title": "Chiffrement des données",
+            "description": "Protection des données sensibles via le chiffrement."
+          },
+          {
+            "title": "Formation des employés",
+            "description": "Formation des employés à identifier et éviter les menaces courantes."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 250, "title": "Menaces neutralisées" },
+        { "count": 40, "title": "Experts certifiés en sécurité" },
+        { "count": 99.99, "icon": "%", "title": "Garantie de disponibilité" },
+        { "count": 4.97, "title": "Note de satisfaction client" }
+      ],
+      "why_choose": {
+        "title": "Pourquoi choisir GloTech-KSA pour la cybersécurité ?",
+        "description": "Nous protégeons vos actifs numériques avec les meilleures technologies, équipes expertes et stratégies sur mesure.",
+        "why_choose_features": [
+          {
+            "title": "Experts certifiés",
+            "description": "Certifiés CISSP, CEH et CompTIA Security+."
+          },
+          {
+            "title": "Mesures proactives",
+            "description": "Identification et neutralisation des menaces en amont."
+          },
+          {
+            "title": "Chiffrement avancé",
+            "description": "Normes de chiffrement avancées pour vos données sensibles."
+          },
+          {
+            "title": "Cadres de sécurité sur mesure",
+            "description": "Solutions de sécurité personnalisées selon vos besoins."
+          }
+        ],
+        "technologies": {
+          "category": "cybersécurité",
+          "title": "Technologies soutenant nos <1>services de cybersécurité</1>",
+          "description": "Nous utilisons des outils comme Palo Alto, Fortinet, Splunk, AWS Shield et CrowdStrike pour une protection renforcée."
+        }
+      }
+    },
+    {
+      "category": "artificial-intelligence",
+      "title": "Services d’intelligence artificielle",
+      "description": "Exploitez l’IA pour automatiser vos processus métiers et analyser vos données efficacement.",
+      "features": {
+        "title": "Solutions d’IA intelligentes pour les entreprises",
+        "description": "Nos services optimisent les opérations, améliorent l’expérience client et libèrent le potentiel des entreprises.",
+        "features_services": [
+          {
+            "title": "Automatisation des processus",
+            "description": "Utiliser l’IA pour automatiser les tâches répétitives et améliorer l’efficacité."
+          },
+          {
+            "title": "Analyse IA",
+            "description": "Exploiter l’IA pour des analyses avancées et des prévisions précises."
+          },
+          {
+            "title": "Chatbots et assistants virtuels",
+            "description": "Développer des bots IA pour améliorer l’interaction avec les clients."
+          },
+          {
+            "title": "Expériences personnalisées",
+            "description": "Utiliser l’IA pour offrir des services personnalisés."
+          },
+          {
+            "title": "Apprentissage automatique",
+            "description": "Créer des algorithmes qui évoluent pour faciliter la prise de décision."
+          }
+        ]
+      },
+      "stats": [
+        { "count": 120, "title": "Projets IA livrés" },
+        { "count": 35, "title": "Ingénieurs IA dédiés" },
+        { "count": 98.6, "icon": "%", "title": "Taux de fidélisation client" },
+        { "count": 4.92, "title": "Note de satisfaction client" }
+      ],
+      "why_choose": {
+        "title": "Pourquoi choisir GloTech-KSA pour l’IA ?",
+        "description": "Nous combinons apprentissage profond, automatisation et intelligence en temps réel pour transformer votre entreprise.",
+        "why_choose_features": [
+          {
+            "title": "Experts IA expérimentés",
+            "description": "Spécialistes en NLP, vision par ordinateur et data science."
+          },
+          {
+            "title": "Solutions sur mesure",
+            "description": "Des services IA adaptés à votre secteur."
+          },
+          {
+            "title": "Intégration fluide",
+            "description": "Nos solutions IA s’intègrent facilement à vos systèmes."
+          },
+          {
+            "title": "Technologies avancées",
+            "description": "Nous utilisons TensorFlow, PyTorch, OpenAI, Azure AI, et Dialogflow."
+          }
+        ],
+        "technologies": {
+          "category": "services IA",
+          "title": "Technologies alimentant nos <1>services IA</1>",
+          "description": "Nous utilisons des plateformes telles que OpenAI, TensorFlow, PyTorch, Hugging Face, Azure AI, et Dialogflow."
+        }
+      }
+    },
+    {
+      "category": "it-services",
+      "title": "Services IT Gérés",
+      "description": "Nous assurons une gestion proactive de vos systèmes informatiques pour garantir leur bon fonctionnement.",
+      "features": {
+        "title": "Gestion informatique fiable et évolutive",
+        "description": "De la surveillance réseau à l’assistance 24/7, nous assurons disponibilité et performance.",
+        "features_services": [
+          {
+            "title": "Surveillance réseau",
+            "description": "Surveillance constante pour détecter et résoudre les problèmes avant qu'ils ne perturbent l’activité."
+          },
+          {
+            "title": "Gestion des serveurs",
+            "description": "Optimisation et maintenance des serveurs pour une performance maximale."
+          },
+          {
+            "title": "Sauvegarde et restauration",
+            "description": "Sauvegardes régulières et solutions de récupération rapide en cas de perte de données."
+          },
+          {
+            "title": "Gestion de l'infrastructure",
+            "description": "Gestion complète de votre infrastructure technologique."
+          },
+          {
+            "title": "Solutions d’évolutivité",
+            "description": "Conception et gestion de systèmes informatiques évolutifs."
+          },
+          {
+            "title": "Assistance IT et Helpdesk",
+            "description": "Support technique complet pour résoudre rapidement vos problèmes.",
+            "sub_features": [
+              {
+                "title": "Support 24/7",
+                "description": "Assistance continue pour garantir la disponibilité de vos systèmes."
+              },
+              {
+                "title": "Support à distance",
+                "description": "Résolution rapide grâce à l'accès à distance."
+              },
+              {
+                "title": "Support sur site",
+                "description": "Intervention de techniciens en cas de besoin sur site."
+              },
+              {
+                "title": "Surveillance proactive",
+                "description": "Détection des problèmes avant qu'ils ne causent des pannes."
+              }
+            ]
+          }
+        ]
+      },
+      "stats": [
+        { "count": 300, "title": "Systèmes surveillés" },
+        { "count": 50, "title": "Ingénieurs certifiés" },
+        { "count": 99.95, "icon": "%", "title": "Disponibilité assurée" },
+        { "count": 4.93, "title": "Note de satisfaction client" }
+      ],
+      "why_choose": {
+        "title": "Pourquoi choisir GloTech-KSA pour les services IT ?",
+        "description": "Des solutions informatiques complètes adaptées à vos besoins avec une fiabilité inégalée.",
+        "why_choose_features": [
+          {
+            "title": "Experts certifiés",
+            "description": "Techniciens expérimentés avec certifications internationales."
+          },
+          {
+            "title": "Infrastructure évolutive",
+            "description": "Des systèmes flexibles qui évoluent avec votre entreprise."
+          },
+          {
+            "title": "Assistance 24/7",
+            "description": "Support permanent pour la continuité de vos opérations."
+          },
+          {
+            "title": "Outils performants",
+            "description": "Utilisation d’outils comme SolarWinds, Datadog, Intune, et VMware."
+          }
+        ],
+        "technologies": {
+          "category": "Services IT",
+          "title": "Technologies alimentant nos <1>services IT</1>",
+          "description": "Nous utilisons SolarWinds, Datadog, Microsoft Intune, ManageEngine, TeamViewer, et VMware pour offrir un support optimal."
         }
       }
     }

@@ -21,7 +21,7 @@ const ServicePage = () => {
   useEffect(() => {
     const title = service
       .split("-")
-      .map((word) => word[0].toUpperCase() + word.slice(1))
+      .map((word) => word.toUpperCase())
       .join(" ");
     setText(title);
   }, [service]);
@@ -41,12 +41,12 @@ const ServicePage = () => {
     <>
       <header id="header" className="h-[30vh] sm:h-[40vh] bg-[#111]">
         <NavigationLayout />
-        <div className="h-[30vh] sm:h-[40vh] pt-[60px] sm:pt-[120px] w-full rounded-md flex md:items-center md:justify-center bg-[#111] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+        <div className="h-[30vh] sm:h-[40vh] pt-[60px] sm:pt-[120px] w-full rounded-md flex md:items-center md:justify-center bg-[#ddd] antialiased bg-grid-white/[0.02] relative overflow-hidden">
           <Spotlight />
           <div className="container">
             <div className="flex items-center justify-center flex-col h-full w-full">
               <TextHoverEffect
-                className="text-[2rem] sm:text-[2.5rem] md:text-[1.8rem]"
+                className="text-[2rem] sm:text-[2.5rem] md:text-[1.2rem]"
                 text={text}
               />
             </div>
@@ -54,7 +54,9 @@ const ServicePage = () => {
         </div>
       </header>
       <main id="main">
+        {/* <div className="bg-[#aaa]">
         <InfiniteMovingBrands />
+        </div> */}
         <ServiceDetail params={service} />
         <Counter stats={stats} />
         <Technologies params={service} filteredService={filteredService} />

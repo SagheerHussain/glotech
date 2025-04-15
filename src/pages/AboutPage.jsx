@@ -28,7 +28,7 @@ const AboutPage = () => {
     <>
       <header id="header" className="h-[50vh] bg-[#111]">
         <NavigationLayout />
-        <div className="h-[50vh] pt-[150px] w-full rounded-md flex md:items-center md:justify-center bg-[#111] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+        <div className="h-[50vh] pt-[150px] w-full rounded-md flex md:items-center md:justify-center bg-[#ddd] antialiased bg-grid-white/[0.02] relative overflow-hidden">
           <Spotlight />
           <div className="container">
             <div className="flex items-center justify-center flex-col h-full w-full">

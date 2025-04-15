@@ -100,7 +100,7 @@ const ContactForm = () => {
                 />
               </div>
             </div>
-            <div className="contact_form bg-[#ccc] px-6 py-8 rounded-[15px]">
+            <div className="contact_form bg-[#fff] px-6 py-8 rounded-[15px]">
               <form action="" onSubmit={handleContactForm}>
                 <div className="name">
                   <label

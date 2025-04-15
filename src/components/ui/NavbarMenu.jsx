@@ -33,9 +33,9 @@ export const MenuItem = ({ setActive, active, item, children }) => {
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-[#171717] z-50 backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-[#171717] z-50 backdrop-blur-sm rounded-2xl overflow-hidden border shadow-2xl"
               >
-                <motion.div layout className="z-50 w-max h-full p-4">
+                <motion.div layout className="z-50 w-max h-full">
                   {children}
                 </motion.div>
               </motion.div>
@@ -51,7 +51,7 @@ export const Menu = ({ setActive, children }) => {
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-[50px] border bg-[#171717] border-[#333] shadow-input flex justify-center space-x-8 px-8 py-6"
+      className="relative rounded-[50px] border text-dark bg-gradient-to-r from-primary to-secondary border-secondary shadow-2xl flex justify-center space-x-8 px-8 py-6"
     >
       {children}
     </nav>
@@ -66,13 +66,14 @@ export const ProductItem = ({ title, description, to, src }) => {
         width={140}
         height={70}
         alt={title}
-        className="shrink-0 rounded-md shadow-2xl "
+        className="shrink-0 rounded-md shadow-2xl"
+        loading="lazy"
       />
       <div className="px-3">
-        <h4 className="text-xl font-bold mb-1 text-white">
+        <h4 className="text-xl font-bold mb-1 text-dark">
           {title}
         </h4>
-        <p className="text-sm max-w-[10rem] text-neutral-300">
+        <p className="text-sm max-w-[10rem] text-dark">
           {description}
         </p>
       </div>

@@ -50,6 +50,18 @@ import performanceOne from "/Images/Services Images/hr-management/performance.jp
 import performanceTwo from "/Images/Services Images/hr-management/performance-review.jpg"
 import taskOne from "/Images/Services Images/project-management/task.webp"
 import taskTwo from "/Images/Services Images/project-management/task-track.webp"
+import payrollOne from "/Images/Services Images/payroll/payroll_processing.jpg"
+import payrollTwo from "/Images/Services Images/payroll/payroll_processing.webp"
+import taxOne from "/Images/Services Images/payroll/tax.jpeg"
+import taxTwo from "/Images/Services Images/payroll/tax.jpg"
+import payslipOne from "/Images/Services Images/payroll/payslip.jpg"
+import payslipTwo from "/Images/Services Images/payroll/payslip (2).jpg"
+import contentOne from "/Images/Services Images/marketing/content-creation.jpg"
+import contentTwo from "/Images/Services Images/marketing/content-creation (2).jpg"
+import socialOne from "/Images/Services Images/marketing/social.png"
+import socialTwo from "/Images/Services Images/marketing/social.webp"
+import cloudOne from "/Images/Services Images/cloud/storage.jpg"
+import cloudTwo from "/Images/Services Images/cloud/storage (2).jpg"
 import { useTranslation } from "react-i18next";
 import { MdVerified } from "react-icons/md";
 import { IoMdHappy } from "react-icons/io";
@@ -166,6 +178,96 @@ export function ServiceDetail({ params }) {
         automatedReportTwo
       ],
     },
+    {
+      category: "payroll-outsourcing",
+      src: [
+        payrollOne,
+        payrollTwo,
+        taxOne,
+        taxTwo,
+        payslipOne,
+        payslipTwo,
+        geoTaggingOne,
+        geoTaggingTwo,
+        automatedReportOne,
+        automatedReportTwo
+      ],
+    },
+    {
+      category: "digital-marketing",
+      src: [
+        seoOne,
+        seoTwo,
+        contentOne,
+        contentTwo,
+        socialOne,
+        socialTwo,
+        visualizationOne,
+        visualizationTwo,
+        customReportOne,
+        customReportTwo
+      ],
+    },
+    {
+      category: "cyber-security",
+      src: [
+        securityOne,
+        securityTwo,
+        onboaringOne,
+        onboaringTwo,
+        cloudOne,
+        cloudTwo,
+        predictionOne,
+        predictionTwo,
+        securityOne,
+        securityTwo
+      ],
+    },
+    {
+      category: "artificial-intelligence",
+      src: [
+        deploymentOne,
+        deploymentTwo,
+        onboaringOne,
+        onboaringTwo,
+        cloudOne,
+        cloudTwo,
+        predictionOne,
+        predictionTwo,
+        securityOne,
+        securityTwo
+      ],
+    },
+    {
+      category: "it-services",
+      src: [
+        deploymentOne,
+        deploymentTwo,
+        onboaringOne,
+        onboaringTwo,
+        cloudOne,
+        cloudTwo,
+        predictionOne,
+        predictionTwo,
+        securityOne,
+        securityTwo
+      ],
+    },
+    {
+      category: "cloud-services",
+      src: [
+        deploymentOne,
+        deploymentTwo,
+        onboaringOne,
+        onboaringTwo,
+        cloudOne,
+        cloudTwo,
+        predictionOne,
+        predictionTwo,
+        securityOne,
+        securityTwo
+      ],
+    },
   ];
 
   const filteredImages = images.find((image) => image.category === params);
@@ -180,10 +282,10 @@ export function ServiceDetail({ params }) {
         title: commitment.title,
         content: (
           <div>
-            <h1 className="text-white text-3xl font-bold mb-2">
+            <h1 className="text-text_dark text-3xl font-bold mb-2">
               {commitment.subTitle || commitment.title}
             </h1>
-            <p className="text-text_light text-sm md:text-base lg:text-lg font-normal mb-8">
+            <p className="text-text_dark text-sm md:text-base lg:text-lg font-normal mb-8">
               {commitment.description}
             </p>
             <div className="grid grid-cols-2 gap-4">
@@ -208,7 +310,7 @@ export function ServiceDetail({ params }) {
 
   return (
     <>
-      <section id="commitment" className="py-20 bg-[#111] overflow-hidden">
+      <section id="commitment" className="py-20 bg-[#fff] overflow-hidden">
         <div className="container">
           <Timeline
             data={data}
