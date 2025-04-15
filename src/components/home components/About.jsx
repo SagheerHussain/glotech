@@ -79,7 +79,7 @@ const About = () => {
               <p className="text-dark pe-3 leading-snug">
                 {t("home-page-components.about.description")}
               </p>
-              <div className="sm:flex items-center">
+              <div className="sm:flex">
                 <div className="our_mission py-6 sm:w-1/2">
                   <FaMedal className="text-primary mb-3" size={24} />
                   <h3 className="text-dark text-xl font-semibold">
@@ -89,7 +89,7 @@ const About = () => {
                     {t("home-page-components.about.missionText")}
                   </p>
                 </div>
-                <div className="our_vision py-4 sm:w-1/2">
+                <div className="our_vision py-6 sm:w-1/2">
                   <FaEye className="text-primary mb-3" size={24} />
                   <h3 className="text-dark text-xl font-semibold">
                     {t("home-page-components.about.visionTitle")}

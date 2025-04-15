@@ -59,12 +59,12 @@ const ContactForm = () => {
 
   return (
     <>
-      <section id="contact" className="py-20 bg-[#111]">
+      <section id="contact" className="py-20 bg-white">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 px-8 py-16 gap-4 bg-[#222] rounded-[10px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 px-8 py-16 gap-4 bg-[#ddd] rounded-[10px]">
             <div className="contact-info">
-              <h1 className="text-5xl font-bold text-white">Contact Us</h1>
-              <p className="text-white text-sm py-6 leading-loose">
+              <h1 className="text-5xl font-bold text-dark">Contact Us</h1>
+              <p className="text-dark text-sm py-6 leading-loose">
                 Have a question that can’t be handled by our support staff? Fill
                 this form below and we will get back to you as soon as we can.
                 If you’re looking for assistance regarding your service or
@@ -73,18 +73,18 @@ const ContactForm = () => {
               </p>
               <div className="contact_info_location py-4">
                 <div className="flex">
-                  <FaLocationCrosshairs size={24} className="text-white" />
-                  <p className="text-white ms-4">
+                  <FaLocationCrosshairs size={24} className="text-primary" />
+                  <p className="text-dark ms-4">
                     Hunaid City Gulistan-e-Johar Block 17 Karachi.
                   </p>
                 </div>
                 <div className="flex py-6">
-                  <FaPhoneAlt size={24} className="text-white" />
-                  <p className="text-white ms-4">+92 312 1234567.</p>
+                  <FaPhoneAlt size={24} className="text-primary" />
+                  <p className="text-dark ms-4">+92 312 1234567.</p>
                 </div>
                 <div className="flex">
-                  <AiOutlineMail size={24} className="text-white" />
-                  <p className="text-white ms-4">contact@glotech.com.</p>
+                  <AiOutlineMail size={24} className="text-primary" />
+                  <p className="text-dark ms-4">contact@glotech.com.</p>
                 </div>
               </div>
               <div className="pt-4">
@@ -100,60 +100,60 @@ const ContactForm = () => {
                 />
               </div>
             </div>
-            <div className="contact_form bg-[#333] px-6 py-8 rounded-[15px]">
+            <div className="contact_form bg-[#ccc] px-6 py-8 rounded-[15px]">
               <form action="" onSubmit={handleContactForm}>
                 <div className="name">
                   <label
                     htmlFor="name"
-                    className="text-text_light text-sm pb-2 inline-block"
+                    className="text-dark text-sm pb-2 inline-block"
                   >
                     Name*
                   </label>
                   <input
                     type="text"
                     name="name"
-                    className="w-full block bg-[#222] px-4 py-2 rounded-[5px] focus:outline-none text-white"
+                    className="w-full block bg-transparent border-[1px] border-[#999] px-4 py-2 rounded-[5px] focus:outline-none text-dark"
                     placeholder="Name"
                   />
                 </div>
                 <div className="email pt-4">
                   <label
                     htmlFor="email"
-                    className="text-text_light text-sm pb-2 inline-block"
+                    className="text-dark text-sm pb-2 inline-block"
                   >
                     Email*
                   </label>
                   <input
                     type="email"
                     name="email"
-                    className="w-full block bg-[#222] px-4 py-2 rounded-[5px] focus:outline-none text-white"
+                    className="w-full block bg-transparent border-[1px] border-[#999] px-4 py-2 rounded-[5px] focus:outline-none text-dark"
                     placeholder="Email"
                   />
                 </div>
                 <div className="subject pt-4">
                   <label
                     htmlFor="subject"
-                    className="text-text_light text-sm pb-2 inline-block"
+                    className="text-dark text-sm pb-2 inline-block"
                   >
                     Subject*
                   </label>
                   <input
                     type="text"
                     name="subject"
-                    className="w-full block bg-[#222] px-4 py-2 rounded-[5px] focus:outline-none text-white"
+                    className="w-full block bg-transparent border-[1px] border-[#999] px-4 py-2 rounded-[5px] focus:outline-none text-dark"
                     placeholder="Subject"
                   />
                 </div>
                 <div className="message pt-4">
                   <label
                     htmlFor="message"
-                    className="text-text_light text-sm pb-2 inline-block"
+                    className="text-dark text-sm pb-2 inline-block"
                   >
                     Message*
                   </label>
                   <textarea
                     name="message"
-                    className="w-full block bg-[#222] px-4 py-2 h-[150px] rounded-[5px] focus:outline-none text-white"
+                    className="w-full block bg-transparent border-[1px] border-[#999] px-4 py-2 h-[150px] rounded-[5px] focus:outline-none text-dark"
                     placeholder="Message"
                   ></textarea>
                   <div className="mt-4">

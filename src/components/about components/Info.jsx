@@ -15,26 +15,22 @@ const Info = () => {
   return (
     <section
       id="info"
-      className="bg-[#111] py-20 z-[2] relative"
-      style={{
-        background: `url('https://img.freepik.com/free-photo/black-background-geometric-gradient-design_677411-2882.jpg') no-repeat center center/cover`,
-      }}
+      className="bg-white py-20 z-[2] relative"
     >
-      <div className="overlay absolute top-0 left-0 w-full h-full bg-[#111111e4] -z-[1]"></div>
       <div className="container">
         <div className="info_content flex md:flex-row flex-col gap-4 md:items-center">
           <div className="info_content_card md:w-[45%]">
-            <h1 className="text-white text-[2.5rem] font-bold leading-snug">
+            <h1 className="text-dark text-[2.5rem] font-bold leading-snug">
               {t("about-page-components.info.title")}
             </h1>
-            <p className="text-text_light text-sm pt-4 leading-loose">
+            <p className="text-dark text-sm pt-4 leading-loose">
               {t("about-page-components.info.description")}
             </p>
             <div className="service_tagging pt-8">
               {serviceTagging?.map((service) => (
                 <div className="tagging flex items-center pb-4">
-                  <ImCheckmark size={16} color="#3059f5" />
-                  <h3 className="text-text_light ps-3">
+                  <ImCheckmark size={16} color="#8c6238" />
+                  <h3 className="text-dark ps-3">
                     {service}
                   </h3>
                 </div>
@@ -52,33 +48,33 @@ const Info = () => {
 
         <div className="vision md:flex mt-32">
           <div className="skynet_mission px-4 text-center md:w-[33.3%] md:mb-0 mb-4">
-            <FaMedal size={24} color="#3059f5" className="mx-auto block mb-4" />
-            <h3 className="text-3xl font-bold mb-3 text-[#fff]">
+            <FaMedal size={24} color="#8c6238" className="mx-auto block mb-4" />
+            <h3 className="text-3xl font-bold mb-3 text-dark">
               {t("about-page-components.mission.title")}
             </h3>
-            <p className="text-sm text-text_light">
+            <p className="text-sm text-dark">
               {t("about-page-components.mission.description")}
             </p>
           </div>
           <div className="skynet_mission px-4 text-center md:w-[33.3%] md:mb-0 mb-4">
-            <FaEye size={24} color="#3059f5" className="mx-auto block mb-4" />
-            <h3 className="text-3xl font-bold mb-3 text-[#fff]">
+            <FaEye size={24} color="#8c6238" className="mx-auto block mb-4" />
+            <h3 className="text-3xl font-bold mb-3 text-dark">
               {t("about-page-components.vision.title")}
             </h3>
-            <p className="text-sm text-text_light">
+            <p className="text-sm text-dark">
               {t("about-page-components.vision.description")}
             </p>
           </div>
           <div className="skynet_mission px-4 text-center md:w-[33.3%] md:mb-0 mb-4">
             <FiTarget
               size={24}
-              color="#3059f5"
+              color="#8c6238"
               className="mx-auto block mb-4"
             />
-            <h3 className="text-3xl font-bold mb-3 text-[#fff]">
+            <h3 className="text-3xl font-bold mb-3 text-dark">
               {t("about-page-components.audience.title")}
             </h3>
-            <p className="text-sm text-text_light">
+            <p className="text-sm text-dark">
               {t("about-page-components.audience.description")}
             </p>
           </div>

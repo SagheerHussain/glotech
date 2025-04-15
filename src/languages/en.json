@@ -42,7 +42,7 @@
     "Contact": { "name": "Contact", "slug": "/contact" }
   },
   "title": "Welcome to Glotech <1/> Pioneering Digital Innovation <1/> in Saudi Arabia",
-  "description": "Born in Riyadh with a vision to fuel Saudi Arabia’s Vision 2030, Azm Global Technology transforms ambitious ideas into real-world tech solutions. From AI-powered analytics to custom SaaS platforms, Azm empowers businesses to simplify operations, scale smarter, and lead boldly. It’s not just a tech company—it’s a movement shaping the future of digital excellence across the Kingdom.",
+  "description": "Born in Riyadh with a vision to fuel Saudi Arabia’s Vision 2030, Glotech KSA transforms ambitious ideas into real-world tech solutions. From AI-powered analytics to custom SaaS platforms, Azm empowers businesses to simplify operations, scale smarter, and lead boldly. It’s not just a tech company—it’s a movement shaping the future of digital excellence across the Kingdom.",
   "home-page-components": {
     "about": {
       "heading": "About Glotech",
@@ -201,7 +201,7 @@
   "about-page-components": {
     "info": {
       "title": "From Strategy to Branding, We Build Success",
-      "description": "GLOTECH KSA is a Saudi Arabian IT services and consulting firm specializing in human asset management systems. With a team of 51-200 employees, the company delivers exclusive products and services tailored to enhance organizational efficiency."
+      "description": "In 2021, Glotech KSA was born out of a bold vision shared by a team of dreamers and doers in Riyadh. It all began with a conversation—a realization that businesses across Saudi Arabia were hungry for solutions that could keep pace with the nation’s rapid transformation under Vision 2030. The team, with backgrounds spanning technology, finance, and innovation, decided to create something extraordinary: a company that didn’t just provide services but solved real problems and unlocked untapped potential."
     },
     "service_tagging": [
       "Human Resource Management",
@@ -212,11 +212,11 @@
     ],
     "mission": {
       "title": "Our Mission",
-      "description": "Our mission is to empower businesses worldwide to reach their full potential by providing exceptional IT, E-commerce solutions, and digital services. We are committed to creating cutting-edge solutions that enable our clients to excel in the digital landscape, helping them thrive and succeed in their respective industries by treating their businesses as our own."
+      "description": "We empower businesses to unlock their full potential by delivering tailored, cutting-edge technology solutions. Through innovation and collaboration, we simplify operations, drive growth, and create value that goes beyond expectations. At Azm Global Technology, our mission is to be more than a service provider—we strive to be a trusted partner in every business's journey toward excellence and impact."
     },
     "vision": {
       "title": "Our Vision",
-      "description": "Our goal is to build lasting client relationships by providing complete, integrated solutions that drive business growth. We deliver innovative strategies tailored to enhance digital presence and maximize success. Through expertise and cutting-edge technology, we ensure seamless experiences and long-term results."
+      "description": "To be the driving force behind transforming businesses into extraordinary success stories by leveraging innovation, technology, and relentless passion to redefine what’s possible in the digital era."
     },
     "audience": {
       "title": "Target Audience",
@@ -229,24 +229,32 @@
     },
     "values": {
       "honesty": {
-        "title": "We Love",
-        "heading": "HONESTY",
-        "description": "We are a tightly connected team, supporting each other with empathy and authenticity. Every member plays a crucial role in our success. Together, we grow, innovate, and strive to make our company the best in the industry."
+        "title": "Integrity",
+        "description": "We uphold the highest ethical standards in all our work."
       },
       "fist": {
-        "title": "Become Part of",
-        "heading": "FIST",
-        "description": "We are a tight-knit group. That means we show up for each other, act with empathy, and bring our authentic selves to work every day in order to become the best company in the world. Lorem ipsum dolor sit amet."
+        "title": "Innovation",
+        "description": "We embrace cutting-edge technologies to deliver forward-thinking solutions."
       },
       "boss": {
-        "title": "Be Your Own",
-        "heading": "BOSS",
-        "description": "We take full responsibility for our work and decisions. With complete freedom, we bring new ideas and innovative solutions to the table. Accountability drives us to achieve excellence, ensuring personal and professional growth in every challenge."
+        "title": "Customer-Centricity",
+        "description": "We prioritize our clients’ needs and ensure their success."
       },
       "flash": {
-        "title": "Be The",
-        "heading": "FLASH!",
-        "description": "The world moves fast, and so do we. Adapting quickly, we learn, unlearn, and relearn to stay ahead. Our ability to execute with speed and precision ensures we always remain competitive in this ever-evolving digital era."
+        "title": "Collaboration",
+        "description": "We work closely with our clients and teams to create optimal solutions."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We strive for excellence and aim to exceed expectations in every project."
+      },
+      "agility": {
+        "title": "Agility",
+        "description": "We remain flexible and adaptable to changing business needs."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "We focus on delivering solutions that support long-term growth and sustainability."
       }
     }
   },

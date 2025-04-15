@@ -42,11 +42,11 @@ export const TextHoverEffect = ({ text, duration = 0, className = "text-[3rem]" 
         <linearGradient id="textGradient" gradientUnits="userSpaceOnUse">
           {hovered && (
             <>
-              <stop offset="0%" stopColor="#06b6d4" />
-              <stop offset="25%" stopColor="#8b5cf6" />
-              <stop offset="50%" stopColor="#3b82f6" />
-              <stop offset="75%" stopColor="#06b6d4" />
-              <stop offset="100%" stopColor="#8b5cf6" />
+              <stop offset="0%" stopColor="#8c6238" />
+              <stop offset="25%" stopColor="#8c6238" />
+              <stop offset="50%" stopColor="#c9a66f" />
+              <stop offset="75%" stopColor="#c9a66f" />
+              <stop offset="100%" stopColor="#8c6238" />
             </>
           )}
         </linearGradient>

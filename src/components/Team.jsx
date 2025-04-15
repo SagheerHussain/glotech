@@ -44,7 +44,7 @@ const Team = () => {
                 i18nKey="teams_intro.title"
                 components={{
                   1: (
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text" />
+                    <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text" />
                   ),
                 }}
               />
