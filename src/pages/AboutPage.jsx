@@ -32,7 +32,7 @@ const AboutPage = () => {
           <Spotlight />
           <div className="container">
             <div className="flex items-center justify-center flex-col h-full w-full">
-              <TextHoverEffect key={i18n.language} text={t("text.about")} />
+              <TextHoverEffect className="text-[2rem] uppercase" key={i18n.language} text={t("text.about")} />
             </div>
           </div>
         </div>
