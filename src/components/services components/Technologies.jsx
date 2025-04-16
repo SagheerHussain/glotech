@@ -38,6 +38,14 @@ import azure from "/Images/technologies/cloud/azure.webp";
 import postgresSql from "/Images/technologies/cloud/postgresql.webp";
 import nginx from "/Images/technologies/cloud/nginx.webp";
 import ansible from "/Images/technologies/cloud/ansible.webp";
+import claude from "/Images/technologies/ai/claude.webp";
+import gemini from "/Images/technologies/ai/gemini.webp";
+import dalle from "/Images/technologies/ai/dall_e.webp";
+import gpt from "/Images/technologies/ai/gpt_logo.webp";
+import llama from "/Images/technologies/ai/llama.webp";
+import palm from "/Images/technologies/ai/palm.webp";
+import stable from "/Images/technologies/ai/stable.webp";
+import whisper from "/Images/technologies/ai/whisper.webp";
 import { Trans, useTranslation } from "react-i18next";
 
 const Technologies = ({ params, filteredService }) => {
@@ -166,15 +174,17 @@ const Technologies = ({ params, filteredService }) => {
     {
       category: "artificial-intelligence",
       src: [
-        { icon: aws, title: "AWS" },
-        { icon: google_cloud, title: "Google Cloud" },
-        { icon: azure, title: "Azure" },
+        { icon: claude, title: "Claude" },
+        { icon: gemini, title: "Gemini" },
+        { icon: dalle, title: "Dall-E" },
+        { icon: gpt, title: "GPT" },
         { icon: python, title: "Python" },
-        { icon: mySql, title: "MySQL" },
-        { icon: postgresSql, title: "PostgreSQL" },
-        { icon: mongodb, title: "Mongo DB" },
-        { icon: nginx, title: "Nginx" },
-        { icon: ansible, title: "Ansible" },
+        { icon: llama, title: "llama" },
+        { icon: palm, title: "Palm" },
+        { icon: stable, title: "Stable" },
+        { icon: whisper, title: "Whisper" },
+        { icon: mySql, title: "MySql" },
+        { icon: postgres, title: "Postgre Sql" },
       ],
     },
     {
@@ -189,6 +199,11 @@ const Technologies = ({ params, filteredService }) => {
         { icon: mongodb, title: "Mongo DB" },
         { icon: nginx, title: "Nginx" },
         { icon: ansible, title: "Ansible" },
+        { icon: word, title: "Word" },
+        { icon: powerBi, title: "Power BI" },
+        { icon: powerpoint, title: "PowerPoint" },
+        { icon: excel, title: "Excel" },
+        { icon: vision_ai, title: "Vision AI" },
       ],
     },
   ];
@@ -234,7 +249,7 @@ const Technologies = ({ params, filteredService }) => {
             <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 xl:grid-cols-9 gap-12">
               {currentStack?.src?.map(({ icon, title }) => (
                 <div>
-                  <img src={icon} className="max-w-[90px] mx-auto" alt="" />
+                  <img src={icon} className="max-w-[100px] object-fit mx-auto" alt="" />
                   <h4 className="text-text_dark text-center font-medium mt-2">
                     {title}
                   </h4>

@@ -4,6 +4,7 @@ import { Navbar } from "./Navbar";
 import LanguageSwitcher from "./LanguageSwitcher";
 import DrawerMenus from "./Drawer";
 import Logo from "./Logo";
+import { Link } from "react-router-dom";
 
 const NavigationLayout = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -51,16 +52,18 @@ const NavigationLayout = () => {
             `}
       >
         <div className="container flex items-center justify-between">
-          <div className="flex items-center">
-            <Logo />
-            <GradientText
-              colors={["#c9a66f", "#8C6238", "#c9a66f", "#c9a66f", "#8C6238"]}
-              animationSpeed={8}
-              showBorder={false}
-              className=""
-            >
-              GLOTECH
-            </GradientText>
+          <div className="">
+            <Link to={`/`} className="flex items-center">
+              <Logo />
+              <GradientText
+                colors={["#c9a66f", "#8C6238", "#c9a66f", "#c9a66f", "#8C6238"]}
+                animationSpeed={8}
+                showBorder={false}
+                className=""
+              >
+                GLOTECH
+              </GradientText>
+            </Link>
           </div>
           <div className="mx-3">
             <Navbar />
@@ -82,16 +85,18 @@ const NavigationLayout = () => {
         } `}
       >
         <div className="container flex items-center justify-between">
-        <div className="flex items-center">
-            <Logo />
-            <GradientText
-              colors={["#c9a66f", "#8C6238", "#c9a66f", "#c9a66f", "#8C6238"]}
-              animationSpeed={8}
-              showBorder={false}
-              className=""
-            >
-              GLOTECH
-            </GradientText>
+          <div className="flex items-center">
+            <Link to={`/`} className="flex items-center">
+              <Logo />
+              <GradientText
+                colors={["#c9a66f", "#8C6238", "#c9a66f", "#c9a66f", "#8C6238"]}
+                animationSpeed={8}
+                showBorder={false}
+                className=""
+              >
+                GLOTECH
+              </GradientText>
+            </Link>
           </div>
           <div>
             <DrawerMenus />

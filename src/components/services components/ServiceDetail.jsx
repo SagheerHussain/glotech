@@ -62,11 +62,24 @@ import socialOne from "/Images/Services Images/marketing/social.png"
 import socialTwo from "/Images/Services Images/marketing/social.webp"
 import cloudOne from "/Images/Services Images/cloud/storage.jpg"
 import cloudTwo from "/Images/Services Images/cloud/storage (2).jpg"
+import cyberOne from "/Images/Services Images/cyber/firewell.webp"
+import automationOne from "/Images/Services Images/artificial-intelligence/automation.webp"
+import automationTwo from "/Images/Services Images/artificial-intelligence/automation (2).webp"
+import chatbotOne from "/Images/Services Images/artificial-intelligence/chatbot.png"
+import chatbotTwo from "/Images/Services Images/artificial-intelligence/chatbot.jpg"
+import machineOne from "/Images/Services Images/artificial-intelligence/machine.jpg"
+import machineTwo from "/Images/Services Images/artificial-intelligence/machine (2).jpg"
+import networkOne from "/Images/Services Images/it-services/network.jpg"
+import networkTwo from "/Images/Services Images/it-services/network.png"
+import serverCloudOne from "/Images/Services Images/it-services/server-cloud.jpg"
+import serverCloudTwo from "/Images/Services Images/it-services/server-cloud.webp"
 import { useTranslation } from "react-i18next";
 import { MdVerified } from "react-icons/md";
 import { IoMdHappy } from "react-icons/io";
 import { Ri24HoursLine } from "react-icons/ri";
 import { FaMedal } from "react-icons/fa6";
+import { FaBalanceScale } from "react-icons/fa";
+import { MdCleaningServices } from "react-icons/md";
 
 export function ServiceDetail({ params }) {
   const { t } = useTranslation();
@@ -76,7 +89,8 @@ export function ServiceDetail({ params }) {
     { icon: <Ri24HoursLine /> },
     { icon: <IoMdHappy /> },
     { icon: <FaMedal /> },
-    { icon: <FaMedal /> },
+    { icon: <FaBalanceScale /> },
+    { icon: <MdCleaningServices /> },
   ];
 
   const services = t("services", {
@@ -185,10 +199,10 @@ export function ServiceDetail({ params }) {
         payrollTwo,
         taxOne,
         taxTwo,
+        customReportOne,
+        customReportTwo,
         payslipOne,
         payslipTwo,
-        geoTaggingOne,
-        geoTaggingTwo,
         automatedReportOne,
         automatedReportTwo
       ],
@@ -215,7 +229,7 @@ export function ServiceDetail({ params }) {
         securityTwo,
         onboaringOne,
         onboaringTwo,
-        cloudOne,
+        cyberOne,
         cloudTwo,
         predictionOne,
         predictionTwo,
@@ -226,31 +240,33 @@ export function ServiceDetail({ params }) {
     {
       category: "artificial-intelligence",
       src: [
-        deploymentOne,
-        deploymentTwo,
-        onboaringOne,
-        onboaringTwo,
-        cloudOne,
-        cloudTwo,
+        automationOne,
+        automationTwo,
+        customReportOne,
+        customReportTwo,
+        chatbotOne,
+        chatbotTwo,
         predictionOne,
         predictionTwo,
-        securityOne,
-        securityTwo
+        machineOne,
+        machineTwo
       ],
     },
     {
       category: "it-services",
       src: [
-        deploymentOne,
-        deploymentTwo,
-        onboaringOne,
-        onboaringTwo,
+        networkOne,
+        networkTwo,
+        serverCloudOne,
+        serverCloudTwo,
         cloudOne,
         cloudTwo,
         predictionOne,
         predictionTwo,
-        securityOne,
-        securityTwo
+        performanceOne,
+        performanceTwo,
+        cleanOne,
+        cleanTwo
       ],
     },
     {

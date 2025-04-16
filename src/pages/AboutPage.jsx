@@ -15,7 +15,7 @@ import { TextHoverEffect } from "../components/ui/TextHoverEffect";
 import { useTranslation } from "react-i18next";
 
 const AboutPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   const stats = [
     { label: t("counter.projects"), value: 10 },
@@ -32,7 +32,7 @@ const AboutPage = () => {
           <Spotlight />
           <div className="container">
             <div className="flex items-center justify-center flex-col h-full w-full">
-              <TextHoverEffect text="ABOUT US" />
+              <TextHoverEffect key={i18n.language} text={t("text.about")} />
             </div>
           </div>
         </div>

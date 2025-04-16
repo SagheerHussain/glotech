@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Benefits, Counter, Footer, NavigationLayout } from "../components/index";
+import {
+  Banner,
+  Benefits,
+  Counter,
+  Footer,
+  NavigationLayout,
+} from "../components/index";
 import { TextHoverEffect } from "../components/ui/TextHoverEffect";
 import { Spotlight } from "../components/ui/SpotlightEffect";
 import { useParams } from "react-router-dom";
@@ -9,8 +15,7 @@ import InfiniteMovingBrands from "../components/services components/InfiniteMovi
 import Technologies from "../components/services components/Technologies";
 
 const ServicePage = () => {
-  const { t } = useTranslation();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [text, setText] = useState("");
   const [stats, setStats] = useState([]);
@@ -18,13 +23,15 @@ const ServicePage = () => {
 
   const { service } = useParams();
 
+  const currentService = t("text.services", { returnObjects: true });
+
   useEffect(() => {
-    const title = service
+    const title = currentService[service]
       .split("-")
       .map((word) => word.toUpperCase())
       .join(" ");
     setText(title);
-  }, [service]);
+  }, [service, i18n.language]);
 
   const services = t("services", {
     returnObjects: true,
@@ -46,8 +53,9 @@ const ServicePage = () => {
           <div className="container">
             <div className="flex items-center justify-center flex-col h-full w-full">
               <TextHoverEffect
-                className="text-[2rem] sm:text-[2.5rem] md:text-[1.2rem]"
+                className={`text-[2rem] sm:text-[2.5rem] ${i18n.language === "fr" ? "md:text-[.9rem]" : "md:text-[1.2rem]"}`}
                 text={text}
+                key={i18n.language}
               />
             </div>
           </div>
@@ -60,6 +68,10 @@ const ServicePage = () => {
         <ServiceDetail params={service} />
         <Counter stats={stats} />
         <Technologies params={service} filteredService={filteredService} />
+        <Banner
+          title={t("home-page-components.banner.title")}
+          description={t("home-page-components.banner.description")}
+        />
       </main>
       <Footer />
     </>

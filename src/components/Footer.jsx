@@ -20,6 +20,8 @@ const Footer = () => {
 
   const footer = t("footer", { returnObjects: true });
 
+  const services = t("menu.Services.subMenus", { returnObjects: true });
+
   return (
     <footer
       id="footer"
@@ -33,24 +35,23 @@ const Footer = () => {
             <p className="text-text_light py-6 text-sm">
               {footer[0].description}
             </p>
-            <Button label={t("buttons.about")} />
+            <Link to={`/about`}>
+              <Button label={t("buttons.about")} />
+            </Link>
           </div>
-          <div className="newsletter">
+          <div className="office_info">
             <h1 className="text-white text-2xl font-bold after:content-[''] after:block after:translate-y-2 after:w-[40px] after:h-[2px] after:bg-primary">
               {footer[1].title}
             </h1>
-            <p className="text-text_light py-6 text-sm">
-              {footer[1].description}
-            </p>
-            <div className="input flex items-center">
-              <input
-                type="email"
-                className="w-full block bg-[#222] py-[.9rem] px-4 rounded-[15px_0px_0px_15px] focus:outline-none focus:text-white"
-                placeholder={`${t("labels.subscribe")}`}
-              />
-              <button className="bg-gradient-to-r from-primary to-secondary py-4 px-4 rounded-[0_15px_15px_0]">
-                <FaLocationArrow size={20} className="text-white" />
-              </button>
+            <div className="mt-6">
+              {services?.slice(0, 5).map((service) => (
+                <Link
+                  to={`/services/${service.category}`}
+                  className="text-text_light text-sm block pb-3"
+                >
+                  {service.title}
+                </Link>
+              ))}
             </div>
           </div>
           <div className="office_info">
@@ -63,27 +64,31 @@ const Footer = () => {
                 {footer[2].address.description}
               </span>
             </div>
-            <div className="flex items-center mt-4">
+            <a
+              href={`tel:${footer[2].phone.description}`}
+              className="flex items-center mt-4"
+            >
               <FaPhoneAlt className="text-primary inline-block" />
               <address className="text-text_light text-sm ms-2">
                 {footer[2].phone.description}
               </address>
-            </div>
-            <div className="flex items-center mt-4">
+            </a>
+            <a
+              href={`mailto:${footer[2].email.description}`}
+              className="flex items-center mt-4"
+            >
               <MdEmail className="text-primary inline-block" />
               <span className="text-text_light text-sm ms-2">
                 {footer[2].email.description}
               </span>
-            </div>
+            </a>
           </div>
           <div className="gallery">
             <h1 className="text-white text-2xl font-bold after:content-[''] after:block after:translate-y-2 after:w-[40px] after:h-[2px] after:bg-primary">
               {footer[4].title}
             </h1>
             <div className="flex gap-4 mt-10">
-              <Link
-                to={`#`}
-              >
+              <Link to={`#`}>
                 <FaFacebookF
                   size={28}
                   className="text-white bg-gradient-to-r from-primary to-secondary hover:from-primary transition-all p-[5px] rounded-full"

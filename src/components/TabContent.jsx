@@ -4,6 +4,7 @@ import { IoCheckmarkDone } from "react-icons/io5";
 import verticalShape from "/Images/shape (1).png";
 import Button from "../components/Button";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const TabContent = ({ src, title, description, features }) => {
   const shapeRef = useRef(null);
@@ -31,12 +32,12 @@ const TabContent = ({ src, title, description, features }) => {
         {/* Image */}
         <div className="image p-6 md:w-[40%] relative h-full z-[2]">
           <div className="overlay absolute -top-[5px] -left-[5px] w-[85%] h-[85%] bg-[#f4f9fd1e] opacity-50 rounded-[25px] -z-[1]" />
-          <img
-            src={src}
-            className="w-full rounded-[25px] z-[1]"
-            alt=""
-          />
-          <div className={`absolute top-0 ${isArabic ? "-left-10" : "-right-10"} -z-[1]`}>
+          <img src={src} className="w-full rounded-[25px] z-[1]" alt="" />
+          <div
+            className={`absolute top-0 ${
+              isArabic ? "-left-10" : "-right-10"
+            } -z-[1]`}
+          >
             <img ref={shapeRef} src={verticalShape} alt="" />
           </div>
         </div>
@@ -62,7 +63,9 @@ const TabContent = ({ src, title, description, features }) => {
               </span>
             ))}
           </div>
-          <Button label={t("buttons.about")} className="mt-10" />
+          <Link to="/about">
+            <Button label={t("buttons.about")} className="mt-10" />
+          </Link>
         </div>
       </div>
     </div>

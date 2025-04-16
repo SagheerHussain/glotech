@@ -1,5 +1,23 @@
 {
   "logo": "My Logo",
+  "text": {
+    "about": "About Us",
+    "contact": "Contact Us",
+    "services": {
+      "web-development": "Web Development",
+      "app-development": "App Development",
+      "data-analytics": "Data Analytics",
+      "hr-management": "HR Management",
+      "asset-tagging": "Asset Tagging",
+      "project-management": "Project Management",
+      "payroll-outsourcing": "Payroll Outsourcing",
+      "digital-marketing": "Digital Marketing",
+      "cloud-services": "Cloud Services",
+      "cyber-security": "Cyber Security",
+      "artificial-intelligence": "Artificial Intelligence",
+      "it-services": "IT Services"
+    }
+  },
   "menu": {
     "Home": { "name": "Home", "slug": "/" },
     "About": { "name": "About", "slug": "/about" },
@@ -288,6 +306,16 @@
       }
     }
   },
+  "contact-page-components": {
+    "title": "Contact Us",
+    "description": "Have a question that can’t be handled by our support staff? Fill this form below and we will get back to you as soon as we can. If you’re looking for assistance regarding your service or account at Godlike.host, please contact us via an appropriate support channel at our support portal.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message"
+    }
+  },
   "counter": {
     "projects": "PROJECTS DELIVERD",
     "years": "PROJECTS DELIVERD",
@@ -330,8 +358,7 @@
       "description": "We work with a passion of taking challenges and creating new ones in advertising sector."
     },
     {
-      "title": "Newsletter",
-      "description": "Subscribe to our newsletter to get the latest news and updates."
+      "title": "Services"
     },
     {
       "title": "Office Info",
@@ -348,7 +375,8 @@
   ],
   "buttons": {
     "about": "About Us",
-    "get-in-touch": "Get in Touch"
+    "get-in-touch": "Get in Touch",
+    "send-message": "Send Message"
   },
   "labels": {
     "subscribe": "Subscribe"
@@ -1198,7 +1226,7 @@
           "description": "We use platforms and tools like Palo Alto, Fortinet, Splunk, AWS Shield, and CrowdStrike for robust protection."
         }
       }
-    },   
+    },
     {
       "category": "artificial-intelligence",
       "title": "AI Services",
@@ -1295,10 +1323,22 @@
             "title": "IT Support & Helpdesk Services",
             "description": "Comprehensive IT support to resolve any technical issues quickly.",
             "sub_features": [
-              { "title": "24/7 Support", "description": "Round-the-clock support to ensure your systems stay up and running." },
-              { "title": "Remote Troubleshooting", "description": "Quick resolutions through remote access to your systems." },
-              { "title": "Onsite Support", "description": "Dispatching technicians when on-site support is needed." },
-              { "title": "Proactive Monitoring", "description": "Identifying and addressing issues before they cause downtime." }
+              {
+                "title": "24/7 Support",
+                "description": "Round-the-clock support to ensure your systems stay up and running."
+              },
+              {
+                "title": "Remote Troubleshooting",
+                "description": "Quick resolutions through remote access to your systems."
+              },
+              {
+                "title": "Onsite Support",
+                "description": "Dispatching technicians when on-site support is needed."
+              },
+              {
+                "title": "Proactive Monitoring",
+                "description": "Identifying and addressing issues before they cause downtime."
+              }
             ]
           }
         ]
@@ -1336,6 +1376,6 @@
           "description": "We use technologies such as SolarWinds, Datadog, Microsoft Intune, ManageEngine, TeamViewer, and VMware to deliver reliable IT support."
         }
       }
-    }    
+    }
   ]
 }

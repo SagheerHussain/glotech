@@ -45,7 +45,7 @@ export default function GradientText({
           backgroundSize: "300% 100%",
         }}
       >
-        <Link to={"/"}> {children}</Link>
+        {children}
       </div>
     </div>
   );

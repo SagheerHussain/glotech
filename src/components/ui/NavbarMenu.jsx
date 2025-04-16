@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion"; // Use framer-motion in Vite
 import { Link } from "react-router-dom"; // React Router for navigation
 import { IoMdArrowDropdown } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 const transition = {
   type: "spring",
@@ -82,10 +83,13 @@ export const ProductItem = ({ title, description, to, src }) => {
 };
 
 export const HoveredLink = ({ children, to }) => {
+
+  const { i18n } = useTranslation();
+
   return (
     <Link
       to={to}
-      className="text-zinc-200 dark:text-neutral-200 hover:text-zinc-300"
+      className={`text-zinc-200 dark:text-neutral-200 hover:text-zinc-300 ${i18n.language === "ar" && children == "عنا" ? "ps-6" : "px-0"}`}
     >
       {children}
     </Link>

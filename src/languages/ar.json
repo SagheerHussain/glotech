@@ -1,5 +1,23 @@
 {
   "logo": "شعاري",
+  "text": {
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "services": {
+      "web-development": "تطوير المواقع الإلكترونية",
+      "app-development": "تطوير التطبيقات",
+      "data-analytics": "تحليلات البيانات",
+      "hr-management": "إدارة الموارد البشرية",
+      "asset-tagging": "ترميز وتتبع الأصول",
+      "project-management": "إدارة المشاريع",
+      "payroll-outsourcing": "الاستعانة بمصادر خارجية للرواتب",
+      "digital-marketing": "التسويق الرقمي",
+      "cloud-services": "خدمات السحابة",
+      "cyber-security": "الأمن السيبراني",
+      "artificial-intelligence": "الذكاء الاصطناعي",
+      "it-services": "خدمات تقنية المعلومات"
+    }
+  },
   "menu": {
     "Home": { "name": "الرئيسية", "slug": "/" },
     "About": { "name": "عنا", "slug": "/about" },
@@ -69,8 +87,7 @@
         }
       ]
     },
-    "Company": { "name": "شركة", "slug": "/company" },
-    "Pricing": { "name": "التسعير", "slug": "/pricing" },
+
     "Contact": { "name": "اتصال", "slug": "/contact" }
   },
   "title": "مرحبًا بكم في Glotech <1/> رائدة الابتكار الرقمي <1/> في المملكة العربية السعودية",
@@ -290,6 +307,16 @@
       }
     }
   },
+  "contact-page-components": {
+    "title": "اتصل بنا",
+    "description": "هل لديك سؤال لا يمكن لفريق الدعم لدينا التعامل معه؟ يرجى ملء النموذج أدناه وسنعاود الاتصال بك في أقرب وقت ممكن. إذا كنت تبحث عن مساعدة بخصوص خدمتك أو حسابك على Godlike.host، يرجى الاتصال بنا عبر قناة الدعم المناسبة في بوابة الدعم الخاصة بنا.",
+    "form": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "subject": "الموضوع",
+      "message": "الرسالة"
+    }
+  },
   "counter": {
     "projects": "المشاريع المنجزة",
     "years": "سنوات من الخبرة",
@@ -335,8 +362,7 @@
       "description": "نعمل بشغف لمواجهة التحديات وابتكار حلول جديدة في مجال الإعلان."
     },
     {
-      "title": "النشرة الإخبارية",
-      "description": "اشترك في نشرتنا الإخبارية للحصول على آخر الأخبار والتحديثات."
+      "title": "الخدمات"
     },
     {
       "title": "معلومات المكتب",
@@ -355,7 +381,8 @@
   ],
   "buttons": {
     "about": "معلومات عنا",
-    "get-in-touch": "تواصل معنا"
+    "get-in-touch": "تواصل معنا",
+    "send-message": "إرسال الرسالة"
   },
   "labels": {
     "subscribe": "يشترك"
@@ -450,8 +477,8 @@
         ],
         "technologies": {
           "category": "web-development",
-          "title": "Tech Stack Our <1>Website Development</1> Company Leverage",
-          "description": "Empowering your websites with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "تقنيات تعتمد عليها شركتنا في <1>تطوير المواقع الإلكترونية</1>",
+          "description": "نعزز مواقعك الإلكترونية بتقنيات حديثة ومتطورة لضمان الأداء المستمر والابتكار الدائم."
         }
       }
     },
@@ -544,8 +571,8 @@
         ],
         "technologies": {
           "category": "app-development",
-          "title": "Tech Stack Our <1>App Development</1> Company Leverage",
-          "description": "Empowering your apps with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "تقنيات تعتمد عليها شركتنا في <1>تطوير تطبيقات الجوال</1>",
+          "description": "نُعزز تطبيقاتك بتقنيات حديثة ومتقدمة ومطلوبة لضمان أداء ثابت وابتكار مستمر."
         }
       }
     },
@@ -638,8 +665,8 @@
         ],
         "technologies": {
           "category": "data-analytics",
-          "title": "Tech Stack Our <1>Data Analytics</1> Company Leverage",
-          "description": "Empowering your analytics with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "تقنيات تعتمد عليها شركتنا في <1>تحليلات البيانات</1>",
+          "description": "نُعزز تحليلاتك باستخدام تقنيات حديثة ومتطورة ومطلوبة لضمان أداء ثابت وابتكار مستمر."
         }
       }
     },
@@ -826,8 +853,8 @@
         ],
         "technologies": {
           "category": "asset-tagging",
-          "title": "Tech Stack Our <1>Asset Tagging</1> Company Leverage",
-          "description": "Empowering your assets with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "تقنيات تعتمد عليها شركتنا في <1>ترميز وتتبع الأصول</1>",
+          "description": "نُعزز أصولك باستخدام تقنيات حديثة ومتطورة ومطلوبة لضمان أداء ثابت وابتكار مستمر."
         }
       }
     },
@@ -920,8 +947,8 @@
         ],
         "technologies": {
           "category": "project-management",
-          "title": "Tech Stack Our <1>Project Management</1> Company Leverage",
-          "description": "Empowering your projects with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "تقنيات تعتمد عليها شركتنا في <1>إدارة المشاريع</1>",
+          "description": "نُعزز مشاريعك باستخدام تقنيات حديثة ومتطورة ومطلوبة لضمان أداء ثابت وابتكار مستمر."
         }
       }
     },
@@ -1307,10 +1334,22 @@
             "title": "دعم ومساعدة تكنولوجيا المعلومات",
             "description": "دعم شامل لحل المشكلات الفنية بسرعة.",
             "sub_features": [
-              { "title": "دعم 24/7", "description": "دعم متواصل لضمان عمل الأنظمة بدون انقطاع." },
-              { "title": "الدعم عن بُعد", "description": "حلول سريعة من خلال الوصول عن بُعد إلى الأنظمة." },
-              { "title": "الدعم الميداني", "description": "إرسال فنيين عند الحاجة إلى الدعم في الموقع." },
-              { "title": "المراقبة الاستباقية", "description": "اكتشاف المشكلات ومعالجتها قبل أن تؤثر على العمل." }
+              {
+                "title": "دعم 24/7",
+                "description": "دعم متواصل لضمان عمل الأنظمة بدون انقطاع."
+              },
+              {
+                "title": "الدعم عن بُعد",
+                "description": "حلول سريعة من خلال الوصول عن بُعد إلى الأنظمة."
+              },
+              {
+                "title": "الدعم الميداني",
+                "description": "إرسال فنيين عند الحاجة إلى الدعم في الموقع."
+              },
+              {
+                "title": "المراقبة الاستباقية",
+                "description": "اكتشاف المشكلات ومعالجتها قبل أن تؤثر على العمل."
+              }
             ]
           }
         ]
@@ -1349,6 +1388,5 @@
         }
       }
     }
-    
   ]
 }

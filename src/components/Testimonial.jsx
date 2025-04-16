@@ -12,6 +12,7 @@ import { IoIosStar } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 import reviewOne from "/Images/testimonials/review (1).png";
 import reviewTwo from "/Images/testimonials/review (2).png";
+import { Link } from "react-router-dom";
 
 const Testimonial = () => {
   const { t } = useTranslation();
@@ -52,13 +53,17 @@ const Testimonial = () => {
               <h2 className="text-dark text-4xl pb-6 font-bold leading-snug">
                 {t("testimonial_intro.title")}
               </h2>
-              <p className="text-dark">
-                {t("testimonial_intro.description")}
-              </p>
-              <Button label={t("buttons.get-in-touch")} className="mt-6" />
+              <p className="text-dark">{t("testimonial_intro.description")}</p>
+              <Link to={`/contact`}>
+                <Button label={t("buttons.get-in-touch")} className="mt-6" />
+              </Link>
             </div>
           </div>
-          <div className={`testimonial_carousel z-[999] md:w-1/2 ${isArabic ? "md:me-[4rem]" : "md:ms-[4rem]"}`}>
+          <div
+            className={`testimonial_carousel z-[999] md:w-1/2 ${
+              isArabic ? "md:me-[4rem]" : "md:ms-[4rem]"
+            }`}
+          >
             <Swiper
               navigation={true}
               modules={[Navigation, Autoplay]}
@@ -95,9 +100,7 @@ const Testimonial = () => {
                       </div>
                       <div className="company_headline ms-4">
                         <h3 className="text-dark">{testimonial.name}</h3>
-                        <span className="text-dark">
-                          {testimonial.title}
-                        </span>
+                        <span className="text-dark">{testimonial.title}</span>
                       </div>
                     </div>
                   </div>

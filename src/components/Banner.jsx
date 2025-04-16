@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Banner = ({ title, description, className = "", ...props }) => {
   const { t } = useTranslation();
@@ -20,7 +21,9 @@ const Banner = ({ title, description, className = "", ...props }) => {
             <p className="text-text_light -mt-4">{description}</p>
           </div>
           <div className="sm:w-[40%] text-center sm:text-end">
-            <Button label={t("buttons.get-in-touch")} className="mt-6" />
+            <Link to={`/contact`}>
+              <Button label={t("buttons.get-in-touch")} className="mt-6" />
+            </Link>
           </div>
         </div>
       </div>

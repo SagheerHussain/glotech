@@ -81,7 +81,9 @@ const Header = () => {
           </p>
 
           <div className="mt-6 flex items-center">
-            <Button label={t("buttons.get-in-touch")} />
+            <Link to={"/contact"}>
+              <Button label={t("buttons.get-in-touch")} />
+            </Link>
           </div>
         </div>
       </div>

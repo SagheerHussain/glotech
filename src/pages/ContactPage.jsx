@@ -18,7 +18,7 @@ const ContactPage = () => {
             <div className="flex items-center justify-center flex-col h-full w-full">
               <TextHoverEffect
                 className="text-[2rem] sm:text-[2.5rem] md:text-[1.8rem]"
-                text={"CONTACT US"}
+                text={t("text.contact")}
               />
             </div>
           </div>

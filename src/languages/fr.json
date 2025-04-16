@@ -1,5 +1,23 @@
 {
   "logo": "Mon Logo",
+  "text": {
+    "about": "À propos de nous",
+    "contact": "Contactez-nous",
+    "services": {
+      "web-development": "Développement Web",
+      "app-development": "Développement d'applications",
+      "data-analytics": "Analyse de données",
+      "hr-management": "Gestion des ressources humaines",
+      "asset-tagging": "Étiquetage des actifs",
+      "project-management": "Gestion de projet",
+      "payroll-outsourcing": "Externalisation de la paie",
+      "digital-marketing": "Marketing numérique",
+      "cloud-services": "Services cloud",
+      "cyber-security": "Cybersécurité",
+      "artificial-intelligence": "Intelligence artificielle",
+      "it-services": "Services informatiques"
+    }
+  },
   "menu": {
     "Home": { "name": "Accueil", "slug": "/" },
     "About": { "name": "propos", "slug": "/about" },
@@ -69,8 +87,6 @@
         }
       ]
     },
-    "Company": { "name": "Entreprise", "slug": "/company" },
-    "Pricing": { "name": "Tarification", "slug": "/pricing" },
     "Contact": { "name": "Contact", "slug": "/contact" }
   },
   "title": "Bienvenue chez Glotech <1/> Pionnier de l’innovation numérique <1/> en Arabie Saoudite",
@@ -290,6 +306,16 @@
       }
     }
   },
+  "contact-page-components": {
+    "title": "Contactez-nous",
+    "description": "Vous avez une question à laquelle notre équipe de support ne peut pas répondre ? Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible. Si vous avez besoin d’assistance concernant votre service ou votre compte chez Godlike.host, veuillez nous contacter via le canal de support approprié sur notre portail d’assistance.",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "subject": "Sujet",
+      "message": "Message"
+    }
+  },
   "counter": {
     "projects": "Projets livrés",
     "years": "Années d'expérience",
@@ -338,8 +364,7 @@
       "description": "Nous travaillons avec passion pour relever des défis et en créer de nouveaux dans le secteur de la publicité."
     },
     {
-      "title": "Bulletin",
-      "description": "Abonnez-vous à notre bulletin pour recevoir les dernières nouvelles et mises à jour."
+      "title": "Services"
     },
     {
       "title": "Infos Bureau",
@@ -358,7 +383,8 @@
   ],
   "buttons": {
     "about": "À propos de nous",
-    "get-in-touch": "Entrer en contact"
+    "get-in-touch": "Entrer en contact",
+    "send-message": "Envoyer le message"
   },
   "labels": {
     "subscribe": "S'abonner"
@@ -453,8 +479,8 @@
         ],
         "technologies": {
           "category": "web-development",
-          "title": "Tech Stack Our <1>Web Development</1> Company Leverage",
-          "description": "Empowering your web development with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "Technologies que notre société de <1>développement web</1> utilise",
+          "description": "Nous renforçons vos sites web avec des technologies modernes, performantes et innovantes pour une performance constante."
         }
       }
     },
@@ -547,8 +573,8 @@
         ],
         "technologies": {
           "category": "app-development",
-          "title": "Tech Stack Our <1>App Development</1> Company Leverage",
-          "description": "Empowering your apps with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "Technologies que notre société de <1>développement d'applications mobiles</1> utilise",
+          "description": "Nous renforçons vos applications avec des technologies modernes, performantes et recherchées pour garantir innovation et performance constante."
         }
       }
     },
@@ -641,8 +667,8 @@
         ],
         "technologies": {
           "category": "data-analytics",
-          "title": "Tech Stack Our <1>Data Analytics</1> Company Leverage",
-          "description": "Empowering your analytics with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "Technologies que notre société de <1>Data Analytics</1> utilise",
+          "description": "Nous renforçons vos analyses avec des technologies modernes, avancées et populaires pour garantir performance constante et innovation."
         }
       }
     },
@@ -829,8 +855,8 @@
         ],
         "technologies": {
           "category": "asset-tagging",
-          "title": "Tech Stack Our <1>Asset Tagging</1> Company Leverage",
-          "description": "Empowering your asset tagging with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "Technologies que notre société de <1>suivi et étiquetage des actifs</1> utilise",
+          "description": "Nous optimisons vos actifs avec des technologies modernes, avancées et recherchées pour garantir performance et innovation constantes."
         }
       }
     },
@@ -923,8 +949,8 @@
         ],
         "technologies": {
           "category": "project-management",
-          "title": "Tech Stack Our <1>Project Management</1> Company Leverage",
-          "description": "Empowering your projects with novel, high-end, and in-demand tech stacks for consistent performance and innovation."
+          "title": "Technologies que notre société de <1>gestion de projets</1> utilise",
+          "description": "Nous renforçons vos projets avec des technologies modernes, avancées et populaires pour assurer une performance constante et une innovation continue."
         }
       }
     },
