@@ -72,7 +72,9 @@ const About = () => {
                 <Trans
                   i18nKey="home-page-components.about.title"
                   components={{
-                    1: <br className="hidden lg:block" />,
+                    1: (
+                      <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text" />
+                    )
                   }}
                 />
               </h1>

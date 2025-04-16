@@ -94,7 +94,7 @@
   "home-page-components": {
     "about": {
       "heading": "About Glotech",
-      "title": "Your Partner for <1/> Software Innovation",
+      "title": "Your Partner for  Software <1>Innovation</1>",
       "description": "At Glotech KSA, we don’t just work with businesses—we build the future with them.",
       "missionTitle": "Our Mission",
       "missionText": "We empower businesses to unlock their full potential by delivering tailored, cutting-edge technology solutions. Through innovation and collaboration, we simplify operations, drive growth, and create value that goes beyond expectations. At Glotech KSA, our mission is to be more than a service provider—we strive to be a trusted partner in every business's journey toward excellence and impact.",
@@ -216,7 +216,7 @@
       }
     ],
     "commitment_intro": {
-      "title": "Our Commitment to Excellence",
+      "title": "Our Commitment to <1>Excellence</1>",
       "description": "We are dedicated to delivering innovative, reliable, and high-quality solutions that exceed expectations and drive long-term success for our clients."
     },
     "commitment": [

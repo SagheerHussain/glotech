@@ -1,13 +1,11 @@
 "use client";
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import GlassIcons from "../bits ui/GlassIcons";
 
 export const Timeline = ({ data, title, description, icons }) => {
   const { i18n } = useTranslation();
-
- 
 
   const ref = useRef(null);
   const containerRef = useRef(null);
@@ -39,11 +37,16 @@ export const Timeline = ({ data, title, description, icons }) => {
     <div className="w-full font-sans" ref={containerRef}>
       <div className="max-w-5xl text-center mx-auto pt-20 pb-10 px-4 md:px-8 lg:px-10">
         <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-dark">
-          {title}
+          <Trans
+            i18nKey={title}
+            components={{
+              1: (
+                <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text" />
+              ),
+            }}
+          />
         </h2>
-        <p className="text-dark text-base xl:text-lg">
-          {description}
-        </p>
+        <p className="text-dark text-base xl:text-lg">{description}</p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
