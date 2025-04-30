@@ -70,9 +70,12 @@ const Header = () => {
       {/* Header Content */}
       <div className="header_content h-[calc(100vh-90px)] lg:h-[calc(125vh-0px)] 2xl:h-[calc(100vh-0px)] flex flex-col items-start justify-center">
         <div className="container">
-          <div className="header_title  ">
+          <div className="header_title">
             <h1 className="text-dark font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-[3.2rem]">
-              <Trans i18nKey="title" components={{ 1: <br /> }} />
+              <Trans
+                i18nKey="title"
+                components={{ 1: <br />, 2: <span className="arabic-decor" /> }}
+              />
             </h1>
           </div>
 

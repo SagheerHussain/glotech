@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { forwardRef, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const springValues = {
@@ -7,17 +7,22 @@ const springValues = {
   mass: 2,
 };
 
-export default function TiltedCard({
-  children, // 👈 Custom content
-  captionText = "",
-  containerHeight = "300px",
-  containerWidth = "100%",
-  scaleOnHover = 1,
-  rotateAmplitude = 14,
-  showMobileWarning = true,
-  showTooltip = true,
-}) {
-  const ref = useRef(null);
+const TiltedCard = forwardRef(function TiltedCard(
+  {
+    children,
+    captionText = "",
+    containerHeight = "300px",
+    containerWidth = "100%",
+    scaleOnHover = 1,
+    rotateAmplitude = 14,
+    showMobileWarning = true,
+    showTooltip = true,
+  },
+  ref
+) {
+  const innerRef = useRef(null);
+  const combinedRef = ref || innerRef;
+
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useSpring(useMotionValue(0), springValues);
@@ -33,9 +38,9 @@ export default function TiltedCard({
   const [lastY, setLastY] = useState(0);
 
   function handleMouse(e) {
-    if (!ref.current) return;
+    if (!combinedRef.current) return;
 
-    const rect = ref.current.getBoundingClientRect();
+    const rect = combinedRef.current.getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
     const offsetY = e.clientY - rect.top - rect.height / 2;
 
@@ -68,7 +73,7 @@ export default function TiltedCard({
 
   return (
     <figure
-      ref={ref}
+      ref={combinedRef}
       className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"
       style={{
         height: containerHeight,
@@ -95,7 +100,6 @@ export default function TiltedCard({
         }}
       >
         <div className="overlay absolute -top-[5%] -right-[15%] bg-[#4079ff0b] z-[-1] rounded-full w-[100px] h-[100px]"></div>
-        {/* 👇 Replace image with any custom content */}
         {children}
       </motion.div>
 
@@ -114,4 +118,6 @@ export default function TiltedCard({
       )}
     </figure>
   );
-}
+});
+
+export default TiltedCard;
