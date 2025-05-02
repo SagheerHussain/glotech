@@ -3,23 +3,30 @@ import { Layout } from "../index";
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
+import { getCategory, updateCategory } from "../../../services/categories";
 
 const EditCategory = () => {
   const [loading, setLoading] = useState(false);
-  const [gCategory, setgCategory] = useState("");
+  const [name, setName] = useState({ en: "", ar: "", fr: "" });
   const [slug, setSlug] = useState("");
 
   const navigate = useNavigate();
 
-  const {id} = useParams();
+  const { id } = useParams();
+  console.log(id);
 
   // Get Category Details
   useEffect(() => {
     const fetchCategory = async () => {
       try {
-        const category = [];
-        setgCategory(category?.name || "");
-        setSlug(category?.slug || "");
+        const { data } = await getCategory(id);
+        console.log(data);
+        setName({
+          en: data?.name?.en || "",
+          ar: data?.name?.ar || "",
+          fr: data?.name?.fr || "",
+        });
+        setSlug(data?.slug || "");
       } catch (error) {
         console.error("Error fetching category:", error);
       }
@@ -28,15 +35,32 @@ const EditCategory = () => {
   }, [id]);
 
   // Edit Category
-  const handleAddCategory = async (e) => {
+  const handleEditCategory = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-     
+      const category = { name, slug };
+      const response = await updateCategory(id, category);
+      if (response.success) {
+        Swal.fire({
+          icon: "success",
+          title: "Category updated successfully",
+          showConfirmButton: false,
+          timer: 700,
+        });
+        navigate("/dashboard/view-category");
+        setLoading(false);
+      } else new Error("Something wrong");
     } catch (error) {
       setLoading(false);
-      console.error("Error creating category:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Error updating category",
+        showConfirmButton: false,
+        timer: 700,
+      });
+      console.error("Error updating category:", error);
     }
   };
 
@@ -45,35 +69,71 @@ const EditCategory = () => {
       <Layout>
         <section id="addCategory" className={`h-[90vh] py-6`}>
           <div className="container py-4">
-            <h1 className="text-[#fff] text-4xl font-bold mb-5">
+            <h1 className="text-[#000] text-4xl font-bold mb-5">
               Edit Category
             </h1>
-            <form action="" onSubmit={handleAddCategory}>
-              <label htmlFor="" className="text-zinc-300 text-sm">
-                Category Name
+            <form action="" onSubmit={handleEditCategory}>
+              <label htmlFor="" className="text-[#000] text-sm">
+                Category Name (in en)*
               </label>
               <input
                 type="text"
-                defaultValue={gCategory}
-                required
-                onChange={(e) => setgCategory(e.target.value)}
-                placeholder="Category"
-                className="placeholder:text-[#ffffff58] w-full text-white bg-transparent focus:border-[#ffffff25] border-2 border-[#ffffff25] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                name="name"
+                defaultValue={name.en}
+                className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                onChange={(e) => setName({ ...name, en: e.target.value })}
+                placeholder="Category Name"
               />
-              <label htmlFor="" className="text-zinc-300 text-sm mt-4">
-                Category Slug
+
+              <label htmlFor="" className="text-[#000] text-sm">
+                (in ar) اسم الفئة*
               </label>
               <input
-                type="name"
-                required
-                onChange={(e) => setSlug(e.target.value)}
+                type="text"
+                name="name"
+                defaultValue={name.ar}
+                style={{ direction: "rtl" }}
+                className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                onChange={(e) => setName({ ...name, ar: e.target.value })}
+                placeholder="اسم الفئة"
+              />
+
+              <label htmlFor="" className="text-[#000] text-sm">
+                Nom de la catégorie (in fr)*
+              </label>
+              <input
+                type="text"
+                name="name"
+                defaultValue={name.fr}
+                className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                onChange={(e) => setName({ ...name, fr: e.target.value })}
+                placeholder="Nom de la catégorie"
+              />
+
+              <label htmlFor="" className="text-[#000] text-sm">
+                Category Slug*
+              </label>
+              <input
+                type="text"
                 defaultValue={slug}
+                onChange={(e) => setSlug(e.target.value)}
                 name="slug"
                 placeholder="Slug"
-                className="placeholder:text-[#ffffff58] w-full text-white bg-transparent focus:border-[#ffffff25] border-2 border-[#ffffff25] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
               />
-              <button className="w-full bg-primary hover:bg-hover_color text-white py-2 rounded mt-4">
-                {loading ? <ClipLoader color="#fff" /> : "Edit Category"}
+              <button
+                type="submit"
+                className={`bg-primary text-white py-2 rounded-full mt-4 px-6 ${
+                  loading
+                    ? "cursor-not-allowed opacity-50"
+                    : "hover:bg-secondary hover:bg-hover_color"
+                }`}
+              >
+                {loading ? (
+                  <ClipLoader size={20} color="#fff" />
+                ) : (
+                  "Edit Category"
+                )}
               </button>
             </form>
           </div>

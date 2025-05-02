@@ -10,6 +10,9 @@ import EditService from "./services/EditService";
 import AddCategory from "./category/AddCategory";
 import ViewCategory from "./category/ViewCategory";
 import EditCategory from "./category/EditCategory";
+import AddColor from "./color/AddColor";
+import ViewColor from "./color/ViewColor";
+import EditColor from "./color/EditColor";
 
 export {
     Footer,
@@ -24,4 +27,7 @@ export {
     AddCategory,
     ViewCategory,
     EditCategory,
+    AddColor,
+    ViewColor,
+    EditColor,
 }

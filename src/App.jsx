@@ -14,6 +14,9 @@ import AddCategory from "./admin/components/category/AddCategory";
 import ViewCategory from "./admin/components/category/ViewCategory";
 import EditCategory from "./admin/components/category/EditCategory";
 import ServiceContentPage from "./pages/ServiceContentPage";
+import ViewColor from "./admin/components/color/ViewColor";
+import AddColor from "./admin/components/color/AddColor";
+import EditColor from "./admin/components/color/EditColor";
 
 function App() {
   return (
@@ -33,6 +36,9 @@ function App() {
         <Route path="/dashboard/add-category" element={<AddCategory />} />
         <Route path="/dashboard/view-category" element={<ViewCategory />} />
         <Route path="/dashboard/edit-category/:id" element={<EditCategory />} />
+        <Route path="/dashboard/add-color" element={<AddColor />} />
+        <Route path="/dashboard/view-color" element={<ViewColor />} />
+        <Route path="/dashboard/edit-color/:id" element={<EditColor />} />
       </Routes>
     </>
   );

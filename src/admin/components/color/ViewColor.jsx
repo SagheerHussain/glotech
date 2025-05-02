@@ -7,9 +7,12 @@ import Swal from "sweetalert2";
 import GridTable from "../GridTable";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { deleteCategory, getCategories } from "../../../services/categories";
-import EditCategory from "./EditCategory";
+import EditCategory from "./EditColor";
+import { deleteColor, getColors } from "../../../services/colors";
+import { FaPencilAlt } from "react-icons/fa";
+import EditColor from "./EditColor";
 
-const ViewCategory = () => {
+const ViewColor = () => {
   const [rows, setRows] = useState([]);
   const [selectedRows, setSelectedRows] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -28,8 +31,8 @@ const ViewCategory = () => {
   };
 
   // Handle Single Edit
-  const handleEdit = () => {
-    navigate(`/dashboard/edit-category/${selectedId}`);
+  const handleEdit = (id) => {
+    navigate(`/dashboard/edit-color/${id}`);
     handleMenuClose();
   };
 
@@ -48,11 +51,11 @@ const ViewCategory = () => {
 
     if (result.isConfirmed) {
       try {
-        await deleteCategory(selectedId);
-        Swal.fire("Deleted!", "The category has been deleted.", "success");
+        await deleteColor(selectedId);
+        Swal.fire("Deleted!", "The color has been deleted.", "success");
         setRows(rows.filter((row) => row.id !== selectedId));
       } catch (error) {
-        console.error("Error deleting category:", error);
+        console.error("Error deleting color:", error);
       }
     }
   };
@@ -63,39 +66,36 @@ const ViewCategory = () => {
   const columns = [
     { field: "No", headerName: "Index", flex: 1, minWidth: 150 },
     {
-      field: "category_en",
-      headerName: "Category (en)",
+      field: "primary_hex",
+      headerName: "Primary",
       flex: 1,
       minWidth: 150,
       editable: true,
+      renderCell: (params) => (
+        <div className="flex items-center">
+          <div
+            className="w-6 h-6 rounded-full"
+            style={{ backgroundColor: params.value }}
+          />
+          <span className="ml-2">{params.value}</span>
+        </div>
+      ),
     },
     {
-      field: "category_ar",
-      headerName: "Category (ar)",
+      field: "secondary_hex",
+      headerName: "Secondary",
       flex: 1,
       minWidth: 150,
       editable: true,
-    },
-    {
-      field: "category_fr",
-      headerName: "Category (fr)",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-    },
-    {
-      field: "category_fr",
-      headerName: "Category",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-    },
-    {
-      field: "slug",
-      headerName: "Slug",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
+      renderCell: (params) => (
+        <div className="flex items-center">
+          <div
+            className="w-6 h-6 rounded-full"
+            style={{ backgroundColor: params.value }}
+          />
+          <span className="ml-2">{params.value}</span>
+        </div>
+      ),
     },
     {
       field: "actions",
@@ -105,34 +105,22 @@ const ViewCategory = () => {
       sortable: false,
       renderCell: (params) => (
         <>
-          <IconButton onClick={(event) => handleMenuOpen(event, params.row.id)}>
-            <BsThreeDotsVertical className="text-black" />
-          </IconButton>
-          <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl) && selectedId === params.row.id}
-            onClose={handleMenuClose}
-          >
-            <MenuItem onClick={handleEdit}>Edit</MenuItem>
-            <MenuItem onClick={handleDelete} className="text-red-500">
-              Delete
-            </MenuItem>
-          </Menu>
+          <button onClick={() => handleEdit(params.row.id)}>
+            <FaPencilAlt size={20} className="text-primary" /> 
+          </button>
         </>
       ),
     },
   ];
 
-  const fetchCategories = async () => {
+  const fetchColors = async () => {
     try {
-      const { data } = await getCategories();
+      const { data } = await getColors();
       const formattedRows = data.map((item, index) => ({
         id: item._id,
         No: index + 1,
-        category_en: item.name.en || "N/A",
-        category_ar: item.name.ar || "N/A",
-        category_fr: item.name.fr || "N/A",
-        slug: item.slug || "N/A",
+        primary_hex: item.primary || "N/A",
+        secondary_hex: item.secondary || "N/A",
       }));
       setRows(formattedRows);
     } catch (error) {
@@ -141,13 +129,13 @@ const ViewCategory = () => {
   };
 
   useEffect(() => {
-    fetchCategories();
+    fetchColors();
   }, []);
 
   return (
     <>
       <GridTable
-        title={"View Categories"}
+        title={"View Colors"}
         handleBulkDelete={handleBulkDelete}
         selectedRows={selectedRows}
         rows={rows}
@@ -156,13 +144,9 @@ const ViewCategory = () => {
       />
 
       {/* Edit Sales Modal */}
-      {selectedId && (
-        <EditCategory
-          id={selectedId}
-        />
-      )}
+      {selectedId && <EditColor id={selectedId} />}
     </>
   );
 };
 
-export default ViewCategory;
+export default ViewColor;
