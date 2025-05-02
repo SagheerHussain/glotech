@@ -3,6 +3,7 @@
   "text": {
     "about": "About Us",
     "contact": "Contact Us",
+    "service": "Services",
     "services": {
       "web-development": "Web Development",
       "app-development": "App Development",
@@ -306,6 +307,70 @@
       }
     }
   },
+  "service_content_intro": {
+    "home_navigation": "Home",
+    "service_navigation": "Services",
+    "title": "What We Offer",
+    "headline": "Tailored Services To Drive Your Success"
+  },
+  "features": [
+    {
+      "what_we_do": "What We Do",
+      "requirements_we_fulfill": "Glotech-KSA is a global centre serving the ever-growing needs of a large group of industry-specific enterprise software companies."
+    },
+    {
+      "what_we_do": "Requirements We Fulfill",
+      "requirements_we_fulfill": "We provide software development, maintenance, support, deployment and implementation services, as well as ITes Staff Augmentation for Systems Administration as well as full-featured G&A and S&M needs."
+    }
+  ],
+  "feature_service_title": "We Deliver <1>Excellence.</1>",
+  "features_service": [
+    {
+      "title": "Cross Platform Development",
+      "description": "Build apps that run seamlessly across Android, iOS, and web platforms. Enhance performance, reduce cost, and reach more users with a single codebase using modern frameworks.",
+      "href": "/services/app-development"
+    },
+    {
+      "title": "Website Development",
+      "description": "We design responsive, SEO-friendly, and scalable websites. Whether static or dynamic, our websites ensure fast loading, modern aesthetics, and strong backend integration for business growth.",
+      "href": "/services/web-development"
+    },
+    {
+      "title": "HR Management System",
+      "description": "Manage your entire workforce from recruitment to payroll. Automate leave tracking, performance reviews, employee records, and ensure compliance with labor regulations efficiently.",
+      "href": "/services/hr-management"
+    },
+    {
+      "title": "Asset Tagging & Management",
+      "description": "Track, verify, and manage physical assets with smart tagging solutions. Improve visibility, reduce loss, and maintain real-time inventory using barcodes, QR, or RFID technologies.",
+      "href": "/services/asset-tagging"
+    },
+    {
+      "title": "Artificial Intelligence",
+      "description": "We develop custom AI models, chatbots, and machine learning workflows. From data-driven decision-making to automation, we help businesses harness AI for real-world solutions.",
+      "href": "/services/artificial-intelligence"
+    },
+    {
+      "title": "Cyber Security",
+      "description": "Protect your digital infrastructure with robust cybersecurity services. We offer threat detection, vulnerability assessments, endpoint security, and risk management strategies tailored to your needs.",
+      "href": "/services/cyber-security"
+    },
+    {
+      "title": "Digital Marketing",
+      "description": "Grow your brand with targeted campaigns, SEO, PPC, and social media strategies. We analyze trends and drive conversions through creative and data-backed digital marketing efforts.",
+      "href": "/services/digital-marketing"
+    },
+    {
+      "title": "Payroll Outsourcing",
+      "description": "Streamline your payroll operations with end-to-end processing, tax filing, compliance checks, and automated payslip generation—saving you time and reducing operational errors.",
+      "href": "/services/payroll-outsourcing"
+    },
+    {
+      "title": "Project Management",
+      "description": "Plan, track, and execute projects with our digital tools. Manage timelines, assign roles, monitor progress, and collaborate effectively across teams using our structured workflows.",
+      "href": "/services/project-management"
+    }
+  ],
   "contact-page-components": {
     "title": "Contact Us",
     "description": "Have a question that can’t be handled by our support staff? Fill this form below and we will get back to you as soon as we can. If you’re looking for assistance regarding your service or account at Godlike.host, please contact us via an appropriate support channel at our support portal.",

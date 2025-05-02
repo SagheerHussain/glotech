@@ -21,6 +21,9 @@ import Info from "./about components/Info";
 
 // Services Components
 import Benefits from "./services components/Benefits";
+import ServiceHeader from "./services content components/ServiceHeader";
+import Features from "./services content components/Features";
+import FeatureServices from "./services content components/FeatureServices";
 
 export {
     Logo,
@@ -40,4 +43,7 @@ export {
     Team,
     ValueAddition,
     Benefits,
+    ServiceHeader,
+    Features,
+    FeatureServices,
 }

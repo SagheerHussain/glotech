@@ -21,22 +21,17 @@ import { MdOutlineDesignServices } from "react-icons/md";
 const Sidebar = () => {
   const [services, setServices] = useState(false);
   const [categories, setCategories] = useState(false);
+  const [color, setColor] = useState(false);
   const [pricing, setPricing] = useState(false);
 
   const handleService = () => {
     setServices(!services);
   };
-  const handleStudents = () => {
-    setStudents(!students);
-  };
   const handleCategories = () => {
     setCategories(!categories);
   };
-  const handleAuthors = () => {
-    setAuthors(!authors);
-  };
-  const handlePricing = () => {
-    setPricing(!pricing);
+  const handleColor = () => {
+    setColor(!color);
   };
 
   return (
@@ -47,15 +42,8 @@ const Sidebar = () => {
       >
         <div className="sidbar_logo flex justify-center mb-4">
           <Link to="/dashboard" className="flex items-center">
-            <img src={logoSrc} className={`max-w-[100px]`} alt="" />
-            <GradientText
-              colors={["#c9a66f", "#8C6238", "#c9a66f", "#c9a66f", "#8C6238"]}
-              animationSpeed={8}
-              showBorder={false}
-              className=""
-            >
-              GLOTECH
-            </GradientText>
+            <img src={logoSrc} className={`max-w-[80px]`} alt="" />
+            <span className="text-secondary text-3xl font-bold">GLOTECH</span>
           </Link>
         </div>
         <div className="sidebar_menus">
@@ -159,6 +147,52 @@ const Sidebar = () => {
                           <GoDot className="text-light_text" />
                         </ListItemIcon>
                         View Categories
+                      </ListItemButton>
+                    </Link>
+                  </List>
+                </Collapse>
+              </div>
+            </div>
+
+            {/* Theme */}
+            <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
+              <div className="px-[.75rem]">
+                <ListItemButton
+                  onClick={handleColor}
+                  className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
+                >
+                  <ListItemIcon className="-mr-4">
+                    <BiCategory className="text-light_text text-xl" />
+                  </ListItemIcon>
+                  <h6 className="text-light_text">Theme</h6>
+                  {categories ? (
+                    <HiOutlineChevronDown className="ms-auto" />
+                  ) : (
+                    <HiOutlineChevronRight className="ms-auto" />
+                  )}
+                </ListItemButton>
+                <Collapse in={color} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/add-color`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        Add Color
+                      </ListItemButton>
+                    </Link>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/view-color`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        View Color
                       </ListItemButton>
                     </Link>
                   </List>
