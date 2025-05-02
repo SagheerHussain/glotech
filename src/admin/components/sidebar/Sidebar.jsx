@@ -173,7 +173,7 @@ const Sidebar = () => {
                 </ListItemButton>
                 <Collapse in={color} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
-                    <Link
+                    {/* <Link
                       className="text-light_text"
                       to={`/dashboard/add-color`}
                     >
@@ -183,7 +183,7 @@ const Sidebar = () => {
                         </ListItemIcon>
                         Add Color
                       </ListItemButton>
-                    </Link>
+                    </Link> */}
                     <Link
                       className="text-light_text"
                       to={`/dashboard/view-color`}

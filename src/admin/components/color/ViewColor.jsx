@@ -9,8 +9,8 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { deleteCategory, getCategories } from "../../../services/categories";
 import EditCategory from "./EditColor";
 import { deleteColor, getColors } from "../../../services/colors";
-import { FaPencilAlt } from "react-icons/fa"; 
-import EditColor from "./EditColor";  
+import { FaPencilAlt } from "react-icons/fa";
+import EditColor from "./EditColor";
 
 const ViewColor = () => {
   const [rows, setRows] = useState([]);
@@ -105,19 +105,9 @@ const ViewColor = () => {
       sortable: false,
       renderCell: (params) => (
         <>
-          <IconButton onClick={(event) => handleMenuOpen(event, params.row.id)}>
-            <BsThreeDotsVertical className="text-black" />
-          </IconButton>
-          <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl) && selectedId === params.row.id}
-            onClose={handleMenuClose}
-          >
-            <MenuItem onClick={handleEdit}>Edit</MenuItem>
-            <MenuItem onClick={handleDelete} className="text-red-500">
-              Delete
-            </MenuItem>
-          </Menu>
+          <button onClick={() => handleEdit(params.row.id)}>
+            <FaPencilAlt size={20} className="text-primary" />
+          </button>
         </>
       ),
     },
@@ -154,11 +144,7 @@ const ViewColor = () => {
       />
 
       {/* Edit Sales Modal */}
-      {selectedId && (
-        <EditColor
-          id={selectedId}
-        />
-      )}
+      {selectedId && <EditColor id={selectedId} />}
     </>
   );
 };

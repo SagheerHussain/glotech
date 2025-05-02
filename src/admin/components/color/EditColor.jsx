@@ -57,6 +57,11 @@ const EditCategory = () => {
     }
   };
 
+  const handleResetTheme = () => {
+    setPrimary("#8c6238");
+    setSecondary("#c9a66f");
+  };
+
   return (
     <>
       <Layout>
@@ -100,8 +105,13 @@ const EditCategory = () => {
               >
                 {loading ? <ClipLoader size={20} color="#fff" /> : "Edit Color"}
               </button>
-              <button className="ms-3 bg-secondary text-black hover:bg-primary hover:text-white py-2 rounded-full mt-4 px-6">Reset Default Theme</button>
             </form>
+            <button
+              onClick={() => handleResetTheme()}
+              className="bg-secondary text-black hover:bg-primary hover:text-white py-2 rounded-full mt-4 px-6"
+            >
+              Reset Default Theme
+            </button>
           </div>
         </section>
       </Layout>
