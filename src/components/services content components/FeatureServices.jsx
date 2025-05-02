@@ -45,7 +45,7 @@ const FeatureServices = () => {
               components={{ 1: <span className="text-primary font-bold" /> }}
             />
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
             {services.map((service, index) => (
               <div
                 key={index}

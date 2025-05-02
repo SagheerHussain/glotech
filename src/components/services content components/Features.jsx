@@ -1,5 +1,6 @@
 import React from "react";
 import { FiSettings } from "react-icons/fi";
+import { GrNotes } from "react-icons/gr";
 import { useTranslation } from "react-i18next";
 
 const Features = () => {
@@ -11,7 +12,7 @@ const Features = () => {
   return (
     <section id="features" className="py-20">
       <div className="container">
-        <div className="grid grid-cols-2 gap-x-6">
+        <div className="grid md:grid-cols-2 gap-x-6">
           <div className="feature-content">
             <FiSettings color="#8c6238" size={40} />
             <h1 className="text-primary text-4xl font-bold pt-12 pb-3">
@@ -22,7 +23,7 @@ const Features = () => {
             </p>
           </div>
           <div className="feature-content">
-            <FiSettings color="#8c6238" size={40} />
+            <GrNotes color="#8c6238" size={40} />
             <h1 className="text-primary text-4xl font-bold pt-12 pb-3">
               {features[1].what_we_do}
             </h1>

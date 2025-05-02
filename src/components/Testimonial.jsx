@@ -35,12 +35,12 @@ const Testimonial = () => {
   return (
     <section
       id="testimonials"
-      className="py-20 relative z-[10]"
+      className="relative z-[10]"
       style={{
         background: `url(https://media.istockphoto.com/id/1485424068/vector/world-map-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=FfRJAk0f0XWCMl1PjdGRVQSdUsVHpDjyfBBQE9L8GWg=)`,
       }}
     >
-      <div className="overlay absolute top-0 left-0 w-full h-full bg-[#ffffffac] -z-[1]"></div>
+      <div className="overlay absolute top-0 left-0 w-full h-full bg-[#ffffffac] -z-[1] py-20"></div>
       <div className="container">
         <div className="md:flex items-center">
           <div className="testimonial_intro md:w-1/2">
