@@ -1,6 +1,7 @@
 import React from "react";
 import { NavigationLayout } from "../index";
 import { useTranslation } from "react-i18next";
+import banner from "/Images/banner.png";
 
 const ServiceHeader = () => {
 
@@ -10,7 +11,7 @@ const ServiceHeader = () => {
     <>
       <header
         id="header"
-        style={{ background: `url(../../../public/Images/banner.png)` }}
+        style={{ background: `url(${banner})` }}
         className="max-w-full h-[60vh]"
       >
         <NavigationLayout />
