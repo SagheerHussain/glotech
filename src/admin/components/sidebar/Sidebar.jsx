@@ -12,17 +12,17 @@ import {
 import { HiOutlineChevronRight, HiOutlineChevronDown } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { IoMdHome } from "react-icons/io";
-import { FaBook } from "react-icons/fa";
-import { PiStudentDuotone } from "react-icons/pi";
 import { BiCategory } from "react-icons/bi";
 import { GoDot } from "react-icons/go";
 import { MdOutlineDesignServices } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
+import { GrNotes } from "react-icons/gr";
 
 const Sidebar = () => {
   const [services, setServices] = useState(false);
   const [categories, setCategories] = useState(false);
   const [color, setColor] = useState(false);
-  const [pricing, setPricing] = useState(false);
+  const [about, setAbout] = useState(false);
 
   const handleService = () => {
     setServices(!services);
@@ -32,6 +32,9 @@ const Sidebar = () => {
   };
   const handleColor = () => {
     setColor(!color);
+  };
+  const handleAbout = () => {
+    setAbout(!about);
   };
 
   return (
@@ -162,7 +165,7 @@ const Sidebar = () => {
                   className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
                 >
                   <ListItemIcon className="-mr-4">
-                    <BiCategory className="text-light_text text-xl" />
+                    <MdLightMode className="text-light_text text-xl" />
                   </ListItemIcon>
                   <h6 className="text-light_text">Theme</h6>
                   {categories ? (
@@ -173,17 +176,6 @@ const Sidebar = () => {
                 </ListItemButton>
                 <Collapse in={color} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
-                    {/* <Link
-                      className="text-light_text"
-                      to={`/dashboard/add-color`}
-                    >
-                      <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon className="-mr-4">
-                          <GoDot className="text-light_text" />
-                        </ListItemIcon>
-                        Add Color
-                      </ListItemButton>
-                    </Link> */}
                     <Link
                       className="text-light_text"
                       to={`/dashboard/view-color`}
@@ -193,6 +185,52 @@ const Sidebar = () => {
                           <GoDot className="text-light_text" />
                         </ListItemIcon>
                         View Color
+                      </ListItemButton>
+                    </Link>
+                  </List>
+                </Collapse>
+              </div>
+            </div>
+
+            {/* About */}
+            <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
+              <div className="px-[.75rem]">
+                <ListItemButton
+                  onClick={handleAbout}
+                  className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
+                >
+                  <ListItemIcon className="-mr-4">
+                    <GrNotes className="text-light_text text-xl" />
+                  </ListItemIcon>
+                  <h6 className="text-light_text">About</h6>
+                  {about ? (
+                    <HiOutlineChevronDown className="ms-auto" />
+                  ) : (
+                    <HiOutlineChevronRight className="ms-auto" />
+                  )}
+                </ListItemButton>
+                <Collapse in={about} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    {/* <Link
+                      className="text-light_text"
+                      to={`/dashboard/add-about`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        Add About
+                      </ListItemButton>
+                    </Link> */}
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/view-about`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        View About
                       </ListItemButton>
                     </Link>
                   </List>

@@ -17,6 +17,9 @@ import ServiceContentPage from "./pages/ServiceContentPage";
 import ViewColor from "./admin/components/color/ViewColor";
 import AddColor from "./admin/components/color/AddColor";
 import EditColor from "./admin/components/color/EditColor";
+import AddAbout from "./admin/components/about/AddAbout";
+import ViewAbout from "./admin/components/about/ViewAbout";
+import EditAbout from "./admin/components/about/EditAbout";
 
 function App() {
   return (
@@ -39,6 +42,9 @@ function App() {
         <Route path="/dashboard/add-color" element={<AddColor />} />
         <Route path="/dashboard/view-color" element={<ViewColor />} />
         <Route path="/dashboard/edit-color/:id" element={<EditColor />} />
+        <Route path="/dashboard/add-about" element={<AddAbout />} />
+        <Route path="/dashboard/view-about" element={<ViewAbout />} />
+        <Route path="/dashboard/edit-about/:id" element={<EditAbout />} />
       </Routes>
     </>
   );

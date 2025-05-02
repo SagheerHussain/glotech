@@ -5,8 +5,10 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import Swal from "sweetalert2";
 // import { MoreVert } from '@mui/icons-material';
 import GridTable from "../GridTable";
+import { getAboutLists } from "../../../services/about";
+import { FaPencilAlt } from "react-icons/fa";
 
-const ViewServices = () => {
+const ViewAbout = () => {
   const [rows, setRows] = useState([]);
   const [selectedRows, setSelectedRows] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -16,7 +18,20 @@ const ViewServices = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const formattedRows = []
+        const { data } = await getAboutLists();
+        const formattedRows = data.map((item, index) => ({
+          id: item._id,
+          No: index + 1,
+          mission_en: item.mission.en || "N/A",
+          mission_ar: item.mission.ar || "N/A",
+          mission_fr: item.mission.fr || "N/A",
+          vision_en: item.vision.en || "N/A",
+          vision_ar: item.vision.ar || "N/A",
+          vision_fr: item.vision.fr || "N/A",
+          target_en: item.target.en || "N/A",
+          target_ar: item.target.ar || "N/A",
+          target_fr: item.target.fr || "N/A",
+        }));
         setRows(formattedRows);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -28,41 +43,15 @@ const ViewServices = () => {
 
   const columns = [
     { field: "No", headerName: "Index", flex: 1, minWidth: 150 },
-    {
-      field: "cover",
-      headerName: "Cover",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-      renderCell: (params) => (
-        <img
-          src={params.value}
-          className="max-w-[100px] max-h-[100px] py-2 object-cover"
-          alt="Book Cover"
-        />
-      ),
-    },
-    {
-      field: "title",
-      headerName: "Title",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-    },
-    {
-      field: "description",
-      headerName: "Description",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-    },
-    {
-      field: "category",
-      headerName: "Category",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-    },
+    { field: "mission_en", headerName: "Mission (EN)", flex: 1, minWidth: 150 },
+    { field: "mission_ar", headerName: "Mission (AR)", flex: 1, minWidth: 150 },
+    { field: "mission_fr", headerName: "Mission (FR)", flex: 1, minWidth: 150 },
+    { field: "vision_en", headerName: "Vision (EN)", flex: 1, minWidth: 150 },
+    { field: "vision_ar", headerName: "Vision (AR)", flex: 1, minWidth: 150 },
+    { field: "vision_fr", headerName: "Vision (FR)", flex: 1, minWidth: 150 },
+    { field: "target_en", headerName: "Target (EN)", flex: 1, minWidth: 150 },
+    { field: "target_ar", headerName: "Target (AR)", flex: 1, minWidth: 150 },
+    { field: "target_fr", headerName: "Target (FR)", flex: 1, minWidth: 150 },
     {
       field: "actions",
       headerName: "Actions",
@@ -71,19 +60,9 @@ const ViewServices = () => {
       sortable: false,
       renderCell: (params) => (
         <>
-          <IconButton onClick={(event) => handleMenuOpen(event, params.row.id)}>
-            <BsThreeDotsVertical className="text-white" />
-          </IconButton>
-          <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl) && selectedId === params.row.id}
-            onClose={handleMenuClose}
-          >
-            <MenuItem onClick={handleEdit}>Edit</MenuItem>
-            <MenuItem onClick={handleDelete} className="text-red-500">
-              Delete
-            </MenuItem>
-          </Menu>
+          <button onClick={() => handleEdit(params.row.id)}>
+            <FaPencilAlt size={20} className="text-primary" />
+          </button>
         </>
       ),
     },
@@ -101,9 +80,9 @@ const ViewServices = () => {
   };
 
   // Handle Single Edit
-  const handleEdit = () => {
+  const handleEdit = (id) => {
     handleMenuClose();
-    navigate(`/dashboard/edit-service/${selectedId}`);
+    navigate(`/dashboard/edit-about/${id}`);
   };
 
   // Handle Single Delete
@@ -111,7 +90,7 @@ const ViewServices = () => {
     handleMenuClose();
     const result = await Swal.fire({
       title: "Are you sure?",
-      text: "Do you really want to delete this service? This action cannot be undone.",
+      text: "Do you really want to delete this about? This action cannot be undone.",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#d33",
@@ -121,24 +100,22 @@ const ViewServices = () => {
 
     if (result.isConfirmed) {
       try {
-        await deleteBook(selectedId);
-        Swal.fire("Deleted!", "The service has been deleted.", "success");
+        await deleteAbout(selectedId);
+        Swal.fire("Deleted!", "The about has been deleted.", "success");
         setRows(rows.filter((row) => row.id !== selectedId));
       } catch (error) {
-        console.error("Error deleting book:", error);
+        console.error("Error deleting about:", error);
       }
     }
   };
 
   // Handle Bulk Delete
-  const handleBulkDelete = async () => {
-   
-  };
+  const handleBulkDelete = async () => {};
 
   return (
     <>
       <GridTable
-        title={"View Services"}
+        title={"View About"}
         handleBulkDelete={handleBulkDelete}
         selectedRows={selectedRows}
         rows={rows}
@@ -149,4 +126,4 @@ const ViewServices = () => {
   );
 };
 
-export default ViewServices;
+export default ViewAbout;
