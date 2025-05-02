@@ -45,7 +45,7 @@ export function Navbar({ className }) {
 
         <HoveredLink to={`/about`}>{t("menu.About.name")}</HoveredLink>
 
-        <Link to={""} className="">
+        <Link to={"/services"} className="">
           <MenuItem
             setActive={setActive}
             active={active}

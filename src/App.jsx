@@ -13,6 +13,7 @@ import EditService from "./admin/components/services/EditService";
 import AddCategory from "./admin/components/category/AddCategory";
 import ViewCategory from "./admin/components/category/ViewCategory";
 import EditCategory from "./admin/components/category/EditCategory";
+import ServiceContentPage from "./pages/ServiceContentPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services/:service" element={<ServicePage />} />
+        <Route path="/services" element={<ServiceContentPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/dashboard" element={<AnalyticsPage />} />
         {/* Admin Routes */}

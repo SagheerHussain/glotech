@@ -306,6 +306,61 @@
       }
     }
   },
+  "service_content_intro": {
+    "home_navigation": "Accueil",
+    "service_navigation": "Services",
+    "title": "Ce que nous offrons",
+    "headline": "Des services personnalisés pour stimuler votre succès"
+  },
+  "features": [
+    {
+      "what_we_do": "Ce que nous faisons",
+      "requirements_we_fulfill": "Glotech-KSA est un centre mondial répondant aux besoins croissants d’un large groupe d’entreprises de logiciels d’entreprise spécialisées par secteur."
+    },
+    {
+      "what_we_do": "Exigences que nous remplissons",
+      "requirements_we_fulfill": "Nous fournissons des services de développement de logiciels, de maintenance, de support, de déploiement et de mise en œuvre, ainsi que de l’augmentation de personnel ITes pour l’administration des systèmes ainsi que pour les besoins complets en gestion générale, ventes et marketing."
+    }
+  ],
+  "feature_service_title": "Nous offrons <1>l'excellence.</1>",
+  "features_service": [
+    {
+      "title": "Développement multiplateforme",
+      "description": "Créez des applications fonctionnant parfaitement sur Android, iOS et le web. Améliorez les performances, réduisez les coûts et atteignez plus d’utilisateurs avec un seul code source."
+    },
+    {
+      "title": "Développement de sites Web",
+      "description": "Nous concevons des sites Web réactifs, optimisés pour le référencement et évolutifs. Qu'ils soient statiques ou dynamiques, nos sites garantissent un chargement rapide et une intégration backend solide."
+    },
+    {
+      "title": "Système de gestion RH",
+      "description": "Gérez votre personnel de l'embauche à la paie. Automatisez le suivi des congés, les évaluations, les dossiers et assurez la conformité aux réglementations du travail."
+    },
+    {
+      "title": "Étiquetage et gestion des actifs",
+      "description": "Suivez, vérifiez et gérez les actifs physiques grâce à des solutions d'étiquetage intelligentes. Améliorez la visibilité, réduisez les pertes et maintenez un inventaire en temps réel avec les codes-barres, QR ou RFID."
+    },
+    {
+      "title": "Intelligence artificielle",
+      "description": "Nous développons des modèles d'IA sur mesure, des chatbots et des flux de travail en apprentissage automatique. De la prise de décision basée sur les données à l'automatisation, nous aidons les entreprises à exploiter l'IA concrètement."
+    },
+    {
+      "title": "Cybersécurité",
+      "description": "Protégez votre infrastructure numérique avec des services de cybersécurité robustes. Nous proposons la détection de menaces, l’évaluation des vulnérabilités et la gestion des risques sur mesure."
+    },
+    {
+      "title": "Marketing digital",
+      "description": "Développez votre marque avec des campagnes ciblées, du SEO, du PPC et des stratégies sociales. Nous analysons les tendances et générons des conversions grâce à un marketing digital créatif et fondé sur les données."
+    },
+    {
+      "title": "Externalisation de la paie",
+      "description": "Simplifiez votre gestion de paie avec un traitement complet, la déclaration fiscale, les contrôles de conformité et la génération automatique des fiches de paie."
+    },
+    {
+      "title": "Gestion de projet",
+      "description": "Planifiez, suivez et réalisez vos projets avec nos outils numériques. Gérez les délais, attribuez les rôles, suivez l'avancement et collaborez efficacement grâce à nos flux de travail structurés."
+    }
+  ],
   "contact-page-components": {
     "title": "Contactez-nous",
     "description": "Vous avez une question à laquelle notre équipe de support ne peut pas répondre ? Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible. Si vous avez besoin d’assistance concernant votre service ou votre compte chez Godlike.host, veuillez nous contacter via le canal de support approprié sur notre portail d’assistance.",

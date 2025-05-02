@@ -27,7 +27,6 @@ html[dir="rtl"] body .header_title h1 {
   line-height: 4rem !important;
 }
 body {
-  background-color: #111;
   overflow-x: hidden !important;
   font-family: "Open Sans", sans-serif;
 }
