@@ -98,14 +98,9 @@ const EditCategory = () => {
                     : "hover:bg-secondary hover:bg-hover_color"
                 }`}
               >
-<<<<<<< HEAD
                 {loading ? <ClipLoader size={20} color="#fff" /> : "Edit Color"}
               </button>
-=======
-                {loading ? <ClipLoader size={20} color="#fff" /> : "Apply Color"}
-              </button>
               <button className="ms-3 bg-secondary text-black hover:bg-primary hover:text-white py-2 rounded-full mt-4 px-6">Reset Default Theme</button>
->>>>>>> b82fcac51eacd2e91ae2d74e3c0c5227f28b01d6
             </form>
           </div>
         </section>

@@ -7,7 +7,6 @@ import {
   Banner,
   Footer,
   Counter,
-<<<<<<< HEAD
   NavigationLayout,
 } from "../components/index";
 import { Spotlight } from "../components/ui/SpotlightEffect";
@@ -16,13 +15,6 @@ import { useTranslation } from "react-i18next";
 
 const ServiceContentPage = () => {
   const { t, i18n } = useTranslation();
-=======
-} from "../components/index";
-import { useTranslation } from "react-i18next";
-
-const ServiceContentPage = () => {
-  const { t } = useTranslation();
->>>>>>> b82fcac51eacd2e91ae2d74e3c0c5227f28b01d6
 
   const stats = [
     { label: t("counter.projects"), value: 10 },
@@ -34,7 +26,6 @@ const ServiceContentPage = () => {
   return (
     <>
       <div className="App">
-<<<<<<< HEAD
         <header id="header" className="h-[50vh] bg-[#111]">
           <NavigationLayout />
           <div className="h-[50vh] pt-[150px] w-full rounded-md flex md:items-center md:justify-center bg-[#ddd] antialiased bg-grid-white/[0.02] relative overflow-hidden">
@@ -50,9 +41,6 @@ const ServiceContentPage = () => {
             </div>
           </div>
         </header>
-=======
-        <ServiceHeader />
->>>>>>> b82fcac51eacd2e91ae2d74e3c0c5227f28b01d6
         <main id="main">
           <Features />
           <FeatureServices />
