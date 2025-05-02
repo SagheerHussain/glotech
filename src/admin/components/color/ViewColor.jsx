@@ -9,6 +9,10 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { deleteCategory, getCategories } from "../../../services/categories";
 import EditCategory from "./EditColor";
 import { deleteColor, getColors } from "../../../services/colors";
+<<<<<<< HEAD
+=======
+import { FaPencilAlt } from "react-icons/fa";
+>>>>>>> b82fcac51eacd2e91ae2d74e3c0c5227f28b01d6
 import EditColor from "./EditColor";
 
 const ViewColor = () => {
@@ -30,8 +34,13 @@ const ViewColor = () => {
   };
 
   // Handle Single Edit
+<<<<<<< HEAD
   const handleEdit = () => {
     navigate(`/dashboard/edit-color/${selectedId}`);
+=======
+  const handleEdit = (id) => {
+    navigate(`/dashboard/edit-color/${id}`);
+>>>>>>> b82fcac51eacd2e91ae2d74e3c0c5227f28b01d6
     handleMenuClose();
   };
 
@@ -104,6 +113,7 @@ const ViewColor = () => {
       sortable: false,
       renderCell: (params) => (
         <>
+<<<<<<< HEAD
           <IconButton onClick={(event) => handleMenuOpen(event, params.row.id)}>
             <BsThreeDotsVertical className="text-black" />
           </IconButton>
@@ -117,6 +127,11 @@ const ViewColor = () => {
               Delete
             </MenuItem>
           </Menu>
+=======
+          <button onClick={() => handleEdit(params.row.id)}>
+            <FaPencilAlt size={20} className="text-primary" /> 
+          </button>
+>>>>>>> b82fcac51eacd2e91ae2d74e3c0c5227f28b01d6
         </>
       ),
     },
@@ -153,11 +168,15 @@ const ViewColor = () => {
       />
 
       {/* Edit Sales Modal */}
+<<<<<<< HEAD
       {selectedId && (
         <EditColor
           id={selectedId}
         />
       )}
+=======
+      {selectedId && <EditColor id={selectedId} />}
+>>>>>>> b82fcac51eacd2e91ae2d74e3c0c5227f28b01d6
     </>
   );
 };

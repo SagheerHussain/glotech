@@ -175,6 +175,7 @@ const Sidebar = () => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
+<<<<<<< HEAD
                       to={`/dashboard/add-color`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
@@ -186,13 +187,19 @@ const Sidebar = () => {
                     </Link>
                     <Link
                       className="text-light_text"
+=======
+>>>>>>> b82fcac51eacd2e91ae2d74e3c0c5227f28b01d6
                       to={`/dashboard/view-color`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
                           <GoDot className="text-light_text" />
                         </ListItemIcon>
+<<<<<<< HEAD
                         View Color
+=======
+                        Color
+>>>>>>> b82fcac51eacd2e91ae2d74e3c0c5227f28b01d6
                       </ListItemButton>
                     </Link>
                   </List>
