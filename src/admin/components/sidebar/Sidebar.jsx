@@ -17,12 +17,14 @@ import { GoDot } from "react-icons/go";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { GrNotes } from "react-icons/gr";
+import { IoIosStats } from "react-icons/io";
 
 const Sidebar = () => {
   const [services, setServices] = useState(false);
   const [categories, setCategories] = useState(false);
   const [color, setColor] = useState(false);
   const [about, setAbout] = useState(false);
+  const [stats, setStats] = useState(false);
 
   const handleService = () => {
     setServices(!services);
@@ -32,6 +34,9 @@ const Sidebar = () => {
   };
   const handleColor = () => {
     setColor(!color);
+  };
+  const handleStats = () => {
+    setStats(!stats);
   };
   const handleAbout = () => {
     setAbout(!about);
@@ -66,7 +71,6 @@ const Sidebar = () => {
                 </Link>
               </div>
             </ListItem>
-
             {/* Books */}
             <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
               <div className="px-[.75rem]">
@@ -110,7 +114,6 @@ const Sidebar = () => {
                 </Collapse>
               </div>
             </div>
-
             {/* Categories */}
             <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
               <div className="px-[.75rem]">
@@ -156,7 +159,6 @@ const Sidebar = () => {
                 </Collapse>
               </div>
             </div>
-
             {/* Theme */}
             <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
               <div className="px-[.75rem]">
@@ -231,6 +233,52 @@ const Sidebar = () => {
                           <GoDot className="text-light_text" />
                         </ListItemIcon>
                         View About
+                      </ListItemButton>
+                    </Link>
+                  </List>
+                </Collapse>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
+              <div className="px-[.75rem]">
+                <ListItemButton
+                  onClick={handleStats}
+                  className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
+                >
+                  <ListItemIcon className="-mr-4">
+                    <IoIosStats className="text-light_text text-xl" />
+                  </ListItemIcon>
+                  <h6 className="text-light_text">Stats</h6>
+                  {stats ? (
+                    <HiOutlineChevronDown className="ms-auto" />
+                  ) : (
+                    <HiOutlineChevronRight className="ms-auto" />
+                  )}
+                </ListItemButton>
+                <Collapse in={stats} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/add-stats`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        Add Stats
+                      </ListItemButton>
+                    </Link>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/view-stats`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        View Stats
                       </ListItemButton>
                     </Link>
                   </List>

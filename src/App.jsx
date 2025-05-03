@@ -20,6 +20,9 @@ import EditColor from "./admin/components/color/EditColor";
 import AddAbout from "./admin/components/about/AddAbout";
 import ViewAbout from "./admin/components/about/ViewAbout";
 import EditAbout from "./admin/components/about/EditAbout";
+import AddStats from "./admin/components/stats/AddStats";
+import ViewStats from "./admin/components/stats/ViewStats";
+import EditStats from "./admin/components/stats/EditStats";
 
 function App() {
   return (
@@ -45,6 +48,9 @@ function App() {
         <Route path="/dashboard/add-about" element={<AddAbout />} />
         <Route path="/dashboard/view-about" element={<ViewAbout />} />
         <Route path="/dashboard/edit-about/:id" element={<EditAbout />} />
+        <Route path="/dashboard/add-stats" element={<AddStats />} />
+        <Route path="/dashboard/view-stats" element={<ViewStats />} />
+        <Route path="/dashboard/edit-stats/:id" element={<EditStats />} />
       </Routes>
     </>
   );
