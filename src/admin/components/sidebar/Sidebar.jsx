@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logoSrc from "/Images/logo.png";
-import GradientText from "../../../components/bits ui/GradientText";
 import {
   Collapse,
   List,
@@ -18,6 +17,7 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { GrNotes } from "react-icons/gr";
 import { IoIosStats } from "react-icons/io";
+import { ImStatsBars2 } from "react-icons/im";
 
 const Sidebar = () => {
   const [services, setServices] = useState(false);
@@ -25,6 +25,7 @@ const Sidebar = () => {
   const [color, setColor] = useState(false);
   const [about, setAbout] = useState(false);
   const [stats, setStats] = useState(false);
+  const [overallStats, setOverallStats] = useState(false);
 
   const handleService = () => {
     setServices(!services);
@@ -40,6 +41,9 @@ const Sidebar = () => {
   };
   const handleAbout = () => {
     setAbout(!about);
+  };
+  const handleOverallStats = () => {
+    setOverallStats(!overallStats);
   };
 
   return (
@@ -71,7 +75,8 @@ const Sidebar = () => {
                 </Link>
               </div>
             </ListItem>
-            {/* Books */}
+
+            {/* Services */}
             <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
               <div className="px-[.75rem]">
                 <ListItemButton onClick={handleService}>
@@ -114,6 +119,7 @@ const Sidebar = () => {
                 </Collapse>
               </div>
             </div>
+
             {/* Categories */}
             <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
               <div className="px-[.75rem]">
@@ -159,6 +165,7 @@ const Sidebar = () => {
                 </Collapse>
               </div>
             </div>
+
             {/* Theme */}
             <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
               <div className="px-[.75rem]">
@@ -285,6 +292,42 @@ const Sidebar = () => {
                 </Collapse>
               </div>
             </div>
+
+            {/* Overall Stats */}
+            <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
+              <div className="px-[.75rem]">
+                <ListItemButton
+                  onClick={handleOverallStats}
+                  className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
+                >
+                  <ListItemIcon className="-mr-4">
+                    <ImStatsBars2 className="text-light_text text-xl" />
+                  </ListItemIcon>
+                  <h6 className="text-light_text">Overall Stats</h6>
+                  {overallStats ? (
+                    <HiOutlineChevronDown className="ms-auto" />
+                  ) : (
+                    <HiOutlineChevronRight className="ms-auto" />
+                  )}
+                </ListItemButton>
+                <Collapse in={overallStats} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/view-overall-stats`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        View Overall Stats
+                      </ListItemButton>
+                    </Link>
+                  </List>
+                </Collapse>
+              </div>
+            </div>
+
           </List>
         </div>
       </aside>

@@ -23,6 +23,8 @@ import EditAbout from "./admin/components/about/EditAbout";
 import AddStats from "./admin/components/stats/AddStats";
 import ViewStats from "./admin/components/stats/ViewStats";
 import EditStats from "./admin/components/stats/EditStats";
+import ViewOverallStats from "./admin/components/overall stats/ViewOverallStats";
+import EditOverallStats from "./admin/components/overall stats/EditOverallStats";
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
         <Route path="/dashboard/add-stats" element={<AddStats />} />
         <Route path="/dashboard/view-stats" element={<ViewStats />} />
         <Route path="/dashboard/edit-stats/:id" element={<EditStats />} />
+        <Route path="/dashboard/view-overall-stats" element={<ViewOverallStats />} />
+        <Route path="/dashboard/edit-overall-stats/:id" element={<EditOverallStats />} />
       </Routes>
     </>
   );
