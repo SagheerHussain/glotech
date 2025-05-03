@@ -25,6 +25,12 @@ import ViewStats from "./admin/components/stats/ViewStats";
 import EditStats from "./admin/components/stats/EditStats";
 import ViewOverallStats from "./admin/components/overall stats/ViewOverallStats";
 import EditOverallStats from "./admin/components/overall stats/EditOverallStats";
+import AddTeam from "./admin/components/team/AddTeam";
+import ViewTeam from "./admin/components/team/ViewTeam";
+import EditTeam from "./admin/components/team/EditTeam";
+import AddTestimonial from "./admin/components/testimonials/AddTestimonial";
+import ViewTestimonial from "./admin/components/testimonials/ViewTestimonial";
+import EditTestimonial from "./admin/components/testimonials/EditTestimonial";
 
 function App() {
   return (
@@ -55,6 +61,12 @@ function App() {
         <Route path="/dashboard/edit-stats/:id" element={<EditStats />} />
         <Route path="/dashboard/view-overall-stats" element={<ViewOverallStats />} />
         <Route path="/dashboard/edit-overall-stats/:id" element={<EditOverallStats />} />
+        <Route path="/dashboard/add-team" element={<AddTeam />} />
+        <Route path="/dashboard/view-team" element={<ViewTeam />} />
+        <Route path="/dashboard/edit-team/:id" element={<EditTeam />} />
+        <Route path="/dashboard/add-testimonial" element={<AddTestimonial />} />
+        <Route path="/dashboard/view-testimonial" element={<ViewTestimonial />} />
+        <Route path="/dashboard/edit-testimonial/:id" element={<EditTestimonial />} />
       </Routes>
     </>
   );

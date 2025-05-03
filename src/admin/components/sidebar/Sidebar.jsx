@@ -18,6 +18,8 @@ import { MdLightMode } from "react-icons/md";
 import { GrNotes } from "react-icons/gr";
 import { IoIosStats } from "react-icons/io";
 import { ImStatsBars2 } from "react-icons/im";
+import { FaUsers } from "react-icons/fa";
+import { MdOutlineRateReview } from "react-icons/md";
 
 const Sidebar = () => {
   const [services, setServices] = useState(false);
@@ -26,6 +28,8 @@ const Sidebar = () => {
   const [about, setAbout] = useState(false);
   const [stats, setStats] = useState(false);
   const [overallStats, setOverallStats] = useState(false);
+  const [team, setTeam] = useState(false);
+  const [testimonial, setTestimonial] = useState(false);
 
   const handleService = () => {
     setServices(!services);
@@ -44,6 +48,12 @@ const Sidebar = () => {
   };
   const handleOverallStats = () => {
     setOverallStats(!overallStats);
+  };
+  const handleTeam = () => {
+    setTeam(!team);
+  };
+  const handleTestimonial = () => {
+    setTestimonial(!testimonial);
   };
 
   return (
@@ -321,6 +331,98 @@ const Sidebar = () => {
                           <GoDot className="text-light_text" />
                         </ListItemIcon>
                         View Overall Stats
+                      </ListItemButton>
+                    </Link>
+                  </List>
+                </Collapse>
+              </div>
+            </div>
+
+            {/* Team */}
+            <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
+              <div className="px-[.75rem]">
+                <ListItemButton
+                  onClick={handleTeam}
+                  className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
+                >
+                  <ListItemIcon className="-mr-4">
+                    <FaUsers className="text-light_text text-xl" />
+                  </ListItemIcon>
+                  <h6 className="text-light_text">Team</h6>
+                  {team ? (
+                    <HiOutlineChevronDown className="ms-auto" />
+                  ) : (
+                    <HiOutlineChevronRight className="ms-auto" />
+                  )}
+                </ListItemButton>
+                <Collapse in={team} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/add-team`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        Add Team
+                      </ListItemButton>
+                    </Link>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/view-team`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        View Team
+                      </ListItemButton>
+                    </Link>
+                  </List>
+                </Collapse>
+              </div>
+            </div>
+
+            {/* Testimonial */}
+            <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
+              <div className="px-[.75rem]">
+                <ListItemButton
+                  onClick={handleTestimonial}
+                  className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
+                >
+                  <ListItemIcon className="-mr-4">
+                    <MdOutlineRateReview className="text-light_text text-xl" />
+                  </ListItemIcon>
+                  <h6 className="text-light_text">Testimonial</h6>
+                  {testimonial ? (
+                    <HiOutlineChevronDown className="ms-auto" />
+                  ) : (
+                    <HiOutlineChevronRight className="ms-auto" />
+                  )}
+                </ListItemButton>
+                <Collapse in={testimonial} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/add-testimonial`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        Add Testimonial
+                      </ListItemButton>
+                    </Link>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/view-testimonial`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        View Testimonial
                       </ListItemButton>
                     </Link>
                   </List>
