@@ -4,19 +4,22 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { addCategory } from "../../../services/categories";
+import { createTeam } from "../../../services/team";
 
 const AddTeam = () => {
   const [loading, setLoading] = useState(false);
-  const [name, setName] = useState({ en: "", ar: "", fr: "" });
-  const [designation, setDesignation] = useState({ en: "", ar: "", fr: "" });
-  const [image, setImage] = useState("");
+  const [formData, setFormData] = useState({
+    name: { en: "", ar: "", fr: "" },
+    designation: { en: "", ar: "", fr: "" },
+    image: null,
+  });
 
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setImage(file);
+      setFormData({ ...formData, image: file });
     }
   };
 
@@ -24,27 +27,17 @@ const AddTeam = () => {
     e.preventDefault();
     setLoading(true);
 
+    const data = new FormData();
+    data.append("name_en", formData.name.en);
+    data.append("name_ar", formData.name.ar);
+    data.append("name_fr", formData.name.fr);
+    data.append("designation_en", formData.designation.en);
+    data.append("designation_ar", formData.designation.ar);
+    data.append("designation_fr", formData.designation.fr);
+    data.append("image", formData.image);
+
     try {
-      const team = { name, designation, image };
-      if (
-        !team.name.en ||
-        !team.name.ar ||
-        !team.name.fr ||
-        !team.designation.en ||
-        !team.designation.ar ||
-        !team.designation.fr ||
-        !team.image
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Please fill all fields",
-          showConfirmButton: false,
-          timer: 700,
-        });
-        setLoading(false);
-        return;
-      }
-      const response = await addTeam(team);
+      const response = await createTeam(data);
       if (response.success) {
         Swal.fire({
           icon: "success",
@@ -52,18 +45,20 @@ const AddTeam = () => {
           showConfirmButton: false,
           timer: 700,
         });
-        navigate("/dashboard/view-category");
-        setLoading(false);
-      } else new Error("Something wrong");
+        navigate("/dashboard/view-team");
+      } else {
+        throw new Error("Something went wrong");
+      }
     } catch (error) {
-      setLoading(false);
       Swal.fire({
         icon: "error",
-        title: "Error creating category",
+        title: "Error creating team",
         showConfirmButton: false,
         timer: 700,
       });
-      console.error("Error creating category:", error);
+      console.error("Error creating team:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -87,7 +82,12 @@ const AddTeam = () => {
                 name="name"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setName({ ...name, en: e.target.value })}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    name: { ...formData.name, en: e.target.value },
+                  })
+                }
                 placeholder="Category Name"
               />
 
@@ -101,7 +101,12 @@ const AddTeam = () => {
                   style={{ direction: "rtl" }}
                   className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                   required
-                  onChange={(e) => setName({ ...name, ar: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      name: { ...formData.name, ar: e.target.value },
+                    })
+                  }
                   placeholder="اسم الفئة"
                 />
               </div>
@@ -114,7 +119,12 @@ const AddTeam = () => {
                 name="name"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setName({ ...name, fr: e.target.value })}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    name: { ...formData.name, fr: e.target.value },
+                  })
+                }
                 placeholder="Nom de la catégorie"
               />
 
@@ -129,7 +139,15 @@ const AddTeam = () => {
                 name="designation"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setName({ ...name, en: e.target.value })}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    designation: {
+                      ...formData.designation,
+                      en: e.target.value,
+                    },
+                  })
+                }
                 placeholder="Category Name"
               />
 
@@ -143,7 +161,15 @@ const AddTeam = () => {
                   style={{ direction: "rtl" }}
                   className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                   required
-                  onChange={(e) => setName({ ...name, ar: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      designation: {
+                        ...formData.designation,
+                        ar: e.target.value,
+                      },
+                    })
+                  }
                   placeholder="تعيين"
                 />
               </div>
@@ -156,7 +182,15 @@ const AddTeam = () => {
                 name="designation"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setName({ ...name, fr: e.target.value })}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    designation: {
+                      ...formData.designation,
+                      fr: e.target.value,
+                    },
+                  })
+                }
                 placeholder="Désignation"
               />
 

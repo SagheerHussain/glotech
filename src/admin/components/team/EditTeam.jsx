@@ -1,65 +1,59 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Layout } from "../index";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
-import { addCategory } from "../../../services/categories";
+import { getTeamById, updateTeam } from "../../../services/team";
 
 const EditTeam = () => {
   const [loading, setLoading] = useState(false);
-  const [name, setName] = useState({ en: "", ar: "", fr: "" });
-  const [designation, setDesignation] = useState({ en: "", ar: "", fr: "" });
-  const [image, setImage] = useState("");
+  const [formData, setFormData] = useState({
+    name: { en: "", ar: "", fr: "" },
+    designation: { en: "", ar: "", fr: "" },
+    image: null,
+  });
 
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setImage(file);
+      setFormData({ ...formData, image: file });
     }
   };
+
+  const { id } = useParams();
 
   const handleAddTeam = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const team = { name, designation, image };
-      if (
-        !team.name.en ||
-        !team.name.ar ||
-        !team.name.fr ||
-        !team.designation.en ||
-        !team.designation.ar ||
-        !team.designation.fr ||
-        !team.image
-      ) {   
-        Swal.fire({
-          icon: "error",
-          title: "Please fill all fields",
-          showConfirmButton: false,
-          timer: 700,
-        });
-        setLoading(false);
-        return;
-      }
-      const response = await addTeam(team);
+      const data = new FormData();
+      data.append("name_en", formData.name.en);
+      data.append("name_ar", formData.name.ar);
+      data.append("name_fr", formData.name.fr);
+      data.append("designation_en", formData.designation.en);
+      data.append("designation_ar", formData.designation.ar);
+      data.append("designation_fr", formData.designation.fr);
+      data.append("image", formData.image);
+
+      const response = await updateTeam(id, data);
       if (response.success) {
         Swal.fire({
           icon: "success",
-          title: "Team added successfully",
+          title: "Team updated successfully",
           showConfirmButton: false,
           timer: 700,
         });
-        navigate("/dashboard/view-category");
+        navigate("/dashboard/view-team");
         setLoading(false);
       } else new Error("Something wrong");
     } catch (error) {
       setLoading(false);
       Swal.fire({
         icon: "error",
-        title: "Error creating category",
+        title: "Error updating team",
         showConfirmButton: false,
         timer: 700,
       });
@@ -67,13 +61,31 @@ const EditTeam = () => {
     }
   };
 
+  // get team member
+  const getTeamMember = async () => {
+    try {
+      const response = await getTeamById(id);
+      if (response.success) {
+        setFormData(response.data);
+      } else {
+        throw new Error("Something went wrong");
+      }
+    } catch (error) {
+      console.error("Error getting team member:", error);
+    }
+  };
+
+  useEffect(() => {
+    getTeamMember();
+  }, [id]);
+
   return (
     <>
       <Layout>
         <section id="addCategory" className={`h-[90vh] py-6`}>
           <div className="container py-4">
             <h1 className="text-[#000] text-4xl font-bold mb-5">
-              Add New Team Member
+              Edit Team Member
             </h1>
             <form action="" onSubmit={handleAddTeam}>
               <label htmlFor="" className="text-[#000] text-sm">
@@ -83,9 +95,14 @@ const EditTeam = () => {
                 type="text"
                 name="name"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, en: e.target.value })}
-                placeholder="Category Name"
+                defaultValue={formData.name.en}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    name: { ...formData.name, en: e.target.value },
+                  })
+                }
+                placeholder="Name"
               />
 
               <label htmlFor="" className="text-[#000] text-sm">
@@ -96,9 +113,14 @@ const EditTeam = () => {
                 name="name"
                 style={{ direction: "rtl" }}
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, ar: e.target.value })}
-                placeholder="اسم الفئة"
+                defaultValue={formData.name.ar}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    name: { ...formData.name, ar: e.target.value },
+                  })
+                }
+                placeholder="اسم"
               />
 
               <label htmlFor="" className="text-[#000] text-sm">
@@ -108,9 +130,14 @@ const EditTeam = () => {
                 type="text"
                 name="name"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, fr: e.target.value })}
-                placeholder="Nom de la catégorie"
+                defaultValue={formData.name.fr}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    name: { ...formData.name, fr: e.target.value },
+                  })
+                }
+                placeholder="Nom"
               />
 
               <label htmlFor="" className="text-[#000] text-sm">
@@ -120,9 +147,14 @@ const EditTeam = () => {
                 type="text"
                 name="designation"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, en: e.target.value })}
-                placeholder="Category Name"
+                defaultValue={formData.designation.en}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    designation: { ...formData.designation, en: e.target.value },
+                  })
+                }
+                placeholder="Designation"
               />
 
               <label htmlFor="" className="text-[#000] text-sm">
@@ -133,8 +165,13 @@ const EditTeam = () => {
                 name="designation"
                 style={{ direction: "rtl" }}
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, ar: e.target.value })}
+                defaultValue={formData.designation.ar}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    designation: { ...formData.designation, ar: e.target.value },
+                  })
+                }
                 placeholder="تعيين"
               />
 
@@ -144,10 +181,24 @@ const EditTeam = () => {
               <input
                 type="text"
                 name="designation"
+                defaultValue={formData.designation.fr}
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, fr: e.target.value })}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    designation: { ...formData.designation, fr: e.target.value },
+                  })
+                }
                 placeholder="Désignation"
+              />
+
+              <label htmlFor="" className="text-[#000] text-sm">
+                Current Image
+              </label>
+              <img
+                src={formData.image}
+                alt=""
+                className="w-24 h-24 object-cover rounded-full mb-4"
               />
 
               <label htmlFor="" className="text-[#000] text-sm">
@@ -155,7 +206,6 @@ const EditTeam = () => {
               </label>
               <input
                 type="file"
-                required
                 onChange={handleFileChange}
                 name="image"
                 placeholder="Image"

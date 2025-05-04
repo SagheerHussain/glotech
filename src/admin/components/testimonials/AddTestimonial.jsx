@@ -72,14 +72,12 @@ const AddTestimonial = () => {
   return (
     <>
       <Layout>
-        <section id="addCategory" className={`h-[90vh] py-6`}>
+        <section id="addCategory" className={`min-h-[90vh] py-6`}>
           <div className="container py-4">
-            <h1 className="text-[#000] text-4xl font-bold mb-5">
-              Add Review
-            </h1>
+            <h1 className="text-[#000] text-4xl font-bold mb-5">Add Review</h1>
             <form action="" onSubmit={handleAddTestimonial}>
               <h1 className="text-[#000] text-lg font-bold py-5">
-                Member Name
+                Client Name
               </h1>
               <label htmlFor="" className="text-[#000] text-sm">
                 Name (in en)*
@@ -121,23 +119,23 @@ const AddTestimonial = () => {
               />
 
               <h1 className="text-[#000] text-lg font-bold py-5">
-                Member Designation
+                Client Review
               </h1>
               <label htmlFor="" className="text-[#000] text-sm">
-                Designation (in en)*
+                Review (in en)*
               </label>
               <input
                 type="text"
-                name="designation"
+                name="review"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setName({ ...name, en: e.target.value })}
+                onChange={(e) => setReview({ ...review, en: e.target.value })}
                 placeholder="Category Name"
               />
 
               <div className="arabic w-full text-end">
                 <label htmlFor="" className="text-[#000] text-sm">
-                  (in ar) تعيين*
+                  (in ar) مراجعة*
                 </label>
                 <input
                   type="text"
@@ -145,28 +143,43 @@ const AddTestimonial = () => {
                   style={{ direction: "rtl" }}
                   className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                   required
-                  onChange={(e) => setName({ ...name, ar: e.target.value })}
-                  placeholder="تعيين"
+                  onChange={(e) => setReview({ ...review, ar: e.target.value })}
+                  placeholder="مراجعة"
                 />
               </div>
 
               <label htmlFor="" className="text-[#000] text-sm">
-                Désignation (in fr)*
+                Revoir (in fr)*
               </label>
               <input
                 type="text"
                 name="designation"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setName({ ...name, fr: e.target.value })}
-                placeholder="Désignation"
+                onChange={(e) => setReview({ ...review, fr: e.target.value })}
+                placeholder="Revoir"
               />
 
               <h1 className="text-[#000] text-lg font-bold py-5">
-                Member Profile
+                Client Rating
               </h1>
               <label htmlFor="" className="text-[#000] text-sm">
-                Image*
+                Rating*
+              </label>
+              <input
+                type="number"
+                name="rating"
+                className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                required
+                onChange={(e) => setRating(e.target.value)}
+                placeholder="Rating"
+              />
+
+              <h1 className="text-[#000] text-lg font-bold py-5">
+                Client Company Logo
+              </h1>
+              <label htmlFor="" className="text-[#000] text-sm">
+                Logo*
               </label>
               <input
                 type="file"

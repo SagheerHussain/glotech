@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom"; // For navigation
 import Swal from "sweetalert2";
 import GridTable from "../GridTable";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { getTeams } from "../../../services/team";
 
 // import { deleteTeam, getTeams } from "../../../services/teams";
 
@@ -62,40 +63,37 @@ const ViewTeam = () => {
 
   const columns = [
     { field: "No", headerName: "Index", flex: 1, minWidth: 150 },
+    { field: "name_en", headerName: "Name (en)", flex: 1, minWidth: 150 },
+    { field: "name_ar", headerName: "Name (ar)", flex: 1, minWidth: 150 },
+    { field: "name_fr", headerName: "Name (fr)", flex: 1, minWidth: 150 },
     {
-      field: "category_en",
-      headerName: "Category (en)",
+      field: "designation_en",
+      headerName: "Designation (en)",
       flex: 1,
       minWidth: 150,
-      editable: true,
     },
     {
-      field: "category_ar",
-      headerName: "Category (ar)",
+      field: "designation_ar",
+      headerName: "Designation (ar)",
       flex: 1,
       minWidth: 150,
-      editable: true,
     },
     {
-      field: "category_fr",
-      headerName: "Category (fr)",
+      field: "designation_fr",
+      headerName: "Designation (fr)",
       flex: 1,
       minWidth: 150,
-      editable: true,
     },
     {
-      field: "category_fr",
-      headerName: "Category",
+      field: "image",
+      headerName: "Image",
       flex: 1,
       minWidth: 150,
-      editable: true,
-    },
-    {
-      field: "slug",
-      headerName: "Slug",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
+      renderCell: (params) => (
+        <a href={params.row.image} target="_blank" rel="noopener noreferrer" className="underline">
+          View Image
+        </a>
+      ),
     },
     {
       field: "actions",
@@ -125,15 +123,17 @@ const ViewTeam = () => {
 
   const fetchCategories = async () => {
     try {
-      // const { data } = await getCategories();
-      const data = [];
+      const { data } = await getTeams();
       const formattedRows = data.map((item, index) => ({
         id: item._id,
         No: index + 1,
-        category_en: item.name.en || "N/A",
-        category_ar: item.name.ar || "N/A",
-        category_fr: item.name.fr || "N/A",
-        slug: item.slug || "N/A",
+        name_en: item.name.en || "N/A",
+        name_ar: item.name.ar || "N/A",
+        name_fr: item.name.fr || "N/A",
+        designation_en: item.designation.en || "N/A",
+        designation_ar: item.designation.ar || "N/A",
+        designation_fr: item.designation.fr || "N/A",
+        image: item.image || "N/A",
       }));
       setRows(formattedRows);
     } catch (error) {
@@ -155,13 +155,6 @@ const ViewTeam = () => {
         columns={columns}
         setSelectedRows={setSelectedRows}
       />
-
-      {/* Edit Sales Modal */}
-      {selectedId && (
-        <EditCategory
-          id={selectedId}
-        />
-      )}
     </>
   );
 };
