@@ -84,13 +84,6 @@ const ViewCategory = () => {
       editable: true,
     },
     {
-      field: "category_fr",
-      headerName: "Category",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-    },
-    {
       field: "slug",
       headerName: "Slug",
       flex: 1,

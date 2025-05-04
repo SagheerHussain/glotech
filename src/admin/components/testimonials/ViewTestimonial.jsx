@@ -6,6 +6,10 @@ import { useNavigate } from "react-router-dom"; // For navigation
 import Swal from "sweetalert2";
 import GridTable from "../GridTable";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import {
+  deleteTestimonial,
+  getTestimonials,
+} from "../../../services/testimonial";
 
 // import { deleteTeam, getTeams } from "../../../services/teams";
 
@@ -48,7 +52,7 @@ const ViewTestimonial = () => {
 
     if (result.isConfirmed) {
       try {
-        await deleteTeam(selectedId);
+        await deleteTestimonial(selectedId);
         Swal.fire("Deleted!", "The category has been deleted.", "success");
         setRows(rows.filter((row) => row.id !== selectedId));
       } catch (error) {
@@ -62,40 +66,23 @@ const ViewTestimonial = () => {
 
   const columns = [
     { field: "No", headerName: "Index", flex: 1, minWidth: 150 },
+    { field: "name_en", headerName: "Name (en)", flex: 1, minWidth: 150 },
+    { field: "name_ar", headerName: "Name (ar)", flex: 1, minWidth: 150 },
+    { field: "name_fr", headerName: "Name (fr)", flex: 1, minWidth: 150 },
+    { field: "review_en", headerName: "Review (en)", flex: 1, minWidth: 150 },
+    { field: "review_ar", headerName: "Review (ar)", flex: 1, minWidth: 150 },
+    { field: "review_fr", headerName: "Review (fr)", flex: 1, minWidth: 150 },
+    { field: "rating", headerName: "Rating", flex: 1, minWidth: 150 },
     {
-      field: "category_en",
-      headerName: "Category (en)",
+      field: "image",
+      headerName: "Image",
       flex: 1,
       minWidth: 150,
-      editable: true,
-    },
-    {
-      field: "category_ar",
-      headerName: "Category (ar)",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-    },
-    {
-      field: "category_fr",
-      headerName: "Category (fr)",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-    },
-    {
-      field: "category_fr",
-      headerName: "Category",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
-    },
-    {
-      field: "slug",
-      headerName: "Slug",
-      flex: 1,
-      minWidth: 150,
-      editable: true,
+      renderCell: (params) => (
+        <a href={params.value} target="_blank" rel="noopener noreferrer" className="underline">
+          View Image
+        </a>
+      ),
     },
     {
       field: "actions",
@@ -126,14 +113,19 @@ const ViewTestimonial = () => {
   const fetchCategories = async () => {
     try {
       // const { data } = await getCategories();
-      const data = [];
+      const { data } = await getTestimonials();
+      console.log(data);
       const formattedRows = data.map((item, index) => ({
         id: item._id,
         No: index + 1,
-        category_en: item.name.en || "N/A",
-        category_ar: item.name.ar || "N/A",
-        category_fr: item.name.fr || "N/A",
-        slug: item.slug || "N/A",
+        name_en: item.name.en || "N/A",
+        name_ar: item.name.ar || "N/A",
+        name_fr: item.name.fr || "N/A",
+        review_en: item.review.en || "N/A",
+        review_ar: item.review.ar || "N/A",
+        review_fr: item.review.fr || "N/A",
+        rating: item.rating || "N/A",
+        image: item.image || "N/A",
       }));
       setRows(formattedRows);
     } catch (error) {

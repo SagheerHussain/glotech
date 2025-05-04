@@ -1,56 +1,54 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Layout } from "../index";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
-// import { addTestimonial } from "../../../services/testimonials";
+import {
+  addTestimonial,
+  getTestimonialById,
+  updateTestimonial,
+} from "../../../services/testimonial";
 
 const EditTestimonial = () => {
   const [loading, setLoading] = useState(false);
-  const [name, setName] = useState({ en: "", ar: "", fr: "" });
-  const [review, setReview] = useState({ en: "", ar: "", fr: "" });
-  const [rating, setRating] = useState("");
-  const [image, setImage] = useState("");
+  const [formData, setFormData] = useState({
+    name: { en: "", ar: "", fr: "" },
+    review: { en: "", ar: "", fr: "" },
+    rating: 0,
+    image: null,
+  });
+
+  const { id } = useParams();
 
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setImage(file);
+      setFormData({ ...formData, image: file });
     }
   };
 
-  const handleAddTestimonial = async (e) => {
+  const handleUpdateTestimonial = async (e) => {
     e.preventDefault();
     setLoading(true);
 
+    const data = new FormData();
+    data.append("name_en", formData.name.en);
+    data.append("name_ar", formData.name.ar);
+    data.append("name_fr", formData.name.fr);
+    data.append("review_en", formData.review.en);
+    data.append("review_ar", formData.review.ar);
+    data.append("review_fr", formData.review.fr);
+    data.append("rating", formData.rating);
+    data.append("image", formData.image);
+
     try {
-      const team = { name, review, rating, image };
-      if (
-        !team.name.en ||
-        !team.name.ar ||
-        !team.name.fr ||
-        !team.review.en ||
-        !team.review.ar ||
-        !team.review.fr ||
-        !team.rating ||
-        !team.image
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Please fill all fields",
-          showConfirmButton: false,
-          timer: 700,
-        });
-        setLoading(false);
-        return;
-      }
-      const response = await addTestimonial(team);
+      const response = await updateTestimonial(id, data);
       if (response.success) {
         Swal.fire({
           icon: "success",
-          title: "Testimonial added successfully",
+          title: "Testimonial updated successfully",
           showConfirmButton: false,
           timer: 700,
         });
@@ -61,25 +59,50 @@ const EditTestimonial = () => {
       setLoading(false);
       Swal.fire({
         icon: "error",
-        title: "Error creating category",
+        title: "Error updating testimonial",
         showConfirmButton: false,
         timer: 700,
       });
-      console.error("Error creating category:", error);
+      console.error("Error updating testimonial:", error);
     }
   };
+
+  useEffect(() => {
+    const fetchTestimonial = async () => {
+      try {
+        const { data, success } = await getTestimonialById(id);
+        if (success) {
+          setFormData({
+            name: {
+              en: data.name.en,
+              ar: data.name.ar,
+              fr: data.name.fr,
+            },
+            review: {
+              en: data.review.en,
+              ar: data.review.ar,
+              fr: data.review.fr,
+            },
+            rating: data.rating,
+            image: data.image,
+          });
+        } else new Error("Something wrong");
+      } catch (error) {
+        console.error("Error fetching testimonial:", error);
+      }
+    };
+    fetchTestimonial();
+  }, [id]);
 
   return (
     <>
       <Layout>
-        <section id="addCategory" className={`h-[90vh] py-6`}>
+        <section id="addCategory" className={`min-h-[90vh] py-6`}>
           <div className="container py-4">
-            <h1 className="text-[#000] text-4xl font-bold mb-5">
-              Add Review
-            </h1>
-            <form action="" onSubmit={handleAddTestimonial}>
+            <h1 className="text-[#000] text-4xl font-bold mb-5">Add Review</h1>
+            <form action="" onSubmit={handleUpdateTestimonial}>
               <h1 className="text-[#000] text-lg font-bold py-5">
-                Member Name
+                Client Name
               </h1>
               <label htmlFor="" className="text-[#000] text-sm">
                 Name (in en)*
@@ -88,9 +111,14 @@ const EditTestimonial = () => {
                 type="text"
                 name="name"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, en: e.target.value })}
-                placeholder="Category Name"
+                defaultValue={formData.name.en}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    name: { ...formData.name, en: e.target.value },
+                  })
+                }
+                placeholder="Client Name"
               />
 
               <div className="arabic w-full text-end">
@@ -102,9 +130,14 @@ const EditTestimonial = () => {
                   name="name"
                   style={{ direction: "rtl" }}
                   className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                  required
-                  onChange={(e) => setName({ ...name, ar: e.target.value })}
-                  placeholder="اسم الفئة"
+                  defaultValue={formData.name.ar}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      name: { ...formData.name, ar: e.target.value },
+                    })
+                  }
+                  placeholder="اسم"
                 />
               </div>
 
@@ -115,62 +148,100 @@ const EditTestimonial = () => {
                 type="text"
                 name="name"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, fr: e.target.value })}
-                placeholder="Nom de la catégorie"
+                defaultValue={formData.name.fr}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    name: { ...formData.name, fr: e.target.value },
+                  })
+                }
+                placeholder="Nom"
               />
 
               <h1 className="text-[#000] text-lg font-bold py-5">
-                Member Designation
+                Client Review
               </h1>
               <label htmlFor="" className="text-[#000] text-sm">
-                Designation (in en)*
+                Review (in en)*
               </label>
               <input
                 type="text"
-                name="designation"
+                name="review"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, en: e.target.value })}
-                placeholder="Category Name"
+                defaultValue={formData.review.en}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    review: { ...formData.review, en: e.target.value },
+                  })
+                }
+                placeholder="Review"
               />
 
               <div className="arabic w-full text-end">
                 <label htmlFor="" className="text-[#000] text-sm">
-                  (in ar) تعيين*
+                  (in ar) مراجعة*
                 </label>
                 <input
                   type="text"
                   name="designation"
                   style={{ direction: "rtl" }}
                   className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                  required
-                  onChange={(e) => setName({ ...name, ar: e.target.value })}
-                  placeholder="تعيين"
+                  defaultValue={formData.review.ar}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      review: { ...formData.review, ar: e.target.value },
+                    })
+                  }
+                  placeholder="مراجعة"
                 />
               </div>
 
               <label htmlFor="" className="text-[#000] text-sm">
-                Désignation (in fr)*
+                Revoir (in fr)*
               </label>
               <input
                 type="text"
                 name="designation"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-                required
-                onChange={(e) => setName({ ...name, fr: e.target.value })}
-                placeholder="Désignation"
+                defaultValue={formData.review.fr}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    review: { ...formData.review, fr: e.target.value },
+                  })
+                }
+                placeholder="Revoir"
               />
 
               <h1 className="text-[#000] text-lg font-bold py-5">
-                Member Profile
+                Client Rating
               </h1>
               <label htmlFor="" className="text-[#000] text-sm">
-                Image*
+                Rating*
               </label>
               <input
+                type="number"
+                name="rating"
+                className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                value={formData.rating}
+                onChange={(e) =>
+                  setFormData({ ...formData, rating: e.target.value })
+                }
+                placeholder="Rating"
+              />
+
+              <h1 className="text-[#000] text-lg font-bold py-5">
+                Current Logo
+              </h1>
+              <img src={formData.image} alt="" className="mb-4 w-[100px]" />
+
+              <h1 className="text-[#000] text-lg font-bold py-5">
+                Client Company Logo
+              </h1>
+              <input
                 type="file"
-                required
                 onChange={handleFileChange}
                 name="image"
                 placeholder="Image"
@@ -187,7 +258,7 @@ const EditTestimonial = () => {
                 {loading ? (
                   <ClipLoader size={20} color="#fff" />
                 ) : (
-                  "Add Team Member"
+                  "Add Client Review"
                 )}
               </button>
             </form>

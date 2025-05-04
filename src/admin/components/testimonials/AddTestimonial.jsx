@@ -3,21 +3,23 @@ import { Layout } from "../index";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
-import { addCategory } from "../../../services/categories";
+import { addTestimonial } from "../../../services/testimonial";
 
 const AddTestimonial = () => {
   const [loading, setLoading] = useState(false);
-  const [name, setName] = useState({ en: "", ar: "", fr: "" });
-  const [review, setReview] = useState({ en: "", ar: "", fr: "" });
-  const [rating, setRating] = useState("");
-  const [image, setImage] = useState("");
+  const [formData, setFormData] = useState({
+    name: { en: "", ar: "", fr: "" },
+    review: { en: "", ar: "", fr: "" },
+    rating: 0,
+    image: null,
+  });
 
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setImage(file);
+      setFormData({ ...formData, image: file });
     }
   };
 
@@ -25,28 +27,18 @@ const AddTestimonial = () => {
     e.preventDefault();
     setLoading(true);
 
+    const data = new FormData();
+    data.append("name_en", formData.name.en);
+    data.append("name_ar", formData.name.ar);
+    data.append("name_fr", formData.name.fr);
+    data.append("review_en", formData.review.en);
+    data.append("review_ar", formData.review.ar);
+    data.append("review_fr", formData.review.fr);
+    data.append("rating", formData.rating);
+    data.append("image", formData.image);
+
     try {
-      const team = { name, review, rating, image };
-      if (
-        !team.name.en ||
-        !team.name.ar ||
-        !team.name.fr ||
-        !team.review.en ||
-        !team.review.ar ||
-        !team.review.fr ||
-        !team.rating ||
-        !team.image
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Please fill all fields",
-          showConfirmButton: false,
-          timer: 700,
-        });
-        setLoading(false);
-        return;
-      }
-      const response = await addTestimonial(team);
+      const response = await addTestimonial(data);
       if (response.success) {
         Swal.fire({
           icon: "success",
@@ -87,8 +79,8 @@ const AddTestimonial = () => {
                 name="name"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setName({ ...name, en: e.target.value })}
-                placeholder="Category Name"
+                onChange={(e) => setFormData({ ...formData, name: { ...formData.name, en: e.target.value } })}
+                placeholder="Client Name"
               />
 
               <div className="arabic w-full text-end">
@@ -101,8 +93,8 @@ const AddTestimonial = () => {
                   style={{ direction: "rtl" }}
                   className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                   required
-                  onChange={(e) => setName({ ...name, ar: e.target.value })}
-                  placeholder="اسم الفئة"
+                  onChange={(e) => setFormData({ ...formData, name: { ...formData.name, ar: e.target.value } })}
+                  placeholder="اسم"
                 />
               </div>
 
@@ -114,8 +106,8 @@ const AddTestimonial = () => {
                 name="name"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setName({ ...name, fr: e.target.value })}
-                placeholder="Nom de la catégorie"
+                onChange={(e) => setFormData({ ...formData, name: { ...formData.name, fr: e.target.value } })}
+                placeholder="Nom"
               />
 
               <h1 className="text-[#000] text-lg font-bold py-5">
@@ -129,8 +121,8 @@ const AddTestimonial = () => {
                 name="review"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setReview({ ...review, en: e.target.value })}
-                placeholder="Category Name"
+                onChange={(e) => setFormData({ ...formData, review: { ...formData.review, en: e.target.value } })}
+                placeholder="Review"
               />
 
               <div className="arabic w-full text-end">
@@ -143,7 +135,7 @@ const AddTestimonial = () => {
                   style={{ direction: "rtl" }}
                   className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                   required
-                  onChange={(e) => setReview({ ...review, ar: e.target.value })}
+                  onChange={(e) => setFormData({ ...formData, review: { ...formData.review, ar: e.target.value } })}
                   placeholder="مراجعة"
                 />
               </div>
@@ -156,7 +148,7 @@ const AddTestimonial = () => {
                 name="designation"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setReview({ ...review, fr: e.target.value })}
+                onChange={(e) => setFormData({ ...formData, review: { ...formData.review, fr: e.target.value } })}
                 placeholder="Revoir"
               />
 
@@ -171,8 +163,8 @@ const AddTestimonial = () => {
                 name="rating"
                 className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                 required
-                onChange={(e) => setRating(e.target.value)}
-                placeholder="Rating"
+                onChange={(e) => setFormData({ ...formData, rating: e.target.value })}
+                placeholder="Rating"  
               />
 
               <h1 className="text-[#000] text-lg font-bold py-5">
@@ -200,7 +192,7 @@ const AddTestimonial = () => {
                 {loading ? (
                   <ClipLoader size={20} color="#fff" />
                 ) : (
-                  "Add Team Member"
+                  "Add Client Review"
                 )}
               </button>
             </form>
