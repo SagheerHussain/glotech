@@ -21,6 +21,7 @@ import { ImStatsBars2 } from "react-icons/im";
 import { FaUsers } from "react-icons/fa";
 import { MdOutlineRateReview } from "react-icons/md";
 import { IoLogoIonic } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Sidebar = () => {
   const [services, setServices] = useState(false);
@@ -32,6 +33,7 @@ const Sidebar = () => {
   const [team, setTeam] = useState(false);
   const [testimonial, setTestimonial] = useState(false);
   const [logo, setLogo] = useState(false);
+  const [contact, setContact] = useState(false);
 
   const handleService = () => {
     setServices(!services);
@@ -59,6 +61,9 @@ const Sidebar = () => {
   };
   const handleLogo = () => {
     setLogo(!logo);
+  };
+  const handleContact = () => {
+    setContact(!contact);
   };
 
   return (
@@ -463,6 +468,41 @@ const Sidebar = () => {
                           <GoDot className="text-light_text" />
                         </ListItemIcon>
                         View Logo
+                      </ListItemButton>
+                    </Link>
+                  </List>
+                </Collapse>
+              </div>
+            </div>
+
+            {/* Contact */}
+            <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
+              <div className="px-[.75rem]">
+                <ListItemButton
+                  onClick={handleContact}
+                  className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
+                >
+                  <ListItemIcon className="-mr-4">
+                    <FaPhoneAlt className="text-light_text text-xl" />
+                  </ListItemIcon>
+                  <h6 className="text-light_text">Contact</h6>
+                  {contact ? (
+                    <HiOutlineChevronDown className="ms-auto" />
+                  ) : (
+                    <HiOutlineChevronRight className="ms-auto" />
+                  )}
+                </ListItemButton>
+                <Collapse in={contact} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/view-contact`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        View Contact
                       </ListItemButton>
                     </Link>
                   </List>

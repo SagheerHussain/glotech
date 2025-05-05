@@ -33,6 +33,8 @@ import ViewTestimonial from "./admin/components/testimonials/ViewTestimonial";
 import EditTestimonial from "./admin/components/testimonials/EditTestimonial";
 import Logo from "./admin/components/header/Logo";
 import EditLogo from "./admin/components/header/EditLogo";
+import Contact from "./admin/components/contact/Contact";
+import EditContact from "./admin/components/contact/EditContact";
 
 function App() {
   return (
@@ -71,6 +73,8 @@ function App() {
         <Route path="/dashboard/edit-testimonial/:id" element={<EditTestimonial />} />
         <Route path="/dashboard/view-logo" element={<Logo />} />
         <Route path="/dashboard/edit-logo/:id" element={<EditLogo />} />
+        <Route path="/dashboard/view-contact" element={<Contact />} />
+        <Route path="/dashboard/edit-contact/:id" element={<EditContact />} />
       </Routes>
     </>
   );
