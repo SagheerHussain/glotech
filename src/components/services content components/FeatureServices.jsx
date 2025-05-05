@@ -39,13 +39,13 @@ const FeatureServices = () => {
     <>
       <section id="services" className="py-20">
         <div className="container">
-          <h1 className="text-6xl font-semibold text-black mb-8" style={{ textAlign: i18n.language === "ar" ? "right" : "left" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-8" style={{ textAlign: i18n.language === "ar" ? "right" : "left" }}>
             <Trans
               i18nKey="feature_service_title"
               components={{ 1: <span className="text-primary font-bold" /> }}
             />
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:p-6">
             {services.map((service, index) => (
               <div
                 key={index}

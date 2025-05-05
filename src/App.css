@@ -24,6 +24,18 @@
   font-size: 4rem;
 }
 
+
+@media (max-width: 1024px) {
+  .arabic-decor {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 640px) {
+  .arabic-decor {
+    font-size: 2rem;
+  }
+}
+
 html[dir="rtl"] body {
   direction: rtl;
   text-align: right;
