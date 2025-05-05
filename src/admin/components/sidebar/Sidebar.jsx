@@ -71,7 +71,7 @@ const Sidebar = () => {
     <>
       <aside
         id="sidebar"
-        className="sidebar bg-[#fff] border-r-2 border-[#0000002c] h-full py-10"
+        className="sidebar bg-[#fff] border-r-2 border-[#0000002c] min-h-screen overflow-y-auto py-10"
       >
         <div className="sidbar_logo flex justify-center mb-4">
           <Link to="/dashboard" className="flex items-center">

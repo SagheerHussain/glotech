@@ -8,7 +8,7 @@ import {
 } from "../components/index";
 import { TextHoverEffect } from "../components/ui/TextHoverEffect";
 import { Spotlight } from "../components/ui/SpotlightEffect";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { ServiceDetail } from "../components/services components/ServiceDetail";
 import { useTranslation } from "react-i18next";
 import InfiniteMovingBrands from "../components/services components/InfiniteMovingBrands";
@@ -40,6 +40,7 @@ const ServicePage = () => {
   useEffect(() => {
     const featuredServices = services.filter((s) => s.category === service);
     const stats = featuredServices[0]?.stats;
+    console.log("stats", stats);
     setStats(stats);
     setFilteredService(featuredServices[0]);
   }, [service, i18n.language]);

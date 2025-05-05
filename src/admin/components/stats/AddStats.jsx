@@ -18,6 +18,7 @@ const AddStats = () => {
             fr: "",
         },
         count: 0,
+        symbol: "",
     });
 
     const [statTwo, setStatTwo] = useState({
@@ -27,6 +28,7 @@ const AddStats = () => {
             fr: "",
         },
         count: 0,
+        symbol: "",
     });
 
     const [statThree, setStatThree] = useState({
@@ -36,6 +38,7 @@ const AddStats = () => {
             fr: "",
         },
         count: 0,
+        symbol: "",
     });
 
     const [statFour, setStatFour] = useState({
@@ -45,6 +48,7 @@ const AddStats = () => {
             fr: "",
         },
         count: 0,
+        symbol: "",
     });
 
     const [category, setCategory] = useState(null);
@@ -135,6 +139,15 @@ const AddStats = () => {
                   onChange={(e) => setStatOne({ ...statOne, count: Number(e.target.value) })}
                   placeholder="Counts"
                 />
+                <label htmlFor="symbol" className="text-[#000] text-sm">Symbol</label>
+                <input
+                  type="text"
+                  className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                  name="symbol"
+                  id="symbol"
+                  placeholder="e.g '+'"
+                  onChange={(e) => setStatOne({ ...statOne, symbol: e.target.value })}
+                />
               </div>
               <div className="stats-two">
                 <h4 className="text-xl font-bold py-6">Stat Two</h4>
@@ -175,6 +188,15 @@ const AddStats = () => {
                   id="count"
                   placeholder="Counts"
                   onChange={(e) => setStatTwo({ ...statTwo, count: Number(e.target.value) })}
+                />
+                <label htmlFor="symbol" className="text-[#000] text-sm">Symbol</label>
+                <input
+                  type="text"
+                  className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                  name="symbol"
+                  id="symbol"
+                  placeholder="e.g +"
+                  onChange={(e) => setStatTwo({ ...statTwo, symbol: e.target.value })}
                 />
               </div>
               <div className="stats-three">
@@ -217,6 +239,15 @@ const AddStats = () => {
                   placeholder="Counts"
                   onChange={(e) => setStatThree({ ...statThree, count: Number(e.target.value) })}
                 />
+                <label htmlFor="symbol" className="text-[#000] text-sm">Symbol</label>
+                <input
+                  type="text"
+                  className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                  name="symbol"
+                  id="symbol"
+                  placeholder="e.g +"
+                  onChange={(e) => setStatThree({ ...statThree, symbol: e.target.value })}
+                />
               </div>
               <div className="stats-four">
                 <h4 className="text-xl font-bold py-6">Stat Four</h4>
@@ -257,6 +288,15 @@ const AddStats = () => {
                   id="count"
                   placeholder="Counts"
                   onChange={(e) => setStatFour({ ...statFour, count: Number(e.target.value) })}
+                />
+                <label htmlFor="symbol" className="text-[#000] text-sm">Symbol</label>
+                <input
+                  type="text"
+                  className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                  name="symbol"
+                  id="symbol"
+                  placeholder="e.g +"
+                  onChange={(e) => setStatFour({ ...statFour, symbol: e.target.value })}
                 />
               </div>
 

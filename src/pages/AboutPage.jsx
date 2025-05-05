@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Info,
   NavigationLayout,
@@ -13,16 +13,22 @@ import {
 import { Spotlight } from "../components/ui/SpotlightEffect";
 import { TextHoverEffect } from "../components/ui/TextHoverEffect";
 import { useTranslation } from "react-i18next";
+import { getOverallStats } from "../services/overallStats";
 
 const AboutPage = () => {
   const { t, i18n } = useTranslation();
+  
+  const [overallStats, setOverallStats] = useState([]);
 
-  const stats = [
-    { label: t("counter.projects"), value: 10 },
-    { label: t("counter.years"), value: 3 },
-    { label: t("counter.members"), value: 5 },
-    { label: t("counter.clients"), value: 9 },
-  ];
+  // Get Overall Stats
+  const getStatsData = async () => {
+    const { data } = await getOverallStats();
+    setOverallStats(data[0]);
+  };
+
+  useEffect(() => {
+    getStatsData();
+  }, []);
 
   return (
     <>
@@ -43,7 +49,7 @@ const AboutPage = () => {
       </header>
       <main id="main">
         <Info />
-        <Counter stats={stats} />
+        <Counter stats={overallStats} />
         <GlotechChoosen />
         <Team />
         <ValueAddition />

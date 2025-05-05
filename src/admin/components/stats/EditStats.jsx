@@ -21,6 +21,7 @@ const EditStats = () => {
       fr: "",
     },
     count: 0,
+    symbol: "",
   });
 
   const [statTwo, setStatTwo] = useState({
@@ -30,6 +31,7 @@ const EditStats = () => {
       fr: "",
     },
     count: 0,
+    symbol: "",
   });
 
   const [statThree, setStatThree] = useState({
@@ -39,6 +41,7 @@ const EditStats = () => {
       fr: "",
     },
     count: 0,
+    symbol: "",
   });
 
   const [statFour, setStatFour] = useState({
@@ -48,6 +51,7 @@ const EditStats = () => {
       fr: "",
     },
     count: 0,
+    symbol: "",
   });
 
   const [category, setCategory] = useState(null);
@@ -100,7 +104,7 @@ const EditStats = () => {
         statTwo,
         statThree,
         statFour,
-        category
+        category,
       );
       console.log(data);
       Swal.fire({
@@ -198,6 +202,15 @@ const EditStats = () => {
                   }
                   placeholder="Counts"
                 />
+                <label htmlFor="symbol" className="text-[#000] text-sm">Symbol</label>
+                <input
+                  type="text"
+                  className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                  name="symbol"
+                  id="symbol"
+                  placeholder="e.g +"
+                  onChange={(e) => setStatOne({ ...statOne, symbol: e.target.value })}
+                />
               </div>
               <div className="stats-two">
                 <h4 className="text-xl font-bold py-6">Stat Two</h4>
@@ -267,6 +280,16 @@ const EditStats = () => {
                   onChange={(e) =>
                     setStatTwo({ ...statTwo, count: Number(e.target.value) })
                   }
+                />
+                <label htmlFor="symbol" className="text-[#000] text-sm">Symbol</label>
+                <input
+                  type="text"
+                  className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                  name="symbol"
+                  id="symbol"
+                  placeholder="e.g +"
+                  defaultValue={stats?.statTwo?.symbol}
+                  onChange={(e) => setStatTwo({ ...statTwo, symbol: e.target.value })}
                 />
               </div>
               <div className="stats-three">
@@ -341,6 +364,16 @@ const EditStats = () => {
                     })
                   }
                 />
+                <label htmlFor="symbol" className="text-[#000] text-sm">Symbol</label>
+                <input
+                  type="text"
+                  className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                  name="symbol"
+                  id="symbol"
+                  placeholder="e.g +"
+                  defaultValue={stats?.statThree?.symbol}
+                  onChange={(e) => setStatThree({ ...statThree, symbol: e.target.value })}
+                />
               </div>
               <div className="stats-four">
                 <h4 className="text-xl font-bold py-6">Stat Four</h4>
@@ -410,6 +443,16 @@ const EditStats = () => {
                   onChange={(e) =>
                     setStatFour({ ...statFour, count: Number(e.target.value) })
                   }
+                />
+                <label htmlFor="symbol" className="text-[#000] text-sm">Symbol</label>
+                <input
+                  type="text"
+                  className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+                  name="symbol"
+                  id="symbol"
+                  placeholder="e.g +"
+                  defaultValue={stats?.statFour?.symbol}
+                  onChange={(e) => setStatFour({ ...statFour, symbol: e.target.value })}
                 />
               </div>
 
