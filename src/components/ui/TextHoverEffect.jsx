@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useSpring } from "framer-motion";
 
-export const TextHoverEffect = ({ text, duration = 0, className = "text-[3rem]" }) => {
+export const TextHoverEffect = ({ text, duration = 0, className = "" }) => {
   const svgRef = useRef(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);

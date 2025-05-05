@@ -16,7 +16,7 @@ import { useTranslation } from "react-i18next";
 
 const AboutPage = () => {
   const { t, i18n } = useTranslation();
-  
+
   const stats = [
     { label: t("counter.projects"), value: 10 },
     { label: t("counter.years"), value: 3 },
@@ -32,7 +32,11 @@ const AboutPage = () => {
           <Spotlight />
           <div className="container">
             <div className="flex items-center justify-center flex-col h-full w-full">
-              <TextHoverEffect className="text-[2rem] uppercase" key={i18n.language} text={t("text.about")} />
+              <TextHoverEffect
+                className={`text-[2rem] sm:text-[2.5rem] md:text-[1.5rem] uppercase`}
+                key={i18n.language}
+                text={t("text.about")}
+              />
             </div>
           </div>
         </div>

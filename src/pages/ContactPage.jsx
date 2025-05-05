@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import ContactForm from "../components/contact components/ContactForm";
 
 const ContactPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -17,7 +17,8 @@ const ContactPage = () => {
           <div className="container">
             <div className="flex items-center justify-center flex-col h-full w-full">
               <TextHoverEffect
-                className="text-[2rem] uppercase"
+                className={`text-[2rem] sm:text-[2.5rem] md:text-[1.5rem] uppercase`}
+                key={i18n.language}
                 text={t("text.contact")}
               />
             </div>
