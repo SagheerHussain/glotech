@@ -20,6 +20,7 @@ import { IoIosStats } from "react-icons/io";
 import { ImStatsBars2 } from "react-icons/im";
 import { FaUsers } from "react-icons/fa";
 import { MdOutlineRateReview } from "react-icons/md";
+import { IoLogoIonic } from "react-icons/io5";
 
 const Sidebar = () => {
   const [services, setServices] = useState(false);
@@ -30,6 +31,7 @@ const Sidebar = () => {
   const [overallStats, setOverallStats] = useState(false);
   const [team, setTeam] = useState(false);
   const [testimonial, setTestimonial] = useState(false);
+  const [logo, setLogo] = useState(false);
 
   const handleService = () => {
     setServices(!services);
@@ -54,6 +56,9 @@ const Sidebar = () => {
   };
   const handleTestimonial = () => {
     setTestimonial(!testimonial);
+  };
+  const handleLogo = () => {
+    setLogo(!logo);
   };
 
   return (
@@ -423,6 +428,41 @@ const Sidebar = () => {
                           <GoDot className="text-light_text" />
                         </ListItemIcon>
                         View Testimonial
+                      </ListItemButton>
+                    </Link>
+                  </List>
+                </Collapse>
+              </div>
+            </div>
+
+            {/* Logo */}
+            <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
+              <div className="px-[.75rem]">
+                <ListItemButton
+                  onClick={handleLogo}
+                  className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
+                >
+                  <ListItemIcon className="-mr-4">
+                    <IoLogoIonic className="text-light_text text-xl" />
+                  </ListItemIcon>
+                  <h6 className="text-light_text">Header</h6>
+                  {logo ? (
+                    <HiOutlineChevronDown className="ms-auto" />
+                  ) : (
+                    <HiOutlineChevronRight className="ms-auto" />
+                  )}
+                </ListItemButton>
+                <Collapse in={logo} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <Link
+                      className="text-light_text"
+                      to={`/dashboard/view-logo`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        View Logo
                       </ListItemButton>
                     </Link>
                   </List>

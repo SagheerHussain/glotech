@@ -31,6 +31,8 @@ import EditTeam from "./admin/components/team/EditTeam";
 import AddTestimonial from "./admin/components/testimonials/AddTestimonial";
 import ViewTestimonial from "./admin/components/testimonials/ViewTestimonial";
 import EditTestimonial from "./admin/components/testimonials/EditTestimonial";
+import Logo from "./admin/components/header/Logo";
+import EditLogo from "./admin/components/header/EditLogo";
 
 function App() {
   return (
@@ -67,6 +69,8 @@ function App() {
         <Route path="/dashboard/add-testimonial" element={<AddTestimonial />} />
         <Route path="/dashboard/view-testimonial" element={<ViewTestimonial />} />
         <Route path="/dashboard/edit-testimonial/:id" element={<EditTestimonial />} />
+        <Route path="/dashboard/view-logo" element={<Logo />} />
+        <Route path="/dashboard/edit-logo/:id" element={<EditLogo />} />
       </Routes>
     </>
   );
