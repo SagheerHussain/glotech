@@ -12,16 +12,22 @@ import {
 import { Spotlight } from "../components/ui/SpotlightEffect";
 import { TextHoverEffect } from "../components/ui/TextHoverEffect";
 import { useTranslation } from "react-i18next";
+import { getOverallStats } from "../services/overallStats";
 
 const ServiceContentPage = () => {
   const { t, i18n } = useTranslation();
 
-  const stats = [
-    { label: t("counter.projects"), value: 10 },
-    { label: t("counter.years"), value: 3 },
-    { label: t("counter.members"), value: 5 },
-    { label: t("counter.clients"), value: 9 },
-  ];
+  const [overallStats, setOverallStats] = useState([]);
+
+  // Get Overall Stats
+  const getStatsData = async () => {
+    const { data } = await getOverallStats();
+    setOverallStats(data[0]);
+  };
+
+  useEffect(() => {
+    getStatsData();
+  }, []);
 
   return (
     <>
