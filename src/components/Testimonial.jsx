@@ -13,6 +13,8 @@ import { useTranslation } from "react-i18next";
 import reviewOne from "/Images/testimonials/review (1).png";
 import reviewTwo from "/Images/testimonials/review (2).png";
 import { Link } from "react-router-dom";
+import { getTestimonials } from "../services/testimonial";
+import { Rating } from "@mui/material";
 
 const Testimonial = () => {
   const { t } = useTranslation();
@@ -20,6 +22,7 @@ const Testimonial = () => {
 
   // State Variables
   const [isArabic, setIsArabic] = useState(false);
+  const [reviews, setReviews] = useState([]);
 
   const testimonials = t("testimonials", {
     returnObjects: true,
@@ -31,6 +34,17 @@ const Testimonial = () => {
     const arabic = i18n.language === "ar";
     setIsArabic(arabic);
   }, [i18n.language]);
+
+  // Get Testimonials
+  const getTestimonialsData = async () => {
+    const { data } = await getTestimonials();
+    console.log("reviews", data);
+    setReviews(data);
+  };
+
+  useEffect(() => {
+    getTestimonialsData();
+  }, []);
 
   return (
     <section
@@ -75,19 +89,26 @@ const Testimonial = () => {
                 disableOnInteraction: false,
               }}
             >
-              {testimonials.map((testimonial, index) => (
+              {reviews?.map((review, index) => (
                 <SwiperSlide key={index}>
                   <div className="testimonial_card bg-white shadow-2xl p-10 rounded-[20px]">
                     <div className="card_ratings flex items-center">
-                      <IoIosStar size={24} className="text-yellow-600" />
-                      <IoIosStar size={24} className="text-yellow-600" />
-                      <IoIosStar size={24} className="text-yellow-600" />
-                      <IoIosStar size={24} className="text-yellow-600" />
-                      <IoIosStar size={24} className="text-yellow-600" />
+                      <Rating
+                        name="read-only"
+                        value={review?.rating}
+                        readOnly
+                        size="small"
+                      />
                     </div>
                     <div className="card_description">
                       <em className="text-dark py-6 leading-loose inline-block">
-                        {testimonial.description}
+                        {
+                          i18n.language === "ar"
+                            ? review?.review?.ar
+                            : i18n.language === "fr"
+                            ? review?.review?.fr
+                            : review?.review?.en
+                        }
                       </em>
                     </div>
                     <div className="card_company flex items-center">
@@ -99,8 +120,24 @@ const Testimonial = () => {
                         />
                       </div>
                       <div className="company_headline ms-4">
-                        <h3 className="text-dark">{testimonial.name}</h3>
-                        <span className="text-dark">{testimonial.title}</span>
+                        <h3 className="text-dark">
+                          {
+                            i18n.language === "ar"
+                              ? review?.name?.ar
+                              : i18n.language === "fr"
+                              ? review?.name?.fr
+                              : review?.name?.en
+                          }
+                        </h3>
+                        <span className="text-dark">
+                          {
+                            i18n.language === "ar"
+                              ? review?.title?.ar
+                              : i18n.language === "fr"
+                              ? review?.title?.fr
+                              : review?.title?.en
+                          }
+                        </span>
                       </div>
                     </div>
                   </div>

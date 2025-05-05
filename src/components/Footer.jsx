@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import footerBg from "/Images/bg-footer.jpg";
 import Button from "./Button";
 import { useTranslation } from "react-i18next";
@@ -14,13 +14,26 @@ import {
 import { Input } from "@heroui/input";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { getContacts } from "../services/contact";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const footer = t("footer", { returnObjects: true });
 
   const services = t("menu.Services.subMenus", { returnObjects: true });
+
+  const [contact, setContact] = useState({});
+
+  // Get Contact Data
+  const getData = async () => {
+    const { data } = await getContacts();
+    setContact(data[0]);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <footer
@@ -61,25 +74,31 @@ const Footer = () => {
             <div className="flex items-center mt-6">
               <FaLocationDot className="text-primary inline-block" />
               <span className="text-text_light text-sm ms-2">
-                {footer[2].address.description}
+                {
+                  i18n.language === "ar"
+                    ? contact?.location?.ar
+                    : i18n.language === "fr"
+                    ? contact?.location?.fr
+                    : contact?.location?.en
+                }
               </span>
             </div>
             <a
-              href={`tel:${footer[2].phone.description}`}
+              href={`tel:${contact?.phone}`}
               className="flex items-center mt-4"
             >
               <FaPhoneAlt className="text-primary inline-block" />
               <address className="text-text_light text-sm ms-2">
-                {footer[2].phone.description}
+                {contact?.phone}
               </address>
             </a>
             <a
-              href={`mailto:${footer[2].email.description}`}
+              href={`mailto:${contact?.email}`}
               className="flex items-center mt-4"
             >
               <MdEmail className="text-primary inline-block" />
               <span className="text-text_light text-sm ms-2">
-                {footer[2].email.description}
+                {contact?.email}
               </span>
             </a>
           </div>

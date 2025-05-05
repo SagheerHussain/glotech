@@ -1,26 +1,22 @@
 // src/components/TeamSection.jsx
-import React from "react";
-import { FaFacebookF, FaTwitter, FaYoutube, FaPinterest } from "react-icons/fa";
-import bg from "/Images/bg-box.jpg";
+import React, { useState, useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { getTeams } from "../services/team";
 
 const Team = () => {
   const { t } = useTranslation();
 
-  const team_members = t("teams.members", { returnObjects: true });
+  const [team, setTeam] = useState([]);
 
-  const images = [
-    "https://assets.wam.ae/resource/bt502eil1k815kgpn.jpeg",
-    "https://i1.rgstatic.net/ii/profile.image/991201121550337-1613332171573_Q512/Fatima_Youssef3.jpg",
-    "https://i1.rgstatic.net/ii/profile.image/688605450219520-1541187741311_Q512/Omer-Khan-12.jpg",
-    "https://data.themeim.com/html/sixart/assets/img/team/team-3.jpg",
-  ];
+  const getData = async () => {
+    const { data } = await getTeams();
+    console.log("team", data);
+    setTeam(data);
+  };
 
-  const team = team_members.map((member, index) => ({
-    name: member.name,
-    role: member.designation,
-    image: images[index],
-  }));
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <section
@@ -51,28 +47,22 @@ const Team = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
+            {team?.map((member, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center text-center rounded-lg"
               >
                 <div className="rounded-full overflow-hidden border-2 border-dashed border-secondary mb-4">
                   <img
-                    src={member.image}
-                    alt={member.name}
+                    src={member?.image}
+                    alt={member?.name?.en}
                     className="w-full h-full object-cover p-3 rounded-full"
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-text_dark">
-                  {member.name}
+                  {member?.name?.en}
                 </h3>
-                <p className="text-text_dark text-sm mb-3">{member.role}</p>
-                <div className="flex gap-4 text-text_dark text-lg">
-                  <FaFacebookF className="hover:text-blue-500 cursor-pointer transition-all" />
-                  <FaTwitter className="hover:text-sky-400 cursor-pointer transition-all" />
-                  <FaYoutube className="hover:text-red-600 cursor-pointer transition-all" />
-                  <FaPinterest className="hover:text-pink-600 cursor-pointer transition-all" />
-                </div>
+                <p className="text-text_dark text-sm mb-3">{member?.designation?.en}</p>
               </div>
             ))}
           </div>

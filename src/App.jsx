@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { Link, Route, Routes } from "react-router-dom";
 import { About, Header } from "./components";
@@ -35,8 +35,30 @@ import Logo from "./admin/components/header/Logo";
 import EditLogo from "./admin/components/header/EditLogo";
 import Contact from "./admin/components/contact/Contact";
 import EditContact from "./admin/components/contact/EditContact";
+import { getColors } from "./services/colors";
 
 function App() {
+  useEffect(() => {
+    // Fetch colors from the API when the component mounts
+    const fetchColors = async () => {
+      try {
+        const { data } = await getColors(); // Replace with your API URL
+        const colors = data[0]; // Assuming there's only one color object
+
+        // Update the CSS variables with the new color values
+        const root = document.documentElement;
+        root.style.setProperty("--primary", colors.primary);
+        root.style.setProperty("--secondary", colors.secondary);
+
+        console.log("Theme colors updated successfully!");
+      } catch (error) {
+        console.error("Error fetching colors:", error);
+      }
+    };
+
+    fetchColors();
+  }, []);
+
   return (
     <>
       <Routes>
@@ -63,14 +85,26 @@ function App() {
         <Route path="/dashboard/add-stats" element={<AddStats />} />
         <Route path="/dashboard/view-stats" element={<ViewStats />} />
         <Route path="/dashboard/edit-stats/:id" element={<EditStats />} />
-        <Route path="/dashboard/view-overall-stats" element={<ViewOverallStats />} />
-        <Route path="/dashboard/edit-overall-stats/:id" element={<EditOverallStats />} />
+        <Route
+          path="/dashboard/view-overall-stats"
+          element={<ViewOverallStats />}
+        />
+        <Route
+          path="/dashboard/edit-overall-stats/:id"
+          element={<EditOverallStats />}
+        />
         <Route path="/dashboard/add-team" element={<AddTeam />} />
         <Route path="/dashboard/view-team" element={<ViewTeam />} />
         <Route path="/dashboard/edit-team/:id" element={<EditTeam />} />
         <Route path="/dashboard/add-testimonial" element={<AddTestimonial />} />
-        <Route path="/dashboard/view-testimonial" element={<ViewTestimonial />} />
-        <Route path="/dashboard/edit-testimonial/:id" element={<EditTestimonial />} />
+        <Route
+          path="/dashboard/view-testimonial"
+          element={<ViewTestimonial />}
+        />
+        <Route
+          path="/dashboard/edit-testimonial/:id"
+          element={<EditTestimonial />}
+        />
         <Route path="/dashboard/view-logo" element={<Logo />} />
         <Route path="/dashboard/edit-logo/:id" element={<EditLogo />} />
         <Route path="/dashboard/view-contact" element={<Contact />} />

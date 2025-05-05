@@ -15,8 +15,8 @@ export default {
         },
       },
       colors: {
-        primary: '#8c6238',
-        secondary: '#c9a66f',
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
         theme: '#111111',
         text_dark: "#222222",
         text_light: '#ccc'

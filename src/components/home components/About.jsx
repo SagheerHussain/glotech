@@ -5,13 +5,15 @@ import { Trans, useTranslation } from "react-i18next";
 import gsap from "gsap";
 import verticalShape from "/Images/shape (1).png";
 import horizontalShape from "/Images/shape (2).png";
+import { getAboutLists } from "../../services/about";
 
 const About = () => {
-  const { i18n } = useTranslation();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const shapeRef = useRef(null);
   const shapeRef2 = useRef(null);
+
+  const [about, setAbout] = useState("");
 
   const [isArabic, setIsArabic] = useState(false);
 
@@ -36,6 +38,16 @@ const About = () => {
       });
     }
   }, [i18n.language]);
+
+  const getData = async () => {
+    const { data } = await getAboutLists();
+    console.log("about", data[0]);
+    setAbout(data[0]);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -88,7 +100,13 @@ const About = () => {
                     {t("home-page-components.about.missionTitle")}
                   </h3>
                   <p className="text-dark pe-3 leading-snug text-sm mt-3">
-                    {t("home-page-components.about.missionText")}
+                    {
+                      i18n.language === "ar"
+                        ? about?.mission?.ar
+                        : i18n.language === "fr"
+                        ? about?.mission?.fr
+                        : about?.mission?.en
+                    }
                   </p>
                 </div>
                 <div className="our_vision py-6 sm:w-1/2">
@@ -97,7 +115,13 @@ const About = () => {
                     {t("home-page-components.about.visionTitle")}
                   </h3>
                   <p className="text-dark pe-3 leading-snug text-sm mt-3">
-                    {t("home-page-components.about.visionText")}
+                    {
+                      i18n.language === "ar"
+                        ? about?.vision?.ar
+                        : i18n.language === "fr"
+                        ? about?.vision?.fr
+                        : about?.vision?.en
+                    }
                   </p>
                 </div>
               </div>

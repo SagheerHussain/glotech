@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ImCheckmark } from "react-icons/im";
 import { FaEye } from "react-icons/fa";
 import { FaMedal } from "react-icons/fa6";
 import { FiTarget } from "react-icons/fi";
 import { Trans, useTranslation } from "react-i18next";
+import { getAboutLists } from "../../services/about";
 
 const Info = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // State Variables
+  const [about, setAbout] = useState({});
+
+  // Get About
+  const getAboutData = async () => {
+    const { data } = await getAboutLists();
+    console.log("about", data[0]);
+    setAbout(data[0]);
+  };
+
+  useEffect(() => {
+    getAboutData();
+  }, []);
 
   return (
     <section id="info" className="bg-white py-20 z-[2] relative">
@@ -40,7 +55,13 @@ const Info = () => {
               {t("about-page-components.mission.title")}
             </h3>
             <p className="text-sm text-dark">
-              {t("about-page-components.mission.description")}
+              {
+                i18n.language === "ar"
+                  ? about?.mission?.ar
+                  : i18n.language === "fr"
+                  ? about?.mission?.fr
+                  : about?.mission?.en
+              }
             </p>
           </div>
           <div className="skynet_mission px-4 text-center md:w-[33.3%] md:mb-0 mb-4">
@@ -49,7 +70,13 @@ const Info = () => {
               {t("about-page-components.vision.title")}
             </h3>
             <p className="text-sm text-dark">
-              {t("about-page-components.vision.description")}
+              {
+                i18n.language === "ar"
+                  ? about?.vision?.ar
+                  : i18n.language === "fr"
+                  ? about?.vision?.fr
+                  : about?.vision?.en
+              }
             </p>
           </div>
           <div className="skynet_mission px-4 text-center md:w-[33.3%] md:mb-0 mb-4">
@@ -62,7 +89,13 @@ const Info = () => {
               {t("about-page-components.audience.title")}
             </h3>
             <p className="text-sm text-dark">
-              {t("about-page-components.audience.description")}
+              {
+                i18n.language === "ar"
+                  ? about?.target?.ar
+                  : i18n.language === "fr"
+                  ? about?.target?.fr
+                  : about?.target?.en
+              }
             </p>
           </div>
         </div>

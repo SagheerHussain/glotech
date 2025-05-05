@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
@@ -6,12 +6,15 @@ import Button from "../Button";
 import Swal from "sweetalert2";
 import { BeatLoader } from "react-spinners";
 import { useTranslation } from "react-i18next";
+import { getContacts } from "../../services/contact";
 
 const ContactForm = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const [contact, setContact] = useState({});
 
   // Submit Form
   const handleContactForm = async (event) => {
@@ -62,20 +65,37 @@ const ContactForm = () => {
     }
   };
 
+  const getData = async () => {
+    const { data } = await getContacts();
+    setContact(data[0]);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
       <section id="contact" className="py-20 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 px-8 py-16 gap-4 bg-[#ddd] rounded-[10px]">
             <div className="contact-info">
-              <h1 className="text-5xl font-bold text-dark">{t("contact-page-components.title")}</h1>
+              <h1 className="text-5xl font-bold text-dark">
+                {t("contact-page-components.title")}
+              </h1>
               <p className="text-dark text-sm py-6 leading-loose">
                 {t("contact-page-components.description")}
               </p>
               <div className="contact_info_location py-4">
                 <div className="flex">
                   <FaLocationCrosshairs size={24} className="text-primary" />
-                  <p className="text-dark ms-4">Riyadh, Saudi Arabia</p>
+                  <p className="text-dark ms-4">
+                    {i18n.language === "ar"
+                      ? contact?.location?.ar
+                      : i18n.language === "fr"
+                      ? contact?.location?.fr
+                      : contact?.location?.en}
+                  </p>
                 </div>
                 <a href="tel:+966115123177" className="flex py-6">
                   <FaPhoneAlt size={24} className="text-primary" />
@@ -83,12 +103,12 @@ const ContactForm = () => {
                     className="text-dark ms-4"
                     style={{ direction: "ltr", margin: "0 1rem" }}
                   >
-                    +966 115 123 177
+                    {contact?.phone}
                   </p>
                 </a>
                 <a href="mailto:info@glotech-ksa.com" className="flex">
                   <AiOutlineMail size={24} className="text-primary" />
-                  <p className="text-dark ms-4">info@glotech-ksa.com</p>
+                  <p className="text-dark ms-4">{contact?.email}</p>
                 </a>
               </div>
               <div className="pt-4">
@@ -110,13 +130,13 @@ const ContactForm = () => {
                     htmlFor="name"
                     className="text-dark text-sm pb-2 inline-block"
                   >
-                    {t('contact-page-components.form.name')}*
+                    {t("contact-page-components.form.name")}*
                   </label>
                   <input
                     type="text"
                     name="name"
                     className="w-full block bg-transparent border-[1px] border-[#999] px-4 py-2 rounded-[5px] focus:outline-none text-dark"
-                    placeholder={t('contact-page-components.form.name')}
+                    placeholder={t("contact-page-components.form.name")}
                   />
                 </div>
                 <div className="email pt-4">
@@ -124,13 +144,13 @@ const ContactForm = () => {
                     htmlFor="email"
                     className="text-dark text-sm pb-2 inline-block"
                   >
-                    {t('contact-page-components.form.email')}*
+                    {t("contact-page-components.form.email")}*
                   </label>
                   <input
                     type="email"
                     name="email"
                     className="w-full block bg-transparent border-[1px] border-[#999] px-4 py-2 rounded-[5px] focus:outline-none text-dark"
-                    placeholder={t('contact-page-components.form.email')}
+                    placeholder={t("contact-page-components.form.email")}
                   />
                 </div>
                 <div className="subject pt-4">
@@ -138,13 +158,13 @@ const ContactForm = () => {
                     htmlFor="subject"
                     className="text-dark text-sm pb-2 inline-block"
                   >
-                    {t('contact-page-components.form.subject')}*
+                    {t("contact-page-components.form.subject")}*
                   </label>
                   <input
                     type="text"
                     name="subject"
                     className="w-full block bg-transparent border-[1px] border-[#999] px-4 py-2 rounded-[5px] focus:outline-none text-dark"
-                    placeholder={t('contact-page-components.form.subject')}
+                    placeholder={t("contact-page-components.form.subject")}
                   />
                 </div>
                 <div className="message pt-4">
@@ -152,12 +172,12 @@ const ContactForm = () => {
                     htmlFor="message"
                     className="text-dark text-sm pb-2 inline-block"
                   >
-                    {t('contact-page-components.form.message')}*
+                    {t("contact-page-components.form.message")}*
                   </label>
                   <textarea
                     name="message"
                     className="w-full block bg-transparent border-[1px] border-[#999] px-4 py-2 h-[150px] rounded-[5px] focus:outline-none text-dark"
-                    placeholder={t('contact-page-components.form.message')}
+                    placeholder={t("contact-page-components.form.message")}
                   ></textarea>
                   <div className="mt-4">
                     {loading ? (

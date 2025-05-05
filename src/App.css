@@ -13,6 +13,12 @@
   font-weight: normal;
   font-style: normal;
 }
+
+:root {
+  --primary: #8c6238;  /* Default primary color */
+  --secondary: #c9a66f; /* Default secondary color */
+}
+
 .arabic-decor {
   font-family: 'AhlanWasahlan', sans-serif;
   font-size: 4rem;
@@ -81,7 +87,7 @@ div[data-slot="input-wrapper"] {
   border-radius: 0.8em;
   cursor: pointer;
   border: none;
-  background: linear-gradient(to right,#8C6238 , #c9a66f);
+  background: linear-gradient(to right, var(--primary) , var(--secondary));
   color: ghostwhite;
   overflow: hidden;
   border-radius: 50px;
@@ -115,7 +121,7 @@ div[data-slot="input-wrapper"] {
 
 .cssbuttons-io::before {
   content: "";
-  background: linear-gradient(to right,#c9a66f , #8C6238);
+  background: linear-gradient(to right,var(--secondary) , var(--primary));
   width: 120%;
   left: -10%;
   transform: skew(30deg);

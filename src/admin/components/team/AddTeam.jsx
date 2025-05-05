@@ -65,7 +65,7 @@ const AddTeam = () => {
   return (
     <>
       <Layout>
-        <section id="addCategory" className={`h-[90vh] py-6`}>
+        <section id="addCategory" className={`min-h-[90vh] py-6`}>
           <div className="container py-4">
             <h1 className="text-[#000] text-4xl font-bold mb-5">
               Add New Team Member

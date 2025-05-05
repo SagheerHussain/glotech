@@ -100,7 +100,7 @@ const Services = () => {
                 i18nKey="home-page-components.service_details_intro.headline"
                 components={{
                   1: (
-                    <span className="bg-gradient-to-r from-[#8C6238] to-[#c9a66f] text-transparent bg-clip-text" />
+                    <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text" />
                   ),
                 }}
               />
