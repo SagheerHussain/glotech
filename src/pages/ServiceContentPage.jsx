@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   ServiceHeader,
   Features,
@@ -50,7 +50,7 @@ const ServiceContentPage = () => {
         <main id="main">
           <Features />
           <FeatureServices />
-          <Counter stats={stats} />
+          <Counter stats={overallStats} />
           <Testimonial />
           <Banner
             title={t("home-page-components.banner.title")}
