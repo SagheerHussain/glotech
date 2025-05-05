@@ -330,7 +330,7 @@ const AddService = () => {
                 <button
                   type="button"
                   onClick={() => removeFeature(index)}
-                  className="bg-red-500 text-white px-3 py-1"
+                  className="bg-red-500 text-white px-3 py-1 rounded-full"
                 >
                   Remove Feature
                 </button>
@@ -340,7 +340,7 @@ const AddService = () => {
             <button
               type="button"
               onClick={addFeature}
-              className="bg-primary hover:bg-secondary text-white px-4 py-2 mt-4"
+              className="bg-primary hover:bg-secondary text-white px-4 py-2 mt-4 rounded-full"
             >
               + Add Feature
             </button>

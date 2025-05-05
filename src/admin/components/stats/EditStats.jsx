@@ -459,7 +459,7 @@ const EditStats = () => {
                 {loading ? (
                   <ClipLoader color="#fff" size={20} />
                 ) : (
-                  "Apply Stats"
+                  "Apply Changes" 
                 )}
               </button>
             </form>

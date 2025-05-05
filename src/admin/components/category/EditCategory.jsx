@@ -132,7 +132,7 @@ const EditCategory = () => {
                 {loading ? (
                   <ClipLoader size={20} color="#fff" />
                 ) : (
-                  "Edit Category"
+                  "Apply Changes"
                 )}
               </button>
             </form>

@@ -67,7 +67,7 @@ const EditCategory = () => {
       <Layout>
         <section id="addCategory" className={`min-h-[90vh] py-6`}>
           <div className="container py-4">
-            <h1 className="text-[#000] text-4xl font-bold mb-5">Edit Color</h1>
+            <h1 className="text-[#000] text-4xl font-bold mb-5">Edit Logo</h1>
             <form action="" onSubmit={handleEditCategory}>
               <div className="flex items-center justify-between mb-4">
                 <div className="pe-6 w-full">

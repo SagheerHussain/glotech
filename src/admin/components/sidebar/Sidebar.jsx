@@ -22,6 +22,7 @@ import { FaUsers } from "react-icons/fa";
 import { MdOutlineRateReview } from "react-icons/md";
 import { IoLogoIonic } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
+import { GrDocumentNotes } from "react-icons/gr";
 
 const Sidebar = () => {
   const [services, setServices] = useState(false);
@@ -98,7 +99,7 @@ const Sidebar = () => {
 
             {/* Services */}
             <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
-              <div className="px-[.75rem]">
+              {/* <div className="px-[.75rem]">
                 <ListItemButton onClick={handleService}>
                   <ListItemIcon className="-mr-4">
                     <MdOutlineDesignServices className="text-light_text text-xl" />
@@ -137,7 +138,7 @@ const Sidebar = () => {
                     </Link>
                   </List>
                 </Collapse>
-              </div>
+              </div> */}
             </div>
 
             {/* Categories */}
@@ -323,7 +324,7 @@ const Sidebar = () => {
                   <ListItemIcon className="-mr-4">
                     <ImStatsBars2 className="text-light_text text-xl" />
                   </ListItemIcon>
-                  <h6 className="text-light_text">Overall Stats</h6>
+                  <h6 className="text-light_text">About Page Stats</h6>
                   {overallStats ? (
                     <HiOutlineChevronDown className="ms-auto" />
                   ) : (
@@ -340,7 +341,7 @@ const Sidebar = () => {
                         <ListItemIcon className="-mr-4">
                           <GoDot className="text-light_text" />
                         </ListItemIcon>
-                        View Overall Stats
+                        View Stats
                       </ListItemButton>
                     </Link>
                   </List>
@@ -483,9 +484,9 @@ const Sidebar = () => {
                   className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
                 >
                   <ListItemIcon className="-mr-4">
-                    <FaPhoneAlt className="text-light_text text-xl" />
+                    <GrDocumentNotes className="text-light_text text-xl" />
                   </ListItemIcon>
-                  <h6 className="text-light_text">Contact</h6>
+                  <h6 className="text-light_text">Footer</h6>
                   {contact ? (
                     <HiOutlineChevronDown className="ms-auto" />
                   ) : (

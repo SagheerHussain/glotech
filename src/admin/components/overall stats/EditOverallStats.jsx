@@ -77,7 +77,7 @@ const EditOverallStats = () => {
       <Layout>
         <section id="addStats" className="min-h-[90vh] py-6">
           <div className="container">
-            <h1 className="text-[#000] text-4xl font-bold mb-5">Edit Overall Stats</h1>
+            <h1 className="text-[#000] text-4xl font-bold mb-5">Edit About Page Stats</h1>
             <form onSubmit={handleSubmit}>
               <div className="stats-one">
                 <h4 className="text-xl font-bold py-6">Stat One</h4>
@@ -299,7 +299,7 @@ const EditOverallStats = () => {
                 {loading ? (
                   <ClipLoader color="#fff" size={20} />
                 ) : (
-                  "Apply Stats"
+                  "Apply Changes"
                 )}
               </button>
             </form>

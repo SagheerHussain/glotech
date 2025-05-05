@@ -258,7 +258,7 @@ const EditTestimonial = () => {
                 {loading ? (
                   <ClipLoader size={20} color="#fff" />
                 ) : (
-                  "Add Client Review"
+                  "Apply Changes"
                 )}
               </button>
             </form>

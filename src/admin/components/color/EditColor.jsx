@@ -103,7 +103,7 @@ const EditCategory = () => {
                     : "hover:bg-secondary hover:bg-hover_color"
                 }`}
               >
-                {loading ? <ClipLoader size={20} color="#fff" /> : "Edit Color"}
+                {loading ? <ClipLoader size={20} color="#fff" /> : "Apply Changes"}
               </button>
             </form>
             <button

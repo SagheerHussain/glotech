@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { LanguageSwitcher, Logo, NavigationLayout } from "./index"; // Fixed import
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import Particles from "./bits ui/Particles";
 import "../i18n";
@@ -44,6 +44,8 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
+  const location = useLocation();
+
   // Fetch color
   useEffect(() => {
     const getColorsData = async () => {
@@ -51,7 +53,7 @@ const Header = () => {
       setColor(data.primary);
     };
     getColorsData();
-  }, []);
+  }, [location.pathname]);
 
   return (
     <header
@@ -64,7 +66,7 @@ const Header = () => {
         <Particles
           particleCount={800}
           particleSpread={10}
-          particleColors={[color]}
+          particleColors={'#000'}
           speed={0.1}
           particleBaseSize={100}
           moveParticlesOnHover={true}

@@ -66,7 +66,7 @@ const AddTestimonial = () => {
       <Layout>
         <section id="addCategory" className={`min-h-[90vh] py-6`}>
           <div className="container py-4">
-            <h1 className="text-[#000] text-4xl font-bold mb-5">Add Review</h1>
+            <h1 className="text-[#000] text-4xl font-bold mb-5">Add Testimonial</h1>
             <form action="" onSubmit={handleAddTestimonial}>
               <h1 className="text-[#000] text-lg font-bold py-5">
                 Client Name
@@ -192,7 +192,7 @@ const AddTestimonial = () => {
                 {loading ? (
                   <ClipLoader size={20} color="#fff" />
                 ) : (
-                  "Add Client Review"
+                  "Add Testimonial"
                 )}
               </button>
             </form>

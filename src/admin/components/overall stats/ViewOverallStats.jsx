@@ -210,7 +210,7 @@ const ViewOverallStats = () => {
   return (
     <>
       <GridTable
-        title={"View Overall Stats"}
+        title={"View About Page Stats"}
         handleBulkDelete={handleBulkDelete}
         selectedRows={selectedRows}
         rows={rows}
