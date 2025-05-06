@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"; // For navigation
 import Swal from "sweetalert2";
 import GridTable from "../GridTable";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { getTeams } from "../../../services/team";
+import { deleteTeam, getTeams } from "../../../services/team";
 
 // import { deleteTeam, getTeams } from "../../../services/teams";
 
@@ -50,10 +50,10 @@ const ViewTeam = () => {
     if (result.isConfirmed) {
       try {
         await deleteTeam(selectedId);
-        Swal.fire("Deleted!", "The category has been deleted.", "success");
+        Swal.fire("Deleted!", "The team has been deleted.", "success");
         setRows(rows.filter((row) => row.id !== selectedId));
       } catch (error) {
-        console.error("Error deleting category:", error);
+        console.error("Error deleting team:", error);
       }
     }
   };

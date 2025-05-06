@@ -101,38 +101,6 @@ const SignIn = () => {
             <label htmlFor="" className="text-white text-sm mb-3">
               Password
             </label>
-            {/* <input
-              type="password"
-              onChange={handleChange}
-              required
-              name="password"
-              placeholder="Password"
-              className="w-full px-4 py-2 mb-4 border-none text-white focus:outline-none"
-              style={{ backgroundColor: "#2b1e0e", borderRadius: "3px" }}
-            /> */}
-            {/* <div className="flex items-center justify-between password_input bg-[#2b1e0e] rounded-[3px] w-full">
-              <input
-                onChange={handleChange}
-                required
-                name="password"
-                type={`${password ? "text" : "password"}`}
-                placeholder="Password"
-                className="w-full px-4 py-2 mb-4 border-none text-white focus:outline-none"
-              />
-              <div className="password_eye_icon">
-                {password ? (
-                  <FaEye
-                    onClick={() => setPassword(false)}
-                    className="text-white cursor-pointer"
-                  />
-                ) : (
-                  <FaEyeSlash
-                    onClick={() => setPassword(true)}
-                    className="text-white cursor-pointer"
-                  />
-                )}
-              </div>
-            </div> */}
             <div className="flex items-center justify-between rounded-full" style={{ backgroundColor: "#2b1e0e" }}>
               <div className="password_input flex items-center w-full">
                 <input

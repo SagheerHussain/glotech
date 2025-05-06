@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, Typography } from "@mui/material";
 import { Breadcrumbs } from "@mui/material";
+import Performance from "./Performance";
 
 const Analytics = () => {
   return (
@@ -14,6 +15,12 @@ const Analytics = () => {
             </Link>
             <Typography sx={{ color: "text.primary" }}>Dashboard</Typography>
           </Breadcrumbs>
+  
+          <div className="flex flex-col md:flex-row gap-6 mt-16">
+            <Performance title="Site Performance" />
+            <Performance title="Server Load" />
+            <Performance title="Database Health" />
+          </div>
           {/* <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
             <AnalyticsCard number={totalBooks} title="Total Books" icon={<FaBook color={"#fa0032"} size={48} />} />
             <AnalyticsCard number={totalStudents} title="Total Students" icon={<PiStudentBold color={"#ffa828"} size={48} />} />
