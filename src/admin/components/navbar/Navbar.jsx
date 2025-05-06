@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import "../dashboard.css";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+
+  const user = JSON.parse(localStorage.getItem("user"));
 
   // Navigate
   const navigate = useNavigate();
@@ -21,8 +24,14 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    // Redirect to login page
-    window.location.href = "/signin";
+    Swal.fire({
+      title: "Logout Successfully",
+      icon: "success",
+      timer: 700
+    });
+    setTimeout(() => {
+      navigate("/login");
+    }, 1200);
   }
 
   return (
@@ -46,10 +55,10 @@ const Navbar = () => {
               >
                 <div className="profile_menu_icon w-[30px] h-[30px] bg-primary rounded-full flex items-center justify-center me-2">
                   <span className="text-white font-semibold text-lg">
-                    G
+                    {user?.username[0]}
                   </span>
                 </div>
-                <span className="text-black">Glotech KSA</span>
+                <span className="text-black">{user?.username}</span>
               </Button>
               <Menu
                 id="basic-menu"

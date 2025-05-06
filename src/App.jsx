@@ -36,6 +36,9 @@ import EditLogo from "./admin/components/header/EditLogo";
 import Contact from "./admin/components/contact/Contact";
 import EditContact from "./admin/components/contact/EditContact";
 import { getColors } from "./services/colors";
+import SignUp from "../app/(auth)/SignUp";
+import SignIn from "../app/(auth)/SignIn";
+import Authentication from "./auth/Authentication";
 
 function App() {
   useEffect(() => {
@@ -67,48 +70,60 @@ function App() {
         <Route path="/services/:service" element={<ServicePage />} />
         <Route path="/services" element={<ServiceContentPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/dashboard" element={<AnalyticsPage />} />
+
+        {/* Auth Routes */}
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/register" element={<SignUp />} />
+
         {/* Admin Routes */}
-        <Route path="/dashboard" element={<AnalyticsPage />} />
-        <Route path="/dashboard/add-service" element={<AddService />} />
-        <Route path="/dashboard/view-service" element={<ViewServices />} />
-        <Route path="/dashboard/edit-service/:id" element={<EditService />} />
-        <Route path="/dashboard/add-category" element={<AddCategory />} />
-        <Route path="/dashboard/view-category" element={<ViewCategory />} />
-        <Route path="/dashboard/edit-category/:id" element={<EditCategory />} />
-        <Route path="/dashboard/add-color" element={<AddColor />} />
-        <Route path="/dashboard/view-color" element={<ViewColor />} />
-        <Route path="/dashboard/edit-color/:id" element={<EditColor />} />
-        <Route path="/dashboard/add-about" element={<AddAbout />} />
-        <Route path="/dashboard/view-about" element={<ViewAbout />} />
-        <Route path="/dashboard/edit-about/:id" element={<EditAbout />} />
-        <Route path="/dashboard/add-stats" element={<AddStats />} />
-        <Route path="/dashboard/view-stats" element={<ViewStats />} />
-        <Route path="/dashboard/edit-stats/:id" element={<EditStats />} />
-        <Route
-          path="/dashboard/view-overall-stats"
-          element={<ViewOverallStats />}
-        />
-        <Route
-          path="/dashboard/edit-overall-stats/:id"
-          element={<EditOverallStats />}
-        />
-        <Route path="/dashboard/add-team" element={<AddTeam />} />
-        <Route path="/dashboard/view-team" element={<ViewTeam />} />
-        <Route path="/dashboard/edit-team/:id" element={<EditTeam />} />
-        <Route path="/dashboard/add-testimonial" element={<AddTestimonial />} />
-        <Route
-          path="/dashboard/view-testimonial"
-          element={<ViewTestimonial />}
-        />
-        <Route
-          path="/dashboard/edit-testimonial/:id"
-          element={<EditTestimonial />}
-        />
-        <Route path="/dashboard/view-logo" element={<Logo />} />
-        <Route path="/dashboard/edit-logo/:id" element={<EditLogo />} />
-        <Route path="/dashboard/view-contact" element={<Contact />} />
-        <Route path="/dashboard/edit-contact/:id" element={<EditContact />} />
+        <Route element={<Authentication />}>
+          <Route path="/dashboard" element={<AnalyticsPage />} />
+          <Route path="/dashboard/add-service" element={<AddService />} />
+          <Route path="/dashboard/view-service" element={<ViewServices />} />
+          <Route path="/dashboard/edit-service/:id" element={<EditService />} />
+          <Route path="/dashboard/add-category" element={<AddCategory />} />
+          <Route path="/dashboard/view-category" element={<ViewCategory />} />
+          <Route
+            path="/dashboard/edit-category/:id"
+            element={<EditCategory />}
+          />
+          <Route path="/dashboard/add-color" element={<AddColor />} />
+          <Route path="/dashboard/view-color" element={<ViewColor />} />
+          <Route path="/dashboard/edit-color/:id" element={<EditColor />} />
+          <Route path="/dashboard/add-about" element={<AddAbout />} />
+          <Route path="/dashboard/view-about" element={<ViewAbout />} />
+          <Route path="/dashboard/edit-about/:id" element={<EditAbout />} />
+          <Route path="/dashboard/add-stats" element={<AddStats />} />
+          <Route path="/dashboard/view-stats" element={<ViewStats />} />
+          <Route path="/dashboard/edit-stats/:id" element={<EditStats />} />
+          <Route
+            path="/dashboard/view-overall-stats"
+            element={<ViewOverallStats />}
+          />
+          <Route
+            path="/dashboard/edit-overall-stats/:id"
+            element={<EditOverallStats />}
+          />
+          <Route path="/dashboard/add-team" element={<AddTeam />} />
+          <Route path="/dashboard/view-team" element={<ViewTeam />} />
+          <Route path="/dashboard/edit-team/:id" element={<EditTeam />} />
+          <Route
+            path="/dashboard/add-testimonial"
+            element={<AddTestimonial />}
+          />
+          <Route
+            path="/dashboard/view-testimonial"
+            element={<ViewTestimonial />}
+          />
+          <Route
+            path="/dashboard/edit-testimonial/:id"
+            element={<EditTestimonial />}
+          />
+          <Route path="/dashboard/view-logo" element={<Logo />} />
+          <Route path="/dashboard/edit-logo/:id" element={<EditLogo />} />
+          <Route path="/dashboard/view-contact" element={<Contact />} />
+          <Route path="/dashboard/edit-contact/:id" element={<EditContact />} />
+        </Route>
       </Routes>
     </>
   );
