@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/NavbarMenu";
 import { cn } from "../lib/utils";
@@ -15,13 +15,15 @@ import serviceNine from "/Images/menus/service (9).jpg";
 import serviceTen from "/Images/menus/service (10).jpg";
 import serviceEleven from "/Images/menus/service (11).webp";
 import serviceTwelve from "/Images/menus/service (12).webp";
+import { getCategories } from "../services/categories";
 
 export function Navbar({ className }) {
   const [active, setActive] = useState(null);
+  const [categories, setCategories] = useState([]);
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const services = t("menu.Services.subMenus", { returnObjects: true });
+  // const services = t("menu.Services.subMenus", { returnObjects: true });
 
   const src = [
     serviceOne,
@@ -38,6 +40,23 @@ export function Navbar({ className }) {
     serviceTwelve,
   ];
 
+  // Get Categories
+  const fetchCategories = async () => {
+    try {
+      const response = await getCategories();
+      console.log("categories", response);
+      if (response.success) {
+        setCategories(response.data);
+      }
+    } catch (error) {
+      console.error("Error fetching categories:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
   return (
     <div className={cn("inset-x-0 max-w-4xl mx-auto", className)}>
       <Menu setActive={setActive}>
@@ -53,13 +72,13 @@ export function Navbar({ className }) {
             className="bg-white"
           >
             <div className="text-sm grid lg:grid-cols-2 2xl:grid-cols-3 gap-10 p-4 max-h-[80vh] overflow-y-auto bg-[#eee]">
-              {services.map((service, index) => (
+              {categories?.map((category, index) => (
                 <ProductItem
                   key={index}
-                  title={service.title}
-                  to={`/services/${service.category}`}
-                  src={src[index]}
-                  description={service.description}
+                  title={i18n.language === "ar" ? category?.name?.ar : i18n.language === "en" ? category?.name?.en : category?.name?.fr}
+                  to={`/services/${category?.slug}`}
+                  src={category?.image}
+                  description={i18n.language === "ar" ? category?.description?.ar : i18n.language === "en" ? category?.description?.en : category?.description?.fr}
                 />
               ))}
             </div>

@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const getCategories = async () => {
     try {
         const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category`);
@@ -18,17 +20,24 @@ export const getCategory = async (id) => {
     }
 }
 
-export const addCategory = async (category) => {
+export const getCategoryBySlug = async (slug) => {
     try {
-        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(category),
-        });
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category/slug/${slug}`);
         const data = await response.json();
         return data;
+    } catch (error) {
+        console.error("Error fetching category by slug:", error);
+    }
+}
+
+export const addCategory = async (category) => {
+    try {
+        const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/category`, category, {
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+        });
+        return response.data;
     } catch (error) {
         console.error("Error adding category:", error);
     }
@@ -36,15 +45,12 @@ export const addCategory = async (category) => {
 
 export const updateCategory = async (id, category) => {
     try {
-        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/category/update/${id}`, {
-            method: "PUT",
+        const response = await axios.put(`${import.meta.env.VITE_BASE_URL}/api/category/update/${id}`, category, {
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "multipart/form-data",
             },
-            body: JSON.stringify(category),
         });
-        const data = await response.json();
-        return data;
+        return response.data;
     } catch (error) {
         console.error("Error updating category:", error);
     }

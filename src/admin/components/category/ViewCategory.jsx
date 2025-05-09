@@ -84,11 +84,44 @@ const ViewCategory = () => {
       editable: true,
     },
     {
+      field: "description_en",
+      headerName: "Description (en)",
+      flex: 1,
+      minWidth: 150,
+      editable: true,
+    },
+    {
+      field: "description_ar",
+      headerName: "Description (ar)",
+      flex: 1,
+      minWidth: 150,
+      editable: true,
+    },
+    {
+      field: "description_fr",
+      headerName: "Description (fr)",
+      flex: 1,
+      minWidth: 150,
+      editable: true,
+    },
+    {
       field: "slug",
       headerName: "Slug",
       flex: 1,
       minWidth: 150,
       editable: true,
+    },
+    {
+      field: "image",
+      headerName: "Image",
+      flex: 1,
+      minWidth: 150,
+      editable: true,
+      renderCell: (params) => (
+        <a href={params.value} target="_blank" rel="noopener noreferrer" className="underline">
+          View Image
+        </a>
+      ),
     },
     {
       field: "actions",
@@ -119,13 +152,18 @@ const ViewCategory = () => {
   const fetchCategories = async () => {
     try {
       const { data } = await getCategories();
+      console.log("data ====== >", data);
       const formattedRows = data.map((item, index) => ({
         id: item._id,
         No: index + 1,
-        category_en: item.name.en || "N/A",
-        category_ar: item.name.ar || "N/A",
-        category_fr: item.name.fr || "N/A",
-        slug: item.slug || "N/A",
+        category_en: item?.name?.en || "N/A",
+        category_ar: item?.name?.ar || "N/A",
+        category_fr: item?.name?.fr || "N/A",
+        description_en: item?.description?.en || "N/A",
+        description_ar: item?.description?.ar || "N/A",
+        description_fr: item?.description?.fr || "N/A",
+        image: item?.image || "N/A",
+        slug: item?.slug || "N/A",
       }));
       setRows(formattedRows);
     } catch (error) {

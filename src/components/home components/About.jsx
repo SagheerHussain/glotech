@@ -53,7 +53,7 @@ const About = () => {
     <>
       <section
         id="about"
-        className="bg-white py-20 relative overflow-y-visible"
+        className="bg-white pb-20 relative overflow-y-visible"
       >
         <div className="container ">
           <div className="md:flex items-center">

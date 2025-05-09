@@ -67,7 +67,7 @@ const TechWorkWith = () => {
   }, []);
 
   return (
-    <section id="techWorkingWith" className="pb-24 min-h-[250px] relative z-[9] bg-[#eee]">
+    <section id="techWorkingWith" className="py-20 min-h-[250px] relative z-[9] bg-[#eee]">
       <div className="container">
         {/* Services */}
         <div className="tech_working_with_content relative py-20 lg:py-0 lg:-top-[100px]">

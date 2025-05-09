@@ -86,7 +86,7 @@ const Services = () => {
     <>
       <section
         id="services"
-        className="relative z-[2] py-24 bg-white"
+        className="relative z-[2] pb-20 bg-white"
       >
         <div className="container">
           <div className="service_intro">

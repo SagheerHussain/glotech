@@ -13,9 +13,11 @@ const AddService = () => {
     description: { en: "", ar: "", fr: "" },
     category: "",
     service_points: [],
+    images: [],
   });
   const [categories, setCategories] = useState([]);
   const [gCategory, setGCategory] = useState("");
+  const [increment, setIncrement] = useState(0);
 
   const navigate = useNavigate();
 
@@ -46,23 +48,20 @@ const AddService = () => {
   };
 
   // ✅ Updated: Handle two image uploads and push into `images` array
-  const handleFileChange = (e, index) => {
+  const handleFileChange = (e) => {
     const files = Array.from(e.target.files);
-    const updatedFeatures = [...formData.service_points];
 
-    // Convert file objects to buffer for Cloudinary upload
-    updatedFeatures[index].images = files.map((file) => ({
-      url: file.name, // Send file object (this will be processed by the backend)
+    setFormData((prev) => ({
+      ...prev,
+      images: [...prev.images, ...files], // store real File objects
     }));
-
-    setFormData({ ...formData, service_points: updatedFeatures });
   };
 
   const addFeature = () => {
     const newFeature = {
       title: { en: "", ar: "", fr: "" },
       content: { en: "", ar: "", fr: "" },
-      images: [],
+      // images: [],
     };
     setFormData({
       ...formData,
@@ -79,48 +78,40 @@ const AddService = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    setLoading(true);
+
     const formDataToSend = new FormData();
-  
-    // Append simple fields
-    formDataToSend.append("name.en", formData.name.en);
-    formDataToSend.append("name.ar", formData.name.ar);
-    formDataToSend.append("name.fr", formData.name.fr);
-    formDataToSend.append("description.en", formData.description.en);
-    formDataToSend.append("description.ar", formData.description.ar);
-    formDataToSend.append("description.fr", formData.description.fr);
+
+
+    // Append multilingual fields
+    formDataToSend.append("name_en", formData.name.en);
+    formDataToSend.append("name_ar", formData.name.ar);
+    formDataToSend.append("name_fr", formData.name.fr);
+    formDataToSend.append("description_en", formData.description.en);
+    formDataToSend.append("description_ar", formData.description.ar);
+    formDataToSend.append("description_fr", formData.description.fr);
     formDataToSend.append("category", formData.category);
-  
-    // Append service points and images
-    formData.service_points.forEach((point, index) => {
-      formDataToSend.append(`service_points[${index}].title.en`, point.title.en);
-      formDataToSend.append(`service_points[${index}].title.ar`, point.title.ar);
-      formDataToSend.append(`service_points[${index}].title.fr`, point.title.fr);
-  
-      formDataToSend.append(`service_points[${index}].content.en`, point.content.en);
-      formDataToSend.append(`service_points[${index}].content.ar`, point.content.ar);
-      formDataToSend.append(`service_points[${index}].content.fr`, point.content.fr);
-  
-      point.images.forEach((img, imgIndex) => {
-        formDataToSend.append(
-          `service_points[${index}].images[${imgIndex}]`,
-          img
-        );
-      });
+
+    // Append service points
+    formDataToSend.append("service_points", JSON.stringify(formData.service_points));
+
+    // ✅ Append images one-by-one with correct key
+    formData.images.forEach((file) => {
+      formDataToSend.append("images", file); // this matches upload.array("images")
     });
-  
-    console.log("formDataToSend", formDataToSend);
-  
-    // Send data to backend
+
     try {
-      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/service`, {
-        method: "POST",
-        body: formDataToSend,
-      });
-      const data = await response.json();
-      console.log("Service added successfully:", data);
+      const { success, data } = await createService(formDataToSend);
+      if (success) {
+        Swal.fire("Success", "Service added successfully!", "success");
+        navigate("/dashboard/view-service");
+        console.log("Add Service ==>", data);
+      }
     } catch (error) {
-      console.error("Error adding service:", error);
+      console.error("Error uploading service:", error);
+      Swal.fire("Error", "Failed to add service", "error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -224,8 +215,10 @@ const AddService = () => {
             </h2>
             <select
               name="category"
-              className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
-              onChange={(e) => setGCategory(e.target.value)}
+              className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] shadow-none rounded-none mb-4 mt-1 px-3 py-2"
+              onChange={(e) =>
+                setFormData({ ...formData, category: e.target.value })
+              }
               required
             >
               <option hidden selected>
@@ -319,7 +312,7 @@ const AddService = () => {
                   accept="image/*"
                   name="images"
                   multiple
-                  onChange={(e) => handleFileChange(e, index)}
+                  onChange={(e) => handleFileChange(e, increment)}
                   className="placeholder:text-[#0000006b] w-full text-black bg-transparent focus:border-[#0000003a] focus:outline-none border-[1px] border-[#0000003a] focus:shadow-none rounded-none mb-4 mt-1 px-3 py-2"
                   required
                 />
@@ -340,7 +333,7 @@ const AddService = () => {
             <button
               type="button"
               onClick={addFeature}
-              className="bg-primary hover:bg-secondary text-white px-4 py-2 mt-4 rounded-full"
+              className="bg-secondary text-black px-4 py-[.3rem] mt-4 text-sm rounded-full"
             >
               + Add Feature
             </button>

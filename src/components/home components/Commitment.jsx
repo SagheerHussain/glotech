@@ -75,7 +75,7 @@ export function Commitment() {
 
   return (
     <>
-      <section id="commitment" className=" bg-white overflow-hidden">
+      <section id="commitment" className=" bg-white overflow-hidden pb-20">
         <div className="container">
           <Timeline
             data={data}

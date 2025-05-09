@@ -99,7 +99,7 @@ const Sidebar = () => {
 
             {/* Services */}
             <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
-              {/* <div className="px-[.75rem]">
+              <div className="px-[.75rem]">
                 <ListItemButton onClick={handleService}>
                   <ListItemIcon className="-mr-4">
                     <MdOutlineDesignServices className="text-light_text text-xl" />
@@ -138,7 +138,7 @@ const Sidebar = () => {
                     </Link>
                   </List>
                 </Collapse>
-              </div> */}
+              </div>
             </div>
 
             {/* Categories */}
