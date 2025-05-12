@@ -22,7 +22,7 @@ const Performance = ({ title }) => {
   }, []);
 
   return (
-    <div className="rounded-xl p-4 bg-white dark:bg-gray-800 w-full md:w-1/3">
+    <div className="rounded-xl p-4 bg-white dark:bg-gray-800 w-full">
       <h2 className="text-lg font-semibold mb-2 text-center text-black dark:text-white">
         {title}
       </h2>

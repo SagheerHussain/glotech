@@ -16,7 +16,7 @@ const Analytics = () => {
             <Typography sx={{ color: "text.primary" }}>Dashboard</Typography>
           </Breadcrumbs>
   
-          <div className="flex flex-col md:flex-row gap-6 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-16">
             <Performance title="Site Performance" />
             <Performance title="Server Load" />
             <Performance title="Database Health" />

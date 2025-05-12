@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { HiOutlineChevronRight, HiOutlineChevronDown } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { IoMdHome } from "react-icons/io";
+import { IoMdClose, IoMdHome } from "react-icons/io";
 import { BiCategory } from "react-icons/bi";
 import { GoDot } from "react-icons/go";
 import { MdOutlineDesignServices } from "react-icons/md";
@@ -24,7 +24,7 @@ import { IoLogoIonic } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GrDocumentNotes } from "react-icons/gr";
 
-const Sidebar = () => {
+const Sidebar = ({ onMenuClick }) => {
   const [services, setServices] = useState(false);
   const [categories, setCategories] = useState(false);
   const [color, setColor] = useState(false);
@@ -71,11 +71,16 @@ const Sidebar = () => {
     <>
       <aside
         id="sidebar"
-        className="sidebar bg-[#fff] border-r-2 border-[#0000002c] min-h-screen overflow-y-auto py-10"
+        className="sidebar bg-[#fff] lg:py-10 py-0 border-r-2 transition-all duration-1000 ease-in-out border-[#0000002c] min-h-screen overflow-y-auto w-[300px] lg:w-full"
       >
+
+        <div className="close_icon flex justify-end pr-4 py-4 lg:hidden">
+          <IoMdClose onClick={onMenuClick} className="text-2xl text-[#000]" />
+        </div>
+
         <div className="sidbar_logo flex justify-center mb-4">
           <Link to="/dashboard" className="flex items-center">
-            <img src={logoSrc} className={`max-w-[80px]`} alt="" />
+            <img src={logoSrc} className={`max-w-[60px]`} alt="" />
             <span className="text-secondary text-3xl font-bold">GLOTECH</span>
           </Link>
         </div>

@@ -33,7 +33,7 @@ export function GlotechChoosen() {
   }));
 
   return (
-    <section id="glotech-choosen" className="pt-20 pb-56 bg-white">
+    <section id="glotech-choosen" className="pt-20 pb-40 bg-white">
       <div className="container">
         <div className="glotech_choosen_intro mb-20">
           <h3 className="flex justify-center mb-4">
