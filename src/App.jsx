@@ -39,6 +39,7 @@ import { getColors } from "./services/colors";
 import SignUp from "../app/(auth)/SignUp";
 import SignIn from "../app/(auth)/SignIn";
 import Authentication from "./auth/Authentication";
+import ComingSoon from "./ComingSoon";
 
 function App() {
   useEffect(() => {
@@ -65,7 +66,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/" element={<HomePage />} /> */}
+        <Route path="/" element={<ComingSoon />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services/:service" element={<ServicePage />} />
         <Route path="/services" element={<ServiceContentPage />} />
