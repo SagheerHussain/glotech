@@ -68,17 +68,17 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<HomePage />} /> */}
         <Route path="/" element={<ComingSoon />} />
-        <Route path="/about" element={<AboutPage />} />
+        {/* <Route path="/about" element={<AboutPage />} />
         <Route path="/services/:service" element={<ServicePage />} />
         <Route path="/services" element={<ServiceContentPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contact" element={<ContactPage />} /> */}
 
         {/* Auth Routes */}
-        <Route path="/login" element={<SignIn />} />
-        <Route path="/register" element={<SignUp />} />
+        {/* <Route path="/login" element={<SignIn />} />
+        <Route path="/register" element={<SignUp />} /> */}
 
         {/* Admin Routes */}
-        <Route element={<Authentication />}>
+        {/* <Route element={<Authentication />}>
           <Route path="/dashboard" element={<AnalyticsPage />} />
           <Route path="/dashboard/add-service" element={<AddService />} />
           <Route path="/dashboard/view-service" element={<ViewServices />} />
@@ -125,7 +125,7 @@ function App() {
           <Route path="/dashboard/edit-logo/:id" element={<EditLogo />} />
           <Route path="/dashboard/view-contact" element={<Contact />} />
           <Route path="/dashboard/edit-contact/:id" element={<EditContact />} />
-        </Route>
+        </Route> */}
       </Routes>
     </>
   );
