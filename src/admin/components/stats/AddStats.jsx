@@ -80,7 +80,7 @@ const AddStats = () => {
                 timer: 1500,
             });
             setLoading(false);
-            navigate("/dashboard/view-stats");
+            navigate("/development/dashboard/view-stats");
         } catch (error) {
             console.error("Error adding stats:", error);
             Swal.fire({

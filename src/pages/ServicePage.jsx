@@ -13,37 +13,38 @@ import { ServiceDetail } from "../components/services components/ServiceDetail";
 import { useTranslation } from "react-i18next";
 import InfiniteMovingBrands from "../components/services components/InfiniteMovingBrands";
 import Technologies from "../components/services components/Technologies";
+import { getStatsByCategory } from "../services/stats";
+import { getCategoryBySlug } from "../services/categories";
 
 const ServicePage = () => {
   const { t, i18n } = useTranslation();
 
-  const [text, setText] = useState("");
-  const [stats, setStats] = useState([]);
-  const [filteredService, setFilteredService] = useState({});
-
   const { service } = useParams();
 
-  const currentService = t("text.services", { returnObjects: true });
+  const formattedParams = service
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  const [stats, setStats] = useState([]);
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
-    const title = currentService[service]
-      .split("-")
-      .map((word) => word.toUpperCase())
-      .join(" ");
-    setText(title);
-  }, [service, i18n.language]);
-
-  const services = t("services", {
-    returnObjects: true,
-  });
+    const fetchCategory = async () => {
+      const { data } = await getCategoryBySlug(service);
+      setCategory(data._id);
+    };
+    fetchCategory();
+  }, [service]);
 
   useEffect(() => {
-    const featuredServices = services.filter((s) => s.category === service);
-    const stats = featuredServices[0]?.stats;
-    console.log("stats", stats);
-    setStats(stats);
-    setFilteredService(featuredServices[0]);
-  }, [service, i18n.language]);
+    const fetchStats = async () => {
+      const { data } = await getStatsByCategory(category);
+      console.log("seperate stats", data);
+      setStats(data);
+    };
+    fetchStats();
+  }, [category, service]);
 
   return (
     <>
@@ -54,8 +55,12 @@ const ServicePage = () => {
           <div className="container">
             <div className="flex items-center justify-center flex-col h-full w-full">
               <TextHoverEffect
-                className={`text-[2rem] sm:text-[2.5rem] ${i18n.language === "fr" ? "md:text-[.9rem]" : "md:text-[1.2rem]"}`}
-                text={text}
+                className={`text-[2rem] sm:text-[2.5rem] ${
+                  i18n.language === "fr"
+                    ? "md:text-[.9rem]"
+                    : "md:text-[1.2rem]"
+                }`}
+                text={formattedParams}
                 key={i18n.language}
               />
             </div>
@@ -68,7 +73,7 @@ const ServicePage = () => {
         </div> */}
         <ServiceDetail params={service} />
         <Counter stats={stats} />
-        <Technologies params={service} filteredService={filteredService} />
+        <Technologies params={service} formattedParams={formattedParams} />
         <Banner
           title={t("home-page-components.banner.title")}
           description={t("home-page-components.banner.description")}

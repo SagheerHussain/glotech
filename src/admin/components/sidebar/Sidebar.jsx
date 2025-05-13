@@ -23,6 +23,7 @@ import { MdOutlineRateReview } from "react-icons/md";
 import { IoLogoIonic } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GrDocumentNotes } from "react-icons/gr";
+import { GrTechnology } from "react-icons/gr";
 
 const Sidebar = ({ onMenuClick }) => {
   const [services, setServices] = useState(false);
@@ -35,6 +36,7 @@ const Sidebar = ({ onMenuClick }) => {
   const [testimonial, setTestimonial] = useState(false);
   const [logo, setLogo] = useState(false);
   const [contact, setContact] = useState(false);
+  const [technology, setTechnology] = useState(false);
 
   const handleService = () => {
     setServices(!services);
@@ -66,6 +68,9 @@ const Sidebar = ({ onMenuClick }) => {
   const handleContact = () => {
     setContact(!contact);
   };
+  const handleTechnology = () => {
+    setTechnology(!technology);
+  };
 
   return (
     <>
@@ -73,13 +78,12 @@ const Sidebar = ({ onMenuClick }) => {
         id="sidebar"
         className="sidebar bg-[#fff] lg:py-10 py-0 border-r-2 transition-all duration-1000 ease-in-out border-[#0000002c] min-h-screen overflow-y-auto w-[300px] lg:w-full"
       >
-
         <div className="close_icon flex justify-end pr-4 py-4 lg:hidden">
           <IoMdClose onClick={onMenuClick} className="text-2xl text-[#000]" />
         </div>
 
         <div className="sidbar_logo flex justify-center mb-4">
-          <Link to="/dashboard" className="flex items-center">
+          <Link to="/development/dashboard" className="flex items-center">
             <img src={logoSrc} className={`max-w-[60px]`} alt="" />
             <span className="text-secondary text-3xl font-bold">GLOTECH</span>
           </Link>
@@ -91,7 +95,7 @@ const Sidebar = ({ onMenuClick }) => {
               className="my-[.75rem] border-1 border-transparent border-b-[#ffffff24]"
             >
               <div className="px-[.75rem] w-full">
-                <Link className="text-light_text" to={`/dashboard`}>
+                <Link className="text-light_text" to={`/development/dashboard`}>
                   <ListItemButton>
                     <ListItemIcon className="-mr-4">
                       <IoMdHome className="text-light_text text-xl" />
@@ -121,7 +125,7 @@ const Sidebar = ({ onMenuClick }) => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/add-service`}
+                      to={`/development/dashboard/add-service`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -132,13 +136,59 @@ const Sidebar = ({ onMenuClick }) => {
                     </Link>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-service`}
+                      to={`/development/dashboard/view-service`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
                           <GoDot className="text-light_text" />
                         </ListItemIcon>
                         View Service
+                      </ListItemButton>
+                    </Link>
+                  </List>
+                </Collapse>
+              </div>
+            </div>
+
+            {/* Technology */}
+            <div className="text-light_text border-1 border-transparent border-b-[#ffffff24] mb-[.75rem]">
+              <div className="px-[.75rem]">
+                <ListItemButton
+                  onClick={handleTechnology}
+                  className='text-light_text relative before:content-[""] before:block before:absolute before:bottom-0 before:left-0 before:bg-slate-50'
+                >
+                  <ListItemIcon className="-mr-4">
+                    <GrTechnology className="text-light_text text-xl" />
+                  </ListItemIcon>
+                  <h6 className="text-light_text">Technology</h6>
+                  {technology ? (
+                    <HiOutlineChevronDown className="ms-auto" />
+                  ) : (
+                    <HiOutlineChevronRight className="ms-auto" />
+                  )}
+                </ListItemButton>
+                <Collapse in={technology} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <Link
+                      className="text-light_text"
+                      to={`/development/dashboard/add-technology`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        Add Technology
+                      </ListItemButton>
+                    </Link>
+                    <Link
+                      className="text-light_text"
+                      to={`/development/dashboard/view-technology`}
+                    >
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon className="-mr-4">
+                          <GoDot className="text-light_text" />
+                        </ListItemIcon>
+                        View Technology
                       </ListItemButton>
                     </Link>
                   </List>
@@ -167,7 +217,7 @@ const Sidebar = ({ onMenuClick }) => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/add-category`}
+                      to={`/development/dashboard/add-category`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -178,7 +228,7 @@ const Sidebar = ({ onMenuClick }) => {
                     </Link>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-category`}
+                      to={`/development/dashboard/view-category`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -213,7 +263,7 @@ const Sidebar = ({ onMenuClick }) => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-color`}
+                      to={`/development/dashboard/view-color`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -259,7 +309,7 @@ const Sidebar = ({ onMenuClick }) => {
                     </Link> */}
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-about`}
+                      to={`/development/dashboard/view-about`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -294,7 +344,7 @@ const Sidebar = ({ onMenuClick }) => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/add-stats`}
+                      to={`/development/dashboard/add-stats`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -305,7 +355,7 @@ const Sidebar = ({ onMenuClick }) => {
                     </Link>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-stats`}
+                      to={`/development/dashboard/view-stats`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -340,7 +390,7 @@ const Sidebar = ({ onMenuClick }) => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-overall-stats`}
+                      to={`/development/dashboard/view-overall-stats`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -375,7 +425,7 @@ const Sidebar = ({ onMenuClick }) => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/add-team`}
+                      to={`/development/dashboard/add-team`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -386,7 +436,7 @@ const Sidebar = ({ onMenuClick }) => {
                     </Link>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-team`}
+                      to={`/development/dashboard/view-team`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -421,7 +471,7 @@ const Sidebar = ({ onMenuClick }) => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/add-testimonial`}
+                      to={`/development/dashboard/add-testimonial`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -432,7 +482,7 @@ const Sidebar = ({ onMenuClick }) => {
                     </Link>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-testimonial`}
+                      to={`/development/dashboard/view-testimonial`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -467,7 +517,7 @@ const Sidebar = ({ onMenuClick }) => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-logo`}
+                      to={`/development/dashboard/view-logo`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -502,7 +552,7 @@ const Sidebar = ({ onMenuClick }) => {
                   <List component="div" disablePadding>
                     <Link
                       className="text-light_text"
-                      to={`/dashboard/view-contact`}
+                      to={`/development/dashboard/view-contact`}
                     >
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon className="-mr-4">
@@ -515,7 +565,6 @@ const Sidebar = ({ onMenuClick }) => {
                 </Collapse>
               </div>
             </div>
-
           </List>
         </div>
       </aside>

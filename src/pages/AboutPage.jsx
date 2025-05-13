@@ -51,7 +51,7 @@ const AboutPage = () => {
         <Info />
         <Counter stats={overallStats} />
         <GlotechChoosen />
-        <Team />
+        {/* <Team /> */}
         <ValueAddition />
         <Testimonial />
         {/* <ValueAddition />  */}

@@ -60,11 +60,11 @@ export function Navbar({ className }) {
   return (
     <div className={cn("inset-x-0 max-w-4xl mx-auto", className)}>
       <Menu setActive={setActive}>
-        <HoveredLink to={`/`}>{t("menu.Home.name")}</HoveredLink>
+        <HoveredLink to={`/development`}>{t("menu.Home.name")}</HoveredLink>
 
-        <HoveredLink to={`/about`}>{t("menu.About.name")}</HoveredLink>
+        <HoveredLink to={`/development/about`}>{t("menu.About.name")}</HoveredLink>
 
-        <Link to={"/services"} className="">
+        <Link to={"/development/services"} className="">
           <MenuItem
             setActive={setActive}
             active={active}
@@ -76,7 +76,7 @@ export function Navbar({ className }) {
                 <ProductItem
                   key={index}
                   title={i18n.language === "ar" ? category?.name?.ar : i18n.language === "en" ? category?.name?.en : category?.name?.fr}
-                  to={`/services/${category?.slug}`}
+                  to={`/development/services/${category?.slug}`}
                   src={category?.image}
                   description={i18n.language === "ar" ? category?.description?.ar : i18n.language === "en" ? category?.description?.en : category?.description?.fr}
                 />
@@ -85,7 +85,7 @@ export function Navbar({ className }) {
           </MenuItem>
         </Link>
 
-        <HoveredLink to={'/contact'}>{t("menu.Contact.name")}</HoveredLink>
+        <HoveredLink to={'/development/contact'}>{t("menu.Contact.name")}</HoveredLink>
       </Menu>
     </div>
   );

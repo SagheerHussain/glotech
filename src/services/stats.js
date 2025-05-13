@@ -35,6 +35,16 @@ export const getStatsById = async (id) => {
     }
 };
 
+export const getStatsByCategory = async (category) => {
+    try {
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/stats/category/${category}`);
+        return response.json();
+    } catch (error) {
+        console.error("Error fetching stats:", error);
+        throw error;
+    }
+};
+
 export const updateStats = async (id, statOne, statTwo, statThree, statFour, category) => {
     try {
         const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/stats/update/${id}`, {

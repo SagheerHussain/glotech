@@ -32,15 +32,22 @@ export function ServiceDetail({ params }) {
     try {
       const { data } = await getCategoryBySlug(params);
       setCategId(data?._id);
+      if (data) {
+        getServiceData(data?._id);
+      }
+      console.log("category data === >>>> ", data);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const getServiceData = async () => {
+  const getServiceData = async (id) => {
     try {
-      const { data } = await getServiceByCategory(categId);
-      setServices(data);
+      const { data } = await getServiceByCategory(id);
+      if (data.length > 0) {
+        setServices(data);
+        console.log("data here === >>>> ", data);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -48,19 +55,21 @@ export function ServiceDetail({ params }) {
 
   useEffect(() => {
     getCategoryData();
-    getServiceData();
   }, [params, categId]);
+
 
   return (
     <>
       <section id="commitment" className="py-20 bg-[#fff] overflow-hidden">
         <div className="container">
-          <Timeline
-            data={services}
-            icons={icons}
-            title={services[0]?.name.en}
-            description={services[0]?.description.en}
-          />
+          {services.length > 0 && (
+            <Timeline
+              data={services}
+              icons={icons}
+              title={services[0]?.name?.en}
+              description={services[0]?.description?.en}
+            />
+          )}
         </div>
       </section>
     </>

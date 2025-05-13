@@ -22,9 +22,9 @@ const ViewServices = () => {
         const formattedRows = data?.map((item, index) => ({
           id: item._id,
           No: index + 1,
-          name_en: item.name.en || "N/A",
-          description_en: item.description.en || "N/A",
-          category: item.category.name.en || "N/A",
+          name_en: item?.name?.en || "N/A",
+          description_en: item?.description?.en || "N/A",
+          category: item?.category?.name?.en || "N/A",
         }));
         setRows(formattedRows);
       } catch (error) {

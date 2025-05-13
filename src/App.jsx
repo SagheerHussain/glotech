@@ -40,6 +40,9 @@ import SignUp from "../app/(auth)/SignUp";
 import SignIn from "../app/(auth)/SignIn";
 import Authentication from "./auth/Authentication";
 import ComingSoon from "./ComingSoon";
+import AddTechnology from "./admin/components/technology/AddTechnology";
+import ViewTechnology from "./admin/components/technology/ViewTechnology";
+import EditTechnology from "./admin/components/technology/EditTechnology";
 
 function App() {
   useEffect(() => {
@@ -68,64 +71,68 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<HomePage />} /> */}
         <Route path="/" element={<ComingSoon />} />
-        {/* <Route path="/about" element={<AboutPage />} />
-        <Route path="/services/:service" element={<ServicePage />} />
-        <Route path="/services" element={<ServiceContentPage />} />
-        <Route path="/contact" element={<ContactPage />} /> */}
+        <Route path="/development" element={<HomePage />} />
+        <Route path="/development/about" element={<AboutPage />} />
+        <Route path="/development/services/:service" element={<ServicePage />} />
+        <Route path="/development/services" element={<ServiceContentPage />} />
+        <Route path="/development/contact" element={<ContactPage />} />
 
         {/* Auth Routes */}
-        {/* <Route path="/login" element={<SignIn />} />
-        <Route path="/register" element={<SignUp />} /> */}
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/register" element={<SignUp />} />
 
         {/* Admin Routes */}
-        {/* <Route element={<Authentication />}>
-          <Route path="/dashboard" element={<AnalyticsPage />} />
-          <Route path="/dashboard/add-service" element={<AddService />} />
-          <Route path="/dashboard/view-service" element={<ViewServices />} />
-          <Route path="/dashboard/edit-service/:id" element={<EditService />} />
-          <Route path="/dashboard/add-category" element={<AddCategory />} />
-          <Route path="/dashboard/view-category" element={<ViewCategory />} />
+        <Route element={<Authentication />}>
+          <Route path="/development/dashboard" element={<AnalyticsPage />} />
+          <Route path="/development/dashboard/add-service" element={<AddService />} />
+          <Route path="/development/dashboard/view-service" element={<ViewServices />} />
+          <Route path="/development/dashboard/edit-service/:id" element={<EditService />} />
+          <Route path="/development/dashboard/add-category" element={<AddCategory />} />
+          <Route path="/development/dashboard/view-category" element={<ViewCategory />} />
           <Route
-            path="/dashboard/edit-category/:id"
+            path="/development/dashboard/edit-category/:id"
             element={<EditCategory />}
           />
-          <Route path="/dashboard/add-color" element={<AddColor />} />
-          <Route path="/dashboard/view-color" element={<ViewColor />} />
-          <Route path="/dashboard/edit-color/:id" element={<EditColor />} />
-          <Route path="/dashboard/add-about" element={<AddAbout />} />
-          <Route path="/dashboard/view-about" element={<ViewAbout />} />
-          <Route path="/dashboard/edit-about/:id" element={<EditAbout />} />
-          <Route path="/dashboard/add-stats" element={<AddStats />} />
-          <Route path="/dashboard/view-stats" element={<ViewStats />} />
-          <Route path="/dashboard/edit-stats/:id" element={<EditStats />} />
+          <Route path="/development/dashboard/add-color" element={<AddColor />} />
+          <Route path="/development/dashboard/view-color" element={<ViewColor />} />
+          <Route path="/development/dashboard/edit-color/:id" element={<EditColor />} />
+          <Route path="/development/dashboard/add-about" element={<AddAbout />} />
+          <Route path="/development/dashboard/view-about" element={<ViewAbout />} />
+          <Route path="/development/dashboard/edit-about/:id" element={<EditAbout />} />
+          <Route path="/development/dashboard/add-stats" element={<AddStats />} />
+          <Route path="/development/dashboard/view-stats" element={<ViewStats />} />
+          <Route path="/development/dashboard/edit-stats/:id" element={<EditStats />} />
           <Route
-            path="/dashboard/view-overall-stats"
+            path="/development/dashboard/view-overall-stats"
             element={<ViewOverallStats />}
           />
           <Route
-            path="/dashboard/edit-overall-stats/:id"
+            path="/development/dashboard/edit-overall-stats/:id"
             element={<EditOverallStats />}
           />
-          <Route path="/dashboard/add-team" element={<AddTeam />} />
-          <Route path="/dashboard/view-team" element={<ViewTeam />} />
-          <Route path="/dashboard/edit-team/:id" element={<EditTeam />} />
+          <Route path="/development/dashboard/add-team" element={<AddTeam />} />
+          <Route path="/development/dashboard/view-team" element={<ViewTeam />} />
+          <Route path="/development/dashboard/edit-team/:id" element={<EditTeam />} />
           <Route
-            path="/dashboard/add-testimonial"
+            path="/development/dashboard/add-testimonial"
             element={<AddTestimonial />}
           />
           <Route
-            path="/dashboard/view-testimonial"
+            path="/development/dashboard/view-testimonial"
             element={<ViewTestimonial />}
           />
           <Route
-            path="/dashboard/edit-testimonial/:id"
+            path="/development/dashboard/edit-testimonial/:id"
             element={<EditTestimonial />}
           />
-          <Route path="/dashboard/view-logo" element={<Logo />} />
-          <Route path="/dashboard/edit-logo/:id" element={<EditLogo />} />
-          <Route path="/dashboard/view-contact" element={<Contact />} />
-          <Route path="/dashboard/edit-contact/:id" element={<EditContact />} />
-        </Route> */}
+          <Route path="/development/dashboard/view-logo" element={<Logo />} />
+          <Route path="/development/dashboard/edit-logo/:id" element={<EditLogo />} />
+          <Route path="/development/dashboard/view-contact" element={<Contact />} />
+          <Route path="/development/dashboard/edit-contact/:id" element={<EditContact />} />
+          <Route path="/development/dashboard/add-technology" element={<AddTechnology />} />
+          <Route path="/development/dashboard/view-technology" element={<ViewTechnology />} />
+          <Route path="/development/dashboard/edit-technology/:id" element={<EditTechnology />} />
+        </Route>
       </Routes>
     </>
   );
