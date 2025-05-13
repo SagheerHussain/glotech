@@ -41,7 +41,11 @@ const Counter = ({ stats }) => {
                     <span className="absolute w-10 h-10 bg-secondary group-hover:-translate-y-[70%] transition-all rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></span>
                   </div>
                   <div className="mt-2 text-base font-semibold tracking-wide text-text_dark uppercase">
-                    {stats?.projectsDelivered?.title?.en}
+                    {i18n.language === "ar"
+                      ? stats?.projectsDelivered?.title?.ar
+                      : i18n.language === "fr"
+                      ? stats?.projectsDelivered?.title?.fr
+                      : stats?.projectsDelivered?.title?.en}
                   </div>
                 </div>
                 <div className="text-center group">
@@ -62,7 +66,11 @@ const Counter = ({ stats }) => {
                     <span className="absolute w-10 h-10 bg-secondary group-hover:-translate-y-[70%] transition-all rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></span>
                   </div>
                   <div className="mt-2 text-base font-semibold tracking-wide text-text_dark uppercase">
-                    {stats?.divisions?.title?.en}
+                    {i18n.language === "ar"
+                      ? stats?.divisions?.title?.ar
+                      : i18n.language === "fr"
+                      ? stats?.divisions?.title?.fr
+                      : stats?.divisions?.title?.en}
                   </div>
                 </div>
                 <div className="text-center group">
@@ -83,7 +91,11 @@ const Counter = ({ stats }) => {
                     <span className="absolute w-10 h-10 bg-secondary group-hover:-translate-y-[70%] transition-all rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></span>
                   </div>
                   <div className="mt-2 text-base font-semibold tracking-wide text-text_dark uppercase">
-                    {stats?.clients?.title?.en}
+                    {i18n.language === "ar"
+                      ? stats?.clients?.title?.ar
+                      : i18n.language === "fr"
+                      ? stats?.clients?.title?.fr
+                      : stats?.clients?.title?.en}
                   </div>
                 </div>
                 <div className="text-center group">
@@ -104,7 +116,11 @@ const Counter = ({ stats }) => {
                     <span className="absolute w-10 h-10 bg-secondary group-hover:-translate-y-[70%] transition-all rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></span>
                   </div>
                   <div className="mt-2 text-base font-semibold tracking-wide text-text_dark uppercase">
-                    {stats?.awards?.title?.en}
+                    {i18n.language === "ar"
+                      ? stats?.awards?.title?.ar
+                      : i18n.language === "fr"
+                      ? stats?.awards?.title?.fr
+                      : stats?.awards?.title?.en}
                   </div>
                 </div>
               </>
@@ -129,7 +145,11 @@ const Counter = ({ stats }) => {
                       <span className="absolute w-10 h-10 bg-secondary group-hover:-translate-y-[70%] transition-all rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></span>
                     </div>
                     <div className="mt-2 text-base font-semibold tracking-wide text-text_dark uppercase">
-                      {stat?.statOne?.title?.en}
+                      {i18n.language === "ar"
+                        ? stat?.statOne?.title?.ar
+                        : i18n.language === "fr"
+                        ? stat?.statOne?.title?.fr
+                        : stat?.statOne?.title?.en}
                     </div>
                   </div>
                   <div className="text-center group">
@@ -150,7 +170,11 @@ const Counter = ({ stats }) => {
                       <span className="absolute w-10 h-10 bg-secondary group-hover:-translate-y-[70%] transition-all rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></span>
                     </div>
                     <div className="mt-2 text-base font-semibold tracking-wide text-text_dark uppercase">
-                      {stat?.statTwo?.title?.en}
+                      {i18n.language === "ar"
+                        ? stat?.statTwo?.title?.ar
+                        : i18n.language === "fr"
+                        ? stat?.statTwo?.title?.fr
+                        : stat?.statTwo?.title?.en}
                     </div>
                   </div>
                   <div className="text-center group">
@@ -171,7 +195,11 @@ const Counter = ({ stats }) => {
                       <span className="absolute w-10 h-10 bg-secondary group-hover:-translate-y-[70%] transition-all rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></span>
                     </div>
                     <div className="mt-2 text-base font-semibold tracking-wide text-text_dark uppercase">
-                      {stat?.statThree?.title?.en}
+                      {i18n.language === "ar"
+                        ? stat?.statThree?.title?.ar
+                        : i18n.language === "fr"
+                        ? stat?.statThree?.title?.fr
+                        : stat?.statThree?.title?.en}
                     </div>
                   </div>
                   <div className="text-center group">
@@ -192,7 +220,11 @@ const Counter = ({ stats }) => {
                       <span className="absolute w-10 h-10 bg-secondary group-hover:-translate-y-[70%] transition-all rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"></span>
                     </div>
                     <div className="mt-2 text-base font-semibold tracking-wide text-text_dark uppercase">
-                      {stat?.statFour?.title?.en}
+                      {i18n.language === "ar"
+                        ? stat?.statFour?.title?.ar
+                        : i18n.language === "fr"
+                        ? stat?.statFour?.title?.fr
+                        : stat?.statFour?.title?.en}
                     </div>
                   </div>
                 </>

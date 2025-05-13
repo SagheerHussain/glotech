@@ -37,10 +37,18 @@ export const Timeline = ({ data, icons }) => {
     <div className="w-full font-sans" ref={containerRef}>
       <div className="max-w-5xl text-center mx-auto px-4 md:px-8 lg:px-10">
         <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-dark">
-          {data[0]?.name?.en}
+          {i18n.language === "ar"
+            ? data[0]?.name?.ar
+            : i18n.language === "fr"
+            ? data[0]?.name?.fr
+            : data[0]?.name?.en}
         </h2>
         <p className="text-dark text-base xl:text-lg">
-          {data[0]?.description?.en}
+          {i18n.language === "ar"
+            ? data[0]?.description?.ar
+            : i18n.language === "fr"
+            ? data[0]?.description?.fr
+            : data[0]?.description?.en}
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

@@ -86,7 +86,7 @@ const NavigationLayout = () => {
       >
         <div className="container flex items-center justify-between">
           <div className="flex items-center">
-            <Link to={`/`} className="flex items-center">
+            <Link to={`/development`} className="flex items-center">
               <Logo />
               <GradientText
                 colors={["#c9a66f", "#8C6238", "#c9a66f", "#c9a66f", "#8C6238"]}
